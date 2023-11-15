@@ -122,7 +122,7 @@ Configuration is defined on a per-property basis. For each property of the cache
 
 ### Example
 
-In the following account, the absolute expiration of cache items is set to 60 seconds for methods of the `AccountServices` class, but to 20 seconds for the `GetAccountsOfCustomer` method. 
+In the following account, the absolute expiration of cache items is set to 60 minutes for methods of the `AccountServices` class, but to 20 minutes for the `GetAccountsOfCustomer` method. 
 
 ```csharp
 using System;
