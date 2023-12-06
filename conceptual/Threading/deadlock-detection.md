@@ -6,6 +6,9 @@ categories: "PostSharp;AOP;Metaprogramming"
 ---
 # Detecting Deadlocks at Runtime
 
+> [!CAUTION]
+> `DeadlockDetectionPolicy` is deprecated and does not work well with async methods.
+
 A common problem that is found in multithreaded code is that multiple threads enter a situation where they are waiting for each other to finish. This is a deadlock situation and neither thread will complete executing in this situation. Because the threads are waiting on each other, neither is capable of providing diagnostic information to aid in debugging the situation. The <xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy> helps provide this information. 
 
 

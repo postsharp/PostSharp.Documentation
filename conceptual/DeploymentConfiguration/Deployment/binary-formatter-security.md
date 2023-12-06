@@ -32,7 +32,7 @@ In legacy applications that require usage of binary serialization, you can disab
 
 ## Recommended actions
 
-Since the usage of BinaryFormatter is discouraged by Microsoft and on in most projects using it would cause a runtime exception, it is required to use PortableFormatter for serializing aspects instead.
+Since the usage of BinaryFormatter is discouraged by Microsoft and in most projects using it would cause a runtime exception, it is required to use PortableFormatter for serializing aspects instead.
 
 All aspects and types that are used for aspect serialization should use `[PSerializable]` instead of `[Serializable]`.
 

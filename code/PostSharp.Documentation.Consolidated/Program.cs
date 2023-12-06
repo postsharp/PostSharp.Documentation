@@ -29,7 +29,7 @@ _ = new Type[]
     typeof(Aspect), // PostSharp.Redist
     typeof(AggregatableAttribute), // PostSharp.Patterns.Aggregation.Redist
     typeof(CacheAttribute), // PostSharp.Patterns.Caching.Redist
-    typeof(AzureCacheInvalidator2), // PostSharp.Patterns.Caching.Azure
+    typeof(AzureServiceBusCacheInvalidator), // PostSharp.Patterns.Caching.Azure
     typeof(MemoryCacheBackend), // PostSharp.Patterns.Caching.IMemoryCache
     typeof(RedisCachingBackend), // PostSharp.Patterns.Caching.Redis
     typeof(RequiredAttribute), // PostSharp.Patterns.Common.Redist

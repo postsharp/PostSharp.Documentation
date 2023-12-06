@@ -11,7 +11,7 @@ PostSharp 2024.0 brings a major platform update, including support for new build
 > [!NOTE]
 > Note that this release contains multiple breaking changes. See <xref:breaking-changes-20240> for details. 
 
-## PostSharp Core
+## PostSharp Compiler
 
 * PostSharp now supports .NET 8.0 SDK and C# 12.
 
@@ -29,9 +29,9 @@ PostSharp 2024.0 brings a major platform update, including support for new build
 
 * Dependencies were upgraded to versions without known security vulnerabilities. This affected most pattern libraries without breaking changes, but some pattern libraries dropped support for older target frameworks, notable `PostSharp.Patterns.Caching`, `PostSharp.Patterns.Caching.Azure`, `PostSharp.Patterns.Diagnostics.Microsoft`, `PostSharp.Patterns.Diagnostics.ApplicationInsights`.
 
-* PostSharp.Patterns.Caching now uses JsonCachingSerializer by default instead of BinarySerializer, which is now deprecated. This serializer internally used BinaryFormatter, which is considered dangerous. Again, see more about the security vulnerability [here](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide).
+* `PostSharp.Patterns.Caching` now uses `JsonCachingSerializer` by default instead of `BinarySerializer`, which is now deprecated. This legacy serializer internally used `BinaryFormatter`, which is considered dangerous. Again, see more about the security vulnerability [here](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide).  
 
-* PostSharp.Patterns.Caching.Azure now uses the latest Azure Service Bus API - Azure.ServiceBus NuGet package - through the new invalidator class `AzureCacheInvalidator3` that is available on all supported target frameworks. Previous implementations are now deprecated - `AzureCacheInvalidator`, `AzureCacheInvalidator2`.
+* `PostSharp.Patterns.Caching.Azure` now uses the `Azure.ServiceBus` package through the new invalidator class <xref:PostSharp.Patterns.Caching.Azure.AzureServiceBusCacheInvalidator> for all supported target frameworks. Previous implementations, `AzureCacheInvalidator` and `AzureCacheInvalidator2`, are deprecated.  
 
-* PostSharp.Patterns.Threading.DeadlockDetectionPolicy is now marked as obsolete. The aspect was implemented before async methods were added to C# and it's usefulness for development of modern application is very low. Since async
-methods are now an ubiquitous part of .NET libraries, it's almost impossible to detect deadlocks through build-time code instrumentation of your code as there will almost always be an async method between synchronization actions. Please refer to [Microsoft guide for debugging deadlocks](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/debug-deadlock).
+* <xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy> is now marked as obsolete. The aspect was implemented before async methods were added to C# and it's usefulness for development of modern application is very low. Since async
+methods are now an ubiquitous part of .NET libraries, it's almost impossible to detect deadlocks through build-time code instrumentation. There will almost always be an non-instrumented async method in between synchronization actions that form a deadlock. Please refer to [Microsoft guide for debugging deadlocks](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/debug-deadlock).
