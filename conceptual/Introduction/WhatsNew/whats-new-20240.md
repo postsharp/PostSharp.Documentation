@@ -6,32 +6,35 @@ categories: "PostSharp;AOP;Metaprogramming"
 ---
 # What's New in PostSharp 2024.0
 
-PostSharp 2024.0 brings a major platform update, including support for new build and target platforms, updated dependencies of many packages.
+PostSharp 2024.0  introduces a significant platform update, incorporating support for new build and target platforms along with updated dependencies for numerous packages.
 
 > [!NOTE]
-> Note that this release contains multiple breaking changes. See <xref:breaking-changes-20240> for details. 
+> Please note that this release includes multiple breaking changes. Refer to <xref:breaking-changes-20240> for more detailed information.
 
 ## PostSharp Compiler
 
-* PostSharp now supports .NET 8.0 SDK and C# 12.
+* PostSharp now supports the .NET 8.0 SDK and C# 12.
 
-* When building .NET Framework projects, PostSharp executes as x64 server process by default. When running as x86 process, it will run by default as a standalone process. This helps avoiding memory issues in x86 server compilations.
+* For .NET Framework projects, PostSharp defaults to executing as an x64 server process. When running as an x86 process, it defaults to operating as a standalone process, which helps prevent memory issues in x86 server compilations.
 
-* PostSharp internal build-time dependencies were upgraded. This included upgrading PostSharp .NET compiler to target .NET 6.0. Minimum supported version of SDK is now .NET SDK 6.0.
+* PostSharp's internal build-time dependencies were upgraded. This included upgrading PostSharp .NET compiler to target .NET 6.0. Minimum supported version of SDK is now .NET SDK 6.0.
 
-* PostSharp newly supports ARM64 on Windows ARM64, Linux ARM64 and MacOS on Apple Silicon when building .NET, .NET Core and .NET Standard projects under .NET 8.0 SDK. On Windows ARM64 it is possible to target all supported platforms - x86, x64, ARM64 by cross-targeting using different versions of the .NET SDK (exactly the same version of the SDK is required to be installed).
+* PostSharp now offers support for ARM64 on Windows ARM64, Linux ARM64 and MacOS on Apple Silicon when building .NET, .NET Core and .NET Standard projects under the .NET 8.0 SDK. On Windows ARM64, it is possible to target all supported target platforms - x86, x64, ARM64 - by cross-targeting with different versions of the .NET SDK. It is crucial to install the exact same version of the .NET SDK for all required platforms.
 
-* PostSharp now also supports ARM64 when building .NET Framework projects on Windows ARM64 under .NET Framework 4.8.1. On Windows ARM64, PostSharp will run as ARM64 server process by default when targeting AnyCPU. On other platforms, .NET Framework 4.7.2 remains the minimum required version.
+* PostSharp now also supports ARM64 when building .NET Framework projects on Windows ARM64 under .NET Framework 4.8.1. On Windows ARM64, PostSharp defaults to running as an ARM64 server process by default when targeting AnyCPU. On other build platforms, the minimum required version remains .NET Framework 4.7.2.
 
-* Usage of `BinaryFormatter` during aspect serialization, used when aspects are marked with `[Serializable]` is deprecated due to security concerns. See more about the security vulnerability [here](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide). Usage of `[PSerializable]` is advised. An MSBuild property `PostSharpBinaryFormatterAllowed` has been added to allow usage of the old method in legacy application, but it is a discouraged and unsupported use case.
+* The usage of `BinaryFormatter` during aspect serialization - employed when aspects are marked with `[Serializable]` - is deprecated due to security concerns. More information about the security vulnerability can be found [here](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide). It is recommended to use [PSerializable] instead. An MSBuild property, `PostSharpBinaryFormatterAllowed`, has been has been introduced to permit the usage of the old method in legacy applications, but this is a discouraged and unsupported practice.
 
 ## PostSharp Pattern Libraries
 
-* Dependencies were upgraded to versions without known security vulnerabilities. This affected most pattern libraries without breaking changes, but some pattern libraries dropped support for older target frameworks, notable `PostSharp.Patterns.Caching`, `PostSharp.Patterns.Caching.Azure`, `PostSharp.Patterns.Diagnostics.Microsoft`, `PostSharp.Patterns.Diagnostics.ApplicationInsights`.
+* Dependencies of pattern libraries were upgraded to versions without known security vulnerabilities. This affected most pattern libraries without causing breaking changes, but some pattern libraries dropped support for older target frameworks, notably `PostSharp.Patterns.Caching`, `PostSharp.Patterns.Caching.Azure`, `PostSharp.Patterns.Diagnostics.Microsoft`, `PostSharp.Patterns.Diagnostics.ApplicationInsights`.
 
-* `PostSharp.Patterns.Caching` now uses `JsonCachingSerializer` by default instead of `BinarySerializer`, which is now deprecated. This legacy serializer internally used `BinaryFormatter`, which is considered dangerous. Again, see more about the security vulnerability [here](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide).  
+* In `PostSharp.Patterns.Caching`, the default serializer is now `JsonCachingSerializer`, replacing the deprecated `BinarySerializer`. The legacy use of `BinarySerializer` internally relied on `BinaryFormatter`, considered unsafe due to security vulnerabilities. Further details on this security concern can be found [here](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide).
 
-* `PostSharp.Patterns.Caching.Azure` now uses the `Azure.ServiceBus` package through the new invalidator class <xref:PostSharp.Patterns.Caching.Azure.AzureServiceBusCacheInvalidator> for all supported target frameworks. Previous implementations, `AzureCacheInvalidator` and `AzureCacheInvalidator2`, are deprecated.  
+* `PostSharp.Patterns.Caching.Azure` now uses the `Azure.ServiceBus` package through the new invalidator class <xref:PostSharp.Patterns.Caching.Azure.AzureServiceBusCacheInvalidator> for all supported target frameworks (.NET Framework 4.7.1 and later, .NET Core 3.1 and later). Previous implementations, `AzureCacheInvalidator` and `AzureCacheInvalidator2`, are deprecated.  
 
-* <xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy> is now marked as obsolete. The aspect was implemented before async methods were added to C# and it's usefulness for development of modern application is very low. Since async
-methods are now an ubiquitous part of .NET libraries, it's almost impossible to detect deadlocks through build-time code instrumentation. There will almost always be an non-instrumented async method in between synchronization actions that form a deadlock. Please refer to [Microsoft guide for debugging deadlocks](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/debug-deadlock).
+* <xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy> is now marked as obsolete. The aspect was designed before async methods were added to the C# language and its utility for development for modern application development is minimal. Due to the ubiquity of async methods in .NET libraries, detecting deadlocks through build-time code instrumentation is nearly impossible. Typically, a non-instrumented async method exists between synchronization actions forming a deadlock. For guidance on debugging deadlocks, please consult the [Microsoft guide for debugging deadlocks](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/debug-deadlock).
+
+## PostSharp Tools for Visual Studio
+
+* PostSharp Tools for Visual Studio can be installed on Visual Studio 2022 ARM64, but this is currently supported only experimentally.
