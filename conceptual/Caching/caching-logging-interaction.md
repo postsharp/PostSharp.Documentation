@@ -3,6 +3,7 @@ uid: caching-logging-interaction
 title: "Troubleshooting Caching"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to enable logging for the caching aspect in PostSharp, using either PostSharp Logging or System.Diagnostics."
 ---
 # Troubleshooting Caching
 

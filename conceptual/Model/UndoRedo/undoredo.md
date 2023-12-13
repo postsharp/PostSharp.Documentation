@@ -3,6 +3,7 @@ uid: undoredo
 title: "Undo/Redo"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document details how to use PostSharp's RecordableAttribute aspect to easily add undo/redo functionality to custom applications, requiring minimal code changes."
 ---
 # Undo/Redo
 
@@ -21,4 +22,5 @@ The <xref:PostSharp.Patterns.Recording.RecordableAttribute> aspect makes it much
 | <xref:undoredo-recorder> | This section explains how to customize the assignment of recordable objects to recorders. |
 | <xref:undoredo-callbacks> | This section shows how to execute custom logic when undo/redo operations occur in a recordable object. |
 | <xref:undoredo-conceptual> | This section describes the concepts and architecture of the <xref:PostSharp.Patterns.Recording.RecordableAttribute> aspect.  |
+
 

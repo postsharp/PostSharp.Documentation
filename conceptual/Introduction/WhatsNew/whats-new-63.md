@@ -3,6 +3,7 @@ uid: whats-new-63
 title: "What's New in PostSharp 6.3"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.3 now supports building on Linux and MacOS, offers improvements to PostSharp Tools for Visual Studio, respects the deterministic compiler option, allows free ordering of OnMethodBoundary aspects on async methods, and enables customization of exception types in contracts."
 ---
 # What's New in PostSharp 6.3
 
@@ -42,4 +43,5 @@ Note that ordering is still limited for iterator methods.
 ## Contracts: ability to customize the type of thrown exceptions
 
 In previous versions, it was possible to customize the exception messages, but not the exception types itself. We now use a factory pattern to instantiate exceptions, so you can now completely customize the exceptions thrown by standard contracts. See <xref:contract-custom-exceptions> for details. 
+
 

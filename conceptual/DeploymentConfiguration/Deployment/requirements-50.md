@@ -3,6 +3,7 @@ uid: requirements-50
 title: "PostSharp 5.0: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document details the requirements and compatibility for using PostSharp 5.0, including software components that need to be installed, requirements for end-user devices, and known incompatibilities and issues."
 ---
 # PostSharp 5.0: Requirements and Compatibility
 
@@ -117,4 +118,5 @@ PostSharp is not compatible with the following products or features:
 ## Known Issues
 
 Known issues are documented in the release notes of each product build.
+
 

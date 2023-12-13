@@ -3,6 +3,7 @@ uid: licensing-shared-source-code
 title: "Sharing Source Code With Unlicensed Teams"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp requires a license only for creating or modifying code, not for building it. To share source code with unlicensed teams, enable source control checking in the PostSharp Configuration File. "
 ---
 # Sharing Source Code With Unlicensed Teams
 
@@ -39,6 +40,7 @@ By default, checking the modifications in the source control is disabled for per
 
 > [!WARNING]
 > When building unmodified source code without a commercial license, PostSharp Logging Developer Edition and limitations to PostSharp Logging features will apply to your build. See <xref:logging-license> for details. 
+
 
 
 

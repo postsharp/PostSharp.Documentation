@@ -3,6 +3,7 @@ uid: caching-invalidation
 title: "Removing Items From the Cache"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to remove items from the cache in PostSharp, using either direct invalidation, the InvalidateCache aspect, or by invalidating cache items imperatively."
 ---
 # Removing Items From the Cache
 
@@ -165,4 +166,5 @@ Retrieving updated value of 1 for the 1st time should hit the database.
 >> Retrieving 1 from the database...
 Retrieved: second
 ```
+
 

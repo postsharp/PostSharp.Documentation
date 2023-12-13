@@ -3,6 +3,7 @@ uid: immutable
 title: "Immutable Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use the PostSharp software to create immutable objects in code, which can be safely accessed by multiple threads. It also distinguishes between 'immutable' and 'readonly', and explains how to use constructors to set up immutable objects."
 ---
 # Immutable Threading Model
 

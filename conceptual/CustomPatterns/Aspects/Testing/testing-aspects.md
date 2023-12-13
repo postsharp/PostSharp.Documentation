@@ -3,6 +3,7 @@ uid: testing-aspects
 title: "Testing and Debugging"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses testing and debugging techniques for aspects in PostSharp, which differ from normal class libraries due to their unique characteristics."
 ---
 # Testing and Debugging
 
@@ -27,4 +28,5 @@ This chapter contains the following sections:
 * <xref:debugging-runtime> explains how to debug run-time logic. 
 
 * <xref:debugging-buildtime> explains how to debug build-time logic. 
+
 

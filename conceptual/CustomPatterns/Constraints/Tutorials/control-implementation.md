@@ -3,6 +3,7 @@ uid: control-implementation
 title: "Restricting Interface Implementation"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp's InternalImplementAttribute to restrict users from implementing an interface in their own classes, helping prevent issues when new members are added to the interface. "
 ---
 # Restricting Interface Implementation
 

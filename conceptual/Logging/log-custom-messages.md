@@ -3,6 +3,7 @@ uid: log-custom-messages
 title: "Writing Custom Messages"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides detailed instructions on how to write custom messages using PostSharp Logging, including writing text messages, messages with parameters, and semantic messages for statistical processing. It also offers performance optimization tips and guidance on implementing custom message types."
 ---
 # Writing Custom Messages
 

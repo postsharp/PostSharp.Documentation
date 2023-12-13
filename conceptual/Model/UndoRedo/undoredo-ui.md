@@ -3,6 +3,7 @@ uid: undoredo-ui
 title: "Adding Undo/Redo to the User Interface"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to add Undo/Redo functionality to a user interface using PostSharp's ready-made WPF controls and custom controls. It also explains how to clear initial history."
 ---
 # Adding Undo/Redo to the User Interface
 
@@ -63,4 +64,5 @@ Now when you open the Customer management screen both the Undo and Redo buttons 
 If the buttons provided by PostSharp don't meet your requirements, you can create your own controls for WPF, Windows Phone, WinRT, or any other platform.
 
 Custom controls will typically provide a front-end to the global <xref:PostSharp.Patterns.Recording.Recorder> exposed by the <xref:PostSharp.Patterns.Recording.RecordingServices.DefaultRecorder> property. The controls could show the contents of the <xref:PostSharp.Patterns.Recording.Recorder.UndoOperations> and <xref:PostSharp.Patterns.Recording.Recorder.RedoOperations> collections. Controls typically use the <xref:PostSharp.Patterns.Recording.Recorder.Undo> and <xref:PostSharp.Patterns.Recording.Recorder.Redo> methods. 
+
 

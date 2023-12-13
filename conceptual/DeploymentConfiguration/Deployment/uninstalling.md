@@ -3,6 +3,7 @@ uid: uninstalling
 title: "Uninstalling PostSharp"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on how to uninstall PostSharp from individual projects or solutions and from Visual Studio, including removing PostSharp packages and cleaning temporary files."
 ---
 # Uninstalling PostSharp
 
@@ -109,5 +110,6 @@ Other than occupying disk space, there is no impact of not removing these files.
 
 
 2. Select the *C:\ProgramData\PostSharp* folder and delete it. 
+
 
 

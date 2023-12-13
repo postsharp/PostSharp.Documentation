@@ -3,6 +3,7 @@ uid: install-compiler
 title: "Installing PostSharp Into a Project"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a step-by-step guide on how to install PostSharp into a project using a PostSharp NuGet package and how to include necessary files in your source control system."
 ---
 # Installing PostSharp Into a Project
 
@@ -58,4 +59,5 @@ Some of the files above might not be present depending on the package management
 Optionally, if you use the packages.config package management format, you can also include the *packages* folder in your source control. Note that there are negative consequences on this practice. See [Omitting NuGet packages in source control systems](https://docs.microsoft.com/en-us/nuget/consume-packages/packages-and-source-control) for more information. If you choose not to include the *packages* folder in your source control system, read <xref:nuget-restore>. 
 
 Once you have all of these files included in your source code repository, any other developer getting that source code from the repository will have the required information to be able to build the application.
+
 

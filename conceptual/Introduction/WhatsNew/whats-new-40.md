@@ -3,6 +3,7 @@ uid: whats-new-40
 title: "What's New in PostSharp 4.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 4.0 introduces several new features, including a redesign of the Threading Pattern Library, an undo/redo feature, and improvements to the Aspect Framework. It also introduces the Aggregatable, Disposable, Immutable, Freezable, and Synchronized patterns."
 ---
 # What's New in PostSharp 4.0
 
@@ -67,4 +68,5 @@ The <xref:PostSharp.Aspects.Advices.InitializeAspectInstanceAdvice> custom attri
 ## NotifyPropertyChanged optimization
 
 Our <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> is four times faster at run time on average. 
+
 

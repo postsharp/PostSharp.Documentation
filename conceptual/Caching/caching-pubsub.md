@@ -3,6 +3,7 @@ uid: caching-pubsub
 title: "Synchronizing Local In-Memory Caches for Multiple Servers"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to synchronize local in-memory caches for multiple servers using PostSharp. It offers solutions for distributed cache invalidation using Azure Service Bus pub/sub and Redis pub/sub."
 ---
 # Synchronizing Local In-Memory Caches for Multiple Servers
 
@@ -101,4 +102,5 @@ var redisCacheInvalidatorOptions = new RedisCacheInvalidatorOptions
 
 CachingServices.DefaultBackend = RedisCacheInvalidator.Create( localCache, connection, redisCacheInvalidatorOptions );
 ```
+
 

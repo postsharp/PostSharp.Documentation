@@ -3,6 +3,7 @@ uid: aspect-validation
 title: "Validating Aspect Usage"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses validating aspect usage in PostSharp. It explains how to use MulticastAttributeUsage, implement CompileTimeValidate, and use message sources for error handling. It also provides code examples."
 ---
 # Validating Aspect Usage
 

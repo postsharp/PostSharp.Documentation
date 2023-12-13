@@ -3,6 +3,7 @@ uid: inotifypropertychanged-mvvmlight
 title: "INotifyPropertyChanged and MVVM Light Toolkit"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use PostSharp with the MVVM Light Toolkit to simplify the implementation of the INotifyPropertyChanged interface, reducing boilerplate code and potential bugs."
 ---
 # INotifyPropertyChanged and MVVM Light Toolkit
 
@@ -68,4 +69,5 @@ namespace MvvmLightTest.ViewModel
 ```
 
 Note that it is no longer necessary to derive your class from the `ViewModelBase` class. Even if you suppress the inheritance from `ViewModelBase` class, you can still use other MVVM Light features in your code such as commands. However, if you do keep the inheritance from `ViewModelBase`, the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect will invoke the `RaisePropertyChanged` method of the `ViewModelBase` class, consistently with the coding practices of MVVM Light. 
+
 

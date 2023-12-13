@@ -3,6 +3,7 @@ uid: attribute-introduction
 title: "Introducing Custom Attributes"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document introduces PostSharp's ability to create custom attribute classes in C#, which can automatically decorate class members with custom attributes. It also explains how to copy attributes from one class to another."
 ---
 # Introducing Custom Attributes
 

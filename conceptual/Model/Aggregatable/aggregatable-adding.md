@@ -3,6 +3,7 @@ uid: aggregatable-adding
 title: "Annotating an Object Model for Parent/Child Relationships (Aggregatable)"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on using PostSharp to describe parent-child relationships in an object model, including steps to apply the Aggregatable aspect and custom attributes to classes, fields, and properties."
 ---
 # Annotating an Object Model for Parent/Child Relationships (Aggregatable)
 

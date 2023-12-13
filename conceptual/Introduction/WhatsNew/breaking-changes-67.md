@@ -3,6 +3,7 @@ uid: breaking-changes-67
 title: "Breaking Changes in PostSharp 6.7"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.7 introduces several breaking changes including build errors, changes in behavior, and deprecated platforms and features. It no longer supports .NET Framework 4.0 and Visual Studio 2015."
 ---
 # Breaking Changes in PostSharp 6.7
 
@@ -34,4 +35,5 @@ PostSharp 6.7 contains the following breaking changes:
 * Visual Studio 2015 is no longer supported. Visual Studio 2017 Update 1 (15.9) is now the oldest supported version.
 
 If you cannot update your development environments or your projects, we suggest that you use PostSharp 6.5 LTS.
+
 

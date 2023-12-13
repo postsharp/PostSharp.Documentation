@@ -3,6 +3,7 @@ uid: model-library
 title: ""
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document describes the Model Pattern Library of PostSharp product, highlighting features like INotifyPropertyChanged, Code Contracts, Aggregatable, and Disposable."
 ---
 The Model Pattern Library provides the following features:
 

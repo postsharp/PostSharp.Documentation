@@ -3,6 +3,7 @@ uid: breaking-changes-61
 title: "Breaking Changes in PostSharp 6.1"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.1 introduces breaking changes including a change in logging behavior, method signature changes in the API for building custom logging back-ends, and replacement of the Logger class. It also drops support for Visual Studio 2013 and .NET Core SDK 2.0."
 ---
 # Breaking Changes in PostSharp 6.1
 
@@ -29,4 +30,5 @@ PostSharp 6.1 contains the following breaking changes:
 * Visual Studio 2013 is no longer supported.
 
 * .NET Core SDK 2.0 is no longer supported as a build platform. See <xref:requirements> for details. 
+
 

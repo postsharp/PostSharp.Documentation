@@ -3,6 +3,7 @@ uid: logging-aspnetcore
 title: "Logging with ASP.NET Core"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging with ASP.NET Core. It details steps for writing PostSharp Logging events to ASP.NET Core and collecting ASP.NET Core logging events into PostSharp Logging."
 ---
 # Logging with ASP.NET Core
 

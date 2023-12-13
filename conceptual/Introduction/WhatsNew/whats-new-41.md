@@ -3,6 +3,7 @@ uid: whats-new-41
 title: "What's New in PostSharp 4.1"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 4.1 broadens its platform support, including Xamarin and Visual Studio 2015, and improves Windows Phone and Windows Store support. It allows building iOS and Android applications using Xamarin."
 ---
 # What's New in PostSharp 4.1
 
@@ -31,4 +32,5 @@ PostSharp Tools for Visual Studio have been almost completely rewritten to take 
 PostSharp Assistant guides you when you are implementing various patterns from Pattern Libraries so that you don't miss any detail. For instance, it would point at relevant documentation articles or at pieces of code that need to be fixed.
 
 PostSharp Assistant is supported in Visual Studio 2015.
+
 

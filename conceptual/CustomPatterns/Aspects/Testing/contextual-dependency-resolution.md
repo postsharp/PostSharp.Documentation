@@ -3,6 +3,7 @@ uid: contextual-dependency-resolution
 title: "Using Contextual Dependency Resolution"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses how to use contextual dependency resolution in PostSharp, including an example of a testable logging aspect with contextual dependency resolution."
 ---
 # Using Contextual Dependency Resolution
 
@@ -191,4 +192,5 @@ namespace DependencyResolution.Contextual.Test
     }
 }
 ```
+
 

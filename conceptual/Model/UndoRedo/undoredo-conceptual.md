@@ -3,6 +3,7 @@ uid: undoredo-conceptual
 title: "Understanding the Recordable Aspect"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the Recordable Aspect in PostSharp, which records changes performed on instances of a class. It covers topics like scopes, logical operations, atomic operations, primitive operations, restore points, implementing IEditableObject, callback methods, and memory consumption."
 ---
 # Understanding the Recordable Aspect
 
@@ -94,4 +95,5 @@ From callback methods, it is not allowed:
 The <xref:PostSharp.Patterns.Recording.Recorder.UndoOperations> and <xref:PostSharp.Patterns.Recording.Recorder.RedoOperations> collections hold strong references to all objects that have changes that can be undone or redone. This means that these objects cannot be garbage-collected and will remain in memory. 
 
 You can define the maximal number of operations available for undo thanks to the <xref:PostSharp.Patterns.Recording.Recorder.MaximumOperationsCount> property. 
+
 

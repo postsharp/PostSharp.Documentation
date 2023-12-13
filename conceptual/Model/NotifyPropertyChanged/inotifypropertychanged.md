@@ -3,6 +3,7 @@ uid: inotifypropertychanged
 title: "INotifyPropertyChanged"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses the use of PostSharp's INotifyPropertyChanged attribute, which simplifies and optimizes the process of binding objects to the UI by automatically implementing property change notifications."
 ---
 # INotifyPropertyChanged
 
@@ -32,4 +33,5 @@ PostSharp can completely eliminate all of that repetition for you. PostSharp's <
 | <xref:inotifypropertychanged-customization> | This section documents how to cope with the cases that cannot be automatically handled by the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect.  |
 | <xref:inotifypropertychanged-conceptual> | This section describes the principles and concepts on which the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect relies.  |
 | <xref:inotifypropertychanged-false-positives> | This section shows how to prevent notifications when the property value does not actually change. |
+
 

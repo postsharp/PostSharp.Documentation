@@ -3,6 +3,7 @@ uid: resource-introduction
 title: "Introducing Managed Resources"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document introduces PostSharp's AssemblyLevelAspect, which allows for programmatically adding resources at compile time in .NET, adding flexibility in determining which resources get embedded and how. It provides a coding example demonstrating the process."
 ---
 # Introducing Managed Resources
 

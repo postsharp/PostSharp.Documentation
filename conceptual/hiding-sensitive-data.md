@@ -1,5 +1,6 @@
 ---
 uid: logging-hiding-sensitive-data
+summary: "The document provides guidelines for hiding sensitive data when logging with PostSharp, to prevent potential security breaches and maintain user data confidentiality. It suggests using wrapper objects or marking parameters with [NotLogged] to avoid exposing sensitive data."
 ---
 
 # Hiding sensitive data when logging
@@ -77,3 +78,4 @@ The problem with the above approaches is that you can easily forget to exclude a
 The general idea is to deliberately use well-known passwords or sensitive data, such as `P@ssw0rd` or `4242424242424242`, to run your application through all possible execution paths, and to check that there is no occurrence of your well-known password in the output log.
 
 While executing this test, log verbosity must be set to its maximum level for all classes and methods.
+

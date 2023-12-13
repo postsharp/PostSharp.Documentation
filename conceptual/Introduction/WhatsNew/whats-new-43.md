@@ -3,6 +3,7 @@ uid: whats-new-43
 title: "What's New in PostSharp 4.3"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 4.3 focuses on improving existing features, offering improved build-time performance, a better debugging experience, more flexible deployment, and enhancements to the NotifyPropertyChanged aspect. It also simplifies PostSharp Express licensing and source code sharing."
 ---
 # What's New in PostSharp 4.3
 
@@ -62,4 +63,5 @@ You no longer need a PostSharp license to build code that someone else wrote and
 ## Automatic computing of build-time assembly binding redirections
 
 It is no longer necessary to manually create an assembly binding redirection file for PostSharp. For details, see <xref:assembly-binding-resolution>. 
+
 

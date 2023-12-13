@@ -3,6 +3,7 @@ uid: distributed-logging
 title: "Logging in a Distributed System"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses the challenges and solutions of implementing logging in a distributed system using PostSharp Logging. It explains how to prepare applications for distributed logging, use hierarchical context IDs, and compare generation strategies."
 ---
 # Logging in a Distributed System
 
@@ -78,4 +79,5 @@ The generation strategy of the <xref:PostSharp.Patterns.Diagnostics.Contexts.ILo
 | Performance | May cause thread contention on highly loaded systems because several threads may be trying to get exclusive access to the global counter at the same time. | No thread contention issue, but more CPU time required to render the id. |
 | Ordering | Preserving time, but not causality (parallel async calls are mixed). | Preserving causality, but not time (parallel async calls are separated from each other). |
 | Filtering | Only based on cross-process boundaries (see discussion on <xref:PostSharp.Patterns.Diagnostics.Contexts.LoggingContext.SyntheticParentId> below).  | Based on any context (external activity, method, custom in-process activity). |
+
 

@@ -3,6 +3,7 @@ uid: caching-value-adapters
 title: "Caching Special Types with Value Adapters"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use PostSharp's value adapters to cache special types that cannot be directly cached. It also provides instructions for implementing a custom value adapter."
 ---
 # Caching Special Types with Value Adapters
 
@@ -136,4 +137,5 @@ True
 Cache hit for null:
 True
 ```
+
 

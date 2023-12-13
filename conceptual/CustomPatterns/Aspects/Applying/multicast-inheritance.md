@@ -3,6 +3,7 @@ uid: multicast-inheritance
 title: "Understanding Aspect Inheritance"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains aspect inheritance in PostSharp, including the difference between strict and multicast inheritance. It also discusses how to avoid duplicate aspects."
 ---
 # Understanding Aspect Inheritance
 

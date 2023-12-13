@@ -3,6 +3,7 @@ uid: whats-new-68
 title: "What's New in PostSharp 6.8"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.8 offers support for .NET 5 and C# 9, includes improvements in logging, and provides usage measurement for Per-Usage. It also features automatic instrumentation of ASP.NET Core and HttpClient."
 ---
 # What's New in PostSharp 6.8
 
@@ -30,4 +31,5 @@ PostSharp 6.8 includes several improvements in logging:
 ## Usage measurement for Per-Usage
 
 It is now possible to know exactly how many lines of code you would be consuming with a Per-Usage Subscription even if you don't have one yet. Documentation of this feature is no longer available as per-usage licenses are no longer offered. 
+
 

@@ -3,6 +3,7 @@ uid: undoredo-operation-name
 title: "Customizing Undo/Redo Operation Names"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides detailed steps on how to customize Undo/Redo operation names in PostSharp, including default operation naming algorithm, setting operation name declaratively and dynamically, and using the OperationFormatter class."
 ---
 # Customizing Undo/Redo Operation Names
 
@@ -212,4 +213,5 @@ class MyOperationFormatter : OperationFormatter
              }
          }
 ```
+
 

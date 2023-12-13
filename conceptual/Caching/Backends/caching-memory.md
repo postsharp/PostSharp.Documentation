@@ -3,6 +3,7 @@ uid: caching-memory
 title: "Using In-Memory Cache"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use in-memory caching in PostSharp. It provides instructions for .NET Framework and .NET Core applications, using two different back-end classes."
 ---
 # Using In-Memory Cache
 
@@ -47,4 +48,5 @@ To use an instance implementing the `Microsoft.Extensions.Caching.Memory.IMemory
 
 
 See [Cache in-memory in ASP.NET Core on MSDN](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-3.1) for more information on the use of IMemoryCache. 
+
 

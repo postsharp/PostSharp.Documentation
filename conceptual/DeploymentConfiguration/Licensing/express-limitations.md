@@ -3,6 +3,7 @@ uid: express-limitations
 title: "PostSharp Essentials"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp Essentials is a free edition of PostSharp with unlimited free features and premium features limited to 1,000 lines of code. Premium features include semantic advising of async methods, instrumenting explicit properties, production mode logging, and integration with higher levels of PostSharp SDK."
 ---
 # PostSharp Essentials
 
@@ -64,4 +65,5 @@ If you don't understand why PostSharp is requiring a commercial license, you can
 ```none
 msbuild /t:Rebuild /v:detailed /p:PostSharpTrace=Licensing > msbuild.log
 ```
+
 

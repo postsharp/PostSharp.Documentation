@@ -3,6 +3,7 @@ uid: method-decorator
 title: "Injecting Behaviors Before and After Method Execution"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides an in-depth guide on how to use the PostSharp.Aspects.OnMethodBoundaryAspect aspect in PostSharp for injecting behaviors before and after method execution. It covers various scenarios including handling exceptions, sharing state between advices, working with async and iterator methods."
 ---
 # Injecting Behaviors Before and After Method Execution
 

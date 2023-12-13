@@ -3,6 +3,7 @@ uid: module-initializer
 title: "Executing Code Just After the Assembly is Loaded"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use the PostSharp.Aspects.ModuleInitializerAttribute attribute to implement module initializers in C# similar to Visual Basic."
 ---
 # Executing Code Just After the Assembly is Loaded
 

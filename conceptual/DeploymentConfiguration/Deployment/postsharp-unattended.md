@@ -3,6 +3,7 @@ uid: postsharp-unattended
 title: "Installing PostSharp Unattended"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "This document provides a detailed guide on how to install PostSharp, a user interface for Visual Studio, unattended using a script. It also includes a PowerShell 2.0 script for automation."
 ---
 # Installing PostSharp Unattended
 
@@ -133,4 +134,5 @@ Set-ItemProperty -Path $regPath -Name "LicenseKey" -Value $license
 
 Write-Host "Done"
 ```
+
 

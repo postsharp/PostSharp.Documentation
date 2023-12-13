@@ -3,6 +3,7 @@ uid: pattern-aware-compilers
 title: "Benefits of Pattern-Aware Compiler Extensions"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "Pattern-aware compiler extensions can enhance programming by reducing boilerplate code, improving software reliability, and making code easier to understand and modify. This allows faster development, easier onboarding of new team members, and future-proof architecture."
 ---
 # Benefits of Pattern-Aware Compiler Extensions
 
@@ -37,4 +38,5 @@ Because patterns are supported by the compiler extension (100% compatible with y
 * **Achieve a better division of labor**. Using a pattern-aware compiler makes the introduction of new or junior team members less onerous since they can focus on simpler, more business logic-oriented tasks rather than having to waste so much time learning complex architectural structures. 
 
 * **Implement a tighter feedback loop**. A pattern-aware compiler can validate that handwritten code respects a pattern or a model, and it can detect bugs at build time instead of during code reviews, testing, or in production. 
+
 

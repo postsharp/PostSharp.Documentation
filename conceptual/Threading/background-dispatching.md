@@ -3,6 +3,7 @@ uid: background-dispatching
 title: "Dispatching a Method to Background"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp allows for the execution of a method in a background thread, reducing the need for boiler plate code. This is achieved by adding the PostSharp.Patterns.Threading package and the BackgroundAttribute to the desired method. "
 ---
 # Dispatching a Method to Background
 

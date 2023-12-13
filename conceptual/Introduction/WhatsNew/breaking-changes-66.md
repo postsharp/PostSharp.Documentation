@@ -3,6 +3,7 @@ uid: breaking-changes-66
 title: "Breaking Changes in PostSharp 6.6"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.6 has introduced changes such as counting lines of code instead of classes for premium features and replacing automatic switch to Developer Mode in PostSharp Logging with an opt-in approach. "
 ---
 # Breaking Changes in PostSharp 6.6
 
@@ -21,4 +22,5 @@ For details about how we count lines of code, see <xref:licensing-counting-lines
 In previous versions, PostSharp Logging would automatically switch to Developer Mode according to the installed license. We found this approach unreliable and replaced it by an explicit opt-in approach.
 
 To enable development mode, set the `LoggingDeveloperMode` property to `true` in *postsharp.config*. See <xref:configuration-system> for details. 
+
 

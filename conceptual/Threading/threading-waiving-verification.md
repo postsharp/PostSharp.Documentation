@@ -3,6 +3,7 @@ uid: threading-waiving-verification
 title: "Opting In and Out From Thread Safety"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to opt in and out of thread safety in PostSharp by using the ExplicitlySynchronizedAttribute and EntryPointAttribute on methods and fields. It also warns about potential multithreading defects."
 ---
 # Opting In and Out From Thread Safety
 

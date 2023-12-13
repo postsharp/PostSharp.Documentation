@@ -3,6 +3,7 @@ uid: installation
 title: "Installing PostSharp Tools for Visual Studio"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to install PostSharp Tools for Visual Studio, including downloading, running the file, and completing the installation wizard."
 ---
 # Installing PostSharp Tools for Visual Studio
 

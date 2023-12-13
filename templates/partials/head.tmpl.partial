@@ -6,6 +6,8 @@
   <meta name="article-id" content="{{uid}}">
   <meta name="product" content="{{product}}">
   <meta name="categories" content="{{categories}}">
+  <meta name="description" content="{{summary}}">
+  
   <!-- Modified for PostSharp documentation. -->
   {{#redirect_url}}
     <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">

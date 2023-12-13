@@ -3,6 +3,7 @@ uid: deployment-configuration
 title: "Deployment and Configuration"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidance on deploying and configuring PostSharp in complex situations, addressing challenges faced by large teams and regulated environments."
 ---
 # Deployment and Configuration
 
@@ -19,3 +20,4 @@ This part is composed of the following chapters.
 | <xref:deployment> | This chapter describes how to install, uninstall and upgrade PostSharp, how to register license keys and to cope with build servers. |
 | <xref:licensing> | This chapter addresses a few technical questions regarding licensing, license keys and license servers. |
 | <xref:configuration> | This chapter explains configuration settings and how to modify them. |
+

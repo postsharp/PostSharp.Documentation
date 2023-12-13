@@ -3,6 +3,7 @@ uid: debugging-runtime
 title: "Debugging Run-Time Logic"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp enhances debugging experience by allowing users to debug aspect code and show aspect code in the call stack window. Users can also disable PostSharp debugger extensions if needed."
 ---
 # Debugging Run-Time Logic
 
@@ -54,4 +55,5 @@ PostSharp improves your debugging experience by installing extensions for the Vi
 
 > [!WARNING]
 > If you build a solution with debugging extensions enabled, you must debug the solution with an instance of Visual Studio where debugging extensions are enabled, otherwise your debugging experience will be frustrating.
+
 

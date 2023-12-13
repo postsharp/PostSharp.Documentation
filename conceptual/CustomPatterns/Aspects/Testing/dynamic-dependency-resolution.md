@@ -3,6 +3,7 @@ uid: dynamic-dependency-resolution
 title: "Using Dynamic Dependency Resolution"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses dynamic dependency resolution in PostSharp, which allows different configurations for testing and production. It presents an example of a testable logging aspect with a global MEF service container."
 ---
 # Using Dynamic Dependency Resolution
 
@@ -178,4 +179,5 @@ namespace DependencyResolution.Dynamic.Test
     }
 }
 ```
+
 

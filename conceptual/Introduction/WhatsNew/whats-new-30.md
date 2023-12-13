@@ -3,6 +3,7 @@ uid: whats-new-30
 title: "What's New in PostSharp 3.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 3.0 offers ready-made implementations of popular design patterns, improved support for Windows Phone, Silverlight, Windows Store, and Portable Class Library, and better discoverability through smart tags and wizards in Visual Studio."
 ---
 # What's New in PostSharp 3.0
 
@@ -47,4 +48,5 @@ PostSharp no longer requires specific support from obfuscators, as it no longer 
 ## Deprecation of old platforms
 
 Support for Silverlight 3, .NET Compact Framework, and Mono has been deprecated.
+
 

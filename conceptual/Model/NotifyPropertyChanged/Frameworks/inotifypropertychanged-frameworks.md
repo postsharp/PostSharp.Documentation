@@ -3,6 +3,7 @@ uid: inotifypropertychanged-frameworks
 title: "Integrating the NotifyPropertyChanged Aspect with UI Frameworks"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses how to integrate the NotifyPropertyChanged Aspect from PostSharp with various UI frameworks to simplify the creation of XAML applications."
 ---
 # Integrating the NotifyPropertyChanged Aspect with UI Frameworks
 
@@ -21,4 +22,5 @@ This list of supported frameworks is not exhaustive. If the framework you are us
 |-------|-------------|
 | <xref:inotifypropertychanged-caliburnmicro> | This section shows how to use the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect with the Caliburn.Micro framework.  |
 | <xref:inotifypropertychanged-mvvmlight> | This section shows how to use the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect with the MVVM Light Toolkit.  |
+
 

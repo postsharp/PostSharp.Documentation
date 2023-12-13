@@ -3,6 +3,7 @@ uid: simple-tests
 title: "Testing Run-Time Logic"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to design a test strategy for aspects in PostSharp. It emphasizes the need for large test coverage and provides an example of testing a caching aspect."
 ---
 # Testing Run-Time Logic
 
@@ -126,4 +127,5 @@ namespace Samples
     }
 }
 ```
+
 

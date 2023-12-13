@@ -3,6 +3,7 @@ uid: requirements-20230
 title: "PostSharp 2023.0: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 2023.0 supports C# 11.0 or earlier and VB 16.9 or earlier. It requires Microsoft Visual Studio 2019 or 2022, .NET Framework 4.7.2 or later, and is compatible with various operating systems and .NET SDK versions. It also supports Xamarin and Blazor via .NET Standard."
 ---
 # PostSharp 2023.0: Requirements and Compatibility
 
@@ -160,4 +161,5 @@ PostSharp is not compatible with the following products or features:
 | ASP.NET Web Sites | Not built using MSBuild | Convert the ASP.NET Web Site to an ASP.NET Web Application. |
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Mono, Unity3D | Unsupported | None. |
+
 

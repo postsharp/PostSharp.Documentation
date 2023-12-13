@@ -3,6 +3,7 @@ uid: synchronized
 title: "Synchronized Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the Synchronized threading model in C#. It details how to apply the model, its differences from the 'lock(this)' statement, and how it works with object trees."
 ---
 # Synchronized Threading Model
 

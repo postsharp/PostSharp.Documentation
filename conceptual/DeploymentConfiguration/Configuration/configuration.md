@@ -3,6 +3,7 @@ uid: configuration
 title: "Configuration"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp, a metaprogramming tool, requires minimal custom configuration and sources its default settings from MSBuild integration, NuGet integration, and PostSharp Tools. Advanced configurations can be implemented if needed. "
 ---
 # Configuration
 
@@ -17,4 +18,5 @@ For most use cases, PostSharp does not require any custom configuration. PostSha
 Even if most configuration settings are correct by default, you may want to understand the configuration system to troubleshoot configuration and installation issues, or simply to implement more advanced configuration scenarios.
 
 PostSharp can be configured using the Visual Studio user interface, by editing MSBuild project files, or by editing PostSharp configuration files.
+
 

@@ -3,6 +3,7 @@ uid: configuration-consuming
 title: "Accessing Configuration from Source Code"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to access configuration elements from user code in PostSharp, including properties and custom sections, using specific methods."
 ---
 # Accessing Configuration from Source Code
 

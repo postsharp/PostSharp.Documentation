@@ -3,6 +3,7 @@ uid: thread-safety-policy
 title: "Making a Whole Project or Solution Thread Safe"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to implement thread-safety policies in a project or solution using PostSharp threading models, either manually or via PostSharp Tools for Visual Studio."
 ---
 # Making a Whole Project or Solution Thread Safe
 

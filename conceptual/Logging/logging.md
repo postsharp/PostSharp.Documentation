@@ -3,6 +3,7 @@ uid: logging
 title: "Logging"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp Logging is a tool that allows detailed, customizable logging for applications. It supports various logging frameworks and structured log servers, and is especially useful for distributed systems."
 ---
 # Logging
 

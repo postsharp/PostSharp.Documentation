@@ -3,6 +3,7 @@ uid: requirements-61
 title: "PostSharp 6.1: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.1 supports C# 7.3 and VB 15.5, and requires Microsoft Visual Studio 2015 Update 3 or 2017, .NET Framework 4.7.1 or later, and Windows 10. It's compatible with ASP.NET Application projects, Microsoft Code Analysis, Code Contracts and obfuscators, but not with ASP.NET Site projects, Visual Studio 2013, 2012, 2010, and others."
 ---
 # PostSharp 6.1: Requirements and Compatibility
 
@@ -123,4 +124,5 @@ PostSharp is not compatible with the following products or features:
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Xamarin | Support suspended (deprioritized because of low customer demand) | Use PostSharp 4.3. Contact PostSharp support team to discuss prioritization. |
 | Mono, Unity3D | Unsupported | None. |
+
 

@@ -3,6 +3,7 @@ uid: multicast-reflection
 title: "Reflecting Aspect Instances at Runtime"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to make attribute multicasting in PostSharp visible at runtime using the PersistMetaData property in the MulticastAttributeUsageAttribute class."
 ---
 # Reflecting Aspect Instances at Runtime
 
@@ -24,4 +25,5 @@ For instance:
 
 > [!NOTE]
 > Multicasting of attributes is not limited only to PostSharp aspects. You can multicast any custom attribute in your codebase in the same way as shown here. If a custom attribute is multicast with the <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.PersistMetaData> property set to `true`, when reflected on the compiled code will look as if you had manually added the custom attribute in all of the locations. 
+
 

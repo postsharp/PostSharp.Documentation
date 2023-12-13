@@ -3,6 +3,7 @@ uid: installation-silent
 title: "Installing PostSharp Tools for Visual Studio Silently"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to silently install PostSharp Tools for Visual Studio, a user interface and build component tool, through a command line interface."
 ---
 # Installing PostSharp Tools for Visual Studio Silently
 

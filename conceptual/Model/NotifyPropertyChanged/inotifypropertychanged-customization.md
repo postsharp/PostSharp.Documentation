@@ -3,6 +3,7 @@ uid: inotifypropertychanged-customization
 title: "Handling Corner Cases of the NotifyPropertyChanged Aspect"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide to handling corner cases of the NotifyPropertyChanged aspect in PostSharp. It covers ignoring property changes, handling complex data flows, dependencies on pure methods, and collections."
 ---
 # Handling Corner Cases of the NotifyPropertyChanged Aspect
 

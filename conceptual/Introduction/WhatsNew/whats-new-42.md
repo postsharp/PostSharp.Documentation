@@ -3,6 +3,7 @@ uid: whats-new-42
 title: "What's New in PostSharp 4.2"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 4.2 introduces improvements to Aggregatable Pattern, NotifyPropertyChanged, Threading Models, and Aspect Framework. It also adds support for ASP.NET v5, Visual Basic, and IncrediBuild, along with code saving metrics."
 ---
 # What's New in PostSharp 4.2
 
@@ -97,4 +98,5 @@ If you use IncrediBuild, PostSharp can now be executed on a remote computer. Ple
 ## Support for ASP.NET v5 (Experimental)
 
 You can now use PostSharp in ASP.NET v5 code. The support is currently limited to the .NET Framework (CoreCLR is not supported). Support is not built-in in the normal PostSharp distribution. You need to download the *PostSharp.Dnx* project from GitHub. Please see [https://github.com/postsharp/PostSharp.Dnx](https://github.com/postsharp/PostSharp.Dnx) for details. 
+
 

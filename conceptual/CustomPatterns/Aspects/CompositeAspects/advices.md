@@ -3,6 +3,7 @@ uid: advices
 title: "Adding Behaviors to Existing Members"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to add new behaviors to existing members in PostSharp using advices and pointcuts. It explains the types of advices, pointcuts, and how to group them."
 ---
 # Adding Behaviors to Existing Members
 

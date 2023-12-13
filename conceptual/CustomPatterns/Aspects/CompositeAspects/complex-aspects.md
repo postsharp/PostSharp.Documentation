@@ -3,6 +3,7 @@ uid: complex-aspects
 title: "Developing Composite Aspects"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses composite aspects in PostSharp's aspect-oriented development. It explains advices and pointcuts, and how to add functionalities to aspects."
 ---
 # Developing Composite Aspects
 
@@ -27,3 +28,4 @@ Advices are covered in the following sections:
 | <xref:advices> | Advices with equivalent functionality as <xref:PostSharp.Aspects.OnMethodBoundaryAspect>, <xref:PostSharp.Aspects.MethodInterceptionAspect>, <xref:PostSharp.Aspects.LocationInterceptionAspect>, and <xref:PostSharp.Aspects.EventInterceptionAspect>.  |
 | <xref:code-injections> | Make the aspect introduce an interface into the target class. The interface is implemented by the aspect itself. |
 | <xref:members> | Make the aspect introduce a new method, property or event into the target class. The new member is implemented by the aspect itself. Conversely, the aspect can import a member of the target so that it can invoke it through a delegate. |
+

@@ -3,6 +3,7 @@ uid: caching-dependencies
 title: "Working with Cache Dependencies"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on working with cache dependencies in PostSharp, including adding string dependencies, adding object-oriented dependencies, and suspending the collection of cache dependencies. It includes code examples for each scenario."
 ---
 # Working with Cache Dependencies
 
@@ -247,4 +248,5 @@ In the next example, the dependencies of `ChildMethod` (a side-effect method cal
        return "{MyObject}";
     }
 ```
+
 

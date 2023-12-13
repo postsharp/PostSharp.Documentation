@@ -3,6 +3,7 @@ uid: requirements-68
 title: "PostSharp 6.8: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides detailed information about the requirements and compatibility of PostSharp 6.8, including supported programming languages, development workstations, build servers, end-user devices, and known incompatibilities."
 ---
 # PostSharp 6.8: Requirements and Compatibility
 
@@ -146,4 +147,5 @@ PostSharp is not compatible with the following products or features:
 | ASP.NET Web Sites | Not built using MSBuild | Convert the ASP.NET Web Site to an ASP.NET Web Application. |
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Mono, Unity3D | Unsupported | None. |
+
 

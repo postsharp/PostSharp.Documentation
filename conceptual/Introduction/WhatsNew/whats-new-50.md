@@ -3,6 +3,7 @@ uid: whats-new-50
 title: "What's New in PostSharp 5.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 5.0 introduces breaking changes, dropping support for Windows Phone and WinRT, and adding support for .NET Core, .NET Standard and Visual Studio 2017. It also features a revamped logging system, a new caching framework, improved support for async methods, and new aspects for MVVM."
 ---
 # What's New in PostSharp 5.0
 
@@ -77,4 +78,5 @@ Let's face it, these platforms were a failure. We no longer want to pay a price 
 ## Suspended support for Xamarin
 
 Usage data show that only a few customers are using PostSharp with Xamarin, so we demoted the priority of this platform. It is not supported in PostSharp 5.0. Affected customers should contact our support team. We're considering to support Xamarin through .NET Standard if there is significant demand for it.
+
 

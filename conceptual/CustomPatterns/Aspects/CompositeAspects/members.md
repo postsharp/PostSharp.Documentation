@@ -3,6 +3,7 @@ uid: members
 title: "Accessing Members of the Target Class"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp allows developers to import a delegate of a target class method, property, or event into the aspect class. This feature helps encapsulate more design patterns using aspects. It also provides a robust and predictable way to handle situations when multiple advices try to introduce or import the same member. "
 ---
 # Accessing Members of the Target Class
 

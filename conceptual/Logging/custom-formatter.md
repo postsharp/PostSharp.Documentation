@@ -3,6 +3,7 @@ uid: custom-formatter
 title: "Implementing a Custom Formatter"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to implement a custom formatter in PostSharp for two contexts: logging and caching. It details when to use a custom formatter, how to implement the IFormattable interface, and how to register the custom formatter."
 ---
 # Implementing a Custom Formatter
 

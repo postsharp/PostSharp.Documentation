@@ -3,6 +3,7 @@ uid: binary-formatter-security
 title: "BinaryFormatter security"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The .NET Core 3.1 BinaryFormatter, used for binary serialization, is considered insecure. PostSharp aspects are serialized at compile-time, but the vulnerability doesn't apply to PostSharp's use of serialization. The recommended action is to use PortableFormatter for serializing aspects."
 ---
 # BinaryFormatter security
 

@@ -3,6 +3,7 @@ uid: multicast-conceptual
 title: "Understanding Attribute Multicasting"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the concept of Attribute Multicasting in PostSharp. It outlines how multicast attributes are applied, the process of filtering target elements of code, user and developer-specified filtering, and overriding filtering attributes."
 ---
 # Understanding Attribute Multicasting
 
@@ -104,4 +105,5 @@ Suppose we have two classes `A` and `B`, `B` being derived from `A`. Both `A` an
 In other words, the <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute> custom attribute is inherited. It can be overwritten in derived classes, but derived class cannot *enlarge* the set of possible targets. They can only *restrict* it. 
 
 Similarly (and hopefully predictably), the aspect user is subject to the same rule: they can restrict the set of possible targets supported by the aspect, but cannot enlarge it.
+
 

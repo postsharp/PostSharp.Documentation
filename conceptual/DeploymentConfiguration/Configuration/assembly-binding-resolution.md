@@ -3,6 +3,7 @@ uid: assembly-binding-resolution
 title: "Resolution of Assembly Binding Redirections"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp follows assembly binding redirections at compile time and stores the assembly binding redirection in a file named PostSharpHost.config. Users can override the default assembly redirections if required."
 ---
 # Resolution of Assembly Binding Redirections
 
@@ -74,4 +75,5 @@ If you disable default binding redirections, you may want to specify a file with
 ```
 
 With this configuration PostSharp uses explicit assembly binding redirection configuration from the `web.config` file. 
+
 

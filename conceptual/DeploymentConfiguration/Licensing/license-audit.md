@@ -3,6 +3,7 @@ uid: license-audit
 title: "License Audit"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp uses an asynchronous, fail-safe license audit instead of license activation, auditing license keys' use on each client machine and periodically reporting to their license servers. It doesn't require a permanent network connection and won't fail if the license server is unavailable. "
 ---
 # License Audit
 

@@ -3,6 +3,7 @@ uid: actor
 title: "Actor Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the Actor Threading Model in PostSharp, which provides a race-free programming model by routing method calls to a single message queue processed by a single thread. It offers a guide on how to apply the model, examples, and potential constraints."
 ---
 # Actor Threading Model
 

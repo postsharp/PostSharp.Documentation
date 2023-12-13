@@ -3,6 +3,7 @@ uid: inotifypropertychanged-caliburnmicro
 title: "INotifyPropertyChanged and Caliburn.Micro"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses how to use PostSharp with Caliburn.Micro to simplify the implementation of the INotifyPropertyChanged interface, reducing the need for boilerplate code."
 ---
 # INotifyPropertyChanged and Caliburn.Micro
 
@@ -73,4 +74,5 @@ namespace CaliburnMicroWithPostSharp
 ```
 
 Note that it is no longer necessary to derive your class from the `PropertyChangedBase` class. Even if you suppress the inheritance from `PropertyChangedBase` class, you can still use other Caliburn.Micro features in your code such as commands. However, if you do keep the inheritance from `PropertyChangedBase`, the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect will invoke the `NotifyOfPropertyChange` method of the `PropertyChangedBase` class, consistently with the coding practices of Caliburn.Micro. 
+
 

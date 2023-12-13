@@ -3,6 +3,7 @@ uid: cache-locking
 title: "Preventing Concurrent Execution of Cached Methods"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp offers a lock manager feature to prevent concurrent execution of resource-heavy methods. It provides two lock managers: NullLockManager and LocalLockManager. Users can configure lock timeouts and implement a distributed lock manager using third-party implementations."
 ---
 # Preventing Concurrent Execution of Cached Methods
 
@@ -68,4 +69,5 @@ public class IgnoreLockStrategy : IAcquireLockTimeoutStrategy
 Implementing a distributed locking algorithm is a highly complex task and we at PostSharp decided not to get involved in this business (just as we do not provide the implementation of a cache itself). However, PostSharp gives you the ability to use any third-party implementation.
 
 To create make your lock manager work with the caching aspect, you should implement the <xref:PostSharp.Patterns.Caching.Locking.ILockManager> and <xref:PostSharp.Patterns.Caching.Locking.ILockHandle> interfaces. 
+
 

@@ -3,6 +3,7 @@ uid: semantic-advising
 title: "Semantic Advising of Iterator and Async Methods"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses semantic advising in PostSharp for async and iterator methods in C# and VB. It explains how to enable and disable semantic advising and how to handle situations where semantic advising is not available."
 ---
 # Semantic Advising of Iterator and Async Methods
 

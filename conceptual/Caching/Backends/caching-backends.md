@@ -3,6 +3,7 @@ uid: caching-backends
 title: "Caching Back-Ends"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses the use of the CacheAttribute in PostSharp with different caching frameworks or servers, known as caching backends. It provides guides on storing cached values using the MemoryCache class or Redis."
 ---
 # Caching Back-Ends
 

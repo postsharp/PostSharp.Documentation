@@ -3,6 +3,7 @@ uid: whats-new-21
 title: "What's New in PostSharp 2.1"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 2.1 introduces several improvements, including build-time performance, compatibility with obfuscators and Code Contracts, support for NuGet and Silverlight 5.0, and a new license server."
 ---
 # What's New in PostSharp 2.1
 
@@ -47,4 +48,5 @@ Silverlight 5.0 is added to the list of supported platforms.
 ## License server
 
 The license server helps customer manage and deploy license keys. The license server is a simple ASP.NET application that can be deployed easily on any Windows machine. Its use is optional.
+
 

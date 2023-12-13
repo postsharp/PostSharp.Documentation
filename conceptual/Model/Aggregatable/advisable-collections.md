@@ -3,6 +3,7 @@ uid: advisable-collections
 title: "Working With Child Collections"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a comprehensive guide on working with child collections in PostSharp, focusing on advisable collections, their implementation, and their advantages over standard .NET collections. It also discusses parent surrogates, enumerating children, collections of references, and using immutable collections."
 ---
 # Working With Child Collections
 

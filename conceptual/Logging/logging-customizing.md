@@ -3,6 +3,7 @@ uid: logging-customizing
 title: "Formatting Log Records"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "This document explains how to customize log records in PostSharp. It covers different scenarios and procedures, editing a build-time configuration, editing run-time options, implementing a custom formatter, and overriding a backend."
 ---
 # Formatting Log Records
 

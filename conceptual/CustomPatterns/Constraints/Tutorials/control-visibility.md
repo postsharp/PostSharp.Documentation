@@ -3,6 +3,7 @@ uid: control-visibility
 title: "Controlling Component Visibility Beyond Private and Internal"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp offers the ability to define component access rules beyond the scope of private and internal keywords, allowing developers to restrict access to a component only from other components in the same namespace or specific types. It also supports error escalation and warning suppression."
 ---
 # Controlling Component Visibility Beyond Private and Internal
 

@@ -3,6 +3,7 @@ uid: license-server-admin
 title: "Installing and Servicing PostSharp License Server"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on how to install, service, and manage the PostSharp License Server. It covers system requirements, installation steps, license key installation, server testing, usage display, lease cancellation, and maintenance."
 ---
 # Installing and Servicing PostSharp License Server
 
@@ -150,4 +151,5 @@ Using SQL Agent, you can schedule a job that purges old records of the `Lease` t
 ```sql
 DELETE FROM [dbo].[Leases] WHERE EndTime < DATEADD( day, -90, GETDATE() );
 ```
+
 

@@ -3,6 +3,7 @@ uid: how-it-works
 title: "How Does PostSharp Work"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp is an extension to the C# or VB compiler that integrates into the build process, post-processing the compiler's output. It uses MSIL technology to transform and validate the intermediate assembly."
 ---
 # How Does PostSharp Work
 
@@ -21,4 +22,5 @@ See <xref:configuration-msbuild> for details.
 PostSharp post-processes the compiler output by reading and disassembling the intermediate assembly, executing the required transformations and validations, and writing the final assembly back to disk.
 
 Although this might sound magic or dangerous, PostSharp's MSIL technology is stable and mature, and has been used by tens of thousands of projects since 2004. Other .NET products relying on MSIL transformation or analysis include Microsoft Code Contracts, Microsoft Code Analysis, and Microsoft Code Coverage.
+
 

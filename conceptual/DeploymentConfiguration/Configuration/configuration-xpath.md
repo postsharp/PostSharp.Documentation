@@ -3,6 +3,7 @@ uid: configuration-xpath
 title: "Using Expressions in Configuration Files"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use expressions in PostSharp configuration files, which work similarly to XSLT and are interpreted as XPath expressions. It covers accessing properties, using functions and operators, and mixing expressions with literal strings."
 ---
 # Using Expressions in Configuration Files
 
@@ -57,4 +58,5 @@ An attribute value can contain both text and expressions. This is illustrated in
           <Property Name="C" Value="C;{$B};{$A}" />  <!-- Evaluates to C;B;A;A -->
         </Project>
 ```
+
 

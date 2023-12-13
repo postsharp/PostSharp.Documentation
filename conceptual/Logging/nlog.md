@@ -3,6 +3,7 @@ uid: nlog
 title: "Logging with NLog"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging and NLog together, including how to write PostSharp Logging events to NLog and collect NLog events into PostSharp Logging."
 ---
 # Logging with NLog
 

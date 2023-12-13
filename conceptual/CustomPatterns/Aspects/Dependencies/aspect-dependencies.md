@@ -3,6 +3,7 @@ uid: aspect-dependencies
 title: "Coping with Several Aspects on the Same Target"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how PostSharp provides a framework to manage dependencies between aspects in aspect-oriented programming, preventing conflicts and ensuring predictable order of execution. It also covers aspect dependency custom attributes and types of aspect dependency relationships."
 ---
 # Coping with Several Aspects on the Same Target
 

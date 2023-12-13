@@ -3,6 +3,7 @@ uid: multicast-override
 title: "Overriding and Removing Aspect Instances"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to override and remove aspect instances in PostSharp. It covers applying multiple instances of the same aspect, manually and automatically overriding an aspect instance, and deleting an aspect instance."
 ---
 # Overriding and Removing Aspect Instances
 
@@ -213,4 +214,5 @@ This is useful, for instance, when you need to exclude a target from the matchin
             }
           }
 ```
+
 

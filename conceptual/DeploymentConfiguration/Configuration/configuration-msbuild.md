@@ -3,6 +3,7 @@ uid: configuration-msbuild
 title: "Configuring Projects Using MSBuild"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidance on how to configure PostSharp projects using MSBuild properties, including setting properties with a text editor, environment variables, and from the command line."
 ---
 # Configuring Projects Using MSBuild
 

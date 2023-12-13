@@ -3,6 +3,7 @@ uid: logging-exception-handling
 title: "Handling Logging Exceptions"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp's logging feature catches all exceptions, preventing application failures due to logging issues. It allows users to override the default exception handling behavior, which logs messages, disables the logging backend, and can't catch exceptions thrown in exception filters."
 ---
 # Handling Logging Exceptions
 

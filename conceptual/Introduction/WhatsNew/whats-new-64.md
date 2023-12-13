@@ -3,6 +3,7 @@ uid: whats-new-64
 title: "What's New in PostSharp 6.4"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.4 introduces full support for .NET Core 3.0, .NET Standard 2.1, and C# 8.0. It also fixes field and property initializer interception, allows free ordering of OnMethodBoundary aspects, and can export build-time profiling information to a CSV file."
 ---
 # What's New in PostSharp 6.4
 
@@ -48,4 +49,5 @@ For details, see <xref:semantic-advising>
 This option is meant to help us diagnose performance issues with PostSharp when there are several projects in the solution. It is now possible to export build-time profiling information to a CSV file. This performance file can be shared by several projects, and then analyzed by a tool like Pivot Table in Excel. For details, see the `BenchmarkOutputFile` property in <xref:configuration-postsharp>. 
 
 Note that this feature is meant to be used by our support team only. It currently does not include any information that could be useful to users.
+
 

@@ -3,6 +3,7 @@ uid: breaking-changes-50
 title: "Breaking Changes in PostSharp 5.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 5.0 introduces breaking changes including silent changes of behavior, build errors, build warnings, deprecated platforms, and licensing changes. Users need to modify their code accordingly."
 ---
 # Breaking Changes in PostSharp 5.0
 
@@ -49,4 +50,5 @@ PostSharp 5.0 contains the following breaking changes:
 
 > [!TIP]
 > Please contact our sales team if you are a commercial user and are affected by the licensing changes. We will find a solution that is acceptable for both.
+
 

@@ -3,6 +3,7 @@ uid: global-service-locator
 title: "Using a Global Service Locator"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidance on using a global service locator in PostSharp for dependency injection, to avoid wasting memory. It includes example code for a logging aspect."
 ---
 # Using a Global Service Locator
 
@@ -165,4 +166,5 @@ namespace DependencyResolution.GlobalServiceLocator.Test
     }
 }
 ```
+
 

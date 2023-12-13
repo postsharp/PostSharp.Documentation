@@ -3,6 +3,7 @@ uid: whats-new-66
 title: "What's New in PostSharp 6.6"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.6 introduces PostSharp Community, a free edition replacing PostSharp Essentials. It also includes per-usage pricing, open access to PostSharp SDK, and supports community add-ins."
 ---
 # What's New in PostSharp 6.6
 
@@ -33,4 +34,5 @@ Access to the lower layers of PostSharp SDK is included in all editions includin
 Additionally, we're supporting an open-source initiative to create or port add-ins for PostSharp. See [our GitHub organization](https://github.com/postsharp) for details. 
 
 Community add-ins will be maintained as different projects, so we won't report progress in this documentation.
+
 

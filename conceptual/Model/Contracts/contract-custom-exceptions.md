@@ -3,6 +3,7 @@ uid: contract-custom-exceptions
 title: "Customizing Contract Exceptions"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to customize contract exceptions in PostSharp by overriding exception types for built-in contracts, using localization service in custom exception factories, and using the exception factory from custom contracts."
 ---
 # Customizing Contract Exceptions
 

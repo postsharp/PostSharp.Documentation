@@ -3,6 +3,7 @@ uid: undoredo-recorder
 title: "Assigning Recorders Manually"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to manually assign recorders in PostSharp by either overriding the default RecorderProvider or attaching a recorder manually to objects where needed."
 ---
 # Assigning Recorders Manually
 
@@ -98,4 +99,5 @@ The second way that you can add a <xref:PostSharp.Patterns.Recording.Recorder> t
 
 > [!NOTE]
 > An object must always have the same <xref:PostSharp.Patterns.Recording.Recorder> as its parent has unless the parent has no <xref:PostSharp.Patterns.Recording.Recorder> assigned. Because of this, whenever a <xref:PostSharp.Patterns.Recording.Recorder> is assigned to an object, all of the child objects will have that same <xref:PostSharp.Patterns.Recording.Recorder> assigned to them. However, if you detach a child object from its parent the child object's assigned <xref:PostSharp.Patterns.Recording.Recorder> will not be detached. For more information about parent-child relationships, see <xref:aggregatable>. 
+
 

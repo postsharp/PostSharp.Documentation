@@ -3,6 +3,7 @@ uid: caching-keys
 title: "Customizing Cache Keys"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on customizing cache keys in PostSharp, including default key generation logic, overriding the ToString method, implementing a custom cache key formatter, excluding parameters from a cache key, changing the maximal length of a cache key, and implementing a custom cache key builder."
 ---
 # Customizing Cache Keys
 
@@ -146,6 +147,7 @@ All the options described above modify the behavior of formatting of a parameter
 
 
 3. Assign an instance of you new cache key builder to the <xref:PostSharp.Patterns.Caching.CachingServices.DefaultKeyBuilder> property. 
+
 
 
 

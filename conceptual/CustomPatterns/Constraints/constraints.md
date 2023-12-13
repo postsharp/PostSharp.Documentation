@@ -3,6 +3,7 @@ uid: constraints
 title: "Validating Architecture"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp allows users to validate their source code against architecture and design rules, known as constraints, at build time. It also supports custom constraints."
 ---
 # Validating Architecture
 
@@ -13,4 +14,5 @@ PostSharp provides ready-made constraints for the following scenarios:
 * <xref:control-implementation>
 * <xref:control-visibility>
 Additionally, you can develop custom constraints to enforce your own design rules. For details, see <xref:custom-constraints>. 
+
 

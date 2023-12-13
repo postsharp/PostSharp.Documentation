@@ -3,6 +3,7 @@ uid: code-injections
 title: "Introducing Interfaces, Methods, Properties and Events into Existing Classes"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to add properties, methods, or interfaces to existing classes using PostSharp, a tool for aspect-oriented programming in .NET. It covers how to introduce interfaces, methods, properties, control visibility of introduced members, and handle potential conflicts."
 ---
 # Introducing Interfaces, Methods, Properties and Events into Existing Classes
 

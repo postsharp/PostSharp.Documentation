@@ -3,6 +3,7 @@ uid: logging-license
 title: "Licensing of PostSharp Logging: Production vs Developer Mode"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp Logging has two modes: Production Mode for unlimited logging and Developer Mode which stops emitting logs 24 hours after compilation. Production Mode is premium while Developer Mode is free."
 ---
 # Licensing of PostSharp Logging: Production vs Developer Mode
 
@@ -30,4 +31,5 @@ You can do this by creating a file named *postsharp.config* in your project dire
 ```
 
 See <xref:configuration-system> for details. 
+
 

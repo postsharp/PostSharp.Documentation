@@ -3,6 +3,7 @@ uid: whats-new-31
 title: "What's New in PostSharp 3.1"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 3.1 improves on version 3.0 with better support for iterator and async methods, an improved configuration system, build-time performance improvements, error message resolution, automatic indentation in logging, and more flexible licensing options."
 ---
 # What's New in PostSharp 3.1
 
@@ -45,4 +46,5 @@ For better log readability, PostSharp Logging Pattern Library now automatically 
 ## Separate licensing of Pattern Libraries
 
 PostSharp Pattern Libraries can now be purchased separately, so you don't have to buy the full PostSharp Ultimate if you just want to use INotifyPropertyChanged. The licensing system has been modified to support this scenario.
+
 

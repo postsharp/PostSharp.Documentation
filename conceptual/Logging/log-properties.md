@@ -3,6 +3,7 @@ uid: log-properties
 title: "Adding Properties to Messages and Activities"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to add properties to messages and activities in PostSharp. It covers defining properties using an anonymous type, defining inherited properties, and advanced scenarios with logging properties."
 ---
 # Adding Properties to Messages and Activities
 
@@ -103,4 +104,5 @@ internal abstract class AspNetCoreMetadata : LogEventMetadata<AspNetCoreRequestE
 ```
 
 You will also create a custom <xref:PostSharp.Patterns.Diagnostics.Custom.LogEventMetadata> if you want to define custom transactions. See <xref:custom-logging-transactions> for details. 
+
 

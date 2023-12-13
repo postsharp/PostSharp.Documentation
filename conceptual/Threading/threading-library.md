@@ -3,6 +3,7 @@ uid: threading-library
 title: "Multithreading"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The Threading Pattern Library aids in building multithreaded applications with fewer lines of code and defects, implementing locking models, thread synchronization aspects."
 ---
 # Multithreading
 

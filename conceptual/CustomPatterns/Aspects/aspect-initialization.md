@@ -3,6 +3,7 @@ uid: aspect-initialization
 title: "Initializing Aspects"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to initialize aspects in PostSharp, detailing three methods: `CompileTimeInitialize`, `RuntimeInitialize`, and instance-scoped aspects methods. It also suggests when to use compile-time initialization."
 ---
 # Initializing Aspects
 

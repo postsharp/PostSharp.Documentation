@@ -3,6 +3,7 @@ uid: benefits
 title: "Why Use PostSharp"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp is a popular commercial product trusted by over 50,000 developers and 1,000 corporations, including 10% of Fortune 500 companies, for reducing development and maintenance costs. It's the leading pattern-aware extension to C# and VB."
 ---
 # Why Use PostSharp
 
@@ -32,4 +33,5 @@ With over a decade experience in boilerplate reduction, PostSharp is now the #1 
 | <xref:solved-problems> | This topic describes which problems PostSharp attends to address. |
 | <xref:pattern-aware-compilers> | This topic defines the concept of Pattern-Aware Compiler and explains its benefits. |
 | <xref:comparative-benefits> | This topic lists the competitive benefits of using PostSharp over alternatives. |
+
 

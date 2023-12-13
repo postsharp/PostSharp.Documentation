@@ -3,6 +3,7 @@ uid: testing-application
 title: "Testing that an Aspect has been Applied"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidelines on how to test if an aspect has been applied to the expected targets in PostSharp, including testing the aspect behavior and checking for the aspect's custom attribute."
 ---
 # Testing that an Aspect has been Applied
 
@@ -41,4 +42,5 @@ PostSharp generates a symbol file named *bin\Debug\MyAssembly.psssym*, where *My
 
 > [!CAUTION]
 > The PostSharp symbol file format is undocumented and unsupported. It means that PostSharp support team cannot answer questions related to this file format.
+
 

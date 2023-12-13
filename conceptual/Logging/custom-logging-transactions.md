@@ -3,6 +3,7 @@ uid: custom-logging-transactions
 title: "Defining Your Own Logging Transactions"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a step-by-step guide to defining custom logging transactions in applications not based on ASP.NET using the codeless configuration system of PostSharp."
 ---
 # Defining Your Own Logging Transactions
 
@@ -112,5 +113,6 @@ This article explains how to do it.
         </transactions>
     </logging>
     ```
+
 
 

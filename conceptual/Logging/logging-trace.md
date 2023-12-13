@@ -3,6 +3,7 @@ uid: logging-trace
 title: "Logging with System.Diagnostics.Trace"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging with System.Diagnostics.Trace, including sending PostSharp Logging events to Trace listeners and collecting Trace events into PostSharp Logging."
 ---
 # Logging with System.Diagnostics.Trace
 

@@ -3,6 +3,7 @@ uid: blazor
 title: "Compatibility with Blazor"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp supports Blazor via .NET Standard, but cannot be directly added to a Blazor application project. To prevent code removal, a custom linker configuration is needed."
 ---
 # Compatibility with Blazor
 

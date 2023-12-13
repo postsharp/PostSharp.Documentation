@@ -3,6 +3,7 @@ uid: threading-models
 title: "Writing Thread-Safe Code with Threading Models"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses the concept of threading models, their benefits in multithreaded programming, and the various threading models provided by the PostSharp Threading Library. It also provides links to related topics and resources."
 ---
 # Writing Thread-Safe Code with Threading Models
 
@@ -48,4 +49,5 @@ PostSharp Threading Library provides an implementation for the following threadi
 ## Conceptual documentation
 
 Please read [this technical white paper](https://www.postsharp.net/links/threading-model-white-paper) for details about the concepts and architecture of PostSharp Threading Models. 
+
 

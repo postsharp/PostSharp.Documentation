@@ -3,6 +3,7 @@ uid: logging-tracesource
 title: "Logging with System.Diagnostics.TraceSource"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging with System.Diagnostics.TraceSource, including sending PostSharp Logging events to TraceSource listeners and collecting TraceSource events into PostSharp Logging."
 ---
 # Logging with System.Diagnostics.TraceSource
 

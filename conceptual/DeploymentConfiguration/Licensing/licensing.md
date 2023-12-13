@@ -3,6 +3,7 @@ uid: licensing
 title: "Licensing"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides technical information on licensing of PostSharp, including installation, types, auditing, shared-source code, server administration, and troubleshooting."
 ---
 # Licensing
 
@@ -18,3 +19,4 @@ It contains the following topics:
 | <xref:licensing-shared-source-code> | This topic explains that you don't need to purchase a license if you need to build code that you didn't write yourself but uses PostSharp. |
 | <xref:license-server-admin> | This topic describes how system administrators can install and maintain the license server. |
 | <xref:license-troubleshooting> | This topic addresses the most common license issues you may encounter. |
+

@@ -3,6 +3,7 @@ uid: dependency-property
 title: "Dependency Property"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document describes how to create and use XAML dependency properties in a PostSharp application. It provides examples of creating simple dependency properties, exposing the DependencyProperty object, validating values with contracts, and using a validation method."
 ---
 # Dependency Property
 

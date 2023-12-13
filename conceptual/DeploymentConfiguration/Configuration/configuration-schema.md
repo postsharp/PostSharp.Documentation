@@ -3,6 +3,7 @@ uid: configuration-schema
 title: "Configuration File Schema Reference"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed explanation of the schema for a PostSharp configuration file, including the elements it contains and the order in which they are processed."
 ---
 # Configuration File Schema Reference
 
@@ -176,4 +177,5 @@ Elements of configuration files are processed in the following order:
 * Extension elements are loaded, but they are not evaluated at this moment.
 
 * Finally, services and other tasks are instantiated and the project is executed.
+
 

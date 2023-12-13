@@ -3,6 +3,7 @@ uid: emitting-errors
 title: "Emitting Errors, Warnings, and Messages"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to emit custom messages, warnings, and errors using PostSharp's messaging facility. It also advises on using a MessageSource for storing all message texts in a single location."
 ---
 # Emitting Errors, Warnings, and Messages
 
@@ -28,4 +29,5 @@ If you want the text of all messages to be stored in a single location, you have
 
 > [!NOTE]
 > Although it is tempting to use a `ResourceManager` as the backend of a message dispenser, comes with a non-negligible performance penalty because of the cost of instantiating the `ResourceManager`. 
+
 
