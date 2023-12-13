@@ -31,5 +31,5 @@ Developers usually think in terms of design patterns, but with conventional prog
 | <xref:constraints> | This chapter explains how to automatically validate your code against guidelines and conventions using PostSharp Architecture Framework. |
 | <xref:testing-aspects> | This chapter explains how to test and debug aspects. |
 | <xref:patterns-misc> | This chapter covers: <xref:module-initializer>.  |
-| <xref:Project_PostSharp> | This is the complete API reference documentation. |
+| <xref:api> | This is the complete API reference documentation. |
 

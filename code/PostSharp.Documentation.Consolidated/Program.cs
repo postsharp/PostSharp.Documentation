@@ -8,7 +8,6 @@ using PostSharp.Patterns.Caching.Backends.Redis;
 using PostSharp.Patterns.Contracts;
 using PostSharp.Patterns.Diagnostics;
 using PostSharp.Patterns.Diagnostics.Adapters.AspNetCore;
-using PostSharp.Patterns.Diagnostics.Adapters.AspNetFramework;
 using PostSharp.Patterns.Diagnostics.Adapters.DiagnosticSource;
 using PostSharp.Patterns.Diagnostics.Adapters.HttpClient;
 using PostSharp.Patterns.Diagnostics.Backends.ApplicationInsights;
@@ -20,6 +19,10 @@ using PostSharp.Patterns.Diagnostics.Backends.Serilog;
 using PostSharp.Patterns.Diagnostics.Backends.Trace;
 using PostSharp.Patterns.Model;
 using PostSharp.Patterns.Xaml;
+
+#if NETFRAMEWORK
+using PostSharp.Patterns.Diagnostics.Adapters.AspNetFramework;
+#endif
 
 Console.WriteLine( "Hello, World!" );
 
@@ -36,7 +39,6 @@ _ = new Type[]
     typeof(LogAttribute), // PostSharp.Patterns.Diagnostics.Redist
     typeof(ApplicationInsightsLoggingBackend), // PostSharp.Patterns.Diagnostics.ApplicationInsights
     typeof(AspNetCoreLogging), // PostSharp.Patterns.Diagnostics.AspNetCore
-    typeof(AspNetFrameworkRequestMetadata), // PostSharp.Patterns.Diagnostics.AspNetFramework
     typeof(CommonLoggingLoggingBackend), // PostSharp.Patterns.Diagnostics.CommonLogging
     typeof(DiagnosticSourceCollectingListener), // PostSharp.Patterns.Diagnostics.DiagnosticSource
     typeof(HttpClientLogging), // PostSharp.Patterns.Diagnostics.HttpClient
@@ -48,4 +50,8 @@ _ = new Type[]
     typeof(TraceLoggingBackend), // PostSharp.Patterns.Diagnostics.Tracing
     typeof(NotifyPropertyChangedAttribute), // PostSharp.Patterns.Model.Redist
     typeof(CommandAttribute), // PostSharp.Patterns.Xaml.Redist
+
+#if NETFRAMEWORK
+    typeof(AspNetFrameworkRequestMetadata), // PostSharp.Patterns.Diagnostics.AspNetFramework
+#endif
 };

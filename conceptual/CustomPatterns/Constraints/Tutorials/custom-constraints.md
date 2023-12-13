@@ -34,7 +34,7 @@ Let's start with a scalar constraint and create a constraint that verifies the f
     ```
 
 
-2. Designate what code construct type this validation aspect should work for by adding the <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute> attribute. In this case, we want the validation to occur on types only, and we want to enable inheritance. Using <xref:PostSharp.Extensibility.Strict> means that `BusinessRulePatternValidation` is applied not only on the class it annotates but also on all of its subclasses, even in other assemblies. 
+2. Designate what code construct type this validation aspect should work for by adding the <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute> attribute. In this case, we want the validation to occur on types only, and we want to enable inheritance. Using <xref:PostSharp.Extensibility.MulticastInheritance.Strict> means that `BusinessRulePatternValidation` is applied not only on the class it annotates but also on all of its subclasses, even in other assemblies. 
 
     ```csharp
     [MulticastAttributeUsage(MulticastTargets.Class, Inheritance = MulticastInheritance.Strict)] 
@@ -327,9 +327,9 @@ When the attribute is applied to a class in the `Models` namespace and that clas
 
 <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute>
 <br><xref:PostSharp.Constraints.ScalarConstraint>
-<br><xref:PostSharp.IgnoreWarningAttribute>
-<br><xref:PostSharp.IgnoreWarningAttribute.MessageId>
-<br><xref:PostSharp.IgnoreWarningAttribute.Reason>
+<br><xref:PostSharp.Extensibility.SuppressWarningAttribute>
+<br><xref:PostSharp.Extensibility.SuppressWarningAttribute.MessageId>
+<br><xref:PostSharp.Extensibility.SuppressWarningAttribute.Reason>
 <br><xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute>
 <br>**Other Resources**
 

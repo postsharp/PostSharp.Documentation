@@ -98,7 +98,7 @@ There are two ways to add contracts:
 
     ```csharp
     [return: Required]
-                    public void SetFullName([Required] string firstName, [Required] string lastName)
+    public string SetFullName([Required] string firstName, [Required] string lastName)
     ```
 
     This example will make sure that both the parameters and the return value are not null.

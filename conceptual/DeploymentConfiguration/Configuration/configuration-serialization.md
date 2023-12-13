@@ -6,7 +6,7 @@ categories: "PostSharp;AOP;Metaprogramming"
 ---
 # Including CLR Objects in Configuration
 
-PostSharp includes a basic facility to describe CLR objects using XML. This facility is used to implement the [Specific rules for the Multicast section](configuration-schema#specific-rules-for-the-multicast-section) and [loggingprofiles](configuration-schema#loggingprofiles) sections of the configuration file, and can be used to define custom sections. 
+PostSharp includes a basic facility to describe CLR objects using XML. This facility is used to implement the [Specific rules for the Multicast section](xref:configuration-schema#multicast) and [loggingprofiles](xref:logging-customizing#editing-a-build-time-configuration) sections of the configuration file, and can be used to define custom sections. 
 
 The facility is consciously limited in features. It was only designed to provide the same features as custom attributes in programming languages.
 

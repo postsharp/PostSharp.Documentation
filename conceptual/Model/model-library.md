@@ -12,7 +12,7 @@ The Model Pattern Library provides the following features:
 
 * **Aggregatable**. The <xref:PostSharp.Patterns.Model.AggregatableAttribute> aspect allows to automate the implementation of parent-child relationships, including automatic synchronization of the `Parent` property and implementation of the Visitor pattern for children. For more information see <xref:aggregatable>. 
 
-* **Disposable**. The <xref:PostSharp.Patterns.Model.DisposableAttribute> aspect implements the <xref:System.IDisposable> interface and can automatically call the <xref:System.IDisposable.Dispose()> method on child objects. More details can be found at <xref:disposable>. 
+* **Disposable**. The <xref:PostSharp.Patterns.Model.DisposableAttribute> aspect implements the <xref:System.IDisposable> interface and can automatically call the `System.IDisposable.Dispose()` method on child objects. More details can be found at <xref:disposable>. 
 
 ## See Also
 

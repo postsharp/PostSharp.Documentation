@@ -6,13 +6,16 @@ categories: "PostSharp;AOP;Metaprogramming"
 ---
 # Installing PostSharp without NuGet
 
+> [!WARNING]
+> This section describes a way of consuming PostSharp that is unsupported and is provided for convenience of users of legacy (non-SDK) .NET Framework projects. 
+> **You should not target .NET Standard, .NET Core or .NET** while using PostSharp from the ZIP archive.
+
 The most common way to add PostSharp to your project is by installing PostSharp NuGet packages. The main benefit of using NuGet Package Manager is that it provides a standard way to install and manage all dependencies for your .NET projects.
 
 > [!WARNING]
 > Using PostSharp without NuGet is deprecated and not recommended. Using the ZIP distribution as described below is possible only for .NET Framework projects.
 
 Previous versions of NuGet had several issues that made it an impractical solution for some teams. For this reason, we allow to use PostSharp without NuGet, by downloading and extracting a standard zip file. However, the installation procedure is significantly more cumbersome without NuGet than with NuGet.
-
 
 ### To install PostSharp into a project without NuGet:
 
@@ -30,7 +33,6 @@ Previous versions of NuGet had several issues that made it an impractical soluti
     ```xml
     <Import Project="..\..\..\postsharp\Tools\PostSharp.targets" />
     ```
-
 
 ## See Also
 

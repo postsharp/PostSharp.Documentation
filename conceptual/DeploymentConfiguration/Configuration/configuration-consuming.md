@@ -29,7 +29,7 @@ IEnumerable<ProjectExtensionElement> elements =
      PostSharpEnvironment.CurrentProject.GetExtensionElements( "MyElement", "uri:MyNamespace" );
 ```
 
-Extension elements must be declared using the [sectiontype](configuration-system#sectiontype) element. 
+Extension elements must be declared using the `sectiontype` element. 
 
 ## See Also
 

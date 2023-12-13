@@ -161,17 +161,17 @@ For details regarding this section, see <xref:configuration-serialization>.
 
 Elements of configuration files are processed in the following order:
 
-* [License](configuration-schema#license) elements are loaded. 
+* [License](#license) elements are loaded. 
 
-* [Property](configuration-schema#property) elements are loaded. Properties are evaluated at this moment unless they are marked for deferred evaluation. 
+* [Property](#property) elements are loaded. Properties are evaluated at this moment unless they are marked for deferred evaluation. 
 
-* [SearchPath](configuration-schema#searchpath) elements are loaded. 
+* [SearchPath](#searchpath) elements are loaded. 
 
-* [Using](configuration-schema#using) elements are loaded and referenced plug-ins and configuration files are immediately loaded. 
+* [Using](#using) elements are loaded and referenced plug-ins and configuration files are immediately loaded. 
 
-* [SectionType](configuration-schema#sectiontype) elements are loaded. 
+* [SectionType](#sectiontype) elements are loaded. 
 
-* [Service](configuration-schema#service) elements are loaded, but they are not yet instantiated. 
+* [Service](#service) elements are loaded, but they are not yet instantiated. 
 
 * Extension elements are loaded, but they are not evaluated at this moment.
 

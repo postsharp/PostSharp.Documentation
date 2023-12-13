@@ -37,7 +37,7 @@ In this example, we will see how to create an aspect that filters the value read
     ```
 
 
-4. Calling `base.OnGetValue` actually retrieves the value from the underlying field or property, and populates the <xref:PostSharp.Aspects.LocationInterceptionArgs.Value> property. Add some code to check if the property currently is set to `null` If the current value is `null`, we want to return a predefined value. To do this we can set the <xref:PostSharp.Aspects.LocationInterceptionArgs.Value> property. Any time this property is requested, and it is set to `null`, the value `"foo"` will be returned. 
+4. Calling `base.OnGetValue` actually retrieves the value from the underlying field or property, and populates the `Value` property. Add some code to check if the property currently is set to `null` If the current value is `null`, we want to return a predefined value. To do this we can set the `Value` property. Any time this property is requested, and it is set to `null`, the value `"foo"` will be returned. 
 
     ```csharp
     public override void OnGetValue(LocationInterceptionArgs args) 
@@ -130,7 +130,7 @@ public class Customer
 }
 ```
 
-You can set the <xref:PostSharp.Aspects.LocationInterceptionArgs.Value> property of <xref:PostSharp.Aspects.LocationInterceptionArgs> and then call <xref:PostSharp.Aspects.LocationInterceptionArgs.ProceedSetValue> to pass a different value in for the property. For example, <xref:PostSharp.Aspects.LocationInterceptionAspect.OnSetValue(PostSharp.Aspects.LocationInterceptionArgs)> could be used to check for a null string, and then change the string to a non-null value: 
+You can set the `Value` property of <xref:PostSharp.Aspects.LocationInterceptionArgs> and then call <xref:PostSharp.Aspects.LocationInterceptionArgs.ProceedSetValue> to pass a different value in for the property. For example, <xref:PostSharp.Aspects.LocationInterceptionAspect.OnSetValue(PostSharp.Aspects.LocationInterceptionArgs)> could be used to check for a null string, and then change the string to a non-null value: 
 
 ```csharp
 [PSerializable] 
@@ -336,7 +336,6 @@ See the Remarks section of <xref:PostSharp.Aspects.LocationInterceptionAspect.On
 <br><xref:PostSharp.Aspects.LocationInterceptionAspect.OnInstanceLocationInitialized(PostSharp.Aspects.LocationInitializationArgs)>
 <br><xref:PostSharp.Aspects.LocationInterceptionArgs>
 <br><xref:PostSharp.Aspects.LocationInitializationArgs>
-<br><xref:PostSharp.Aspects.LocationInterceptionArgs.Location>
 <br><xref:PostSharp.Reflection.LocationInfo>
 <br><xref:PostSharp.Reflection.LocationInfo.FieldInfo>
 <br><xref:PostSharp.Reflection.LocationInfo.PropertyInfo>

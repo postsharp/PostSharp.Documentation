@@ -136,14 +136,14 @@ public class CustomerModel
 
 When working with view models, properties often contain collections and other properties that depend on the content of these collections. The default behavior of the aspect is to react only on the collection itself being replaced. However, any change of the collection content should result in change of a dependent property.
 
-To facilititate this, the property containing the collection should be marked with <xref:PostSharp.Patterns.Model.AggregateAllChanges>. This causes any change of the collection (adding an item, replacing an item, removing an item, etc.). to result in notification of the change to any property that depends on it. 
+To facilititate this, the property containing the collection should be marked with <xref:PostSharp.Patterns.Model.AggregateAllChangesAttribute>. This causes any change of the collection (adding an item, replacing an item, removing an item, etc.). to result in notification of the change to any property that depends on it. 
 
 
 ### Example
 
 In following `Recipe` class, the `LongestStep` property gets a duration of the longest of steps in the recipe's `Steps` collection. 
 
-Since the collection property is marked <xref:PostSharp.Patterns.Model.AggregateAllChanges>, each change to this collection will result in a change of `LongestStep` property even though the property still contains same collection object. 
+Since the collection property is marked <xref:PostSharp.Patterns.Model.AggregateAllChangesAttribute>, each change to this collection will result in a change of `LongestStep` property even though the property still contains same collection object. 
 
 ```csharp
 public class RecipeStep

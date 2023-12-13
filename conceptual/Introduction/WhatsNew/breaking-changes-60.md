@@ -46,5 +46,5 @@ PostSharp 6.0 contains the following breaking changes:
 
 ## Licensing changes
 
-* It is now mandatory to add your license key to the build server or the source repository if you are using the <xref:PostSharp.Patterns.Diagnostics> namespace. See [build-server](logging-license#build-server) for details. 
+* It is now mandatory to add your license key to the build server or the source repository if you are using the <xref:PostSharp.Patterns.Diagnostics> namespace. See [build-server](xref:logging-license) for details. 
 

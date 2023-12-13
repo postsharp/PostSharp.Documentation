@@ -57,7 +57,7 @@ The following steps show how to implement a contract which throws an exception i
     }
     ```
 
-    The <xref:PostSharp.Aspects.ILocationValidationAspect`1.ValidateValue(`0,System.String,PostSharp.Reflection.LocationKind)> method takes in the value to test, the name of the parameter, property or field, and the usage (i.e. whether it’s a parameter, property, or field). The method must throw an exception if a check fails, or null or if no exception is to be raised. 
+    The <xref:PostSharp.Aspects.ILocationValidationAspect`1.ValidateValue(`0,System.String,PostSharp.Reflection.LocationKind,PostSharp.Aspects.LocationValidationContext)> method takes in the value to test, the name of the parameter, property or field, and the usage (i.e. whether it’s a parameter, property, or field). The method must throw an exception if a check fails, or null or if no exception is to be raised. 
 
 
 With the contract now created it can be used. For example, the following methods, which calculate the modulus between two numbers, can use the contract defined above to ensure that neither of their input parameters are zero:

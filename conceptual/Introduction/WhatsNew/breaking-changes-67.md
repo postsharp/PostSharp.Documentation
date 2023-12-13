@@ -20,7 +20,7 @@ PostSharp 6.7 contains the following breaking changes:
 
 * Logging: indentation of async methods in logging is no longer based on the execution context but rather on the thread context. This improves performance.
 
-* Logging: the <xref:PostSharp.Patterns.Diagnostics.Contexts.ParentContext> property now always refers to the thread context. 
+* Logging: the <xref:PostSharp.Patterns.Diagnostics.Contexts.LoggingContext.ParentContext> property now always refers to the thread context. 
 
 * Threading: read-only fields and getter-only properties in classes with a threading model are now protected by the threading model. They were previously ignored. This change would typically not affect your release builds since threading models are only enforced in debug builds by default.
 

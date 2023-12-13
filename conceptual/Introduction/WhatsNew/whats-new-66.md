@@ -21,7 +21,7 @@ The software development industry has traditionally charged their customers by u
 
 We're introducing a per-usage pricing, where you the price is not proportional to the number of daily unique users, but to the number of lines of code to which you apply our product. Therefore, you can start with a small budget, even in a large team.
 
-For technical details about per-usage licenses, see <xref:per-repo-licenses>. 
+Per-usage licenses are no longer offered.
 
 
 ## PostSharp SDK open to end users, and community add-ins

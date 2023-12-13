@@ -35,7 +35,7 @@ PostSharp 4.3 brings more freedom when it comes to deployment and installation:
 
 * **Alternative to NuGet.** Between versions 3.0 and 4.2, the PostSharp compiler and libraries were only distributed as NuGet packages. Starting from version 4.3, we are re-introducing the old good zip file, and integrate it better with PostSharp Tools for Visual Studio. See <xref:install-without-nuget> for details. 
 
-* **Command Line Tool.** Using PostSharp as a command-line tool is now a supported and documented scenario. For details, see <xref:command-line> 
+* **Command Line Tool.** Using PostSharp as a command-line tool is now a supported and documented scenario. This feature has been discontinued in PostSharp 5.0. 
 
 * **PostSharp Tools for Visual Studio no longer required.** You will now be able to build a project that uses PostSharp without having PostSharp Tools installed in Visual Studio. The tooling is still highly recommended but no longer strictly required. 
 

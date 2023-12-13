@@ -56,7 +56,7 @@ private void SaveCompleted()
 
 By default, the <xref:PostSharp.Patterns.Threading.DispatchedAttribute> forces the target method to execute synchronously on the foreground thread, which means that the background thread will wait until the method execution has completed. This waiting causes some performance overhead. Additionally, synchronous execution is not always useful. If the method has no return value and no side effect of interest for the calling thread, the method could be safely executed asynchronously, which means the calling thread would not need to wait for the method execution to complete on the foreground thread, so that the calling thread would continue its execution immediately after having enqueued the call to the foreground thread. 
 
-You can enable asynchronous execution of a dispatched method by passing the `true` value to the parameter of the <xref:PostSharp.Patterns.Threading.DispatchedAttribute.#ctor(System.Boolean)> constructor, for instance: 
+You can enable asynchronous execution of a dispatched method by passing the `true` value to the parameter of the <xref:PostSharp.Patterns.Threading.DispatchedAttribute> class constructor, for instance: 
 
 ```csharp
 [Dispatched(true)] 

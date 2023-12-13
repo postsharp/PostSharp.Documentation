@@ -4,7 +4,7 @@ title: ""
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
 ---
-Ready-made patterns implementation described in parts <xref:standard-patterns> and <xref:threading-library> are only the tip of the iceberg. There are a lot more design patterns that are not available off-the-shelf in PostSharp. There are even more patterns that are not general enough to be recognized as design patterns because they are specific to your application, However, even custom patterns deserve automation for exactly the same reason as standard patterns. 
+Ready-made patterns implementation are only the tip of the iceberg. There are a lot more design patterns that are not available off-the-shelf in PostSharp. There are even more patterns that are not general enough to be recognized as design patterns because they are specific to your application, However, even custom patterns deserve automation for exactly the same reason as standard patterns. 
 
 There are two ways you can automate custom patterns:
 

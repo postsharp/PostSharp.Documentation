@@ -1,50 +1,70 @@
-﻿// Copyright (c) SharpCrafters s.r.o. See the LICENSE.md file in the root directory of this repository root for details.
-
+﻿
+using System.Collections.Immutable;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
 using PostSharp.Engineering.BuildTools.Utilities;
 using System.IO;
 using System.IO.Compression;
+using System.Text.RegularExpressions;
 
 namespace BuildPostSharpDocumentation
 {
     public class DocFxSolution : Solution
     {
-        public string DocFxSiteDirectory { get; }
-
-        public string PackageFileName { get; }
-
-        public DocFxSolution( string solutionPath, string docFxSiteDirectory, string packageFileName ) : base( solutionPath )
+        public DocFxSolution( string solutionPath ) : base( solutionPath )
         {
-            this.DocFxSiteDirectory = docFxSiteDirectory;
-            this.PackageFileName = packageFileName;
-
             // Packing is done by the publish command.
             this.BuildMethod = PostSharp.Engineering.BuildTools.Build.Model.BuildMethod.Pack;            
         }
 
         public override bool Build( BuildContext context, BuildSettings settings )
         {
-            if ( !RunDocFx( context, this.SolutionPath, "metadata" ) )
+        
+            var options = new ToolInvocationOptions()
             {
+                ErrorPatterns = ToolInvocationOptions.Default.ErrorPatterns.Add( new Regex(@"Markup failed") ),
+                WarningPatterns = ToolInvocationOptions.Default.WarningPatterns,
+                SilentPatterns = settings.Verbosity == Verbosity.Detailed ? ImmutableArray<Regex>.Empty : ImmutableArray.Create(new Regex(@": info :"), new Regex(@"\]Info:")),
+                ReplacePatterns = ImmutableArray.Create(
+                    
+                    // Replace pattern when the path is present but not the line
+                    new ReplacePattern(new Regex(@"(?<time>\[[^\]]*\])(?<severity>\w+):(?<component>\[[^\]]*\])\((~\/)?(?<path>[^\)#]+)\)(?<message>.*)$"), 
+                    match => $"{match.Groups["path"]}: {match.Groups["severity"].Value.ToLowerInvariant()}: {match.Groups["message"]}"),
+                    
+                    // Replace pattern when the path is present including the line.
+                    new ReplacePattern(new Regex(@"(?<time>\[[^\]]*\])(?<severity>\w+):(?<component>\[[^\]]*\])\((~\/)?(?<path>[^\)#]+)#L(?<line>\d+)\)(?<message>.*)$"), 
+                        match => $"{match.Groups["path"]}({match.Groups["line"]}): {match.Groups["severity"].Value.ToLowerInvariant()}: {match.Groups["message"]}"),
+                    
+                    // Replace pattern without the path
+                    new ReplacePattern(new Regex(@"(?<time>\[[^\]]*\])(?<severity>\w+):(?<component>\[[^\]]*\])\((~\/)?(?<message>.*)$"), 
+                    match => $"{this.SolutionPath}: {match.Groups["severity"].Value.ToLowerInvariant()}: {match.Groups["message"]}")
+
+                    )
+            };
+
+            const string docfxPackageName = "docfx.console";
+            var docfxPackagesDirectories = Directory.GetDirectories( Path.Combine( context.RepoDirectory, "docfx\\packages" ), $"{docfxPackageName}.*" );
+
+            if ( docfxPackagesDirectories.Length == 0 )
+            {
+                context.Console.WriteError( $"The {docfxPackageName} package has not been restored." );
                 return false;
             }
 
-            if ( !RunDocFx( context, this.SolutionPath, "build" ) )
+            if ( docfxPackagesDirectories.Length > 1 )
             {
+                context.Console.WriteError( $"More than one version of the {docfxPackageName} package has been restored." );
                 return false;
             }
 
-            return true;
-        }
+            var docfxPackageDirectory = docfxPackagesDirectories[0];
 
-        private static bool RunDocFx( BuildContext context, string solutionPath, string command )
-        {
             return ToolInvocationHelper.InvokeTool(
                 context.Console,
-                Path.Combine( context.RepoDirectory, "docfx\\packages\\docfx.console.2.59.0\\tools\\docfx.exe" ),
-                command + " " + Path.Combine( context.RepoDirectory, solutionPath ),
-                context.RepoDirectory );
+                Path.Combine( docfxPackageDirectory, "tools\\docfx.exe" ),
+                Path.Combine( context.RepoDirectory, this.SolutionPath ),
+                context.RepoDirectory,
+                options );
         }
 
         public override bool Pack( BuildContext context, BuildSettings settings )
@@ -54,9 +74,16 @@ namespace BuildPostSharpDocumentation
                 return false;
             }
 
+            var zipPath = Path.Combine( context.RepoDirectory, "artifacts\\publish\\private\\PostSharp.Doc.zip" );
+
+            if (File.Exists(zipPath))
+            {
+                File.Delete(zipPath);
+            }
+            
             ZipFile.CreateFromDirectory(
-                Path.Combine( context.RepoDirectory, "docfx", this.DocFxSiteDirectory ),
-                Path.Combine( context.RepoDirectory, "artifacts", "publish", "private", this.PackageFileName ) );
+                Path.Combine( context.RepoDirectory, "docfx\\_site" ),
+                zipPath );
 
             return true;
         }
@@ -68,7 +95,7 @@ namespace BuildPostSharpDocumentation
 
         public override bool Restore( BuildContext context, BuildSettings settings )
         {
-            return DotNetHelper.Run(context, settings, Path.Combine( context.RepoDirectory, "docfx", "DocFx.csproj" ), "restore");
+            return DotNetHelper.Run(context, settings, Path.Combine( context.RepoDirectory, "docfx\\DocFx.csproj" ), "restore");
         }
     }
 }

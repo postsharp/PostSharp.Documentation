@@ -29,5 +29,6 @@
     "**/README.md",
     "**/*.txt",
     "**/*.md"
-]
+],
+"window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}${separator}[Branch: topic/2024.0/story-doc-update]"
 }

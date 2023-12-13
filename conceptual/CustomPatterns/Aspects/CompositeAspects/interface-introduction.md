@@ -16,7 +16,7 @@ One of the common situations that you will encounter is the need to implement a 
 
 ### 
 
-1. Let's add the <xref:Microsoft.TeamFoundation.TestManagement.Client.IIdentifiable> interface to the target code. 
+1. Let's add the `Microsoft.TeamFoundation.TestManagement.Client.IIdentifiable` interface to the target code. 
 
     ```csharp
     public interface IIdentifiable 
@@ -29,7 +29,7 @@ One of the common situations that you will encounter is the need to implement a 
 2. Create an aspect that inherits from <xref:PostSharp.Aspects.InstanceLevelAspect> and add the custom attribute [<xref:PostSharp.Serialization.PSerializableAttribute>]. 
 
 
-3. The key to adding an interface to target code is that you must implement that interface on your aspect. Let's implement the <xref:Microsoft.TeamFoundation.TestManagement.Client.IIdentifiable> interface on our aspect. It's this implementation of the interface that will be added to the target code, so anything that you include in method or property bodies will be added to the target code as you have declared it in the aspect. 
+3. The key to adding an interface to target code is that you must implement that interface on your aspect. Let's implement the `Microsoft.TeamFoundation.TestManagement.Client.IIdentifiable` interface on our aspect. It's this implementation of the interface that will be added to the target code, so anything that you include in method or property bodies will be added to the target code as you have declared it in the aspect. 
 
     ```csharp
     [PSerializable] 

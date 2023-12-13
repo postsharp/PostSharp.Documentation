@@ -26,7 +26,7 @@ When you use the <xref:PostSharp.Patterns.Diagnostics.LogAttribute> aspect to lo
 2. In a `using` statement, invoke the <xref:PostSharp.Patterns.Diagnostics.Custom.LogLevelSource.OpenActivity``1(``0@,PostSharp.Patterns.Diagnostics.OpenActivityOptions@)> method. Specify the activity description with the <xref:PostSharp.Patterns.Diagnostics.FormattedMessageBuilder.Formatted*> or <xref:PostSharp.Patterns.Diagnostics.SemanticMessageBuilder.Semantic*> method. 
 
     > [!TIP]
-    > We strongly advice to use the `var` keyword to receive the return value of <xref:PostSharp.Patterns.Diagnostics.Custom.LogLevelSource.OpenActivity``1(``0@,PostSharp.Patterns.Diagnostics.OpenActivityOptions@)> method because the return type of the method depends on the number and types of arguments sent to <xref:PostSharp.Patterns.Diagnostics.FormattedMessageBuilder.Formatted*> or <xref:PostSharp.Patterns.Diagnostics.SemanticMessageBuilder.Semantic*>. Alternatively, you can use a variable of type <xref:PostSharp.Patterns.Diagnostics.ILogMessage>, but this will cause boxing of the <xref:PostSharp.Patterns.Diagnostics.LogActivity`1> value type. 
+    > We strongly advice to use the `var` keyword to receive the return value of <xref:PostSharp.Patterns.Diagnostics.Custom.LogLevelSource.OpenActivity``1(``0@,PostSharp.Patterns.Diagnostics.OpenActivityOptions@)> method because the return type of the method depends on the number and types of arguments sent to <xref:PostSharp.Patterns.Diagnostics.FormattedMessageBuilder.Formatted*> or <xref:PostSharp.Patterns.Diagnostics.SemanticMessageBuilder.Semantic*>. Alternatively, you can use a variable of type <xref:PostSharp.Patterns.Diagnostics.Custom.Messages.IMessage>, but this will cause boxing of the <xref:PostSharp.Patterns.Diagnostics.LogActivity`1> value type. 
 
 
 3. Wrap the code of the activity with a `try/catch` construct. 
@@ -146,7 +146,7 @@ static class Hasher
 
 When you open an activity with a specific level, say <xref:PostSharp.Patterns.Diagnostics.LogSource.Debug>, and then close the activity successfully, the close message will be emitted with the same level as the open message, i.e. <xref:PostSharp.Patterns.Diagnostics.LogSource.Debug>. 
 
-However, when the activity fails with an exception, the close message level will be <xref:PostSharp.Patterns.Diagnostics.LogSource.Failure>, whose value can be changed only by the <xref:PostSharp.Patterns.Diagnostics.LogSource.WithLevel(PostSharp.Patterns.Diagnostics.LogLevel)> method. See [Changing the default level for exceptions](log-custom-messages#changing-the-default-level-for-exceptions) for information about changing the default levels. 
+However, when the activity fails with an exception, the close message level will be <xref:PostSharp.Patterns.Diagnostics.LogSource.Failure>, whose value can be changed only by the <xref:PostSharp.Patterns.Diagnostics.LogSource.WithLevel(PostSharp.Patterns.Diagnostics.LogLevel)> method. See [Changing the default level for exceptions](xref:log-custom-messages#to-configure-the-default-logging-levels-centrally) for information about changing the default levels. 
 
 
 ## Measuring the execution time of activities

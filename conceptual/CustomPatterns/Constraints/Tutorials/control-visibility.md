@@ -237,12 +237,12 @@ By default, any situation that breaks the access rules defined by the applicatio
 
 ## Ignoring warnings
 
-There may be specific situations where you want to suppress the warning message that is being generated at compile time. In those cases, you can apply the <xref:PostSharp.IgnoreWarningAttribute> attribute to the locations where you want to allow access to the component. 
+There may be specific situations where you want to suppress the warning message that is being generated at compile time. In those cases, you can apply the <xref:PostSharp.Extensibility.SuppressWarningAttribute> attribute to the locations where you want to allow access to the component. 
 
 > [!NOTE]
-> The <xref:PostSharp.IgnoreWarningAttribute> attribute will only suppress warnings. If you have escalated the warnings to be errors, those errors will still be generated even if the <xref:PostSharp.IgnoreWarningAttribute> attribute is present. 
+> The <xref:PostSharp.Extensibility.SuppressWarningAttribute> attribute will only suppress warnings. If you have escalated the warnings to be errors, those errors will still be generated even if the <xref:PostSharp.Extensibility.SuppressWarningAttribute> attribute is present. 
 
-If you wanted to allow access to the constrained component in a specific method you could add the <xref:PostSharp.IgnoreWarningAttribute> attribute to that method. 
+If you wanted to allow access to the constrained component in a specific method you could add the <xref:PostSharp.Extensibility.SuppressWarningAttribute> attribute to that method. 
 
 ```csharp
 public class CustomerServices 
@@ -258,9 +258,9 @@ public class CustomerServices
 
 > [!NOTE]
 > `AR0102` is the identifier of the warning emitted by <xref:PostSharp.Constraints.ComponentInternalAttribute>. To ignore warnings emitted by `Internal`, use the identifier `AR0104`. 
-You may wonder where these identifiers come from. <xref:PostSharp.IgnoreWarningAttribute> actually works with any PostSharp warning and not just this one. Any build error, whether from MSBuild, C# or PostSharp, has an identifier. To see error identifiers in Visual Studio, open the View menu and click on the Output item, select "Show output from: Build". You will see warnings including their identifiers. 
+You may wonder where these identifiers come from. <xref:PostSharp.Extensibility.SuppressWarningAttribute> actually works with any PostSharp warning and not just this one. Any build error, whether from MSBuild, C# or PostSharp, has an identifier. To see error identifiers in Visual Studio, open the View menu and click on the Output item, select "Show output from: Build". You will see warnings including their identifiers. 
 
-If you wanted to allow access in an entire class you could add the <xref:PostSharp.IgnoreWarningAttribute> attribute at the class level. Any access to the constrained component within the class would have its warning suppressed. 
+If you wanted to allow access in an entire class you could add the <xref:PostSharp.Extensibility.SuppressWarningAttribute> attribute at the class level. Any access to the constrained component within the class would have its warning suppressed. 
 
 ```csharp
 [IgnoreWarning("AR0102")] 
@@ -278,7 +278,7 @@ public class CustomerServices
 
 **Reference**
 
-<xref:PostSharp.IgnoreWarningAttribute>
+<xref:PostSharp.Extensibility.SuppressWarningAttribute>
 <br><xref:PostSharp.Constraints.ComponentInternalAttribute>
 <br><xref:PostSharp.Constraints.InternalAttribute>
 <br>**Other Resources**

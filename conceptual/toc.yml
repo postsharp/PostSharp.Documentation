@@ -110,6 +110,34 @@ items:
           - name: Requirements and Compatibility
             topicUid: requirements
             items:
+              - name: Requirements of PostSharp 2023.0
+                topicUid: requirements-20230
+              - name: Requirements of PostSharp 6.10
+                topicUid: requirements-610
+              - name: Requirements of PostSharp 6.9
+                topicUid: requirements-69
+              - name: Requirements of PostSharp 6.8
+                topicUid: requirements-68
+              - name: Requirements of PostSharp 6.7
+                topicUid: requirements-67
+              - name: Requirements of PostSharp 6.6
+                topicUid: requirements-66
+              - name: Requirements of PostSharp 6.5
+                topicUid: requirements-65
+              - name: Requirements of PostSharp 6.4
+                topicUid: requirements-64
+              - name: Requirements of PostSharp 6.3
+                topicUid: requirements-63
+              - name: Requirements of PostSharp 6.2
+                topicUid: requirements-62
+              - name: Requirements of PostSharp 6.1
+                topicUid: requirements-61
+              - name: Requirements of PostSharp 6.0
+                topicUid: requirements-60
+              - name: Requirements of PostSharp 5.0
+                topicUid: requirements-50
+              - name: Requirements of PostSharp 4.3
+                topicUid: requirements-43
               - name: Compatibility with Xamarin
                 topicUid: xamarin
               - name: Compatibility with Blazor
@@ -279,10 +307,14 @@ items:
             topicUid: logging-verbosity-api
           - name: Defining Your Own Logging Transactions
             topicUid: custom-logging-transactions
+      - name: Hiding sensitive data when logging
+        topicUid: logging-hiding-sensitive-data
       - name: Logging in a Distributed System
         topicUid: distributed-logging
       - name: Handling Logging Exceptions
         topicUid: logging-exception-handling
+      - name: Troubleshooting 
+        topicUid: logging-troubleshooting
   - name: Contracts
     topicUid: contracts
     items:

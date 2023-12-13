@@ -7,53 +7,56 @@ using PostSharp.Engineering.BuildTools.Build.Solutions;
 using PostSharp.Engineering.BuildTools.AWS.S3.Publishers;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
-using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Utilities;
 using Spectre.Console.Cli;
 using System.IO;
 using System.Diagnostics;
 using PostSharp.Engineering.BuildTools.Build.Publishers;
+using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
+using PostSharp.Engineering.BuildTools.Search;
 
 const string docPackageFileName = "PostSharp.Doc.zip";
 
-// PostSharp SDK Documentiation is not published at the moment.
-// const string docSdkPackageFileName = "PostSharp.Sdk.Doc.zip";
-
-var product = new Product( Dependencies.PostSharpDocumentation )
+var product = new Product( PostSharpDependencies.PostSharpDocumentation )
 {
     Solutions = new Solution[]
     {
-        new DotNetSolution( Path.Combine( "code", "PostSharp.Documentation.Prerequisites.sln" ) ) { CanFormatCode = true },
-        new DocFxSolution( Path.Combine( "docfx", "docfx.json" ), "_site", docPackageFileName ),
-
-        // PostSharp SDK Documentiation is not published at the moment.
-        // new DocFxSolution( Path.Combine( "docfx", "docfx_sdk.json"), "_site_sdk", docSdkPackageFileName )
+        new DotNetSolution( Path.Combine( "code", "PostSharp.Documentation.Prerequisites.sln" ) )
+        {
+            CanFormatCode = true
+        },
+        new DocFxSolution( "docfx.json" ),
     },
     PublicArtifacts = Pattern.Create(
         docPackageFileName
-
-        // PostSharp SDK Documentiation is not published at the moment.
-        // docSdkPackageFileName
     ),
-    Dependencies = new[] { Dependencies.PostSharpEngineering },
-    AdditionalDirectoriesToClean = new[] { "docfx\\obj", "docfx\\_site", "docfx\\_site_sdk" },
+    Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering },
+    AdditionalDirectoriesToClean = new[] { "obj", "docfx\\_site" },
 
     // Disable automatic build triggers.
     Configurations = Product.DefaultConfigurations
         .WithValue( BuildConfiguration.Debug, c => c with { BuildTriggers = default } )
-        .WithValue( BuildConfiguration.Public, new BuildConfigurationInfo(
-            MSBuildName: "Release",
-            PublicPublishers: new Publisher[]
+        .WithValue( BuildConfiguration.Public,
+            c => c with
             {
-                new MergePublisher(),
-                new DocumentationPublisher( new S3PublisherConfiguration[]
+                PublicPublishers = new Publisher[]
                 {
-                    new(docPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net", docPackageFileName),
-
-                    // PostSharp SDK Documentiation is not published at the moment.
-                    //new(docSdkPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net", docSdkPackageFileName),
-                } )
-            } ) )
+                    new MergePublisher(),
+                    new DocumentationPublisher( new S3PublisherConfiguration[]
+                    {
+                        new(docPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net",
+                            docPackageFileName),
+                    } )
+                }
+            } ),
+    Extensions = new ProductExtension[]
+    {
+        new UpdateSearchProductExtension<UpdatePostSharpDocumentationCommand>(
+            "https://0fpg9nu41dat6boep.a1.typesense.net",
+            "postsharpdoc",
+            "https://doc-production.postsharp.net/sitemap.xml",
+            true )
+    }
 };
 
 product.PrepareCompleted += OnPrepareCompleted;

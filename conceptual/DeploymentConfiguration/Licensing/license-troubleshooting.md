@@ -24,7 +24,7 @@ In case you do have a license key installed as mentioned in the <xref:deploying-
 There are two cases in which you might get such error:
 
 * You are using PostSharp Essentials license:
-    In this case, you've hit the limitation of the license. To diagnose this, follow the information given at [log](express-limitations#log). 
+    In this case, you've hit the limitation of the license. To diagnose this, follow the information given at [log](xref:express-limitations#diagnosing-licensing-issues). 
 
 * You are using other license than PostSharp Essentials or PostSharp Ultimate license:
     If you don't have the unlimited PostSharp Ultimate license, any features not covered by your license are licensed as if you were using the PostSharp Essentials license.

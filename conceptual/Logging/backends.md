@@ -28,7 +28,7 @@ In addition, the following scenarios are supported:
 |---------|-------------|
 | <xref:custom-logging-backend> | This article shows how to write PostSharp Logging output to any logging framework by building your own adapter, named *backend* in PostSharp jargon.  |
 | <xref:log-multiplexer> | This article explains how to write PostSharp Logging output to several logging frameworks, each possibly with different verbosity. |
-| <xref:audit> | This article shows how to automatically add audit records to your application. |
+| [Audit Sample](https://github.com/postsharp/PostSharp.Samples/tree/master/Diagnostics/PostSharp.Samples.Logging.Audit) | This example shows how to automatically add audit records to your application. |
 PostSharp Logging can also collect events from many logging frameworks. This is called *collecting logs*. For details, see <xref:log-collecting>. 
 
 ## See Also

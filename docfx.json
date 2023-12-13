@@ -13,7 +13,6 @@
             "PostSharp.Patterns.Common.dll",
             "PostSharp.Patterns.Diagnostics.dll",
             "PostSharp.Patterns.Diagnostics.Adapters.AspNetCore.dll",
-            "PostSharp.Patterns.Diagnostics.Adapters.AspNetFramework.dll",
             "PostSharp.Patterns.Diagnostics.Adapters.DiagnosticSource.dll",
             "PostSharp.Patterns.Diagnostics.Adapters.HttpClient.dll",
             "PostSharp.Patterns.Diagnostics.Backends.ApplicationInsights.dll",
@@ -31,15 +30,25 @@
             "System.dll",
             "System.Collections.dll",
             "System.Collections.Generic.dll",
-            "System.Diagnostics.dll"
+            "System.Diagnostics.dll",
+            "System.ObjectModel.dll",
+            "System.Runtime.dll",
+            "Microsoft.TeamFoundation.TestManagement.Client.dll"
           ],
-          "src": "../code/PostSharp.Documentation.Consolidated/bin/Debug/net6.0"
+          "src": "code/PostSharp.Documentation.Consolidated/bin/Debug/net7.0-windows"
+        },
+        {
+          "files": [
+            "PostSharp.Patterns.Caching.Backends.Azure.dll",
+            "PostSharp.Patterns.Diagnostics.Adapters.AspNetFramework.dll"
+          ],
+          "src": "code/PostSharp.Documentation.Consolidated/bin/Debug/net48"
         }
       ],
       "dest": "obj/api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
-      "filter": "filter.yml"
+      "filter": "docfx-api-filter.yml"
     }
   ],
   "build": {
@@ -55,7 +64,7 @@
           "**.md",
           "toc.yml"
         ],
-        "src": "../conceptual"
+        "src": "conceptual"
       }
     ],
     "resource": [
@@ -66,19 +75,19 @@
           "api.xml",
           "redirect.xml"
         ],
-        "src": "../conceptual"
+        "src": "conceptual"
       }
     ],
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
-    "dest": "_site",
+    "dest": "docfx/_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "packages/memberpage.2.59.0/content",
-      "custom-templates"
+      "docfx/packages/memberpage.2.59.0/content",
+      "templates"
     ],
     "postProcessors": [],
     "markdownEngineName": "dfm",

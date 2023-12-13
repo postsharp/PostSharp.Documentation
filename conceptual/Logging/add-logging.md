@@ -115,10 +115,10 @@ Alternatively, you can easily implement a custom backend. See <xref:custom-loggi
 4. Add the following code on the top of the startup method:
 
     ```csharp
-    LoggingServices.DefaultBackend = new Patterns.Diagnostics.Backends.Console.ConsoleLoggingBackend();
+    LoggingServices.DefaultBackend = new PostSharp.Patterns.Diagnostics.Backends.Console.ConsoleLoggingBackend();
     ```
 
-    In the code snippet above, you can replace <xref:Patterns.Diagnostics.Backends.Console.ConsoleLoggingBackend> by any of the logging backends. 
+    In the code snippet above, you can replace <xref:PostSharp.Patterns.Diagnostics.Backends.Console.ConsoleLoggingBackend> by any of the logging backends. 
 
 
 

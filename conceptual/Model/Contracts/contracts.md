@@ -38,5 +38,5 @@ PostSharp Code Contracts have the following features and benefits:
 <br><xref:PostSharp.Patterns.Contracts.LocationContractAttribute>
 <br><xref:PostSharp.Patterns.Contracts.LocationContractAttribute.ErrorMessage>
 <br><xref:PostSharp.Aspects.ILocationValidationAspect>
-<br><xref:PostSharp.Aspects.ILocationValidationAspect`1.ValidateValue(`0,System.String,PostSharp.Reflection.LocationKind)>
+<br><xref:PostSharp.Aspects.ILocationValidationAspect`1.ValidateValue*>
 <br>

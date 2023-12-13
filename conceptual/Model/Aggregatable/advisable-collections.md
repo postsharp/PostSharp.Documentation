@@ -81,7 +81,7 @@ The following table shows how advisable collections map to standard collections.
 
 Patterns such as Aggregatable, Recordable or Threading Models dynamically inject advices into advisable collections. These advices typically expose an interface, respectively <xref:PostSharp.Patterns.Model.IAggregatable>, <xref:PostSharp.Patterns.Recording.IRecordable> and <xref:PostSharp.Patterns.Threading.IThreadAware>. Because interfaces are introduced at run-time and not at build-time, you cannot use the normal type casting constructs to access the interface members. 
 
-Instead of a normal cast, you can use the <xref:PostSharp.Patterns.Model.QueryInterfaceExtensions.QueryInterface``1(System.Object,System.Boolean)> extension method to access interfaces implemented by the given instance. This method will return the proper interface implementation irrespective how the interface is implemented: directly in the source code, introduced by PostSharp aspect at build time, or added dynamically at run time. 
+Instead of a normal cast, you can use the <xref:PostSharp.Patterns.DynamicAdvising.DynamicAdvisingServices.QueryInterface``1(System.Object,System.Boolean)> extension method to access interfaces implemented by the given instance. This method will return the proper interface implementation irrespective how the interface is implemented: directly in the source code, introduced by PostSharp aspect at build time, or added dynamically at run time. 
 
 The following code snippet gets the <xref:PostSharp.Patterns.Model.IAggregatable> interface of the `Lines` collection in the example above: 
 
@@ -89,7 +89,7 @@ The following code snippet gets the <xref:PostSharp.Patterns.Model.IAggregatable
 IAggregatable aggregatable = invoice.Lines.QueryInterface<IAggregatable>();
 ```
 
-By default, the <xref:PostSharp.Patterns.Model.QueryInterfaceExtensions.QueryInterface``1(System.Object,System.Boolean)> method throws `InvalidCastException` if the given instance doesn't implement the queried interface. You can also safely check whether the interface is implemented by passing `false` as a method argument. 
+By default, the <xref:PostSharp.Patterns.DynamicAdvising.DynamicAdvisingServices.QueryInterface``1(System.Object,System.Boolean)> method throws `InvalidCastException` if the given instance doesn't implement the queried interface. You can also safely check whether the interface is implemented by passing `false` as a method argument. 
 
 ```csharp
 if ( collection.QueryInterface<IAggregatable>( false ) != null )

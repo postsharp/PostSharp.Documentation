@@ -3,15 +3,16 @@
 	<!-- The role of this project is to gather all libraries to be documented into the output directory
 		 so they can be used by docfx. -->
 	
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-	<ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>net7.0-windows;net48</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
 
 	<ItemGroup>
-	    <PackageReference Include="PostSharp.Redist" Version="$(PostSharpVersion)" />
+		<PackageReference Include="PostSharp.Redist" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Aggregation.Redist" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Caching.Redist" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Caching.Azure" Version="$(PostSharpVersion)" />
@@ -21,12 +22,11 @@
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.Redist" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.ApplicationInsights" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.AspNetCore" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.AspNetFramework" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.CommonLogging" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.DiagnosticSource" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.HttpClient" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.Configuration" Version="$(PostSharpVersion)" />
-	    <PackageReference Include="PostSharp.Patterns.Diagnostics.Log4Net" Version="$(PostSharpVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.Log4Net" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.Microsoft" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.NLog" Version="$(PostSharpVersion)" />
 		<PackageReference Include="PostSharp.Patterns.Diagnostics.Serilog" Version="$(PostSharpVersion)" />
@@ -36,8 +36,22 @@
 		<PackageReference Include="PostSharp.Patterns.Xaml.Redist" Version="$(PostSharpVersion)" />
 	</ItemGroup>
 
+	<ItemGroup Condition="'$(TargetFramework)'=='net48'">
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.AspNetFramework" Version="$(PostSharpVersion)" />
+	</ItemGroup>
+
 	<Target Name="CheckConfiguration">
 		<Error Text="This project can only be built in Debug configuration because its Debug output directory is specifically referenced. Check the sln file." Condition="'$(Configuration)'!='Debug'"/>
+	</Target>
+
+	<!-- TODO: This is a workaround to have XML documentation files copied from NuGet packages to the output directory.
+			   Why is this needed here and not in Metalama doc?
+			   Source: https://stackoverflow.com/a/65432020/4100001 -->
+	<Target Name="_ResolveCopyLocalNuGetPkgXmls" AfterTargets="ResolveReferences">
+		<ItemGroup><!-- Copy XML files from all PackageReferences to output dir -->
+			<ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')"
+				Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)'!='' and Exists('%(RootDir)%(Directory)%(Filename).xml')" />
+		</ItemGroup>
 	</Target>
 
 </Project>

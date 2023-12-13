@@ -21,7 +21,7 @@ The <xref:PostSharp.Patterns.Diagnostics.LogAttribute> and <xref:PostSharp.Patte
 
 ## Threading Pattern Library
 
-PostSharp Threading Pattern Library invites you to raise the level of abstraction in which multithreading is being addressed. It provides three threading models: actors (<xref:PostSharp.Patterns.Threading.Actor>), reader-writer synchronized (<xref:PostSharp.Patterns.Threading.ReaderWriterSynchronizedAttribute>) and thread unsafe (<xref:PostSharp.Patterns.Threading.ThreadUnsafeAttribute>). Additionally, <xref:PostSharp.Patterns.Threading.BackgroundAttribute> and <xref:PostSharp.Patterns.Threading.DispatchedAttribute> allow you to easily dispatch a thread back and forth between a background and the UI thread. 
+PostSharp Threading Pattern Library invites you to raise the level of abstraction in which multithreading is being addressed. It provides three threading models: actors (<xref:PostSharp.Patterns.Threading.ActorAttribute>), reader-writer synchronized (<xref:PostSharp.Patterns.Threading.ReaderWriterSynchronizedAttribute>) and thread unsafe (<xref:PostSharp.Patterns.Threading.ThreadUnsafeAttribute>). Additionally, <xref:PostSharp.Patterns.Threading.BackgroundAttribute> and <xref:PostSharp.Patterns.Threading.DispatchedAttribute> allow you to easily dispatch a thread back and forth between a background and the UI thread. 
 
 
 ## Smart tags and wizards in Visual Studio

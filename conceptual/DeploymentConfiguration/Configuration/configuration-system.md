@@ -38,7 +38,7 @@ Configuration files are typically useful in the following scenarios:
     </Project>
     ```
 
-    See [buildtime](logging-customizing#buildtime) for details. 
+    See [buildtime](xref:logging-customizing#editing-a-build-time-configuration) for details. 
 
 * Adding aspects to your code without affecting your code base, for instance:
     ```xml
@@ -55,9 +55,9 @@ Configuration files are typically useful in the following scenarios:
 
 Other less common use cases are:
 
-* Configuring properties. See the [property](configuration-schema#property) configuration element for details. 
+* Configuring properties. See the <xref:configuration-schema> for details. 
 
-* Including a plug-in. See the [using](configuration-schema#using) configuration element for details. 
+* Including a plug-in. See the <xref:configuration-schema> for details. 
 
 
 ## Configuration file schema
@@ -89,7 +89,7 @@ For instance, the files may be loaded in the following order:
 
 The most typical way to share configuration between projects is to have a *postsharp.config* file in a parent directory of all projects. 
 
-Additionally, it is possible to define a [using](configuration-schema#using) configuration element: 
+Additionally, it is possible to define a using configuration element: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -98,3 +98,4 @@ Additionally, it is possible to define a [using](configuration-schema#using) con
 </Project>
 ```
 
+See <xref:configuration-schema> for details.

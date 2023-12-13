@@ -27,7 +27,7 @@ PostSharp can completely eliminate all of that repetition for you. PostSharp's <
 |-------|-------------|
 | <xref:inotifypropertychanged-add> | This section shows how to automatically implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface in a class thanks to the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect.  |
 | <xref:inotifypropertychanged-dependencies> | This section describes how to handle dependencies that cross several objects, as when a view-model object is dependent on properties of a model object. |
-| <xref:inotifypropertychanging> | This section documents how to implement the <xref:t:system.componentmodel.inotifypropertychanging> interface for components which need to be signalled *before* a property value is changed.  |
+| <xref:inotifypropertychanging> | This section documents how to implement the <xref:System.ComponentModel.INotifyPropertyChanging> interface for components which need to be signalled *before* a property value is changed.  |
 | <xref:inotifypropertychanged-frameworks> | This section shows examples of using the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect with some of the popular UI frameworks.  |
 | <xref:inotifypropertychanged-customization> | This section documents how to cope with the cases that cannot be automatically handled by the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect.  |
 | <xref:inotifypropertychanged-conceptual> | This section describes the principles and concepts on which the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect relies.  |

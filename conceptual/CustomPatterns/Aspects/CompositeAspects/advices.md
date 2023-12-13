@@ -196,7 +196,7 @@ The code in the left column may make sense in some situations, but it is not con
 
 Additionally, when advices of the <xref:PostSharp.Aspects.OnMethodBoundaryAspect> family are grouped together, it will be possible to share information among them using <xref:PostSharp.Aspects.MethodExecutionArgs.MethodExecutionTag>. 
 
-The reasons to group advices of the family <xref:PostSharp.Aspects.LocationInterceptionAspect> and <xref:PostSharp.Aspects.EventInterceptionAspect> are similar: advices grouped together behave consistently as a single filter (see <xref:interception-aspects>). 
+The reasons to group advices of the family <xref:PostSharp.Aspects.LocationInterceptionAspect> and <xref:PostSharp.Aspects.EventInterceptionAspect> are similar: advices grouped together behave consistently as a single filter (see <xref:simple-aspects>). 
 
 
 ### How to Group Advices
@@ -240,5 +240,5 @@ The following code shows how two advices of type <xref:PostSharp.Aspects.Advices
 <br>**Other Resources**
 
 <xref:advice-ordering>
-<br><xref:interception-aspects>
+<br><xref:simple-aspects>
 <br>

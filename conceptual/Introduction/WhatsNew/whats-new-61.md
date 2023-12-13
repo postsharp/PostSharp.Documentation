@@ -18,15 +18,15 @@ We've worked hard to improve the scenario of logging high-load distributed syste
 
 To achieve this goal, we had to bring several improvements to PostSharp Logging:
 
-* **Semantic-First Logging**, suitable for statistical processing of messages and machine learning. See [semantic](log-custom-messages#semantic) for details. 
+* **Semantic-First Logging**, suitable for statistical processing of messages and machine learning. See [semantic](xref:log-custom-messages#writing-semantic-messages-for-easy-statistical-processing) for details.
 
 * **Custom Properties** on custom messages and activities, including cross-process properties (aka baggage). See <xref:log-properties> for details. 
 
 * **Hierarchical and Cross-Process Activity ID** that can be easily filtered and sorted on to get a logical view of a request in a distributed system. See <xref:distributed-logging> for details. 
 
-* **Sampled Logging**: Instead of hoarding gigabytes of useless logs, you can now enable logging for selected requests only. See <xref:sampled-logging> for details. 
+* **Sampled Logging**: Instead of hoarding gigabytes of useless logs, you can now enable logging for selected requests only. See <xref:log-enabling> for details. 
 
-* **Execution time measurement for custom activities**. See [execution-time](log-custom-activities#execution-time) for details. 
+* **Execution time measurement for custom activities**. See [execution-time](xref:log-custom-activities#measuring-the-execution-time-of-activities) for details. 
 
 * **Serilog backend improvements**: You now have more control over generated Serilog properties. See <xref:PostSharp.Patterns.Diagnostics.Backends.Serilog.SerilogLoggingBackendOptions.IncludedSpecialProperties> and <xref:PostSharp.Patterns.Diagnostics.Backends.Serilog.SerilogLoggingBackendOptions.LogEventEnricher> properties for details. 
 

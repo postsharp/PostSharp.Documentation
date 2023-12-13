@@ -62,7 +62,7 @@ In the following example, we’ll create an attribute decorator class which appl
     ```
 
     > [!NOTE]
-    > Since the <xref:PostSharp.Aspects.IAspectProvider.ProvideAspects(System.Object)> method returns an `IEnumerable`, the yield keyword should be used to return aspects for PostSharp to apply. 
+    > Since the `ProvideAspects` method returns an `IEnumerable`, the yield keyword should be used to return aspects for PostSharp to apply. 
 
 
 3. Apply the `AutoDataContractAttribute` class. In the following example we apply it to a `Product` class where it will decorate `Product` with <xref:System.Runtime.Serialization.DataContractAttribute> and each member with <xref:System.Runtime.Serialization.DataMemberAttribute>: 

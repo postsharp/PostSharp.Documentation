@@ -32,11 +32,11 @@ namespace PostSharp.Samples.Logging.CustomBackend.ServiceStack
 
 ## Override the LoggingTypeSource class
 
-The <xref:PostSharp.Patterns.Diagnostics.Backends.LoggingTypeSource> class corresponds to the `ILog` or `ILogger` concept of several logging frameworks. Your <xref:PostSharp.Patterns.Diagnostics.Backends.LoggingTypeSource> will typically contain one field of this type, which will be initialized in the constructor. 
+The <xref:PostSharp.Patterns.Diagnostics.LoggingTypeSource> class corresponds to the `ILog` or `ILogger` concept of several logging frameworks. Your <xref:PostSharp.Patterns.Diagnostics.LoggingTypeSource> will typically contain one field of this type, which will be initialized in the constructor. 
 
-Additionally to exposing the back-end logger, the <xref:PostSharp.Patterns.Diagnostics.Backends.LoggingTypeSource> class exposes the <xref:PostSharp.Patterns.Diagnostics.LoggingTypeSource.IsBackendEnabled(PostSharp.Patterns.Diagnostics.LogLevel)> method, which determines whether logging is enabled for the specified level and the current type and role. 
+Additionally to exposing the back-end logger, the <xref:PostSharp.Patterns.Diagnostics.LoggingTypeSource> class exposes the <xref:PostSharp.Patterns.Diagnostics.LoggingTypeSource.IsBackendEnabled(PostSharp.Patterns.Diagnostics.LogLevel)> method, which determines whether logging is enabled for the specified level and the current type and role. 
 
-Your implementation of <xref:PostSharp.Patterns.Diagnostics.Backends.LoggingTypeSource> must be immutable or thread-safe. 
+Your implementation of <xref:PostSharp.Patterns.Diagnostics.LoggingTypeSource> must be immutable or thread-safe. 
 
 
 ### Example
@@ -77,13 +77,13 @@ namespace PostSharp.Samples.Logging.CustomBackend.ServiceStack
 
 ## Override the TextLogRecordBuilder class
 
-The role of the <xref:PostSharp.Patterns.Diagnostics.Backends.TextLogRecordBuilder> is to create a string representing the current log record and finally to emit this string to the target logging framework. 
+The role of the <xref:PostSharp.Patterns.Diagnostics.RecordBuilders.TextLogRecordBuilder> is to create a string representing the current log record and finally to emit this string to the target logging framework. 
 
-The <xref:PostSharp.Patterns.Diagnostics.Backends.TextLogRecordBuilder> class already contains the logic that creates the string. If you don't need to alter the string formatting logic, all you have to do is to implement the <xref:PostSharp.Patterns.Diagnostics.RecordBuilders.TextLogRecordBuilder.Write(PostSharp.Patterns.Formatters.UnsafeString)> method. 
+The <xref:PostSharp.Patterns.Diagnostics.RecordBuilders.TextLogRecordBuilder> class already contains the logic that creates the string. If you don't need to alter the string formatting logic, all you have to do is to implement the <xref:PostSharp.Patterns.Diagnostics.RecordBuilders.TextLogRecordBuilder.Write(PostSharp.Patterns.Formatters.UnsafeString)> method. 
 
-If you need to customize the formatting of the string, or if you need to implement semantic logging, you will need to override other virtual methods of the <xref:PostSharp.Patterns.Diagnostics.Backends.TextLogRecordBuilder> class. Please refer to the API reference for details. 
+If you need to customize the formatting of the string, or if you need to implement semantic logging, you will need to override other virtual methods of the <xref:PostSharp.Patterns.Diagnostics.RecordBuilders.TextLogRecordBuilder> class. Please refer to the API reference for details. 
 
-Your implementation of the <xref:PostSharp.Patterns.Diagnostics.Backends.TextLogRecordBuilder> class does not need to be thread-safe. All threads involved in logging have their own instance of the <xref:PostSharp.Patterns.Diagnostics.Backends.TextLogRecordBuilder> class. 
+Your implementation of the <xref:PostSharp.Patterns.Diagnostics.RecordBuilders.TextLogRecordBuilder> class does not need to be thread-safe. All threads involved in logging have their own instance of the <xref:PostSharp.Patterns.Diagnostics.RecordBuilders.TextLogRecordBuilder> class. 
 
 
 ### Example
@@ -246,7 +246,7 @@ namespace PostSharp.Samples.Logging.CustomBackend.ServiceStack
 
 Contexts are typically used to represent the execution of a logged method and a custom activity. There are typically two log records per context: the entry record and the exit record. The role of context classes is to expose or store pieces of information that are shared by several records of the same context. Unless you need to store more pieces of information in the context, you do not need to extend the context classes. Most back-end implementations do not extend context classes.
 
-Context classes all derive from the <xref:PostSharp.Patterns.Diagnostics.Contexts.LoggingContext> class. The following table lists all context classes. If you choose to derive a context class, you will also need to override the corresponding factory method in your <xref:PostSharp.Patterns.Diagnostics.Backends.LoggingBackend> class. 
+Context classes all derive from the <xref:PostSharp.Patterns.Diagnostics.Contexts.LoggingContext> class. The following table lists all context classes. If you choose to derive a context class, you will also need to override the corresponding factory method in your <xref:PostSharp.Patterns.Diagnostics.LoggingBackend> class. 
 
 | Context class | Factory method | Description |
 |---------------|----------------|-------------|

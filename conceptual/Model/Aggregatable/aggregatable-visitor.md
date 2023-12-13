@@ -29,7 +29,7 @@ In the following example, we see how to implement recursive validation for an ob
 
     ---
     > [!NOTE]
-    > If you are attempting to access <xref:PostSharp.Patterns.Model.IAggregatable> members on either <xref:PostSharp.Patterns.Collections.AdvisableCollection`1> or <xref:PostSharp.Patterns.Collections.AdvisableDictionary`2> you will not be able to use the cast operator or the <xref:PostSharp.Post.Cast``2(``0)> method. Instead, you will have to use the <xref:PostSharp.Patterns.Model.QueryInterfaceExtensions.QueryInterface``1(System.Object,System.Boolean)> extension method. 
+    > If you are attempting to access <xref:PostSharp.Patterns.Model.IAggregatable> members on either <xref:PostSharp.Patterns.Collections.AdvisableCollection`1> or <xref:PostSharp.Patterns.Collections.AdvisableDictionary`2> you will not be able to use the cast operator or the <xref:PostSharp.Post.Cast``2(``0)> method. Instead, you will have to use the <xref:PostSharp.Patterns.DynamicAdvising.DynamicAdvisingServices.QueryInterface``1(System.Object,System.Boolean)> extension method. 
 
 
 2. Invoke the <xref:PostSharp.Patterns.Model.IAggregatable.VisitChildren(PostSharp.Patterns.Model.ChildVisitor,PostSharp.Patterns.Model.ChildVisitorOptions,System.Object)> method and pass a delegate to the method to be executed. 
@@ -64,5 +64,5 @@ In the following example, we see how to implement recursive validation for an ob
 <br><xref:PostSharp.Patterns.Model.IAggregatable>
 <br><xref:PostSharp.Patterns.Model.IAggregatable.VisitChildren(PostSharp.Patterns.Model.ChildVisitor,PostSharp.Patterns.Model.ChildVisitorOptions,System.Object)>
 <br><xref:PostSharp.Post.Cast``2(``0)>
-<br><xref:PostSharp.Patterns.Model.QueryInterfaceExtensions.QueryInterface``1(System.Object,System.Boolean)>
+<br><xref:PostSharp.Patterns.DynamicAdvising.DynamicAdvisingServices.QueryInterface``1(System.Object,System.Boolean)>
 <br>

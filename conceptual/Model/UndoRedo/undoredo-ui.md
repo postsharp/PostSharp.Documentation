@@ -11,7 +11,7 @@ The Undo/Redo functionality that you added to your codebase needs to be made ava
 
 ## Using the ready-made WPF controls
 
-PostSharp includes two button controls <xref:PostSharp.Patterns.Xaml.UndoButton> and <xref:PostSharp.Patterns.Xaml.RedoButton> that you can add to your application. 
+PostSharp includes two button controls <xref:PostSharp.Patterns.Model.Controls.UndoButton> and <xref:PostSharp.Patterns.Model.Controls.RedoButton> that you can add to your application. 
 
 
 ### To add Undo/Redo to a WPF window:

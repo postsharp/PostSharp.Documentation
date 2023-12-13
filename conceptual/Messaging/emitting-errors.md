@@ -13,7 +13,7 @@ Custom code running in PostSharp at build time can use the messaging facility to
 
 If you just have a few messages to emit, you may simply use one of the overloads of the `Write` method of the <xref:PostSharp.Extensibility.Message> class. 
 
-All messages must have a severity <xref:PostSharp.Extensibility.SeverityType>, a message number (used as a reference when ignoring or escalating messages), and a message text. Additionally, and preferably, messages may have a location (<xref:PostSharp.MessageLocation>). 
+All messages must have a severity <xref:PostSharp.Extensibility.SeverityType>, a message number (used as a reference when ignoring or escalating messages), and a message text. Additionally, and preferably, messages may have a location (<xref:PostSharp.Extensibility.MessageLocation>). 
 
 > [!NOTE]
 > To benefit from the possibility to ignore messages locally, you should always use provide a relevant location with your messages. Previous API overloads, which did not require a message location, are considered obsolete.

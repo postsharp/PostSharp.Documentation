@@ -11,11 +11,7 @@ This section describes the principles and algorithm on which the <xref:PostSharp
 
 ## Implementation of the INotifyPropertyChanged interface
 
-The <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect introduces the <xref:System.ComponentModel.INotifyPropertyChanged> interface to the target class unless the target class already implements the interface. Additionally, the aspect also introduces the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttributeTargetClass.OnPropertyChanged(System.String)> method. The aspect always introduces this method as protected and virtual, so it can be overridden in derived classes. 
-
-If the target class already implements the <xref:System.ComponentModel.INotifyPropertyChanged> interface, the aspect requires the class to expose the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttributeTargetClass.OnPropertyChanged(System.String)> method. 
-
-The aspect uses the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttributeTargetClass.OnPropertyChanged(System.String)> to raise the <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> event. Thanks to this method, the aspect is able to raise the event even when the <xref:System.ComponentModel.INotifyPropertyChanged> is not implemented by the aspect. This mechanism also allows user code to raise notifications that are not automatically handled by the <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect. 
+The <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect introduces the <xref:System.ComponentModel.INotifyPropertyChanged> interface to the target class unless the target class already implements the interface.
 
 
 ## Instrumentation of fields

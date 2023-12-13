@@ -54,7 +54,7 @@ invoice.Id = 123456;
 Instead of using the cast operator, you can also use the <xref:PostSharp.Post.Cast``2(``0)> method. This method is faster and safer than the cast operator because it is verified and compiled by PostSharp at build time. 
 
 > [!NOTE]
-> If you are attempting to freeze either <xref:PostSharp.Patterns.Collections.AdvisableCollection`1> or <xref:PostSharp.Patterns.Collections.AdvisableDictionary`2> you will not be able to use the cast operator or the <xref:PostSharp.Post.Cast``2(``0)> method. Instead, you will have to use the <xref:PostSharp.Patterns.Model.QueryInterfaceExtensions.QueryInterface``1(System.Object,System.Boolean)> extension method. 
+> If you are attempting to freeze either <xref:PostSharp.Patterns.Collections.AdvisableCollection`1> or <xref:PostSharp.Patterns.Collections.AdvisableDictionary`2> you will not be able to use the cast operator or the <xref:PostSharp.Post.Cast``2(``0)> method. Instead, you will have to use the <xref:PostSharp.Patterns.DynamicAdvising.DynamicAdvisingServices.QueryInterface``1(System.Object,System.Boolean)> extension method. 
 
 Once you’ve called the <xref:PostSharp.Patterns.Threading.IFreezable.Freeze> method on an object instance the code will no longer be able to change the property values on that instance. If a value change is attempted the code will throw an <xref:PostSharp.Patterns.Threading.ObjectReadOnlyException>. 
 
