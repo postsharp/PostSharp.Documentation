@@ -94,8 +94,6 @@ PostSharp supports the following threading models and features:
 
 * Thread Dispatching: see <xref:background-dispatching> and <xref:ui-dispatching>. 
 
-* Deadlock Detection: see <xref:deadlock-detection>. 
-
 
 ### Example
 

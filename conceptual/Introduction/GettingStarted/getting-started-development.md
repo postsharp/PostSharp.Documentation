@@ -37,7 +37,6 @@ PostSharp offers a number of different pre-built patterns. You will need to lear
 | Disposable | <xref:disposable> |
 | Undo and Redo | <xref:undoredo> |
 | Threading Models | <xref:threading-models><br><xref:freezable>, <xref:immutable>, <xref:actor>, <xref:reader-writer-synchronized>, <xref:synchronized>, <xref:thread-unsafe>, <xref:thread-affine> <br><xref:threading-model-compatibility><br><xref:threading-waiving-verification> |
-| Deadlock Detection | <xref:deadlock-detection> |
 | Dispatching Threads | <xref:ui-dispatching><br><xref:background-dispatching> |
 | Architecture Validation | <xref:control-implementation><br><xref:control-visibility> |
 
