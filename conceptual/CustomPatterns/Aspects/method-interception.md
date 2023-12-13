@@ -3,6 +3,7 @@ uid: method-interception
 title: "Intercepting Methods"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document outlines how to use PostSharp's MethodInterceptionAspect class to intercept method invocations and replace them with custom hooks. It also provides examples and instructions on how to create an aspect that retries a method call on exception."
 ---
 # Intercepting Methods
 

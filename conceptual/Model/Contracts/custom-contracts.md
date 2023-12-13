@@ -3,6 +3,7 @@ uid: custom-contracts
 title: "Creating Custom Contracts"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a step-by-step guide on how to create custom contracts in PostSharp, specifically a contract that throws an exception if a numeric parameter is zero."
 ---
 # Creating Custom Contracts
 
@@ -73,4 +74,5 @@ bool Mod([NonZero] uint number, [NonZero] uint dividend)
   return ((number % dividend) == 0);
 }
 ```
+
 

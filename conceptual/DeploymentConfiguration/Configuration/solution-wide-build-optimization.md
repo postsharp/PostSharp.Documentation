@@ -3,6 +3,7 @@ uid: solution-wide-build-optimization
 title: ""
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp's solution-wide build feature, which reuses AppDomains to reduce overhead and increase speed, is temporarily disabled. This experimental feature only works when a build is triggered by Visual Studio."
 ---
 > [!IMPORTANT]
 > This feature is temporarily disabled.
@@ -52,4 +53,5 @@ As a result, PostSharp will attempt to reuse AppDomains when building this solut
 
 > [!TIP]
 > PostSharp needs to create at least one AppDomain per specific version of the target framework. To optimize the AppDomain reuse and therefore build time, make sure to consolidate the target framework versions of your projects.
+
 

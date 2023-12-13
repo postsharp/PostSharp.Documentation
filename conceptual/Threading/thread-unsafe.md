@@ -3,6 +3,7 @@ uid: thread-unsafe
 title: "Thread-Unsafe Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the thread-unsafe threading model in PostSharp, which throws exceptions when objects are accessed concurrently by multiple threads. It provides steps to apply this model to a class and details the rules enforced by this aspect."
 ---
 # Thread-Unsafe Threading Model
 

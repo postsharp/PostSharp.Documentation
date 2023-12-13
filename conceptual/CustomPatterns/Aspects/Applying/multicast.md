@@ -3,6 +3,7 @@ uid: multicast
 title: "Adding Aspects Declaratively Using Attributes"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses the use of multicast custom attributes in .NET, a feature of PostSharp that allows applying a custom attribute to multiple declarations with a single line of code."
 ---
 # Adding Aspects Declaratively Using Attributes
 

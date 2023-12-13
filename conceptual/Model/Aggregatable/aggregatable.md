@@ -3,6 +3,7 @@ uid: aggregatable
 title: "Parent/Child, Visitor and Disposable"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses the concept of parent-child relationship in object-oriented design, its implementation in PostSharp, and the three types of object relationships in UML specification: Aggregation, Composition, and Association."
 ---
 # Parent/Child, Visitor and Disposable
 
@@ -29,4 +30,5 @@ The Aggregatable pattern is used by other PostSharp aspects, including all threa
 | <xref:aggregatable-visitor> | This section describes how to enumerate the children of an object thanks to the visitor pattern. |
 | <xref:disposable> | This section shows how to automatically implement the <xref:System.IDisposable> interface so that children objects are disposed when the parent object is disposed.  |
 | <xref:advisable-collections> | This section covers advanced topics related to collections in aggregatable object models. |
+
 

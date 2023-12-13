@@ -3,6 +3,7 @@ uid: global-service-container
 title: "Using a Global Composition Container"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to initialize an aspect from an ambient container at runtime using a global composition container in the PostSharp AOP framework. It includes relevant code examples."
 ---
 # Using a Global Composition Container
 
@@ -165,4 +166,5 @@ namespace DependencyResolution.GlobalServiceContainer.Test
     }
 }
 ```
+
 

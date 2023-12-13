@@ -3,6 +3,7 @@ uid: comparative-benefits
 title: "Benefits of PostSharp vs Alternatives"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp is a pattern-aware extension to C#/VB that reduces boilerplate code and errors, enhancing productivity. It automates complex patterns, provides ready-made pattern implementations, and offers thread-safety features. It supports existing C#/VB codebases and delivers exceptional run-time performance."
 ---
 # Benefits of PostSharp vs Alternatives
 
@@ -84,4 +85,5 @@ Start-up latency, execution speed and memory consumption matter. Whether you're 
 * **No reflection**. PostSharp does not rely on reflection at run-time. The only code that is executed is what you can see with a decompiler. 
 
 * **Build-time initialization**. Many patterns make decisions based on the shape of the code which they are applied. With PostSharp, you can analyze the target code at build-time and store the decisions into serializable fields. At runtime, the aspects will be deserialized and you won't need to analyze the code at run-time using reflection. 
+
 

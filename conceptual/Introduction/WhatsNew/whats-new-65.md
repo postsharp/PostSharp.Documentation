@@ -3,6 +3,7 @@ uid: whats-new-65
 title: "What's New in PostSharp 6.5"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.5 features improved build-time and design-time experience, official Docker support, and performance enhancements. It also brings updates for Visual Studio and Docker, and installer improvements."
 ---
 # What's New in PostSharp 6.5
 
@@ -48,4 +49,5 @@ We've tested PostSharp on Docker thoroughly and fixed a few issues with thin Win
 * We added support for the modern `Microsoft.Extensions.Caching.Memory.IMemoryCache` interface of .NET Core and `Microsoft.Azure.ServiceBus`, the new API for Azure Service Bus. 
 
 * Visual Studio 2017 RTM (15.0) is no longer supported. It is replaced by Visual Studio 2017 Update 1 (15.9, LTS).
+
 

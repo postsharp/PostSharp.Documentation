@@ -3,6 +3,7 @@ uid: requirements-62
 title: "PostSharp 6.2: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document outlines the requirements and compatibility of PostSharp 6.2 for development, build and end-user devices. It includes supported programming languages, software components, operating systems, and known incompatibilities."
 ---
 # PostSharp 6.2: Requirements and Compatibility
 
@@ -125,4 +126,5 @@ PostSharp is not compatible with the following products or features:
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Xamarin | Support suspended (deprioritized because of low customer demand) | Use PostSharp 4.3. Contact PostSharp support team to discuss prioritization. |
 | Mono, Unity3D | Unsupported | None. |
+
 

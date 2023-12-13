@@ -3,6 +3,7 @@ uid: importing-dependencies
 title: "Importing Dependencies from the Target Object"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to import dependencies from target objects in PostSharp by implementing the IInstanceScopedAspect interface and using custom attributes. It includes a step-by-step guide and code examples."
 ---
 # Importing Dependencies from the Target Object
 
@@ -173,4 +174,5 @@ namespace DependencyResolution.InstanceScoped.Test
     }
 }
 ```
+
 

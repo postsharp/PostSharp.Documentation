@@ -3,6 +3,7 @@ uid: attached-property
 title: "Attached Property"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to create and use attached properties in XAML using PostSharp's AttachedPropertyAttribute aspect. It also discusses its relationship with DependencyPropertyAttribute aspect."
 ---
 # Attached Property
 

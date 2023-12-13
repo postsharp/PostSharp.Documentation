@@ -3,6 +3,7 @@ uid: threading-library
 title: "Multithreading"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The Threading Pattern Library aids in building multithreaded applications with fewer lines of code and defects, implementing locking models, thread synchronization aspects, and deadlock detection."
 ---
 # Multithreading
 
@@ -15,4 +16,5 @@ It provides the following features:
 * **Thread Dispatching.** Custom attributes <xref:PostSharp.Patterns.Threading.DispatchedAttribute> and <xref:PostSharp.Patterns.Threading.BackgroundAttribute> cause the execution of a method to be dispatched to the UI thread or to a background thread, respectively. For details, read <xref:ui-dispatching> and <xref:background-dispatching>. 
 
 * **Deadlock Detection.** Detects deadlocks at run time and throws an exception instead of allowing your application to freeze. For details, see <xref:deadlock-detection>. 
+
 

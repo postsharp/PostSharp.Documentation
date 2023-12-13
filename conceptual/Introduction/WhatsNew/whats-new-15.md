@@ -3,6 +3,7 @@ uid: whats-new-15
 title: "What's New in PostSharp 1.5"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 1.5 introduces aspect inheritance, the ability to read assemblies without loading them in the CLR, lazy loading of assemblies, build-time performance improvements, support for Mono, Silverlight 2.0, Compact Framework 2.0, and a pluggable aspect serializer."
 ---
 # What's New in PostSharp 1.5
 
@@ -42,4 +43,5 @@ You can add aspects to your projects targeting Silverlight 2.0 or the Compact Fr
 ## Pluggable aspect serializer & partial trust
 
 Previously, all aspects were serializers using the standard .NET binary formatter. It is now possible to choose another serializer or implement your own, and enhance assemblies that be executed with partial trust.
+
 

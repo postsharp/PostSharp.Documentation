@@ -3,6 +3,7 @@ uid: reader-writer-synchronized
 title: "Reader/Writer Synchronized Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document details the Reader/Writer Synchronized Threading Model in PostSharp, which uses locks to prevent data races in multithreaded programs. It explains how to implement the model and provides usage examples."
 ---
 # Reader/Writer Synchronized Threading Model
 

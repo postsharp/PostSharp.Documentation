@@ -3,6 +3,7 @@ uid: nuget-restore
 title: "Restoring Packages at Build Time"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidelines on how to restore NuGet packages at build time, specifically the PostSharp package, using different versions of NuGet, Visual Studio, and .NET Core Command Line Interface."
 ---
 # Restoring Packages at Build Time
 

@@ -3,6 +3,7 @@ uid: aspect-serialization
 title: "Understanding Aspect Serialization"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed explanation on aspect serialization in PostSharp, including the default and fallback serialization strategies, and how to handle aspects without serialization. It also discusses the aspect life cycle."
 ---
 # Understanding Aspect Serialization
 

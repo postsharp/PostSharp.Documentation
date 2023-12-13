@@ -3,6 +3,7 @@ uid: aggregatable-visitor
 title: "Enumerating Child Objects (Visitor)"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use the Aggregatable pattern in PostSharp to enumerate child objects of a parent, including a step-by-step guide and code examples."
 ---
 # Enumerating Child Objects (Visitor)
 

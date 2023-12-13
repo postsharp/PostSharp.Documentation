@@ -3,6 +3,7 @@ uid: application-insights
 title: "Logging with Application Insights"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging and Application Insights together, including setting up and configuring the services."
 ---
 # Logging with Application Insights
 

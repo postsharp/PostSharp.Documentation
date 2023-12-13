@@ -3,6 +3,7 @@ uid: add-logging
 title: "Getting Started with PostSharp Logging"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on how to implement and configure PostSharp Logging in your codebase. It covers steps from adding logging to projects, choosing and configuring a logging framework, to setting logging verbosity."
 ---
 # Getting Started with PostSharp Logging
 

@@ -3,6 +3,7 @@ uid: simple-aspects
 title: "Developing Simple Aspects"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on developing simple aspects in PostSharp, which are composed of a single transformation, and includes related articles for further reading."
 ---
 # Developing Simple Aspects
 
@@ -22,4 +23,5 @@ If your aspect cannot be implemented as a single transformation, see <xref:compl
 | <xref:event-interception> | This article describes how to intercept the action of adding a delegate to an event, removing a delegate from an event, and invoking a delegate by raising the event. |
 | <xref:attribute-introduction> | This article shows how to add a custom attribute to any element of code. |
 | <xref:resource-introduction> | This article shows how to add a managed resource to the current assembly. |
+
 

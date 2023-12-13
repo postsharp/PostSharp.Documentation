@@ -3,6 +3,7 @@ uid: weak-event
 title: "Weak Event"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use the PostSharp.Patterns.Model.WeakEventAttribute aspect to prevent memory leaks in .NET by turning strong event references into weak ones, allowing for garbage collection of event clients."
 ---
 # Weak Event
 
@@ -73,4 +74,5 @@ The following code snippet makes all events *of a specific namespace* weak event
 ```csharp
 [assembly: PostSharp.Patterns.Model.WeakEvent(AttributeTargetTypes="OurCompany.OurApplication.ViewModel.*")]
 ```
+
 

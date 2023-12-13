@@ -3,6 +3,7 @@ uid: deadlock-detection
 title: "Detecting Deadlocks at Runtime"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on using PostSharp Tools for Visual Studio to detect deadlocks in multithreaded code at runtime, either manually or using a wizard."
 ---
 # Detecting Deadlocks at Runtime
 

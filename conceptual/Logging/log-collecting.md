@@ -3,6 +3,7 @@ uid: log-collecting
 title: "Collecting Logs from Other Frameworks"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use PostSharp to collect logs from other frameworks, detailing the benefits of log collection and providing examples of output with and without log collection. It also mentions support for various logging frameworks."
 ---
 # Collecting Logs from Other Frameworks
 

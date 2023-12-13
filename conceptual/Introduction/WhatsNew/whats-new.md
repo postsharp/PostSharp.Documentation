@@ -3,6 +3,7 @@ uid: whats-new
 title: "What's New"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides an overview of updates and new features added to PostSharp, a popular tool for aspect-oriented programming in .NET, since 2004."
 ---
 # What's New
 
@@ -32,3 +33,4 @@ This chapter contains the following sections:
 * <xref:whats-new-21>
 * <xref:whats-new-20>
 * <xref:whats-new-15>
+

@@ -3,6 +3,7 @@ uid: whats-new-60
 title: "What's New in PostSharp 6.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.0 now supports .NET Core 2.0-2.1 and .NET Standard 2.0, runs natively in .NET Core, and supports C# 7.2. It has also improved the robustness of the logging component and is now GDPR compliant. "
 ---
 # What's New in PostSharp 6.0
 
@@ -81,4 +82,5 @@ You can still build .NET Core 1.1 and .NET Standard 1.* projects, but using the 
 ## Removal of the UI to use PostSharp without NuGet
 
 If is still possible to use PostSharp without NuGet, but we removed the UI from PostSharp Tools for Visual Studio.
+
 

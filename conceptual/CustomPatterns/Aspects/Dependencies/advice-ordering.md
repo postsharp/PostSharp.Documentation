@@ -3,6 +3,7 @@ uid: advice-ordering
 title: "Ordering Advices"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidance on ordering advices in PostSharp, explaining aspect dependencies, execution order, and the use of custom attributes for defining dependencies and ordering."
 ---
 # Ordering Advices
 

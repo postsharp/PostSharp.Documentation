@@ -3,6 +3,7 @@ uid: build-server
 title: "Using PostSharp on a Build Server"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses how to use PostSharp on a build server, emphasizing its ease of use and various ways to install a license on the server."
 ---
 # Using PostSharp on a Build Server
 

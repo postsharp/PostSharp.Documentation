@@ -3,6 +3,7 @@ uid: caching-redis
 title: "Using Redis Cache"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to use Redis Cache with PostSharp, including server configuration, setting up PostSharp for Redis caching, adding local in-memory cache, and using dependencies with the Redis caching backend."
 ---
 # Using Redis Cache
 
@@ -77,6 +78,7 @@ If you choose to enable dependencies with Redis, you need to make sure that ther
 
 
 3. Set the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.SupportsDependencies> property to `true`. 
+
 
 
 

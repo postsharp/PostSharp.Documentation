@@ -3,6 +3,7 @@ uid: whats-new-61
 title: "What's New in PostSharp 6.1"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.1 focuses on improving the logging API and debugging experience, with significant advancements made in the front-end API for logging high-load distributed systems. It also supports C# 7.3 and fixes .NET Standard gaps. "
 ---
 # What's New in PostSharp 6.1
 
@@ -67,4 +68,5 @@ PostSharp was affected by the following features of C# 7.3:
 ## Miscelanneous
 
 * Resolved ambiguous method matching in <xref:PostSharp.Aspects.Advices.LocationValidationAdvice> by adding the <xref:PostSharp.Aspects.Advices.LocationValidationAdvice.Priority> property. 
+
 

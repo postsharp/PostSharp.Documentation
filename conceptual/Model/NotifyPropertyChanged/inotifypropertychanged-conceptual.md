@@ -3,6 +3,7 @@ uid: inotifypropertychanged-conceptual
 title: "Understanding the NotifyPropertyChanged Aspect"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the NotifyPropertyChanged Aspect in PostSharp, its implementation, how it analyzes field-property dependencies, its limitations, and how it raises notifications. It also covers dependencies on properties of external objects."
 ---
 # Understanding the NotifyPropertyChanged Aspect
 
@@ -189,4 +190,5 @@ The <xref:PostSharp.Patterns.Model.NotifyPropertyChangedAttribute> aspect never 
 The algorithm heuristically detects dependency cycles. If a cycle is detected, an exception is thrown instead of allowing for an infinite update cycle.
 
 All notifications are invoked on the thread on which the change is being made. The accumulator that buffers the changes is a thread-local storage.
+
 

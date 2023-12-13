@@ -1,5 +1,6 @@
 ---
 uid: logging-troubleshooting
+summary: "The document provides troubleshooting steps for issues related to PostSharp Logging, focusing on checking code enhancement at compile time and verifying run-time setup."
 ---
 
 # Troubleshooting logging

@@ -3,6 +3,7 @@ uid: aspect-inheritance
 title: "Adding Aspects to Derived Classes and Methods Using Attributes"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use PostSharp's aspect inheritance feature to apply aspects to derived classes and methods. It provides examples of applying aspects to derived types, setting inheritance on a per-usage basis, and applying aspects to new methods of derived types."
 ---
 # Adding Aspects to Derived Classes and Methods Using Attributes
 

@@ -3,6 +3,7 @@ uid: custom-logging-backend
 title: "Building Your Own Logging Backend (Adapter)"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to build a custom logging back-end (adapter) for PostSharp Logging by overriding four classes: TextLoggingBackendOptions, LoggingTypeSource, TextLogRecordBuilder, and TextLoggingBackend."
 ---
 # Building Your Own Logging Backend (Adapter)
 

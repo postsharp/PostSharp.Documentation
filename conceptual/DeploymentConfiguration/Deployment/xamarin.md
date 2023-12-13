@@ -3,6 +3,7 @@ uid: xamarin
 title: "Compatibility with Xamarin"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp supports Xamarin through .NET Standard libraries, but not directly in a Xamarin application project. A custom linker configuration is needed to prevent removal of required code."
 ---
 # Compatibility with Xamarin
 

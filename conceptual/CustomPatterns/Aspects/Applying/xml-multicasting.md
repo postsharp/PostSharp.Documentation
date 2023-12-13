@@ -3,6 +3,7 @@ uid: xml-multicasting
 title: "Adding Aspects Using XML"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp allows aspects to be added in code and via XML. Adding aspects through XML doesn't require modifying the source code and can be applied to multiple projects. This is done by specifying an attribute in the project's postsharp.config file."
 ---
 # Adding Aspects Using XML
 

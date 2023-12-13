@@ -3,6 +3,7 @@ uid: common-logging
 title: "Logging with Common.Logging"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging with Common.Logging, including adding necessary packages and configuring output directions."
 ---
 # Logging with Common.Logging
 

@@ -3,6 +3,7 @@ uid: requirements-43
 title: "PostSharp 4.3: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document details the requirements and compatibility of PostSharp 4.3 for development workstations, build servers, end-user devices, and its compatibility with ASP.NET, Microsoft Code Analysis, Code Contracts and Obfuscators. It also lists known incompatibilities."
 ---
 # PostSharp 4.3: Requirements and Compatibility
 
@@ -94,4 +95,5 @@ PostSharp is not compatible with the following products or features:
 | Visual Studio Express | Microsoft's licensing policy | Use Visual Studio Community Edition |
 | Delayed strong-name signing on cloud build servers | No way to unregister verification of strong names | Use normal (non-delayed) strong-name signing or use build servers where you have administrative access. |
 | ASP.NET Web Sites | Not built using MSBuild | Convert the ASP.NET Web Site to an ASP.NET Web Application. |
+
 

@@ -3,6 +3,7 @@ uid: consuming-dependencies
 title: "Consuming Dependencies from an Aspect"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses how to consume dependencies from an aspect in PostSharp, highlighting different patterns to overcome obstacles related to instantiation and static scope."
 ---
 # Consuming Dependencies from an Aspect
 
@@ -23,3 +24,4 @@ This section presents several ways to consume dependencies from an aspect:
 * <xref:dynamic-dependency-resolution>
 * <xref:contextual-dependency-resolution>
 * <xref:importing-dependencies>
+

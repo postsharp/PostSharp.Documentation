@@ -3,6 +3,7 @@ uid: aggregatable-adding-programmatically
 title: "Rule-Based Annotation"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use rule-based annotation in PostSharp to programmatically annotate fields as a child or a reference, particularly useful for auto-generated fields or large numbers of fields."
 ---
 # Rule-Based Annotation
 

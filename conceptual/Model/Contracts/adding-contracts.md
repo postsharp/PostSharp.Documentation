@@ -3,6 +3,7 @@ uid: adding-contracts
 title: "Adding Contracts to Code"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use PostSharp's Contract attributes to validate parameters, fields, and properties in code, ensuring data integrity and reducing boilerplate code. It also covers contract inheritance in derived classes."
 ---
 # Adding Contracts to Code
 
@@ -129,4 +130,5 @@ Here `ICustomerModel.SetFullName` method specifies that the `firstName` and `las
 
 > [!NOTE]
 > If the derived class exists in a separate assembly, that assembly must be processed by PostSharp and must reference the `PostSharp` and `PostSharp.Patterns.Model` package 
+
 

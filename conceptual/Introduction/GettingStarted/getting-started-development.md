@@ -3,6 +3,7 @@ uid: getting-started-development
 title: "Developer Role: Using Aspects"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide for developers on using PostSharp aspects, including how to install and upgrade PostSharp, work with pre-built patterns, and work with patterns."
 ---
 # Developer Role: Using Aspects
 
@@ -50,4 +51,5 @@ The following resources are for all aspects. You can save a great amount of time
 |-------|----------|
 | Adding aspects to several declarations | <xref:multicast> |
 | Resolving Errors | <xref:messages> |
+
 

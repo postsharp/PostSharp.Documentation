@@ -3,6 +3,7 @@ uid: undoredo-callbacks
 title: "Adding Callbacks on Undo and Redo"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use the IRecordableCallback interface in PostSharp to execute code before or after an Undo or Redo operation."
 ---
 # Adding Callbacks on Undo and Redo
 
@@ -33,4 +34,5 @@ public class Invoice : IRecordableCallback
 ```
 
 For more information, see the reference documentation for the <xref:PostSharp.Patterns.Recording.IRecordableCallback> interface. 
+
 

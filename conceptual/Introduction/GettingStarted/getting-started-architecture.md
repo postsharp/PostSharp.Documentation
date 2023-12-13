@@ -3,6 +3,7 @@ uid: getting-started-architecture
 title: "Architecture Role: Selecting and Creating Aspects"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "This document is a guide to understanding the architecture role in adopting PostSharp, a tool that offers pre-built aspects and allows users to create custom aspects for specific needs."
 ---
 # Architecture Role: Selecting and Creating Aspects
 
@@ -49,4 +50,5 @@ PostSharp's built-in patterns won't cover all scenarios in your codebase that ca
 |-------|----------|
 | Aspects | <xref:custom-aspects> |
 | Architecture Validation | <xref:constraints> |
+
 

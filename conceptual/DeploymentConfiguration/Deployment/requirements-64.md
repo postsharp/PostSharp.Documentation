@@ -3,6 +3,7 @@ uid: requirements-64
 title: "PostSharp 6.4: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.4 supports C# 8.0 and VB 16.0, and is compatible with various versions of Microsoft Visual Studio, .NET Framework, and .NET Core. It also works with several operating systems, including Windows 10 and certain versions of Ubuntu, Alpine, and macOS."
 ---
 # PostSharp 6.4: Requirements and Compatibility
 
@@ -126,4 +127,5 @@ PostSharp is not compatible with the following products or features:
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Xamarin | Support suspended (deprioritized because of low customer demand) | Use PostSharp 4.3. Contact PostSharp support team to discuss prioritization. |
 | Mono, Unity3D | Unsupported | None. |
+
 

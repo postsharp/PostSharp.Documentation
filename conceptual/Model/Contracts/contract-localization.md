@@ -3,6 +3,7 @@ uid: contract-localization
 title: "Localizing Contract Error Messages"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to localize error messages in PostSharp's built-in contracts, using the ContractLocalizedTextProvider class, and also how to localize custom contracts."
 ---
 # Localizing Contract Error Messages
 
@@ -104,5 +105,6 @@ Once you have configured a text provider, you can use it to localize error messa
          {"NonZeroErrorMessage", "Hodnota {2} nesmí být 0."}
       };
     ```
+
 
 

@@ -3,6 +3,7 @@ uid: configuration-serialization
 title: "Including CLR Objects in Configuration"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document describes how PostSharp includes a facility to describe CLR objects using XML, including rules for XML serialized objects and attribute formatting. It also outlines specific rules for the Multicast section of the configuration file."
 ---
 # Including CLR Objects in Configuration
 
@@ -44,4 +45,5 @@ The following additional rules apply to the <xref:configuration-schema> section 
 * The class must derive from <xref:PostSharp.Extensibility.MulticastAttribute>. 
 
 * The <xref:PostSharp.Extensibility.MulticastAttribute.AttributePriority> property may not be defined. This attribute is added automatically according to the order of the XML element in the section. 
+
 

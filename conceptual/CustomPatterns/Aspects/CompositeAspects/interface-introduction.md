@@ -3,6 +3,7 @@ uid: interface-introduction
 title: ""
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use PostSharp to add code constructs such as interfaces, methods, and properties to your codebase in a controlled and consistent manner, adhering to the DRY (Don't Repeat Yourself) principle. It also covers handling potential conflicts and controlling visibility of introduced members."
 ---
 Some design patterns require you to add properties, methods or interfaces to your target code. If many components in your codebase need to represent the same construct, repetitively adding those constructs flies in the face of the DRY (Don't Repeat Yourself) principle. So how can you add code constructs to your target code without it becoming repetitive?
 

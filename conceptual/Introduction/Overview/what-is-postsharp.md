@@ -3,6 +3,7 @@ uid: what-is-postsharp
 title: "Quick Examples"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp is a .NET tool that provides ready-made implementations of common patterns and threading models. It also allows users to create and validate custom patterns using aspect-oriented programming (AOP)."
 ---
 # Quick Examples
 
@@ -216,4 +217,5 @@ public abstract BusinessRule
   // ...
 }
 ```
+
 

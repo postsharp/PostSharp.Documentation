@@ -3,6 +3,7 @@ uid: api
 title: "API Reference"
 product: "postsharp"
 categories: "PostSharp;AOP;PostSharp API"
+summary: "The document is an API reference for PostSharp, a design pattern automation tool for Microsoft .NET, detailing its various namespaces and their functions."
 ---
 # API Reference
 
@@ -77,3 +78,4 @@ PostSharp is a design pattern automation tool for Microsoft .NET.
 | <xref:PostSharp.Patterns.Diagnostics.Backends.Multiplexer> | This namespace allows to multiplex the output of PostSharp Logging to several back-ends instead of just one. |
 | <xref:PostSharp.Patterns.Diagnostics.Transactions> | This namespace defines the abstractions for top-level logging transactions such as an incoming request. |
 | <xref:PostSharp.Patterns.Diagnostics.Transactions.Model> | This namespace specifies the transaction configuration XML file and the classes and functions available to expressions. |
+

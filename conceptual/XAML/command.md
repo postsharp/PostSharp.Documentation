@@ -3,6 +3,7 @@ uid: command
 title: "Command"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on using PostSharp's CommandAttribute aspect to implement commands in MVVM pattern-based GUI applications, reducing boilerplate code and simplifying the implementation of the `CanExecute` logic."
 ---
 # Command
 

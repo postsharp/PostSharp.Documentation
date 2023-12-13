@@ -3,6 +3,7 @@ uid: disposable
 title: "Automatically Disposing Children Objects (Disposable)"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to automatically dispose of objects in hierarchies using the PostSharp.Patterns.Model.DisposableAttribute aspect in PostSharp. It covers implementing IDisposable interface, customizing the Dispose logic, and provides coding examples."
 ---
 # Automatically Disposing Children Objects (Disposable)
 
@@ -98,4 +99,5 @@ public class HomeMadeLogger
 ```
 
 Once you have done this, PostSharp will properly run your custom Dispose logic as well as running any of the parent and child implementations of the <xref:PostSharp.Patterns.Model.DisposableAttribute> that exist for the object. 
+
 

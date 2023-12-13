@@ -3,6 +3,7 @@ uid: logging-console
 title: "Logging with System.Console"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to configure PostSharp Logging to output to the console and how to customize console themes for log messages."
 ---
 # Logging with System.Console
 

@@ -3,6 +3,7 @@ uid: requirements
 title: "Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides information on the requirements and compatibility for using PostSharp to build applications for various devices and versions."
 ---
 # Requirements and Compatibility
 
@@ -27,3 +28,4 @@ This chapter contains the following sections:
 * <xref:requirements-60>
 * <xref:requirements-50>
 * <xref:requirements-43>
+

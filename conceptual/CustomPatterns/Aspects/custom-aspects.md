@@ -3,6 +3,7 @@ uid: custom-aspects
 title: "Developing Custom Aspects"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to develop custom aspects in PostSharp, including creation, initialization, configuration, validation, serialization, and handling dependencies."
 ---
 # Developing Custom Aspects
 
@@ -20,3 +21,4 @@ This chapter describes how to build your own aspect. It includes the following t
 | <xref:aspect-serialization> | This topic explains aspect serialization and how to customize it. |
 | <xref:customize-vs-appearance> | This topic shows how aspect can influence how they appear in Visual Studio tooltips and code saving metrics. |
 | <xref:consuming-dependencies> | This topic describes several strategies to consume services from aspects. |
+

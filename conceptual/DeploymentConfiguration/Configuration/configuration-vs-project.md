@@ -3,6 +3,7 @@ uid: configuration-vs-project
 title: "Configuring Projects in Visual Studio"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to configure PostSharp projects in Visual Studio, detailing each configuration setting and how to edit them. It also notes that starting from Visual Studio 2022, the project properties tab is no longer available for SDK-style projects."
 ---
 # Configuring Projects in Visual Studio
 
@@ -49,4 +50,5 @@ Note that all settings are dependent on the selected project configuration (for 
 | Processor Architecture | `PostSharpTargetProcessor` | The processor architecture (`x86` or `x64`) of the process hosting PostSharp. Since PostSharp needs to execute the current project during the build, the processor architecture of the PostSharp process must be compatible with the target platform of the current project. The default value is `x86`, or `x64` if the target platform of the current project is `x64`.  |
 | Build Host | `PostSharpHost` | The kind of process hosting PostSharp, which influences the assembly loading mechanism, compatibility and performance features. See [hosting-properties](xref:msbuild-properties#hosting-properties).  |
 | Optimization Mode | `PostSharpOptimizationMode` | When set to `Build Time`, PostSharp will use a faster algorithm to generate the final assembly. When set to `Size`, PostSharp will use a slower algorithm that generates smaller assemblies. The default value is `Build Time` by default, or `Size` when the C# or VB compiler is set to generate optimal code (typically, in release builds).  |
+
 

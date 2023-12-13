@@ -3,6 +3,7 @@ uid: instance-initialization
 title: "Coping with Custom Object Serializers"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to handle custom object serializers in PostSharp. It details how to manually initialize aspects either by defining a method 'InitializeAspects' or invoking 'AspectUtilities.InitializeCurrentAspects'."
 ---
 # Coping with Custom Object Serializers
 
@@ -65,4 +66,5 @@ If the class from which <xref:PostSharp.Aspects.AspectUtilities.InitializeCurren
 
 > [!NOTE]
 > Using this approach may be brittle in some situations: calls to <xref:PostSharp.Aspects.AspectUtilities.InitializeCurrentAspects> will have no effect if aspects are applied to derived classes, but not to the calling class. In this scenario, it is preferable to define the method `InitializeAspects`. 
+
 

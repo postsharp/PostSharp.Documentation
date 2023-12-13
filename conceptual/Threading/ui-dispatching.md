@@ -3,6 +3,7 @@ uid: ui-dispatching
 title: "Dispatching a Method to the UI Thread"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to dispatch methods to the UI thread using the PostSharp.Patterns.Threading.DispatchedAttribute aspect in PostSharp. It also covers synchronous and asynchronous execution of dispatched methods."
 ---
 # Dispatching a Method to the UI Thread
 

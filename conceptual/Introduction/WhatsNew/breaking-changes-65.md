@@ -3,6 +3,7 @@ uid: breaking-changes-65
 title: "Breaking Changes in PostSharp 6.5"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document outlines the breaking changes in PostSharp 6.5, including changes causing build errors, changes causing a silent change in behavior, and deprecated platforms and features."
 ---
 # Breaking Changes in PostSharp 6.5
 
@@ -24,4 +25,5 @@ PostSharp 6.5 contains the following breaking changes:
 ## Deprecated platforms and features
 
 * Visual Studio 2017 RTM (15.0) is no longer supported. Visual Studio 2017 Update 1 (15.9) is supported instead.
+
 

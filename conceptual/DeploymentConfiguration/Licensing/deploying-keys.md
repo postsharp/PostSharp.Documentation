@@ -3,6 +3,7 @@ uid: deploying-keys
 title: "Deploying License Keys"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on how to install PostSharp license keys, including configuring the key in source code, registering it using the user interface, subscribing to a license server, and deploying the key as an environment variable."
 ---
 # Deploying License Keys
 
@@ -164,4 +165,5 @@ See <xref:configuration-system> for details about this configuration file.
 There are two situations when you may consider using an environment variable to configure PostSharp licensing: when configuring build agents, and when configuring a large number of development machines using management tools such as Active Directory Group Policies or Microsoft Intune.
 
 The environment variable to set is named PostSharpLicense. It must be set to the license key itself or to the URL of the license server.
+
 

@@ -3,6 +3,7 @@ uid: location-interception
 title: "Intercepting Properties and Fields"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "This document provides a detailed guide on how to intercept properties and fields in .NET using PostSharp's LocationInterceptionAspect. It covers intercepting get and set operations, getting and setting the underlying property, intercepting fields, and reacting to initialization of instance fields and properties."
 ---
 # Intercepting Properties and Fields
 

@@ -3,6 +3,7 @@ uid: log-custom-activities
 title: "Working with Custom Activities"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to work with custom activities in PostSharp, including logging an activity, measuring execution time, and changing the default level for exceptions. It also provides examples of code implementation."
 ---
 # Working with Custom Activities
 

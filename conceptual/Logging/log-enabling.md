@@ -3,6 +3,7 @@ uid: log-enabling
 title: "Adjusting Logging Verbosity"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on how to adjust logging verbosity in PostSharp, using an XML configuration file or programmatically. It covers configuring logging verbosity, per-request or per-transaction logging, and sampled logging."
 ---
 # Adjusting Logging Verbosity
 
@@ -170,6 +171,7 @@ The following policy file defines two transaction policies: the first catches a 
     </transactions>
 </logging>
 ```
+
 
 
 

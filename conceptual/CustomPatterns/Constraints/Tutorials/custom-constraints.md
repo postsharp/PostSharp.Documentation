@@ -3,6 +3,7 @@ uid: custom-constraints
 title: "Developing Custom Architectural Constraints"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to develop custom architectural constraints in PostSharp, including scalar and referential constraints. It provides step-by-step instructions on creating these constraints and ensuring they are consistently implemented across a codebase."
 ---
 # Developing Custom Architectural Constraints
 

@@ -3,6 +3,7 @@ uid: thread-affine
 title: "Thread Affine Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the Thread Affine threading model in PostSharp, which restricts object instance access to the thread that created it. It illustrates how to apply this model to a class and its enforcement rules."
 ---
 # Thread Affine Threading Model
 

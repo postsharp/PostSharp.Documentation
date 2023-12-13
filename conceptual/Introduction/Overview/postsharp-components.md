@@ -3,6 +3,7 @@ uid: postsharp-components
 title: "PostSharp Components"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp offers components for Visual Studio, available as NuGet packages or a zip archive for teams not using NuGet. It includes build-time and run-time packages for various functions and aspects."
 ---
 # PostSharp Components
 

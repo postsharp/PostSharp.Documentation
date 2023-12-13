@@ -3,6 +3,7 @@ uid: event-interception
 title: "Intercepting Events"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to use PostSharp to intercept events such as subscribing, unsubscribing, and raising. It provides detailed steps for intercepting add and remove actions, raise actions, and accessing the current context."
 ---
 # Intercepting Events
 

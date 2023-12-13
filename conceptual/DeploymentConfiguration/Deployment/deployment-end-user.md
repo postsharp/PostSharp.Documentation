@@ -3,6 +3,7 @@ uid: deployment-end-user
 title: "Deploying PostSharp to End-User Devices"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to deploy PostSharp, a compiler technology, to end-user devices either through bundling its run-time libraries in the final product or by using NuGet packages."
 ---
 # Deploying PostSharp to End-User Devices
 
@@ -88,4 +89,5 @@ In the following example, you see a .NET Core project which uses the PackageRefe
 ```
 
 See [Package references (PackageReference) in project files](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) for details. 
+
 

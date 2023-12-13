@@ -3,6 +3,7 @@ uid: customizing-aspect-description
 title: "Customizing Aspect Description in Tooltips"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidance on customizing aspect descriptions in tooltips using PostSharp Tools, including instructions for both simple and composite aspects."
 ---
 # Customizing Aspect Description in Tooltips
 
@@ -50,4 +51,5 @@ The following code snippet illustrates how to set the description of the advice.
                 // Details skipped.
               }
 ```
+
 

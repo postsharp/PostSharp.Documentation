@@ -3,6 +3,7 @@ uid: logging-verbosity-api
 title: "Adjusting Logging Verbosity Programmatically"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to adjust logging verbosity programmatically using PostSharp Logging API, enabling/disabling with the backend API, and optimizing execution time when logging is disabled."
 ---
 # Adjusting Logging Verbosity Programmatically
 
@@ -94,4 +95,5 @@ The following *postsharp.config* enables the JIT-compiler optimizations for the 
   </Logging>
 </Project>
 ```
+
 

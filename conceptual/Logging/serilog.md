@@ -3,6 +3,7 @@ uid: serilog
 title: "Logging with Serilog"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging and Serilog together, including how to write PostSharp Logging events to Serilog sinks, use Serilog formatters, include more semantic parameters, and collect Serilog events into PostSharp Logging."
 ---
 # Logging with Serilog
 

@@ -3,6 +3,7 @@ uid: log4net
 title: "Logging with log4net"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging and log4net together, including steps to send PostSharp Logging events to log4net appenders and collect log4net events into PostSharp Logging."
 ---
 # Logging with log4net
 

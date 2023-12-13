@@ -3,6 +3,7 @@ uid: ignoring-warnings
 title: "Ignoring and Escalating Warnings"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to ignore or escalate warnings in PostSharp, either globally or locally. It provides instructions for adjusting these settings in Visual Studio and MSBuild."
 ---
 # Ignoring and Escalating Warnings
 
@@ -28,4 +29,5 @@ There are several ways to ignore or escalate a warning for a complete project:
 Most warnings are related to a specific element of code. To disable a specific warning for a specific element of code, add the <xref:PostSharp.Extensibility.SuppressWarningAttribute> custom attribute to that element of code, or to any enclosing element of code (for instance, adding the attribute to a type will make it effective for all members of this type). 
 
 You can create your own custom attribute derived from <xref:PostSharp.Extensibility.SuppressWarningAttribute> and make it conditional to a compilation symbol by using the <xref:System.Diagnostics.ConditionalAttribute> custom attribute. 
+
 

@@ -3,6 +3,7 @@ uid: technologies
 title: "Key Technologies"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp is a metaprogramming tool for .NET that uses Aspect-Oriented Programming (AOP) for program transformations. It also uses static and dynamic program analysis for structural analysis and runtime checks respectively."
 ---
 # Key Technologies
 
@@ -57,4 +58,5 @@ PostSharp uses dynamic analysis to check the program against threading models. S
 Another example of use of dynamic program analysis in PostSharp is deadlock detection. For details, see <xref:deadlock-detection>. 
 
 In PostSharp, dynamic analysis is achieved by adding instrumentation aspects to the program.
+
 

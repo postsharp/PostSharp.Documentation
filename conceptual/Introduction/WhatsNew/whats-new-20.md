@@ -3,6 +3,7 @@ uid: whats-new-20
 title: "What's New in PostSharp 2.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 2.0 enhances aspect-oriented programming (AOP) in the .NET community by improving convenience, reliability, and runtime performance. It introduces new features such as Visual Studio Extension, composite aspects, adaptive code generation, aspect dependencies, and instance-scoped aspects."
 ---
 # What's New in PostSharp 2.0
 
@@ -62,4 +63,5 @@ In PostSharp 1.5, all aspects had static scope, i.e. there was a single instance
 ## Build performance improvements
 
 Just starting the CLR and loading system assemblies takes considerable time, too much for an application (such as PostSharp) that is typically started very frequently and whose running time is just a couple of seconds. To cope with this issue, PostSharp now preferably runs as a background application
+
 

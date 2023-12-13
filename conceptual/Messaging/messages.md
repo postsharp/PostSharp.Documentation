@@ -3,6 +3,7 @@ uid: messages
 title: "Working with Errors, Warnings, and Messages"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses how PostSharp, a compiler, can emit messages, warnings, and errors, and how custom code can use this feature. It also mentions an experimental feature in PostSharp 2.1."
 ---
 # Working with Errors, Warnings, and Messages
 
@@ -15,4 +16,5 @@ In this section:
 
 > [!TIP]
 > PostSharp 2.1 contains an experimental feature that adds file and line information to errors and warnings. The feature requires Visual Studio. In must be enabled manually in the **PostSharp** tab of Visual Studio options. 
+
 

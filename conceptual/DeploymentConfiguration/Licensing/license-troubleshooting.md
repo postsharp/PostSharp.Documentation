@@ -3,6 +3,7 @@ uid: license-troubleshooting
 title: "License Troubleshooting"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides solutions for various technical issues that may arise with the PostSharp Licensing component, including license errors, uninstallation failures, and unexpected server disconnections."
 ---
 # License Troubleshooting
 
@@ -55,4 +56,5 @@ For example, if your licensed namespace is `MyOssLib`, you assembly name must be
 ## PostSharp license server is closing connections unexpectedly.
 
 Make sure that the PostSharp License Server runs on .NET Framework 4.7.2 or newer.
+
 

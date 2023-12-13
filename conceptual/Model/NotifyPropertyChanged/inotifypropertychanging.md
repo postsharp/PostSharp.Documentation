@@ -3,6 +3,7 @@ uid: inotifypropertychanging
 title: "Implementing INotifyPropertyChanging"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on implementing the INotifyPropertyChanging interface with PostSharp, which signals before a property value changes, by creating an 'OnPropertyChanging' method."
 ---
 # Implementing INotifyPropertyChanging
 
@@ -57,4 +58,5 @@ public class MyClass : INotifyPropertyChanging
     public string MyProperty { get; set; }
 }
 ```
+
 

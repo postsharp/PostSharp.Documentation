@@ -3,6 +3,7 @@ uid: introduction
 title: "Introduction"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "This document introduces PostSharp, a tool designed to eliminate boilerplate code in object-oriented programming, enabling developers to work more efficiently and avoid bugs. The tool adds support for patterns into C# and VB languages."
 ---
 # Introduction
 
@@ -24,4 +25,5 @@ PostSharp adds support for patterns into the C# and VB languages, allowing devel
 | <xref:how-it-works> | This chapter proves that there is no magic involved, and that everything relies on stable specifications and documented extension points. |
 | <xref:getting-started> | This chapter suggests a few learning resources according to your role in and the phase of the project. |
 | <xref:whats-new> | This chapter lists the new features in each major and minor release. |
+
 

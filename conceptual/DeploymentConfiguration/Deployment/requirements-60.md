@@ -3,6 +3,7 @@ uid: requirements-60
 title: "PostSharp 6.0: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document outlines the requirements and compatibility of PostSharp 6.0. It supports C# 7.2 and VB 15.5, and requires Microsoft Visual Studio, .NET Framework 4.7.1 or later, and specific operating systems."
 ---
 # PostSharp 6.0: Requirements and Compatibility
 
@@ -126,4 +127,5 @@ PostSharp is not compatible with the following products or features:
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Xamarin | Support suspended (deprioritized because of low customer demand) | Use PostSharp 4.3. Contact PostSharp support team to discuss prioritization. |
 | Mono, Unity3D | Unsupported | None. |
+
 

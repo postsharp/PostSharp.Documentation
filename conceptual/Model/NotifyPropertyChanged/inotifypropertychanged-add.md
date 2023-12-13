@@ -3,6 +3,7 @@ uid: inotifypropertychanged-add
 title: "Implementing INotifyPropertyChanged"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to implement the INotifyPropertyChanged interface using PostSharp, including adding the NotifyPropertyChanged aspect, and accessing the INotifyPropertyChanged interface from your code."
 ---
 # Implementing INotifyPropertyChanged
 

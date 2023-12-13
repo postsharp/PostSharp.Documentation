@@ -3,6 +3,7 @@ uid: postsharp
 title: "PostSharp Documentation"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp is a pattern-aware extension for C# and VB, aimed at eliminating boilerplate code and enhancing automation. This document provides comprehensive documentation on its various features and uses."
 ---
 # PostSharp Documentation
 
@@ -32,4 +33,5 @@ Developers usually think in terms of design patterns, but with conventional prog
 | <xref:testing-aspects> | This chapter explains how to test and debug aspects. |
 | <xref:patterns-misc> | This chapter covers: <xref:module-initializer>.  |
 | <xref:api> | This is the complete API reference documentation. |
+
 

@@ -3,6 +3,7 @@ uid: vsonline
 title: "Using PostSharp with Visual Studio Online"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to add PostSharp to a codebase hosted on Visual Studio Online, including how to verify successful builds."
 ---
 # Using PostSharp with Visual Studio Online
 

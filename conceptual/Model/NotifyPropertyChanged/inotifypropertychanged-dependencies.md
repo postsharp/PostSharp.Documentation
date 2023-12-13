@@ -3,6 +3,7 @@ uid: inotifypropertychanged-dependencies
 title: "Implementing INotifyPropertyChanged with Properties that Depend on Other Objects"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to implement INotifyPropertyChanged with properties that depend on other objects using PostSharp. It provides a code example demonstrating the concept."
 ---
 # Implementing INotifyPropertyChanged with Properties that Depend on Other Objects
 

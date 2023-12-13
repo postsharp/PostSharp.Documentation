@@ -3,6 +3,7 @@ uid: aspect-lifetime
 title: "Understanding Aspect Lifetime and Scope "
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp, an Aspect-Oriented Programming (AOP) framework, instantiates aspects at compile time, unlike most other frameworks. It offers two kinds of aspect scopes: static and per-instance. The framework serializes aspect instances into a binary resource for persistence between compile time and run time."
 ---
 # Understanding Aspect Lifetime and Scope
 

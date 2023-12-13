@@ -3,6 +3,7 @@ uid: whats-new-20230
 title: "What's New in PostSharp 2023.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 2023.0 introduces support for .NET 7.0 and C# 11, and is now compatible with Metalama. However, it discontinues support for .NET Core 5.0 and older Visual Studio versions."
 ---
 # What's New in PostSharp 2023.0
 
@@ -17,4 +18,5 @@ The following Microsoft platforms are no longer in mainstream support. Although 
 * Visual Studio 2017 (PostSharp Tools is not published for this version anymore)
 
 * Visual Studio 2019 before 16.11
+
 

@@ -3,6 +3,7 @@ uid: breaking-changes-60
 title: "Breaking Changes in PostSharp 6.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.0 introduces several breaking changes including changes in assembly loading algorithms, MSBuild properties, API removals, and licensing changes. It also discontinues support for certain platforms and features."
 ---
 # Breaking Changes in PostSharp 6.0
 
@@ -47,4 +48,5 @@ PostSharp 6.0 contains the following breaking changes:
 ## Licensing changes
 
 * It is now mandatory to add your license key to the build server or the source repository if you are using the <xref:PostSharp.Patterns.Diagnostics> namespace. See [build-server](xref:logging-license) for details. 
+
 

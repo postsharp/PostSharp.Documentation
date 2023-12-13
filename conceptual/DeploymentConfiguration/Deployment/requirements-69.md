@@ -3,6 +3,7 @@ uid: requirements-69
 title: "PostSharp 6.9: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.9 supports C# 9.0 and VB 16.0, and requires Microsoft Visual Studio 2017 Update 1 or 2019, .NET Framework 4.7.2, and .NET Core SDK 2.1 or later. It's compatible with Xamarin and Blazor via .NET Standard, but not with ARM platforms or certain older versions of Visual Studio."
 ---
 # PostSharp 6.9: Requirements and Compatibility
 
@@ -155,4 +156,5 @@ PostSharp is not compatible with the following products or features:
 | ASP.NET Web Sites | Not built using MSBuild | Convert the ASP.NET Web Site to an ASP.NET Web Application. |
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Mono, Unity3D | Unsupported | None. |
+
 

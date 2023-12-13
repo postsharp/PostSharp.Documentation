@@ -3,6 +3,7 @@ uid: getting-started-deployment
 title: "Deployment Role: Installing and Deploying PostSharp"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides guidance on how to deploy PostSharp in various scenarios including development environments, build infrastructure, end-user devices, and large or regulated environments."
 ---
 # Deployment Role: Installing and Deploying PostSharp
 
@@ -15,3 +16,4 @@ This section describes how to deploy PostSharp in different situations. Read it 
 | Deploying to Production or End-User Devices | <xref:deployment-end-user> |
 | Deploying to Large or Regulated Development Environments | <xref:license-audit><br><xref:license-server-admin><br>[script](xref:upgrade#upgrading-large-repositories)
  |
+

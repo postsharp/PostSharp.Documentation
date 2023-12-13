@@ -3,6 +3,7 @@ uid: aspect-provider
 title: "Adding Aspects Dynamically"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to add aspects dynamically in PostSharp using IAspectProvider, especially when it's impossible to add aspects declaratively to the source code."
 ---
 # Adding Aspects Dynamically
 

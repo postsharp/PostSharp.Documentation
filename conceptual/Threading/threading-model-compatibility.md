@@ -3,6 +3,7 @@ uid: threading-model-compatibility
 title: "Compatibility of Threading Models"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document presents a compatibility matrix showing which threading models can be used as children based on the parent model in PostSharp. Also, it explains how assignment between objects with threading models works."
 ---
 # Compatibility of Threading Models
 

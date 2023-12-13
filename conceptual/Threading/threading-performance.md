@@ -3,6 +3,7 @@ uid: threading-performance
 title: "Run-Time Performance of Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp threading models have minimal runtime overhead but high memory cost. They can significantly impact performance when instantiating large object graphs. To mitigate this, manually assign newly-created objects to a concurrency controller."
 ---
 # Run-Time Performance of Threading Model
 
@@ -58,4 +59,5 @@ var useDeadlockDetection = DeadlockDetectionPolicy.IsEnabled(typeof(Synchronized
                 parent.Children.Add( child2 );
             }
 ```
+
 

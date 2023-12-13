@@ -3,6 +3,7 @@ uid: estimating-code-saving
 title: "Estimating Code Savings"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp, a tool for Aspect-Oriented Programming, estimates lines of handwritten code saved by using aspects during build time. Users can adjust these estimates for more accuracy."
 ---
 # Estimating Code Savings
 

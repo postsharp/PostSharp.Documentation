@@ -3,6 +3,7 @@ uid: etw
 title: "Logging with ETW"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp Logging and Event Tracing for Windows (ETW) together, including targeting ETW with PostSharp Logging and listening to ETW events using PerfView."
 ---
 # Logging with ETW
 

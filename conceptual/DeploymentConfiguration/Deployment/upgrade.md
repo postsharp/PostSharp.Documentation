@@ -3,6 +3,7 @@ uid: upgrade
 title: "Upgrading from a Previous Version of PostSharp"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides detailed instructions on how to upgrade from a previous version of PostSharp, including upgrading PostSharp Tools for Visual Studio and solutions from PostSharp 3 or later and PostSharp 2."
 ---
 # Upgrading from a Previous Version of PostSharp
 
@@ -113,4 +114,5 @@ Although PostSharp 3 or later is mostly backward compatible with PostSharp 2 at 
 * Aspects that target Silverlight, Windows Phone or Windows Store must be annotated with the <xref:PostSharp.Serialization.PSerializableAttribute> custom attribute. 
 
 * PostSharp Toolkits 2.1 need to be uninstalled using NuGet. Instead, you can install PostSharp Pattern Libraries 3 from NuGet. Namespaces and some type names have been changed.
+
 

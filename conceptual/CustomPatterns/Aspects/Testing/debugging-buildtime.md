@@ -3,6 +3,7 @@ uid: debugging-buildtime
 title: "Debugging Build-Time Logic"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to debug build-time logic using PostSharp, by attaching a debugger to the PostSharp process and using Visual Studio to set breakpoints."
 ---
 # Debugging Build-Time Logic
 
@@ -39,5 +40,6 @@ Suppose you have your aspects logic `MyAspects.csproj` and unit tests (i.e. the 
 
 
 6. Set up break points in your code and continue the program execution.
+
 
 

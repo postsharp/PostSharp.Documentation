@@ -3,6 +3,7 @@ uid: msbuild-properties
 title: "Well-Known MSBuild Properties"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on well-known MSBuild properties in PostSharp, including general, hosting, diagnostic, directory, and other properties. Each property is described in a table format."
 ---
 # Well-Known MSBuild Properties
 
@@ -71,4 +72,5 @@ PostSharp uses multiple directories during build-time. You can use following pro
 | `PostSharpUseHardLink` | Use hard links instead of file copies when creating the snapshot for Visual Studio Code Analysis (FxCop). This property is `True` by default.  |
 | `ExecuteCodeAnalysisOnPostSharpOutput` | When set to `True`, executes Microsoft Code Analysis on the *output* of PostSharp. By default, the analysis is done on the *input* of PostSharp, i.e. on the output of the compiler. This property has no effect when Microsoft Code Analysis is disabled for the current build.  |
 | `PostSharpCopyCodeAnalysisDependenciesDisabled` | When set to `True`, PostSharp will not copy the all dependencies of the current project output into the *obj\Debug\Before-PostSharp* directory, which contains the copy of the assembly on which Microsoft Code Analysis is executed by default. This property has no effect when Microsoft Code Analysis is disabled for the current build or when the `ExecuteCodeAnalysisOnPostSharpOutput` property has been set to `True`.  |
+
 

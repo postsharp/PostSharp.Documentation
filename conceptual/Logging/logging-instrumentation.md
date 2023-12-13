@@ -3,6 +3,7 @@ uid: logging-instrumentation
 title: "Instrumentation of ASP.NET and HttpClient"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp Logging offers packages that support specific software stacks like ASP.NET Core, legacy ASP.NET, and HttpClient. It allows dynamic logging verbosity changes and distributed transaction tracking."
 ---
 # Instrumentation of ASP.NET and HttpClient
 

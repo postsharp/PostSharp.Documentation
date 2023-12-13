@@ -3,6 +3,7 @@ uid: caching
 title: "Caching"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses the use of PostSharp for simplifying caching in application development, reducing complexity, and avoiding errors associated with manual implementation. It also outlines various related topics."
 ---
 # Caching
 

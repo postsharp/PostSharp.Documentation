@@ -3,6 +3,7 @@ uid: caching-getting-started
 title: "Caching Method Return Values"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on how to cache method return values using PostSharp's caching method. It includes configuring cache behavior, using custom attributes for caching, and disabling caching at runtime."
 ---
 # Caching Method Return Values
 
@@ -232,4 +233,5 @@ You can disable caching at run time by setting the <xref:PostSharp.Patterns.Cach
 CachingServices.Profiles.Default.IsEnabled = false;
              CachingServices.Profiles["Account"].IsEnabled = false;
 ```
+
 

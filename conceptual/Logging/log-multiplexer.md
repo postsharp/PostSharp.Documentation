@@ -3,6 +3,7 @@ uid: log-multiplexer
 title: "Multiplexing Log Output to Several Frameworks"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to use PostSharp's MultiplexerBackend to send logging output to multiple logging frameworks simultaneously, including setting up, configuring backends, and handling logging errors."
 ---
 # Multiplexing Log Output to Several Frameworks
 

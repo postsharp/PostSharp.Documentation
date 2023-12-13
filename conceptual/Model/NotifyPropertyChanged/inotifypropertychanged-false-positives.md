@@ -3,6 +3,7 @@ uid: inotifypropertychanged-false-positives
 title: "Suppressing False Positives of the NotifyPropertyChanged Aspect"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to suppress false positives in the NotifyPropertyChanged Aspect in PostSharp to avoid redundant event notifications, thereby improving application responsiveness. However, it warns against suppressing false positives when property getters have side effects."
 ---
 # Suppressing False Positives of the NotifyPropertyChanged Aspect
 

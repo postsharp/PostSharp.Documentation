@@ -3,6 +3,7 @@ uid: contracts
 title: "Contracts"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document discusses PostSharp Code Contracts, which improve code readability, are inheritable, and customizable for localization. It also outlines sections on adding, customizing contracts and exceptions."
 ---
 # Contracts
 

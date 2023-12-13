@@ -3,6 +3,7 @@ uid: freezable
 title: "Freezable Threading Model"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains the Freezable Threading Model in PostSharp, which allows users to define when an object becomes immutable. It provides steps to make an object freezable and enforce rules by the Freezable aspect."
 ---
 # Freezable Threading Model
 

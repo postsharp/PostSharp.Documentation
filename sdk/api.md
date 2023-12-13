@@ -3,6 +3,7 @@ uid: api
 title: "PostSharp SDK Documentation"
 product: "postsharp"
 categories: "PostSharp;AOP;PostSharp API;SDK"
+summary: "The document provides a comprehensive list of namespaces in the PostSharp SDK, each linking to its respective detailed documentation."
 ---
 # PostSharp SDK documentation
 
@@ -42,3 +43,4 @@ categories: "PostSharp;AOP;PostSharp API;SDK"
 | <xref:PostSharp.Sdk.Utilities> | This article documents the PostSharp.Sdk.Utilities namespace. |
 | <xref:PostSharp.Sdk.WeavingSymbols> | This article documents the PostSharp.Sdk.WeavingSymbols namespace. |
 | <xref:PostSharp.Sdk.WeavingSymbols.Collections> | This article documents the PostSharp.Sdk.WeavingSymbols.Collections namespace. |
+

@@ -3,6 +3,7 @@ uid: threading-runtime-verification
 title: "Enabling and Disabling Runtime Verification"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document explains how to enable or disable runtime verification in PostSharp, either for a whole project or a specific class, with runtime verification being enabled by default in the Debug build and disabled in the Release build."
 ---
 # Enabling and Disabling Runtime Verification
 

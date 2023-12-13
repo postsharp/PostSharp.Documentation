@@ -3,6 +3,7 @@ uid: configuration-system
 title: "Configuring Projects Using postsharp.config"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp can be configured using an XML file named postsharp.config, placed in your project or parent directory. This file can be used for adding a license key, configuring build-time options, adding aspects, and sharing configurations between projects."
 ---
 # Configuring Projects Using postsharp.config
 
@@ -99,3 +100,4 @@ Additionally, it is possible to define a using configuration element:
 ```
 
 See <xref:configuration-schema> for details.
+

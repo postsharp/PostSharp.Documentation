@@ -3,6 +3,7 @@ uid: undoredo-start
 title: "Making Your Model Recordable"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on making an object recordable for undo/redo operations using PostSharp's RecordableAttribute aspect, and how to exclude a property from these operations."
 ---
 # Making Your Model Recordable
 
@@ -87,4 +88,5 @@ public class Document
   public boolean AnyChangesMade { get; set; }
 }
 ```
+
 

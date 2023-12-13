@@ -3,6 +3,7 @@ uid: attribute-multicasting
 title: "Adding Aspects to Multiple Declarations Using Attributes"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document describes how to use PostSharp's custom attribute multicasting to apply aspects to multiple declarations in an application code, including applying to all class members, all types in a namespace, excluding some members, and filtering by class visibility or method modifiers."
 ---
 # Adding Aspects to Multiple Declarations Using Attributes
 

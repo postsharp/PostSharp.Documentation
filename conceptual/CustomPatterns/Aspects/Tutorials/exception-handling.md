@@ -3,6 +3,7 @@ uid: exception-handling
 title: "Handling Exceptions"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp provides a solution to exception handling by encapsulating custom exception handling logic into a reusable class. This class can be applied as an attribute to methods and properties where exceptions are to be dealt with, making the process more efficient and code cleaner."
 ---
 # Handling Exceptions
 

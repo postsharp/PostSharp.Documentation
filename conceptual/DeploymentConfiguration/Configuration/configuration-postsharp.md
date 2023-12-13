@@ -3,6 +3,7 @@ uid: configuration-postsharp
 title: "Well-Known PostSharp Properties"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a list of well-known PostSharp properties that can be set from the MSBuild project, their corresponding MSBuild property names, and descriptions. It also mentions the option of defining custom PostSharp properties."
 ---
 # Well-Known PostSharp Properties
 
@@ -26,4 +27,5 @@ Other properties are recognized but are of little interest for end-users. For a 
 ## Using custom properties
 
 By defining your own PostSharp properties, you can pass information from the build environment to aspects, or to any code running in PostSharp. Custom PostSharp properties behave exactly as other PostSharp properties, so they can be defined and read using the same procedures.
+
 

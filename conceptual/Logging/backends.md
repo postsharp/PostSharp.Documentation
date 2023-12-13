@@ -3,6 +3,7 @@ uid: backends
 title: "Connecting to Source and Target Logging Frameworks"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides instructions on how to configure PostSharp Logging to work with different logging frameworks and create custom logging backends. It also covers log collection and audit record addition."
 ---
 # Connecting to Source and Target Logging Frameworks
 

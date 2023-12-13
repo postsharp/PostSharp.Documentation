@@ -3,6 +3,7 @@ uid: deployment
 title: "Deployment"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a detailed guide on the deployment and configuration of PostSharp, including installation, upgrading, uninstalling, and redistribution to end-user devices."
 ---
 # Deployment
 
@@ -24,3 +25,4 @@ It contains the following topics:
 | <xref:upgrade> | This topic explains how to upgrade from a previous version of PostSharp. |
 | <xref:uninstalling> | This topic shows how to uninstall PostSharp from your projects and from Visual Studio. |
 | <xref:deployment-end-user> | This topic describes redistribution of PostSharp run-time libraries to end-user devices. |
+

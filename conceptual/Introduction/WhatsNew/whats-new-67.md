@@ -3,6 +3,7 @@ uid: whats-new-67
 title: "What's New in PostSharp 6.7"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 6.7 has ended support for .NET Framework 4.0 and Visual Studio 2015, and now supports Xamarin and Blazor. It offers improved integration with existing logging frameworks, better support for async iterators, and enhanced telemetry reporting."
 ---
 # What's New in PostSharp 6.7
 
@@ -50,4 +51,5 @@ We are now detecting when PostSharp Tools for Visual Studio blocks the UI thread
 ## No registration needed
 
 We are no longer asking your email address to start with the trial or with PostSharp Community.
+
 

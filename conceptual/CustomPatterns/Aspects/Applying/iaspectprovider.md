@@ -3,6 +3,7 @@ uid: iaspectprovider
 title: "Adding Aspects Programmatically using IAspectProvider"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "The document provides a guide on how to add aspects programmatically using the IAspectProvider interface in PostSharp, including creating aspect graphs and initializing aspects at runtime."
 ---
 # Adding Aspects Programmatically using IAspectProvider
 
