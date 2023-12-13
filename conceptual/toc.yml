@@ -416,7 +416,7 @@ items:
         topicUid: background-dispatching
       - name: Dispatching a Method to the UI Thread
         topicUid: ui-dispatching
-      - name: Detecting Deadlocks at Runtime
+      - name: Detecting Deadlocks at Runtime (Deprecated)
         topicUid: deadlock-detection
   - name: Developing Custom Aspects
     topicUid: custom-aspects

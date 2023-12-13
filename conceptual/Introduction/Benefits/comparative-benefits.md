@@ -59,8 +59,6 @@ Starting new threads and tasks in .NET languages is simple, but ensuring that ob
 
 * **Thread dispatching patterns**. Causes the execution of a method to be dispatched to the UI thread or to a background thread. Much easier than using nested anonymous methods. 
 
-* **Deadlock detection**. Causes an easy-to-diagnose exception in case of deadlock instead of allowing the application to freeze and create user's frustration. 
-
 
 ## Maintain your existing codebase in C# or Visual Basic
 

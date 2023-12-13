@@ -40,7 +40,7 @@ The thread-safety policy emits warnings in two situations:
 5. Close the wizard when the process had completed by clicking **Finish**. 
 
 
-If you added the policy to the whole solution, the result of running this wizard is that a *pssln* file has been added to your project. The *pssln* file contains an entry that enables deadlock detection across all projects in your solution. 
+If you added the policy to the whole solution, the result of running this wizard is that a *pssln* file has been added to your project. The *pssln* file contains an entry that enables the thread-safety policy across all projects in your solution. 
 
 ```xml
 <Project xmlns="http://schemas.postsharp.org/1.0/configuration" xmlns:t="clr-namespace:PostSharp.Patterns.Threading;assembly:PostSharp.Patterns.Threading">
@@ -108,10 +108,7 @@ Once you save the *pssln* file you will have added thread-safety policy to all p
 
 ## See Also
 
-**Other Resources**
+**Reference**
 
-<xref:deadlock-detection>
-<br>**Reference**
-
-<xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy>
+<xref:PostSharp.Patterns.Threading.ThreadSafetyPolicy>
 <br>

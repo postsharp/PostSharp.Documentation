@@ -26,7 +26,7 @@ Developers usually think in terms of design patterns, but with conventional prog
 | <xref:aggregatable> | This chapter explains how to implement the Aggregatable pattern by annotating an object model with parent/child information, and how to implement a visitor. The Aggregatable pattern is the base of undo/redo patterns and threading models. |
 | <xref:undoredo> | This chapter explains how to implement an undo/redo feature by making your model objects record their changes. |
 | <xref:caching> | This chapter explains how to add caching to your code. |
-| <xref:threading-library> | This chapter covers multit-threading aspects: <xref:threading-models>; <xref:background-dispatching>; <xref:ui-dispatching> <xref:deadlock-detection>.  |
+| <xref:threading-library> | This chapter covers multi-threading aspects: <xref:threading-models>; <xref:background-dispatching>; <xref:ui-dispatching> <xref:deadlock-detection>.  |
 | <xref:custom-aspects> | This chapter explains how to create your own aspects with PostSharp Aspect Framework. |
 | <xref:constraints> | This chapter explains how to automatically validate your code against guidelines and conventions using PostSharp Architecture Framework. |
 | <xref:testing-aspects> | This chapter explains how to test and debug aspects. |
