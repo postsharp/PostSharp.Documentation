@@ -110,6 +110,8 @@ items:
           - name: Requirements and Compatibility
             topicUid: requirements
             items:
+              - name: Requirements of PostSharp 2024.0
+                topicUid: requirements-20240
               - name: Requirements of PostSharp 2023.0
                 topicUid: requirements-20230
               - name: Requirements of PostSharp 6.10
