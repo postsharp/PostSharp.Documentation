@@ -89,7 +89,7 @@ Xamarin applications use a linker that is executed during build to discard the u
 
 Blazor is supported as a runtime platform only via .NET Standard. You can add supported PostSharp packages to your .NET Standard libraries and then reference these libraries in your Blazor application project. Adding PostSharp directly to a Blazor application project is not supported.
 
-Blazor applications use a linker that is executed during build to discard the unused code and reduce the size of the application. To prevent the linker from removing the code required by PostSharp you need to add a custom linker configuration to your project. See <xref:blazor-linker> for more details. 
+Blazor applications use a linker that is executed during build to discard the unused code and reduce the size of the application. To prevent the linker from removing the code required by PostSharp you need to add a custom linker configuration to your project. See <xref:blazor> for more details. 
 
 To debug Blazor applications, `PostSharpDebuggerExtensionsMode` MSBuild property should be set to `Disabled` for all referenced projects using PostSharp, otherwise the debugger may fail to load debugging symbols properly. See <xref:blazor-debugging> for more details. 
 

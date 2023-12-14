@@ -30,7 +30,7 @@ PostSharp 2024.0 contains larger number of breaking changes mainly related to pl
 * Support for targeting .NET Framework 4.6.0 and earlier has been discontinued.
 
 ## PostSharp.Patterns.Caching.Azure
-* `AzureCacheInvalidator` and `AzureCacheInvalidator2` have been replaced with <xref:PostSharp.Patterns.Caching.Azure.AzureServiceBusCacheInvalidator>, which utilizes the latest Azure API.
+* `AzureCacheInvalidator` and `AzureCacheInvalidator2` have been replaced with <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator>, which utilizes the latest Azure API.
 * The package has a new dependency on `Azure.Messaging.ServiceBus` 7.16.1 instead of `WindowsAzure.ServiceBus` and `Microsoft.Azure.ServiceBus`.
 * The package has a new dependency on `Azure.Identity` 1.10.4.
 * Support for targeting .NET Framework 4.7.0 and earlier has been discontinued.

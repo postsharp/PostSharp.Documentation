@@ -12,5 +12,5 @@ The following articles did not fit in any other chapter.
 | Section | Description |
 |---------|-------------|
 | <xref:module-initializer> | This topic shows how to add module initializers to your code. |
-| <xref:deprecated> | This topic lists articles for deprecated features. |
+| <xref:deprecated-features> | This topic lists articles for deprecated features. |
 

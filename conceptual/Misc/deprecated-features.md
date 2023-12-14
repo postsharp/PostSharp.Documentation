@@ -11,5 +11,6 @@ The following articles cover deprecated features.
 
 | Section | Description |
 |---------|-------------|
-| <xref:module-initializer> | This topic shows how to add module initializers to your code. |
+| <xref:install-without-nuget> | This topic shows how to install PostSharp without NuGet. |
+| <xref:deadlock-detection> | This topic shows how to detect deadlocks at runtime. |
 
