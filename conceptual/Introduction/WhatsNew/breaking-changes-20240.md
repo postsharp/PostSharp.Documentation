@@ -3,6 +3,7 @@ uid: breaking-changes-20240
 title: "Breaking Changes in PostSharp 2024.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
+summary: "PostSharp 2024.0 introduces several breaking changes including build errors, changes in behavior, and deprecated platforms and features."
 ---
 # Breaking Changes in PostSharp 2024.0
 

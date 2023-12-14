@@ -21,7 +21,7 @@ The principal inconvenience of pub/sub invalidation is that there is some latenc
 ## Using Azure Service Bus pub/sub for distributed invalidation
 
 > [!WARNING]
-> `AzureCacheInvalidator` and `AzureCacheInvalidator2` are deprecated since PostSharp 2024.0. This guide covers the usage of <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator>.
+> `AzureCacheInvalidator` and `AzureCacheInvalidator2` are deprecated since PostSharp 2024.0. They are replaced by <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator>.
 
 ### To use Azure Service Bus pub/sub for distributed invalidation:
 

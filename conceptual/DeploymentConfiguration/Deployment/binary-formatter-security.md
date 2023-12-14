@@ -7,8 +7,7 @@ summary: "The .NET Core 3.1 BinaryFormatter, used for binary serialization, is c
 ---
 # BinaryFormatter security
 
-In .NET Core 3.1 `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter`, which is used for binary serialization of CLR object, began to be considered insecure and dangerous. In .NET 5.0, `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter` started to throw an exception upon its use in ASP.NET Core applications. In .NET 8.0, more serialization-related APIs started to be obsolete and by default, BinaryFormatter
-is disabled (throwing exceptions) in all .NET 8.0 projects with an exception of WinForms and WPF projects.
+In .NET Core 3.1 `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter`, which is used for binary serialization of CLR object, began to be considered insecure and dangerous. In .NET 5.0, `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter` started to throw an exception upon its use in ASP.NET Core applications. In .NET 8.0, more serialization-related APIs started to be obsolete and by default, BinaryFormatter is disabled (throwing exceptions) in all .NET 8.0 projects with an exception of WinForms and WPF projects.
 
 The attack vector of this vulnerability is deserialization of data that could be manipulated by the attacker, which can result in execution of arbitrary command under credentials of the process that executed the deserialization.
 

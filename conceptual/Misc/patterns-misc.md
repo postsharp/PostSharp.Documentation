@@ -3,13 +3,14 @@ uid: patterns-misc
 title: "Hacking"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document discusses non-pattern implementations in PostSharp, including how to add module initializers to your code."
+summary: "The document lists miscellaneous articles that do not fit anywhere else."
 ---
 # Hacking
 
-The following aspects are not really pattern implementations but do not fit in any other chapter.
+The following articles did not fit in any other chapter.
 
 | Section | Description |
 |---------|-------------|
 | <xref:module-initializer> | This topic shows how to add module initializers to your code. |
+| <xref:deprecated> | This topic lists articles for deprecated features. |
 

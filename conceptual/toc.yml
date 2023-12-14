@@ -158,8 +158,6 @@ items:
             topicUid: installation-silent
           - name: Installing PostSharp Into a Project
             topicUid: install-compiler
-          - name: Installing PostSharp without NuGet
-            topicUid: install-without-nuget
           - name: Using PostSharp on a Build Server
             topicUid: build-server
             items:
@@ -454,8 +452,6 @@ items:
         topicUid: background-dispatching
       - name: Dispatching a Method to the UI Thread
         topicUid: ui-dispatching
-      - name: Detecting Deadlocks at Runtime (Deprecated)
-        topicUid: deadlock-detection
   - name: Developing Custom Aspects
     topicUid: custom-aspects
     items:
@@ -549,10 +545,17 @@ items:
         topicUid: testing-application
       - name: Testing Run-Time Logic
         topicUid: simple-tests
-  - name: Hacking
+  - name: Miscellaneous
     topicUid: patterns-misc
     items:
       - name: Executing Code Just After the Assembly is Loaded
         topicUid: module-initializer
+      - name: Deprecated Features
+        topicUid: deprecated-features
+        items:
+          - name: Installing PostSharp without NuGet
+            topicUid: install-without-nuget
+          - name: Detecting Deadlocks at Runtime
+            topicUid: deadlock-detection
   - name: API Reference
     topicUid: api
