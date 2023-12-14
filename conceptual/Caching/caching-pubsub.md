@@ -13,7 +13,7 @@ A typical answer to this issue is to use a centralized cache server (or a cluste
 
 An alternative solution to the problem of distributed caching is to have a local in-memory cache in each instance in the application. Instead of using a shared distributed cache, each application instance caches its own data into its own local cache. However, when one instance of the application modifies a piece of data, it needs to make sure that all instances remove the relevant items from their local cache. This is called *distributed cache invalidation*. It can be achieved easily and cheaply with a publish/subscribe (Pub/Sub) message bus such as Azure Service Bus, much less expensive than a cache cluster. 
 
-PostSharp allows you to easily add sub/sub cache invalidation to your existing PostSharp caching.
+PostSharp allows you to easily add pub/sub cache invalidation to your existing PostSharp caching.
 
 The principal inconvenience of pub/sub invalidation is that there is some latency in the invalidation mechanism, i.e. different instances of the application can see different data during a few dozens of milliseconds.
 
@@ -60,7 +60,7 @@ There are two ways to create topic subscriptions: automatic, and manual.
 
 * **Manual topic management** means that you have to create the topic subscriptions yourself using the Azure portal or another management API. In this case, you need to pass the topic subscription name to <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidatorOptions>, but your Azure credentials do not need the management permission. 
 
-In .NET Core, you select the strategy by invoking the corresponding constructor of the <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidatorOptions> class. (In .NET Framework, automatic topic management is always used.) 
+You can select the strategy by invoking the corresponding constructor of the <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidatorOptions> class.
 
 
 ## Using Redis pub/sub for distributed invalidation
