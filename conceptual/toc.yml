@@ -30,6 +30,10 @@ items:
       - name: What's New
         topicUid: whats-new
         items:
+          - name: What's New in PostSharp 2024.0
+            topicUid: whats-new-20240
+              - name: Breaking Changes in PostSharp 2024.0
+                topicUid: breaking-changes-20240
           - name: What's New in PostSharp 2023.0
             topicUid: whats-new-20230
           - name: What's New in PostSharp 6.10

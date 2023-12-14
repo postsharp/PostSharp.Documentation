@@ -75,21 +75,27 @@ The following table displays the versions of the target frameworks that are supp
 
 | Package | .NET Framework | .NET Core & .NET | .NET Standard*** | Xamarin*** | Blazor*** |
 |---------|----------------|------------------|------------------|------------|-----------|
-| *PostSharp* | 3.5 SP1, 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 3.1, 6.0, 7.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | Supported |
-| *PostSharp.Patterns.Common*<br>*PostSharp.Patterns.Aggregation*<br>*PostSharp.Patterns.Model* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 3.1, 6.0, 7.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | Supported |
-| *PostSharp.Patterns.Diagnostics* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 3.1, 6.0, 7.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | Supported |
-| *PostSharp.Patterns.Threading* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 3.1, 6.0, 7.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | - |
-| *PostSharp.Patterns.Xaml* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 3.1, 6.0-windows, 7.0-windows | - | - | - |
-| *PostSharp.Patterns.Caching* | 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 3.1, 6.0, 7.0 | 2.0, 2.1 | Supported | Supported |
+| *PostSharp* | 3.5 SP1, 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 6.0, 7.0, 8.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | Supported |
+| *PostSharp.Patterns.Common*<br>*PostSharp.Patterns.Aggregation*<br>*PostSharp.Patterns.Model* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 6.0, 7.0, 8.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | Supported |
+| *PostSharp.Patterns.Diagnostics* <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%</superscript> | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 6.0, 7.0, 8.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | Supported |
+| *PostSharp.Patterns.Threading* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 6.0, 7.0, 8.0 | 1.3, 1.4, 1.5, 1.6, 2.0, 2.1 | Supported | - |
+| *PostSharp.Patterns.Xaml* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 6.0-windows, 7.0-windows, 8.0-windows | - | - | - |
+| *PostSharp.Patterns.Caching* <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%%</superscript> | 4.6.1 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 6.0, 7.0, 8.0 | 2.0, 2.1 | Supported | Supported |
 
 > [!NOTE]
-> \* .NET Framework versions 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1 are no longer supported by Microsoft. Although we still provide libraries targeting them, we no longer run our tests on these specific versions of the .NET Framework.
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript> .NET Framework versions 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1 are no longer supported by Microsoft. Although we still provide libraries targeting them, we no longer run our tests on these specific versions of the .NET Framework.
 
 > [!NOTE]
-> ** .NET Framework 4.8.1 for ARM64 is not supported for PostSharp Pattern Libraries.
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript> .NET Framework ARM64 is experimentally supported for PostSharp Pattern Libraries. We recommend using PostSharp Pattern Libraries on ARM64 Windows with emulated .NET Framework x64.
 
 > [!NOTE]
-> *** PostSharp does not implicitly support all platforms that support .NET Standard. Only platforms mentioned in this table are supported.
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">***</superscript> PostSharp does not implicitly support all platforms that support .NET Standard. Only platforms mentioned in this table are supported.
+
+> [!NOTE]
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%</superscript> Each PostSharp.Patterns.Diagnostics logging backend has different set of supported target frameworks. Please refer to individual packages on [nuget.org](http://www.nuget.org).
+
+> [!NOTE]
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%%</superscript> Each PostSharp.Patterns.Caching caching backend has different set of supported target frameworks. Please refer to individual packages on [nuget.org](http://www.nuget.org).
 
 
 ## Compatibility with Xamarin
