@@ -12,7 +12,7 @@
     <!-- Versions of dependencies -->
     <PropertyGroup>
         <PostSharpEngineeringVersion>2023.2.54</PostSharpEngineeringVersion>
-        <PostSharpVersion>2023.0.7</PostSharpVersion>
+        <PostSharpVersion>2024.0.4-rc</PostSharpVersion>
         <NuGetCommandLineVersion>6.4.0</NuGetCommandLineVersion>
     </PropertyGroup>
 

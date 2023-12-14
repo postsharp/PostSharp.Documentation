@@ -46,10 +46,8 @@ To avoid excessive creation and assignment of concurrency controllers, you can u
 
 The following code snippet illustrates the use of <xref:PostSharp.Patterns.Threading.ThreadingServices.WithConcurrencyController(PostSharp.Patterns.Threading.IConcurrencyController)>. Thanks to this method, a single concurrency controller instance is created, and each node is assigned only once to this concurrency controller, amounting to 3 assignments for 3 nodes. Without the use of this method, 3 instances of the concurrency controller would have been created, and totally 5 assignments would be done. 
 
-```csharp
-var useDeadlockDetection = DeadlockDetectionPolicy.IsEnabled(typeof(SynchronizedObject).Assembly);
-            
-            using ( ThreadingServices.WithConcurrencyController( ConcurrencyControllerFactory.CreateSynchronizedController(useDeadlockDetection)) )
+```csharp            
+            using ( ThreadingServices.WithConcurrencyController( ConcurrencyControllerFactory.CreateSynchronizedController()) )
             {
                 var child1 = new SynchronizedObject();
                 var child2 = new SynchronizedObject();

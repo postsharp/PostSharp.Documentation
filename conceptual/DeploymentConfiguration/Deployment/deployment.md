@@ -20,7 +20,6 @@ It contains the following topics:
 | <xref:installation> | This topic shows how to install PostSharp Tools for Visual Studio using an interactive installer. |
 | <xref:installation-silent> | This topic shows how to install PostSharp Tools for Visual Studio silently using a command line interface. |
 | <xref:install-compiler> | This topic shows how to install PostSharp Compiler into your project using NuGet Package Manager. |
-| <xref:install-without-nuget> | This topic shows how to install PostSharp Compiler into your project without NuGet Package Manager. |
 | <xref:build-server> | This topic shows how to use PostSharp on a build server and describes licensing details for this scenario. |
 | <xref:upgrade> | This topic explains how to upgrade from a previous version of PostSharp. |
 | <xref:uninstalling> | This topic shows how to uninstall PostSharp from your projects and from Visual Studio. |

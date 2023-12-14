@@ -9,6 +9,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
+		<UseWPF>True</UseWPF>
+		<UseWindowsForms>True</UseWindowsForms>
 	</PropertyGroup>
 
 	<ItemGroup>

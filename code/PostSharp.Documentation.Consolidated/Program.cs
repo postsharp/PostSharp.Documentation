@@ -32,6 +32,7 @@ _ = new Type[]
     typeof(Aspect), // PostSharp.Redist
     typeof(AggregatableAttribute), // PostSharp.Patterns.Aggregation.Redist
     typeof(CacheAttribute), // PostSharp.Patterns.Caching.Redist
+    typeof(AzureServiceBusCacheInvalidator), // PostSharp.Patterns.Caching.Azure
     typeof(MemoryCacheBackend), // PostSharp.Patterns.Caching.IMemoryCache
     typeof(RedisCachingBackend), // PostSharp.Patterns.Caching.Redis
     typeof(RequiredAttribute), // PostSharp.Patterns.Common.Redist
@@ -50,12 +51,7 @@ _ = new Type[]
     typeof(NotifyPropertyChangedAttribute), // PostSharp.Patterns.Model.Redist
     typeof(CommandAttribute), // PostSharp.Patterns.Xaml.Redist
 
-#if NET
-    typeof(AzureCacheInvalidator2), // PostSharp.Patterns.Caching.Azure
-#endif
-
 #if NETFRAMEWORK
-    typeof(AzureCacheInvalidator), // PostSharp.Patterns.Caching.Azure
     typeof(AspNetFrameworkRequestMetadata), // PostSharp.Patterns.Diagnostics.AspNetFramework
 #endif
 };

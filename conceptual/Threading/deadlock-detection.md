@@ -1,11 +1,14 @@
 ---
 uid: deadlock-detection
-title: "Detecting Deadlocks at Runtime"
+title: "Detecting Deadlocks at Runtime (Deprecated)"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
 summary: "The document provides a guide on using PostSharp Tools for Visual Studio to detect deadlocks in multithreaded code at runtime, either manually or using a wizard."
 ---
 # Detecting Deadlocks at Runtime
+
+> [!CAUTION]
+> <xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy> is deprecated and should not be used. The aspect does not support async methods.
 
 A common problem that is found in multithreaded code is that multiple threads enter a situation where they are waiting for each other to finish. This is a deadlock situation and neither thread will complete executing in this situation. Because the threads are waiting on each other, neither is capable of providing diagnostic information to aid in debugging the situation. The <xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy> helps provide this information. 
 

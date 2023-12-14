@@ -13,13 +13,15 @@ A typical answer to this issue is to use a centralized cache server (or a cluste
 
 An alternative solution to the problem of distributed caching is to have a local in-memory cache in each instance in the application. Instead of using a shared distributed cache, each application instance caches its own data into its own local cache. However, when one instance of the application modifies a piece of data, it needs to make sure that all instances remove the relevant items from their local cache. This is called *distributed cache invalidation*. It can be achieved easily and cheaply with a publish/subscribe (Pub/Sub) message bus such as Azure Service Bus, much less expensive than a cache cluster. 
 
-PostSharp allows you to easily add sub/sub cache invalidation to your existing PostSharp caching.
+PostSharp allows you to easily add pub/sub cache invalidation to your existing PostSharp caching.
 
 The principal inconvenience of pub/sub invalidation is that there is some latency in the invalidation mechanism, i.e. different instances of the application can see different data during a few dozens of milliseconds.
 
 
 ## Using Azure Service Bus pub/sub for distributed invalidation
 
+> [!WARNING]
+> `AzureCacheInvalidator` and `AzureCacheInvalidator2` are deprecated since PostSharp 2024.0. They are replaced by <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator>.
 
 ### To use Azure Service Bus pub/sub for distributed invalidation:
 
@@ -40,47 +42,12 @@ The principal inconvenience of pub/sub invalidation is that there is some latenc
 
 6. Go back to your source code and find the place where the <xref:PostSharp.Patterns.Caching.Backends.MemoryCachingBackend> is initialized. 
 
-
-The next steps differ depending on whether you're using .NET Framework or not.
-
-
-### If you're using .NET Framework
-
-1. Create an instance of <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureCacheInvalidatorOptions> class and specify the connection string to the shared access policy you just created. 
-
-
-2. Create an instance of the <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureCacheInvalidator> class using the <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureCacheInvalidator.Create(PostSharp.Patterns.Caching.Implementation.CachingBackend,PostSharp.Patterns.Caching.Backends.Azure.AzureCacheInvalidatorOptions)> factory method passing the existing instance of the <xref:PostSharp.Patterns.Caching.Backends.MemoryCachingBackend> and <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureCacheInvalidatorOptions>. Assign the new <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureCacheInvalidator> to the <xref:PostSharp.Patterns.Caching.CachingServices.DefaultBackend> property. 
-
-
-
-### Example
-
-This example shows how to initialize an in-memory caching backend to let it invalidate and be invalidated using Azure Service Bus pub/sub.
-
-```csharp
-var localCache = new MemoryCachingBackend();
-
-string connectionString = "Endpoint=sb://yourServiceNamespace.servicebus.windows.net/;EntityPath=yourTopic;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=yourKey";
-
-var azureCacheInvalidatorOptions = new AzureCacheInvalidatorOptions
-                                    {
-                                        ConnectionString = connectionString
-                                    };
-
-CachingServices.DefaultBackend = AzureCacheInvalidator.Create( localCache, azureCacheInvalidatorOptions );
-```
-
-
-### If you're using .NET Standard or .NET Core
-
-1. Create an instance of `AzureCacheInvalidatorOptions2` class using the connection string to the shared access policy you just created. You also need to either specify the Service Bus topic subscription name or additional credentials that would allow the code to create new topic subscriptions. See below. 
+7. Create an instance of <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidatorOptions> class using the connection string to the shared access policy you just created. You also need to either specify the Service Bus topic subscription name or additional credentials that would allow the code to create new topic subscriptions. See below. 
 
     If you choose automatic topic management, you will need to pass a client ID, client secret and tenant ID to each client. These can be the same for all clients. [You can create these credentials in the Microsoft Azure portal in the section Azure Active Directory.](https://docs.microsoft.com/en-gb/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-id) 
 
 
-2. Create an instance of the `AzureCacheInvalidator2` class using the `AzureCacheInvalidator2.Create` factory method passing the existing instance of the <xref:PostSharp.Patterns.Caching.Backends.MemoryCachingBackend> and `AzureCacheInvalidatorOptions2`. Assign the new `AzureCacheInvalidator2` to the <xref:PostSharp.Patterns.Caching.CachingServices.DefaultBackend> property. 
-
-
+8. Create an instance of the <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator> class using the <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator.Create(PostSharp.Patterns.Caching.Implementation.CachingBackend,PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidatorOptions)> factory method passing the existing instance of the <xref:PostSharp.Patterns.Caching.Backends.MemoryCachingBackend> and <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator>. Assign the new <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidator> to the <xref:PostSharp.Patterns.Caching.CachingServices.DefaultBackend> property. 
 
 ### Topic creation strategies
 
@@ -91,9 +58,9 @@ There are two ways to create topic subscriptions: automatic, and manual.
 * **Automatic topic management** means that PostSharp will automatically create a topic subscription for each instance of the cache invalidator. This topic subscription will have an auto-generated name and will be set to auto-expire after a few minutes after the connection ends. 
     In .NET Framework, this strategy is the only one that can be used and it does not require extra permissions. In .NET Core and .NET Standard, this strategy requires your application to have management permissions to Azure Service Bus.
 
-* **Manual topic management** means that you have to create the topic subscriptions yourself using the Azure portal or another management API. In this case, you need to pass the topic subscription name to `AzureCacheInvalidatorOptions2`, but your Azure credentials do not need the management permission. 
+* **Manual topic management** means that you have to create the topic subscriptions yourself using the Azure portal or another management API. In this case, you need to pass the topic subscription name to <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidatorOptions>, but your Azure credentials do not need the management permission. 
 
-In .NET Core, you select the strategy by invoking the corresponding constructor of the `AzureCacheInvalidatorOptions2` class. (In .NET Framework, automatic topic management is always used.) 
+You can select the strategy by invoking the corresponding constructor of the <xref:PostSharp.Patterns.Caching.Backends.Azure.AzureServiceBusCacheInvalidatorOptions> class.
 
 
 ## Using Redis pub/sub for distributed invalidation

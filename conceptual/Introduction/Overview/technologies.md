@@ -55,8 +55,6 @@ A secondary role for static analysis is architecture validation. This role is ma
 
 PostSharp uses dynamic analysis to check the program against threading models. Since many model properties cannot be reliably verified at build time, they must be enforced at run time. For instance, with the Synchronized threading model, accessing a field without owning access to the object would result in a <xref:PostSharp.Patterns.Threading.ThreadAccessException>. For details, see <xref:threading-models>. 
 
-Another example of use of dynamic program analysis in PostSharp is deadlock detection. For details, see <xref:deadlock-detection>. 
-
 In PostSharp, dynamic analysis is achieved by adding instrumentation aspects to the program.
 
 

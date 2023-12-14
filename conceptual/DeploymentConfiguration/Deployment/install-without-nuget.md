@@ -1,6 +1,6 @@
 ---
 uid: install-without-nuget
-title: "Installing PostSharp without NuGet"
+title: "Installing PostSharp without NuGet (Deprecated)"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
 summary: "The document provides instructions for installing PostSharp without using NuGet, an unsupported method primarily intended for users of legacy .NET Framework projects."

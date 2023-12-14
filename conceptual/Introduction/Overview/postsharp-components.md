@@ -50,15 +50,6 @@ The following table lists all PostSharp packages:
 | *PostSharp.Patterns.Diagnostics.HttpClient* | N/A | Collects events from <xref:System.Net.Http.HttpClient>.  |
 | *PostSharp.Patterns.Diagnostics.AspNetCore* | N/A | Collects events from ASP.NET Core and ASP.NET 5. |
 
-
-## Zip distribution
-
-For teams that cannot use NuGet, PostSharp also comes as one zip archive containing the files otherwise contained in all NuGet packages.
-
-In this archive, the *lib* folder contains run-time libraries (*redistributables*), and the *tools* folder contains all build-time components. 
-
-See <xref:install-without-nuget> for details. 
-
 ## See Also
 
 **Other Resources**
