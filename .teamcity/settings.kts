@@ -229,7 +229,7 @@ object PublicUpdateSearch : BuildType({
                 path = "Build.ps1"
             }
             noProfile = false
-            param("jetbrains_powershell_scriptArguments", "tools search update https://0fpg9nu41dat6boep.a1.typesense.net postsharpdoc https://doc-production.postsharp.net/sitemap.xml --ignore-tls %UpdateSearchArguments%")
+            param("jetbrains_powershell_scriptArguments", "tools search update https://0fpg9nu41dat6boep.a1.typesense.net postsharpdoc https://doc-production.postsharp.net/il/sitemap.xml --ignore-tls %UpdateSearchArguments%")
         }
     }
 

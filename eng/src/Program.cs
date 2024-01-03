@@ -51,6 +51,7 @@ var product = new Product( PostSharpDependencies.PostSharpDocumentation )
             } ),
     Extensions = new ProductExtension[]
     {
+        // Run `b generate-scripts` after changing these parameters.
         new UpdateSearchProductExtension<UpdatePostSharpDocumentationCommand>(
             "https://0fpg9nu41dat6boep.a1.typesense.net",
             "postsharpdoc",
