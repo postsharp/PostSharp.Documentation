@@ -12,8 +12,6 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<!-- Temporary fix because PostSharp.Compiler.Common references PostSharp, including build tools. Remove after PostSharp package dependency is bumped (#34278). -->
-		<PackageReference Include="PostSharp" Version="$(PostSharpVersion)" ExcludeAssets="all" />
 		<PackageReference Include="PostSharp.Compiler.Engine" Version="$(PostSharpVersion)" />
 	</ItemGroup>
 
