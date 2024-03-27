@@ -14,32 +14,32 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="PostSharp.Redist" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Aggregation.Redist" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Caching.Redist" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Caching.Azure" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Caching.IMemoryCache" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Caching.Redis" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Common.Redist" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.Redist" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.ApplicationInsights" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.AspNetCore" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.CommonLogging" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.DiagnosticSource" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.HttpClient" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.Configuration" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.Log4Net" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.Microsoft" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.NLog" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.Serilog" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Model.Redist" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Threading.Redist" Version="$(PostSharpVersion)" />
-		<PackageReference Include="PostSharp.Patterns.Xaml.Redist" Version="$(PostSharpVersion)" />
+		<PackageReference Include="PostSharp.Redist" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Aggregation.Redist" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Caching.Redist" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Caching.Azure" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Caching.IMemoryCache" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Caching.Redis" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Common.Redist" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.Redist" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.ApplicationInsights" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.AspNetCore" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.CommonLogging" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.DiagnosticSource" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.HttpClient" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.Configuration" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.Log4Net" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.Microsoft" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.NLog" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.Serilog" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Model.Redist" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Threading.Redist" Version="$(PostSharpPackageVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Xaml.Redist" Version="$(PostSharpPackageVersion)" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)'=='net48'">
-		<PackageReference Include="PostSharp.Patterns.Diagnostics.AspNetFramework" Version="$(PostSharpVersion)" />
+		<PackageReference Include="PostSharp.Patterns.Diagnostics.AspNetFramework" Version="$(PostSharpPackageVersion)" />
 	</ItemGroup>
 
 	<Target Name="CheckConfiguration">

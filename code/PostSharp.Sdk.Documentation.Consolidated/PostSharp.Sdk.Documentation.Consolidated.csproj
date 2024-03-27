@@ -12,7 +12,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="PostSharp.Compiler.Engine" Version="$(PostSharpVersion)" />
+		<PackageReference Include="PostSharp.Compiler.Engine" Version="$(PostSharpPackageVersion)" />
 	</ItemGroup>
 
 	<Target Name="CheckConfiguration">
