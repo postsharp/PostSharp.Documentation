@@ -68,7 +68,7 @@ object DebugBuild : BuildType({
     }
 
     requirements {
-        equals("env.BuildAgentType", "build62stable")
+        equals("env.BuildAgentType", "caravela04")
     }
 
     features {
@@ -127,7 +127,7 @@ object PublicBuild : BuildType({
     }
 
     requirements {
-        equals("env.BuildAgentType", "build62stable")
+        equals("env.BuildAgentType", "caravela04")
     }
 
     features {
@@ -178,7 +178,7 @@ object PublicDeployment : BuildType({
     }
 
     requirements {
-        equals("env.BuildAgentType", "build62stable")
+        equals("env.BuildAgentType", "caravela04")
     }
 
     features {
@@ -247,7 +247,7 @@ object PublicUpdateSearch : BuildType({
     }
 
     requirements {
-        equals("env.BuildAgentType", "build62stable")
+        equals("env.BuildAgentType", "caravela04")
     }
 
     features {
