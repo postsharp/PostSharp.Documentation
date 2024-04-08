@@ -3,7 +3,7 @@ uid: deadlock-detection
 title: "Detecting Deadlocks at Runtime (Deprecated)"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides a guide on using PostSharp Tools for Visual Studio to detect deadlocks in multithreaded code at runtime, either manually or using a wizard."
+summary: "The document provides a guide on using Visual Studio Tools for Metalama and PostSharp to detect deadlocks in multithreaded code at runtime, either manually or using a wizard."
 ---
 # Detecting Deadlocks at Runtime
 
@@ -13,10 +13,10 @@ summary: "The document provides a guide on using PostSharp Tools for Visual Stud
 A common problem that is found in multithreaded code is that multiple threads enter a situation where they are waiting for each other to finish. This is a deadlock situation and neither thread will complete executing in this situation. Because the threads are waiting on each other, neither is capable of providing diagnostic information to aid in debugging the situation. The <xref:PostSharp.Patterns.Threading.DeadlockDetectionPolicy> helps provide this information. 
 
 
-## Adding deadlock detection using PostSharp Tools for Visual Studio
+## Adding deadlock detection using Visual Studio Tools for Metalama and PostSharp
 
 
-### To apply the deadlock detection to your application with PostSharp Tools for Visual Studio:
+### To apply the deadlock detection to your application with Visual Studio Tools for Metalama and PostSharp:
 
 1. Right click on your solution in Solution Explorer, select Add followed by PostSharp Policy...
 

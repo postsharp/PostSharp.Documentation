@@ -3,11 +3,11 @@ uid: customize-vs-appearance
 title: "Customizing Aspect Appearance in Visual Studio"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides guidance on customizing the appearance of custom aspects in PostSharp Tools for Visual Studio, including changing descriptions and estimating code savings."
+summary: "The document provides guidance on customizing the appearance of custom aspects in Visual Studio Tools for Metalama and PostSharp, including changing descriptions and estimating code savings."
 ---
 # Customizing Aspect Appearance in Visual Studio
 
-This chapter explains how to configure how your custom aspects appear in PostSharp Tools for Visual Studio. It contains the following topics:
+This chapter explains how to configure how your custom aspects appear in Visual Studio Tools for Metalama and PostSharp. It contains the following topics:
 
 | Section | Description |
 |---------|-------------|

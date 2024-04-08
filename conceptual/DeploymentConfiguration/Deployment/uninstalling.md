@@ -72,7 +72,7 @@ If you would like to remove PostSharp from Visual Studio, proceed with the follo
 First, remove the PostSharp extension from Visual Studio.
 
 
-### Uninstalling the PostSharp Tools for Visual Studio
+### Uninstalling the Visual Studio Tools for Metalama and PostSharp
 
 1. Open the Extensions and Updates window.
 

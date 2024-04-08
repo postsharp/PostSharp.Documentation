@@ -3,7 +3,7 @@ uid: configuration
 title: "Configuration"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "PostSharp, a metaprogramming tool, requires minimal custom configuration and sources its default settings from MSBuild integration, NuGet integration, and PostSharp Tools. Advanced configurations can be implemented if needed. "
+summary: "PostSharp, a metaprogramming tool, requires minimal custom configuration and sources its default settings from MSBuild integration, NuGet integration, and Visual Studio Tools for Metalama and PostSharp. Advanced configurations can be implemented if needed. "
 ---
 # Configuration
 
@@ -13,7 +13,7 @@ For most use cases, PostSharp does not require any custom configuration. PostSha
 
 * **NuGet integration**. Some PostSharp plug-ins delivered as NuGet packages may modify PostSharp configuration files during installation. 
 
-* **PostSharp Tools**. When adding aspects and policies from Visual Studio, PostSharp may automatically modify some configuration files. 
+* **Visual Studio Tools for Metalama and PostSharp**. When adding aspects and policies from Visual Studio, PostSharp may automatically modify some configuration files. 
 
 Even if most configuration settings are correct by default, you may want to understand the configuration system to troubleshoot configuration and installation issues, or simply to implement more advanced configuration scenarios.
 

@@ -1,21 +1,21 @@
 ---
 uid: installation
-title: "Installing PostSharp Tools for Visual Studio"
+title: "Installing Visual Studio Tools for Metalama and PostSharp"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides instructions on how to install PostSharp Tools for Visual Studio, including downloading, running the file, and completing the installation wizard."
+summary: "The document provides instructions on how to install Visual Studio Tools for Metalama and PostSharp, including downloading, running the file, and completing the installation wizard."
 ---
-# Installing PostSharp Tools for Visual Studio
+# Installing Visual Studio Tools for Metalama and PostSharp
 
-PostSharp Tools for Visual Studio are PostSharp's user interface. Install them on a developer's computer, does not affect the projects until the PostSharp NuGet package has been added to this project. See <xref:install-compiler> for details. 
+Visual Studio Tools for Metalama and PostSharp are PostSharp's user interface. Install them on a developer's computer, does not affect the projects until the PostSharp NuGet package has been added to this project. See <xref:install-compiler> for details. 
 
 
-### To install PostSharp Tools for Visual Studio:
+### To install Visual Studio Tools for Metalama and PostSharp:
 
 1. Download the file *PostSharp-X.X.X.exe* from [https://www.postsharp.net/download](https://www.postsharp.net/download). 
 
     > [!NOTE]
-    > Older versions of PostSharp Tools for Visual Studio are available at [https://www.postsharp.net/downloads](https://www.postsharp.net/downloads). 
+    > Older versions of Visual Studio Tools for Metalama and PostSharp are available at [https://www.postsharp.net/downloads](https://www.postsharp.net/downloads). 
 
 
 2. Run the file *PostSharp-X.X.X.exe*. 

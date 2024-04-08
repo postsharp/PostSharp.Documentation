@@ -72,7 +72,7 @@ PostSharp will automatically load a few well-known configuration files if they a
 
 * Any file named `postsharp.config` located in the directory containing the MSBuild project file (*csproj* or *vbproj*, typically), or in any parent directory, up to the root. These files are loaded in ascending order, i.e. up from the root directory to the project directory. This is the recommended way to configure new projects. 
 
-* Any file named `<MySolution>.pssln` located in the same directory as the solution file `<MySolution>.pssln`. Also PostSharp Tools for Visual Studio uses this file for convenience, we recommend you do not use this file and move the configuration to a shared *postsharp.config* file instead. The reason is that a project file can belong to several solutions, and it would be misleading to have the compilation depend on which solution was used. 
+* Any file named `<MySolution>.pssln` located in the same directory as the solution file `<MySolution>.pssln`. Also Visual Studio Tools for Metalama and PostSharp uses this file for convenience, we recommend you do not use this file and move the configuration to a shared *postsharp.config* file instead. The reason is that a project file can belong to several solutions, and it would be misleading to have the compilation depend on which solution was used. 
 
 * Any file named `<MyProject>.psproj` located in the same directory as the project file `<MyProject>.csproj` or `<MyProject>.vbproj`. 
 

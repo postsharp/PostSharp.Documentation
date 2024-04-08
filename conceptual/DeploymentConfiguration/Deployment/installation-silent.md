@@ -1,15 +1,15 @@
 ---
 uid: installation-silent
-title: "Installing PostSharp Tools for Visual Studio Silently"
+title: "Installing Visual Studio Tools for Metalama and PostSharp Silently"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides instructions on how to silently install PostSharp Tools for Visual Studio, a user interface and build component tool, through a command line interface."
+summary: "The document provides instructions on how to silently install Visual Studio Tools for Metalama and PostSharp, a user interface and build component tool, through a command line interface."
 ---
-# Installing PostSharp Tools for Visual Studio Silently
+# Installing Visual Studio Tools for Metalama and PostSharp Silently
 
-PostSharp is composed of a user interface (PostSharp Tools for Visual Studio) and build components (NuGet packages). NuGet packages are usually checked into source control or retrieved from a package repository at build time (see <xref:nuget-restore>), so its deployment does not require additional automation. The user interface is typically installed by each user. It does not require administrative privileges. 
+PostSharp is composed of a user interface (Visual Studio Tools for Metalama and PostSharp) and build components (NuGet packages). NuGet packages are usually checked into source control or retrieved from a package repository at build time (see <xref:nuget-restore>), so its deployment does not require additional automation. The user interface is typically installed by each user. It does not require administrative privileges. 
 
-In large teams, it might be inconvenient to install PostSharp Tools for Visual Studio on each machine manually. For this purpose, PostSharp installer enables silent installation using a command line interface. You can install PostSharp automatically for a large number of users using the silent installer.
+In large teams, it might be inconvenient to install Visual Studio Tools for Metalama and PostSharp on each machine manually. For this purpose, PostSharp installer enables silent installation using a command line interface. You can install PostSharp automatically for a large number of users using the silent installer.
 
 
 ### To install PostSharp unattended:

@@ -3,11 +3,11 @@ uid: customizing-aspect-description
 title: "Customizing Aspect Description in Tooltips"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides guidance on customizing aspect descriptions in tooltips using PostSharp Tools, including instructions for both simple and composite aspects."
+summary: "The document provides guidance on customizing aspect descriptions in tooltips using Visual Studio Tools for Metalama and PostSharp, including instructions for both simple and composite aspects."
 ---
-# Customizing Aspect Description in Tooltips
+# Customizing Aspect Description in CodeLens and Tooltips
 
-When you position the mouse cursor over a declaration that has been enhanced by an aspect, PostSharp Tools adds a description of the aspect to the Intellisense tooltip. The description that PostSharp generates by default is sometimes little helpful. To make the Intellisense description of your aspect more understandable for its users, you should override the default description.
+When you position the mouse cursor over a declaration that has been enhanced by an aspect, Visual Studio Tools for Metalama and PostSharp add a description of the aspect to CodeLens, and optionally to the Intellisense tooltip. The description that PostSharp generates by default is sometimes little helpful. To make the CodeLens and Intellisense description of your aspect more understandable for its users, you should override the default description.
 
 
 ## Simple Aspects

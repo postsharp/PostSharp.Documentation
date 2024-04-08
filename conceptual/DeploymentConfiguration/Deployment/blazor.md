@@ -41,7 +41,7 @@ For more detailed information about the linker configuration please refer to the
 ## Debugging
 
 To debug Blazor applications, it is recommended to set `PostSharpDebuggerExtensionsMode` MSBuild property to `Disabled`, otherwise the debugger may fail to work properly. This should be done for all projects in the solution. The simplest way to achieve this is to [set the property in file Directory.Build.props in the solution root](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build#directorybuildprops-and-directorybuildtargets). 
-By default, PostSharp emits debugging information to improve the debugging experience of code enhanced by PostSharp. This includes additional sequence points and other metadata consumed by Visual Studio Debugger extension that is a part of PostSharp Tools Visual Studio extension.
+By default, PostSharp emits debugging information to improve the debugging experience of code enhanced by PostSharp. This includes additional sequence points and other metadata consumed by Visual Studio Debugger extension that is a part of Visual Studio Tools for Metalama and PostSharp.
 Other debuggers will not interpret this information and may reject symbols containing it or get into an invalid state. The Blazor debugger is unable to load debugging symbols for assemblies that contain PostSharp's additional debugging information.
 ## See Also
 

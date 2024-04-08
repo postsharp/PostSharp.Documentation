@@ -7,7 +7,7 @@ summary: "This document provides a detailed guide on how to install PostSharp, a
 ---
 # Installing PostSharp Unattended
 
-PostSharp is composed of a user interface (PostSharp Tools for Visual Studio) and build components (NuGet packages). NuGet packages are usually checked into source control or retrieved from a package repository at build time (see <xref:nuget-restore>), so its deployment does not require additional automation. The user interface is typically installed by each user. It does not require administrative privileges. 
+PostSharp is composed of a user interface (Visual Studio Tools for Metalama and PostSharp) and build components (NuGet packages). NuGet packages are usually checked into source control or retrieved from a package repository at build time (see <xref:nuget-restore>), so its deployment does not require additional automation. The user interface is typically installed by each user. It does not require administrative privileges. 
 
 > [!WARNING]
 > The PostSharp user interface requires NuGet Package Manager 2.2, which is not installed by default with Visual Studio. Installing NuGet requires administrative privileges on the local machine.
