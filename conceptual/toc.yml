@@ -507,7 +507,7 @@ items:
       - name: Customizing Aspect Appearance in Visual Studio
         topicUid: customize-vs-appearance
         items:
-          - name: Customizing Aspect Description in Tooltips
+          - name: Customizing Aspect Description in CodeLens and Tooltips
             topicUid: customizing-aspect-description
           - name: Estimating Code Savings
             topicUid: estimating-code-saving

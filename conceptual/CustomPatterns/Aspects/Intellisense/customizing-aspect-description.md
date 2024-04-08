@@ -1,9 +1,9 @@
 ---
 uid: customizing-aspect-description
-title: "Customizing Aspect Description in Tooltips"
+title: "Customizing Aspect Description in CodeLens And Tooltips"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides guidance on customizing aspect descriptions in tooltips using Visual Studio Tools for Metalama and PostSharp, including instructions for both simple and composite aspects."
+summary: "The document provides guidance on customizing aspect descriptions in CodeLens and tooltips using Visual Studio Tools for Metalama and PostSharp, including instructions for both simple and composite aspects."
 ---
 # Customizing Aspect Description in CodeLens and Tooltips
 
@@ -40,7 +40,7 @@ This is illustrated in the following code snippet.
 
 With composite aspects, you should add a description to every advice. You can do that by setting the <xref:PostSharp.Aspects.Advices.Advice.Description> property of the advice custom attribute. 
 
-The following code snippet illustrates how to set the description of the advice. This description will appear in the Intellisense tooltip of each property affected by this advice.
+The following code snippet illustrates how to set the description of the advice. This description will appear in CodeLens and the Intellisense tooltip of each property affected by this advice.
 
 ```csharp
 [OnLocationSetValueAdvice( Description="Persists the property to disk." ), 
