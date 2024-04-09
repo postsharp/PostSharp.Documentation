@@ -155,8 +155,6 @@ items:
             topicUid: postsharp-components
           - name: Installing Visual Studio Tools for Metalama and PostSharp
             topicUid: installation
-          - name: Installing Visual Studio Tools for Metalama and PostSharp Silently
-            topicUid: installation-silent
           - name: Installing PostSharp Into a Project
             topicUid: install-compiler
           - name: Using PostSharp on a Build Server
@@ -164,8 +162,6 @@ items:
             items:
               - name: Restoring Packages at Build Time
                 topicUid: nuget-restore
-              - name: Using PostSharp with Visual Studio Online
-                topicUid: vsonline
           - name: Upgrading from a Previous Version of PostSharp
             topicUid: upgrade
           - name: Installing PostSharp Unattended

@@ -12,7 +12,7 @@ summary: "PostSharp offers components for Visual Studio, available as NuGet pack
 
 This is the user interface of PostSharp. It extends the Visual Studio editor and provides a new menu, option pages, toolbox windows, diagnostics, code actions, and debugging enhancements.
 
-For details regarding the installation of this component, see <xref:installation> and <xref:installation-silent>. 
+For details regarding the installation of this component, see <xref:installation> and <xref:postsharp-unattended>. 
 
 
 ## NuGet packages
