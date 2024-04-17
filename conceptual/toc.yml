@@ -153,10 +153,8 @@ items:
                 topicUid: binary-formatter-security
           - name: PostSharp Components
             topicUid: postsharp-components
-          - name: Installing PostSharp Tools for Visual Studio
+          - name: Installing Visual Studio Tools for Metalama and PostSharp
             topicUid: installation
-          - name: Installing PostSharp Tools for Visual Studio Silently
-            topicUid: installation-silent
           - name: Installing PostSharp Into a Project
             topicUid: install-compiler
           - name: Using PostSharp on a Build Server
@@ -164,8 +162,6 @@ items:
             items:
               - name: Restoring Packages at Build Time
                 topicUid: nuget-restore
-              - name: Using PostSharp with Visual Studio Online
-                topicUid: vsonline
           - name: Upgrading from a Previous Version of PostSharp
             topicUid: upgrade
           - name: Installing PostSharp Unattended
@@ -507,11 +503,11 @@ items:
       - name: Customizing Aspect Appearance in Visual Studio
         topicUid: customize-vs-appearance
         items:
-          - name: Customizing Aspect Description in Tooltips
+          - name: Customizing Aspect Description in CodeLens and Tooltips
             topicUid: customizing-aspect-description
           - name: Estimating Code Savings
             topicUid: estimating-code-saving
-          - name: Pushing Information to PostSharp Tools Programmatically
+          - name: Pushing Information to Visual Studio Programmatically
             topicUid: programmatic-tooltip
       - name: Consuming Dependencies from an Aspect
         topicUid: consuming-dependencies

@@ -15,7 +15,7 @@ Under some circumstances, you may want to restrict users of an API to implement 
 To restrict implementation of publicly declared interfaces you simply need to add [<xref:PostSharp.Constraints.InternalImplementAttribute>] to that interface. 
 
 > [!NOTE]
-> This procedure requires [PostSharp Tools for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/a058d5d3-e654-43f8-a308-c3bdfdd0be4a) to be installed on your machine. You can however achieve the same results by editing the code and the project manually. 
+> This procedure requires [Visual Studio Tools for Metalama and PostSharp](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp) to be installed on your machine. You can however achieve the same results by editing the code and the project manually. 
 
 ### 
 

@@ -60,12 +60,10 @@
     <rule from="^binary-formatter-security$" to="deploymentconfiguration/deployment/binary-formatter-security" />
     <rule from="^postsharp-components$" to="introduction/overview/postsharp-components" />
     <rule from="^installation$" to="deploymentconfiguration/deployment/installation" />
-    <rule from="^installation-silent$" to="deploymentconfiguration/deployment/installation-silent" />
     <rule from="^install-compiler$" to="deploymentconfiguration/deployment/install-compiler" />
     <rule from="^install-without-nuget$" to="deploymentconfiguration/deployment/install-without-nuget" />
     <rule from="^build-server$" to="deploymentconfiguration/deployment/build-server" />
     <rule from="^nuget-restore$" to="deploymentconfiguration/deployment/nuget-restore" />
-    <rule from="^vsonline$" to="deploymentconfiguration/deployment/vsonline" />
     <rule from="^upgrade$" to="deploymentconfiguration/deployment/upgrade" />
     <rule from="^uninstalling$" to="deploymentconfiguration/deployment/uninstalling" />
     <rule from="^deployment-end-user$" to="deploymentconfiguration/deployment/deployment-end-user" />

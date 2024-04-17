@@ -3,7 +3,7 @@ uid: whats-new-20240
 title: "What's New in PostSharp 2024.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "PostSharp 2023.0 introduces support for .NET 8.0 and C# 12, including ARM64 build platforms and experimental support for ARM64 .NET Framework and Visual Studio."
+summary: "PostSharp 2024.0 introduces support for .NET 8.0 and C# 12, including ARM64 build platforms and experimental support for ARM64 .NET Framework and Visual Studio."
 ---
 # What's New in PostSharp 2024.0
 

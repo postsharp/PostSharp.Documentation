@@ -3,7 +3,7 @@ uid: thread-safety-policy
 title: "Making a Whole Project or Solution Thread Safe"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides instructions on how to implement thread-safety policies in a project or solution using PostSharp threading models, either manually or via PostSharp Tools for Visual Studio."
+summary: "The document provides instructions on how to implement thread-safety policies in a project or solution using PostSharp threading models, either manually or via Visual Studio Tools for Metalama and PostSharp."
 ---
 # Making a Whole Project or Solution Thread Safe
 
@@ -19,10 +19,10 @@ The thread-safety policy emits warnings in two situations:
 > The thread-safety policy does not make your application thread-safe by itself. What the thread-safety policy does is to remind you to use threading models in your code. It is the use of threading models that makes your application thread-safe.
 
 
-## Adding the thread-safety policy using PostSharp Tools for Visual Studio.
+## Adding the thread-safety policy using Visual Studio Tools for Metalama and PostSharp.
 
 
-### To apply the thread-safety policy to your application with PostSharp Tools for Visual Studio:
+### To apply the thread-safety policy to your application with Visual Studio Tools for Metalama and PostSharp:
 
 1. Right click on your solution or your project in **Solution Explorer**, select **Add** followed by **PostSharp Policy...** 
 

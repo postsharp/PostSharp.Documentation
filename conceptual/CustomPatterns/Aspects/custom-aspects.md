@@ -19,6 +19,6 @@ This chapter describes how to build your own aspect. It includes the following t
 | <xref:complex-aspects> | This topic describes how to create aspects that are composed of several primitive transformations, using advices and pointcuts. |
 | <xref:aspect-dependencies> | This topic explains how to express aspect dependencies to prevent issues that would otherwise happen if several aspects are added to the same declaration. |
 | <xref:aspect-serialization> | This topic explains aspect serialization and how to customize it. |
-| <xref:customize-vs-appearance> | This topic shows how aspect can influence how they appear in Visual Studio tooltips and code saving metrics. |
+| <xref:customize-vs-appearance> | This topic shows how aspects can influence how they appear in Visual Studio CodeLens, tooltips, and code saving metrics. |
 | <xref:consuming-dependencies> | This topic describes several strategies to consume services from aspects. |
 

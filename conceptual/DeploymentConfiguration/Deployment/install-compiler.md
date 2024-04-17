@@ -40,7 +40,7 @@ The compiler components of PostSharp are distributed as a [PostSharp NuGet packa
 > There are other ways to manage NuGet packages in your projects. See [NuGet Package Consumption Workflow documentation](https://learn.microsoft.com/en-us/nuget/consume-packages/overview-and-workflow) for more information. 
 
 > [!TIP]
-> NuGet Package Manager can be configured using a file named *nuget.config*, which can be checked into source control and can specify, among other settings, the location of the package repository (if it must be shared among several solutions, for instance) or package sources (if packages must be pre-approved). See [NuGet Configuration File](http://docs.nuget.org/docs/reference/nuget-config-file) and [NuGet Configuration Settings](http://docs.nuget.org/docs/reference/nuget-config-settings) for more information. 
+> NuGet Package Manager can be configured using a file named *nuget.config*, which can be checked into source control and can specify, among other settings, the location of the package repository (if it must be shared among several solutions, for instance) or package sources (if packages must be pre-approved). See [Common NuGet configurations](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior) and [`nuget.config` reference](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file) for more information. 
 
 
 ## Including files in your source control system
@@ -48,16 +48,13 @@ The compiler components of PostSharp are distributed as a [PostSharp NuGet packa
 After you add PostSharp to a project, you need to add the following files to source control:
 
 * *packages.config*
-* *postsharp.config*, if any 
-
-* **.psproj*, if any 
-
-* **.pssln*, if any 
+* *postsharp.config*
+* **.psproj*
+* **.pssln*
 
 Some of the files above might not be present depending on the package management format you use (packages.config/PackageReference) and on which PostSharp packages you have installed in your project.
 
-Optionally, if you use the packages.config package management format, you can also include the *packages* folder in your source control. Note that there are negative consequences on this practice. See [Omitting NuGet packages in source control systems](https://docs.microsoft.com/en-us/nuget/consume-packages/packages-and-source-control) for more information. If you choose not to include the *packages* folder in your source control system, read <xref:nuget-restore>. 
+Optionally, if you use the packages.config package management format, you can also include the *packages* folder in your source control. Note that there are negative consequences on this practice. See [Omitting NuGet packages in source control systems](https://learn.microsoft.com/en-us/nuget/consume-packages/packages-and-source-control) for more information. If you choose not to include the *packages* folder in your source control system, read <xref:nuget-restore>. 
 
 Once you have all of these files included in your source code repository, any other developer getting that source code from the repository will have the required information to be able to build the application.
-
 

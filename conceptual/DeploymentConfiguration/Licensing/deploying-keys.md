@@ -40,10 +40,10 @@ See <xref:configuration-system> for details about this configuration file.
 
 Registering a license key using the user interface is the preferred procedure for individual developers and small teams.
 
-It's easier to do it when PostSharp Tools for Visual Studio are installed, but you can also do it without them.
+It's easier to do it when Visual Studio Tools for Metalama and PostSharp are installed, but you can also do it without them.
 
 
-### To open the licensing UI with PostSharp Tools for Visual Studio:
+### To open the licensing UI with Visual Studio Tools for Metalama and PostSharp:
 
 1. Open Visual Studio.
 
@@ -58,7 +58,7 @@ You should now see the following dialog box:
 ![](VsLicenseOptions.PNG)
 
 
-### To open the licensing UI without PostSharp Tools for Visual Studio:
+### To open the licensing UI without Visual Studio Tools for Metalama and PostSharp:
 
 1. Build a project that contains PostSharp. The build does not need to be successful.
 2. Open the `C:\ProgramData\PostSharp` directory with Windows Explorer.

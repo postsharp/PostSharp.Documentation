@@ -17,7 +17,7 @@ As an example let's look at a data access related class. As a precaution against
 ## Restricting access to specific namespaces
 
 > [!NOTE]
-> This procedure requires [PostSharp Tools for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/a058d5d3-e654-43f8-a308-c3bdfdd0be4a) to be installed on your machine. You can however achieve the same results by editing the code and the project manually. 
+> This procedure requires [Visual Studio Tools for Metalama and PostSharp](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp) to be installed on your machine. You can however achieve the same results by editing the code and the project manually. 
 
 ### To limit access of a class only to other classes within the validation namespace:
 
@@ -156,7 +156,7 @@ PostSharp offers you the ability to decorate a publically declared component in 
     ```
 
 
-2. Place the caret on the publically declared component that you want to restrict external access to and expand the smart tag. Select "Add architectural constraint" This procedure requires [PostSharp Tools for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/a058d5d3-e654-43f8-a308-c3bdfdd0be4a) to be installed on your machine. You can however achieve the same results by editing the code and the project manually. . 
+2. Place the caret on the publically declared component that you want to restrict external access to and expand the smart tag. Select "Add architectural constraint" This procedure requires [Visual Studio Tools for Metalama and PostSharp](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp) to be installed on your machine. You can however achieve the same results by editing the code and the project manually. . 
 
     ![](../../Aspects/Tutorials/Internal_1.PNG)
 

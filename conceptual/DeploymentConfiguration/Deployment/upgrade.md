@@ -3,7 +3,7 @@ uid: upgrade
 title: "Upgrading from a Previous Version of PostSharp"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "The document provides detailed instructions on how to upgrade from a previous version of PostSharp, including upgrading PostSharp Tools for Visual Studio and solutions from PostSharp 3 or later and PostSharp 2."
+summary: "The document provides detailed instructions on how to upgrade from a previous version of PostSharp, including upgrading Visual Studio Tools for Metalama and PostSharp and solutions from PostSharp 3 or later and PostSharp 2."
 ---
 # Upgrading from a Previous Version of PostSharp
 
@@ -12,16 +12,16 @@ This section explains how to upgrade from a previous version of PostSharp.
 > Other sections of this chapter, specifically <xref:installation>, <xref:deploying-keys> and <xref:build-server>, are also useful if you need to upgrade from an earlier version of PostSharp. 
 
 
-## Upgrading PostSharp Tools for Visual Studio
+## Upgrading Visual Studio Tools for Metalama and PostSharp
 
-After you install PostSharp Tools for Visual Studio, you will still be able to open solutions that use older versions of PostSharp.
+After you install Visual Studio Tools for Metalama and PostSharp, you will still be able to open solutions that use older versions of PostSharp.
 
-PostSharp Tools for Visual Studio are backward compatible with older versions of PostSharp. However, several versions of the extension cannot coexist. Therefore, installing a new version of PostSharp Tools will uninstall the previous version.
+Visual Studio Tools for Metalama and PostSharp are backward compatible with older versions of PostSharp. However, several versions of the extension cannot coexist. Therefore, installing a new version of PostSharp Tools will uninstall the previous version.
 
-To upgrade PostSharp Tools for Visual Studio, simply download it from [https://www.postsharp.net/download](https://www.postsharp.net/download) and execute the installation package. 
+To upgrade Visual Studio Tools for Metalama and PostSharp, simply download it from [https://www.postsharp.net/download](https://www.postsharp.net/download) and execute the installation package. 
 
 > [!CAUTION]
-> Upgrading PostSharp Tools for Visual Studio does not implicitly upgrade your source code.
+> Upgrading Visual Studio Tools for Metalama and PostSharp does not implicitly upgrade your source code.
 
 
 ## Upgrading solutions from PostSharp 3 or later
