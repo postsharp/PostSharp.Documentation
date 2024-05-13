@@ -4,7 +4,7 @@ using Amazon;
 using BuildPostSharpDocumentation;
 using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build.Solutions;
-using PostSharp.Engineering.BuildTools.AWS.S3.Publishers;
+using PostSharp.Engineering.BuildTools.S3.Publishers;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
 using PostSharp.Engineering.BuildTools.Utilities;
@@ -13,11 +13,14 @@ using System.IO;
 using System.Diagnostics;
 using PostSharp.Engineering.BuildTools.Build.Publishers;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
+using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Search;
+using PostSharpDocumentationDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies;
+using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2024_1;
 
 const string docPackageFileName = "PostSharp.Doc.zip";
 
-var product = new Product( PostSharpDependencies.PostSharpDocumentation )
+var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumentation )
 {
     Solutions = new Solution[]
     {
@@ -30,7 +33,14 @@ var product = new Product( PostSharpDependencies.PostSharpDocumentation )
     PublicArtifacts = Pattern.Create(
         docPackageFileName
     ),
-    Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering },
+    ParametrizedDependencies = new[]
+    {
+        DevelopmentDependencies.PostSharpEngineering.ToDependency(),
+        PostSharpDependencies.PostSharp.ToDependency(
+            new ConfigurationSpecific<BuildConfiguration>(
+                BuildConfiguration.Release, BuildConfiguration.Release, BuildConfiguration.Release
+            ) )
+    },
     AdditionalDirectoriesToClean = new[] { "obj", "docfx\\_site" },
 
     // Disable automatic build triggers.

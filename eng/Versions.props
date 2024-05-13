@@ -11,10 +11,12 @@
 
     <!-- Versions of dependencies -->
     <PropertyGroup>
-        <PostSharpEngineeringVersion>2023.2.82</PostSharpEngineeringVersion>
-        <PostSharpPackageVersion>2024.1.2-rc</PostSharpPackageVersion> <!-- This property cannot be named PostSharpVersion, because this name is already used by PostSharp targets. -->
+        <PostSharpEngineeringVersion>2023.2.87</PostSharpEngineeringVersion>
         <NuGetCommandLineVersion>6.4.0</NuGetCommandLineVersion>
     </PropertyGroup>
+
+    <!-- Set the deafult versions of auto-updated dependencies -->
+    <Import Project="AutoUpdatedVersions.props" />
 
     <!-- Import overrides for the local build -->
     <Import Project="Versions.g.props" Condition="Exists('Versions.g.props')" />
