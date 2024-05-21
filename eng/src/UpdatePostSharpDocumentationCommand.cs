@@ -6,7 +6,7 @@ using PostSharp.Engineering.BuildTools.Search.Updaters;
 
 namespace BuildPostSharpDocumentation;
 
-public class UpdatePostSharpDocumentationCommand : UpdateSearchCommandBase
+internal class UpdatePostSharpDocumentationCommand : UpdateSearchCommandBase
 {
     protected override CollectionUpdater CreateUpdater( SearchBackendBase backend ) =>
         new DocumentationUpdater<PostSharpDocCrawler>( new[] { "PostSharp" }, backend );

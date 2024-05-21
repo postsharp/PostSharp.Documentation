@@ -2,7 +2,7 @@
 
 namespace BuildPostSharpDocumentation;
 
-public enum PostSharpDocFxRank
+internal enum PostSharpDocFxRank
 {
     Unknown = 1,
     Api = 2,

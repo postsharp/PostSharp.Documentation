@@ -11,8 +11,8 @@
 
     <!-- Versions of dependencies -->
     <PropertyGroup>
-        <PostSharpEngineeringVersion>2023.2.87</PostSharpEngineeringVersion>
-        <NuGetCommandLineVersion>6.4.0</NuGetCommandLineVersion>
+        <PostSharpEngineeringVersion>2023.2.94</PostSharpEngineeringVersion>
+        <NuGetCommandLineVersion>6.9.1</NuGetCommandLineVersion>
     </PropertyGroup>
 
     <!-- Set the deafult versions of auto-updated dependencies -->

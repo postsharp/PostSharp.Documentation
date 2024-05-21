@@ -28,7 +28,7 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
         {
             CanFormatCode = true
         },
-        new DocFxSolution( "docfx.json" ),
+        new DocFxSolution( "docfx.json", docPackageFileName )
     },
     PublicArtifacts = Pattern.Create(
         docPackageFileName
@@ -56,7 +56,7 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
                     {
                         new(docPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net",
                             docPackageFileName),
-                    } )
+                    }, "https://postsharp-helpbrowser.azurewebsites.net/" )
                 }
             } ),
     Extensions = new ProductExtension[]
