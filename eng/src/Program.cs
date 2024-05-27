@@ -22,25 +22,25 @@ const string docPackageFileName = "PostSharp.Doc.zip";
 
 var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumentation )
 {
-    Solutions = new Solution[]
-    {
+    Solutions =
+    [
         new DotNetSolution( Path.Combine( "code", "PostSharp.Documentation.Prerequisites.sln" ) )
         {
             CanFormatCode = true
         },
         new DocFxSolution( "docfx.json", docPackageFileName )
-    },
+    ],
     PublicArtifacts = Pattern.Create(
         docPackageFileName
     ),
-    ParametrizedDependencies = new[]
-    {
+    ParametrizedDependencies =
+    [
         DevelopmentDependencies.PostSharpEngineering.ToDependency(),
         PostSharpDependencies.PostSharp.ToDependency(
             new ConfigurationSpecific<BuildConfiguration>(
                 BuildConfiguration.Release, BuildConfiguration.Release, BuildConfiguration.Release
             ) )
-    },
+    ],
     AdditionalDirectoriesToClean = new[] { "obj", "docfx\\_site" },
 
     // Disable automatic build triggers.
@@ -49,25 +49,25 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
         .WithValue( BuildConfiguration.Public,
             c => c with
             {
-                PublicPublishers = new Publisher[]
-                {
+                PublicPublishers =
+                [
                     new MergePublisher(),
                     new DocumentationPublisher( new S3PublisherConfiguration[]
                     {
                         new(docPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net",
                             docPackageFileName),
                     }, "https://postsharp-helpbrowser.azurewebsites.net/" )
-                }
+                ]
             } ),
-    Extensions = new ProductExtension[]
-    {
+    Extensions =
+    [
         // Run `b generate-scripts` after changing these parameters.
         new UpdateSearchProductExtension<UpdatePostSharpDocumentationCommand>(
             "https://0fpg9nu41dat6boep.a1.typesense.net",
             "postsharpdoc",
             "https://doc-production.postsharp.net/il/sitemap.xml",
             true )
-    }
+    ]
 };
 
 product.PrepareCompleted += OnPrepareCompleted;

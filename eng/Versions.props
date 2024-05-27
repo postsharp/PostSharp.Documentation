@@ -11,7 +11,7 @@
 
     <!-- Versions of dependencies -->
     <PropertyGroup>
-        <PostSharpEngineeringVersion>2023.2.94</PostSharpEngineeringVersion>
+        <PostSharpEngineeringVersion>2023.2.106</PostSharpEngineeringVersion>
         <NuGetCommandLineVersion>6.9.1</NuGetCommandLineVersion>
     </PropertyGroup>
 
