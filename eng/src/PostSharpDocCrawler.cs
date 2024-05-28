@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace BuildPostSharpDocumentation;
 
-public class PostSharpDocCrawler : DocFxCrawler
+internal class PostSharpDocCrawler : DocFxCrawler
 {
     protected override BreadcrumbInfo GetBreadcrumbData( HtmlNode[] breadcrumbLinks )
     {
