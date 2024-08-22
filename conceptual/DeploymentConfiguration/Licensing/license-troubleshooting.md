@@ -11,12 +11,12 @@ We've designed the PostSharp Licensing component so that it stands in your way a
 
 In case the solution given by this article doesn't work, or your case isn't listed, please contact our [support](https://www.postsharp.net/support). 
 
-This article only talks about the technical issues you may encounter. You can find more answers to your questions about PostSharp licensing in our [licensing FAQ](https://www.postsharp.net/pricing/faq). 
+This article only talks about the technical issues you may encounter. You can find more answers to your questions about PostSharp licensing in our [licensing FAQ](https://www.postsharp.net/il/pricing/faq). 
 
 
 ## Error PS0242: License error. No valid license key has been installed. To register a license key, see https://doc.postsharp.net/deploying-keys.
 
-In case you do have a license key installed as mentioned in the <xref:deploying-keys> and you're still getting this error, it most probably means that the version of PostSharp you are using has been released after the end of your subscription period. In this case, you either need to [renew your subscription](https://www.postsharp.net/pricing/upgrades-and-renewals) or to use an older version of PostSharp, that has been released before the end of your subscription period. 
+In case you do have a license key installed as mentioned in the <xref:deploying-keys> and you're still getting this error, it most probably means that the version of PostSharp you are using has been released after the end of your subscription period. In this case, you either need to [renew your subscription](https://www.postsharp.net/il/pricing/upgrades-and-renewals) or to use an older version of PostSharp, that has been released before the end of your subscription period. 
 
 
 ## Error PS0243: License error. The project uses non-licensed premium features. It is not allowed to enhance types with a total of more than X

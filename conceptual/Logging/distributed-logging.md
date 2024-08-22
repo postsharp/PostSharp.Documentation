@@ -16,7 +16,7 @@ The next challenge is to correlate the log records coming from different applica
 
 ## Preparing a set of applications for distributed logging
 
-TODO: point to the example and blog post.
+[comment]: # (TODO: point to the example and blog post.)
 
 
 ### To prepare a set of applications for distributed logging:
@@ -40,7 +40,7 @@ TODO: point to the example and blog post.
 4. Choose a generation strategy for `SyntheticId` as described below. 
 
 
-> [!SECURITY NOTE]
+> [!WARNING]
 > Enabling request correlation on a publically available service is a potential security risk. Logging is often performed before the request is fully authenticated, so the content of the additional correlation HTTP headers cannot be trusted. However, they can be used to inject values to your logging system. These values may then be processed by your application, and will be stored in your log server.
 If you need to enable correlation of distributed logging on a public service, consider wrapping a default implementation of <xref:PostSharp.Patterns.Diagnostics.Correlation.ICorrelationProtocol> with your own logic that verifies the request security. 
 

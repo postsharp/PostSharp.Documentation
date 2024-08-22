@@ -27,7 +27,7 @@ using PostSharp.Patterns.Diagnostics.Adapters.AspNetFramework;
 Console.WriteLine( "Hello, World!" );
 
 // // This is to make sure that all packages are properly referenced.
-_ = new Type[]
+_ = new[]
 {
     typeof(Aspect), // PostSharp.Redist
     typeof(AggregatableAttribute), // PostSharp.Patterns.Aggregation.Redist

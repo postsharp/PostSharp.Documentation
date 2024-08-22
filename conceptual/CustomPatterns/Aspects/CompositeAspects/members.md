@@ -70,11 +70,7 @@ Based on this well-defined order, the advices behave as follow:
 | <xref:PostSharp.Aspects.Advices.IntroduceMemberAttribute> | No member, or private member defined in a parent class. | Member introduced. |
 |  | Non-virtual member defined in a parent class | Ignored if the property <xref:PostSharp.Aspects.Advices.IntroduceMemberAttribute.OverrideAction> is `Ignore` or `OverrideOrIgnore`, otherwise fail (by default).  |
 |  | Virtual member defined in a parent class | Introduce a new `override` method if the property <xref:PostSharp.Aspects.Advices.IntroduceMemberAttribute.OverrideAction> is `OverrideOrFail` or `OverrideOrIgnore`, ignore if the property is `Ignore`, otherwise fail (by default).  |
-|  | Member defined in the target class (virtual or not) | Fail by default or if the property <xref:PostSharp.Aspects.Advices.IntroduceMemberAttribute.OverrideAction> is `Fail`. <br>Otherwise:<br>* Move the previous method body to a new method so that the previous implementation can be imported by advices <xref:PostSharp.Aspects.Advices.ImportMemberAttribute> with the property <xref:PostSharp.Aspects.Advices.ImportMemberAttribute.Order> set to `BeforeIntroductions`. 
-
-* Override the method with the imported method.
-
- |
+|  | Member defined in the target class (virtual or not) | Fail by default or if the property <xref:PostSharp.Aspects.Advices.IntroduceMemberAttribute.OverrideAction> is `Fail`. <br>Otherwise:<br>* Move the previous method body to a new method so that the previous implementation can be imported by advices <xref:PostSharp.Aspects.Advices.ImportMemberAttribute> with the property <xref:PostSharp.Aspects.Advices.ImportMemberAttribute.Order> set to `BeforeIntroductions`.<br>* Override the method with the imported method. |
 
 ## See Also
 

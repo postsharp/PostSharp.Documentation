@@ -28,7 +28,8 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
         {
             CanFormatCode = true
         },
-        new DocFxSolution( "docfx.json", docPackageFileName )
+        new DocFxMetadataSolution( "docfx.json" ),
+        new DocFxBuildSolution( "docfx.json", docPackageFileName )
     ],
     PublicArtifacts = Pattern.Create(
         docPackageFileName
@@ -41,7 +42,7 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
                 BuildConfiguration.Release, BuildConfiguration.Release, BuildConfiguration.Release
             ) )
     ],
-    AdditionalDirectoriesToClean = new[] { "obj", "docfx\\_site" },
+    AdditionalDirectoriesToClean = [Path.Combine( "artifacts", "api" ), Path.Combine( "artifacts", "site" )],
 
     // Disable automatic build triggers.
     Configurations = Product.DefaultConfigurations
@@ -70,23 +71,8 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
     ]
 };
 
-product.PrepareCompleted += OnPrepareCompleted;
-
-
 var commandApp = new CommandApp();
 
 commandApp.AddProductCommands( product );
 
 return commandApp.Run( args );
-
-
-static void OnPrepareCompleted( PrepareCompletedEventArgs args )
-{
-    var nuget = Path.Combine( Path.GetDirectoryName( Process.GetCurrentProcess().MainModule!.FileName )!, "nuget.exe " );
-
-    if ( !ToolInvocationHelper.InvokeTool( args.Context.Console, nuget,
-        "restore \"docfx\\packages.config\" -OutputDirectory \"docfx\\packages\"", args.Context.RepoDirectory ) )
-    {
-        args.IsFailed = true;
-    }
-}

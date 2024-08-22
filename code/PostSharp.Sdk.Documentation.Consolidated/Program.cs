@@ -5,7 +5,7 @@ using PostSharp.Sdk.AspectWeaver;
 Console.WriteLine( "Hello, World!" );
 
 // // This is to make sure that all packages are properly referenced.
-_ = new Type[]
+_ = new[]
 {
     typeof(AspectWeaver)
 };

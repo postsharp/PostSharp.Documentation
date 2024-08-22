@@ -35,7 +35,7 @@
             "System.Runtime.dll",
             "Microsoft.TeamFoundation.TestManagement.Client.dll"
           ],
-          "src": "code/PostSharp.Documentation.Consolidated/bin/Debug/net7.0-windows"
+          "src": "code/PostSharp.Documentation.Consolidated/bin/Debug/net8.0-windows"
         },
         {
           "files": [
@@ -45,10 +45,11 @@
           "src": "code/PostSharp.Documentation.Consolidated/bin/Debug/net48"
         }
       ],
-      "dest": "obj/api",
+      "dest": "artifacts/api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
-      "filter": "docfx-api-filter.yml"
+      "filter": "docfx-api-filter.yml",
+      "memberLayout": "separatePages"
     }
   ],
   "build": {
@@ -57,7 +58,7 @@
         "files": [
           "api/**.yml"
         ],
-        "src": "obj"
+        "src": "artifacts"
       },
       {
         "files": [
@@ -78,19 +79,19 @@
         "src": "conceptual"
       }
     ],
-    "xrefService": [
-      "https://xref.docs.microsoft.com/query?uid={uid}"
+    "xref": [
+      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
     ],
-    "dest": "docfx/_site",
+    "dest": "artifacts/site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "docfx/packages/memberpage.2.59.0/content",
       "templates"
     ],
+    // Used for debugging
+    // "maxParallelism": 1,
     "postProcessors": [],
-    "markdownEngineName": "dfm",
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false

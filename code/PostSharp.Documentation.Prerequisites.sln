@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharp.Documentation.Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostSharp.Sdk.Documentation.Consolidated", "PostSharp.Sdk.Documentation.Consolidated\PostSharp.Sdk.Documentation.Consolidated.csproj", "{B90F8AF8-5F68-446B-AA13-840E563C08C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharp.Documentation.Markdig.Extensions", "PostSharp.Documentation.Markdig.Extensions\PostSharp.Documentation.Markdig.Extensions.csproj", "{FCE279C5-A4C1-49DF-9475-CE2327FBB489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostSharp.Documentation.Docfx", "PostSharp.Documentation.Docfx\PostSharp.Documentation.Docfx.csproj", "{61A72A90-63BB-4648-9D14-21E31F19DC76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B90F8AF8-5F68-446B-AA13-840E563C08C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B90F8AF8-5F68-446B-AA13-840E563C08C0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{B90F8AF8-5F68-446B-AA13-840E563C08C0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FCE279C5-A4C1-49DF-9475-CE2327FBB489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE279C5-A4C1-49DF-9475-CE2327FBB489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE279C5-A4C1-49DF-9475-CE2327FBB489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE279C5-A4C1-49DF-9475-CE2327FBB489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A72A90-63BB-4648-9D14-21E31F19DC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A72A90-63BB-4648-9D14-21E31F19DC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A72A90-63BB-4648-9D14-21E31F19DC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A72A90-63BB-4648-9D14-21E31F19DC76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
