@@ -28,8 +28,8 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
         {
             CanFormatCode = true
         },
-        new DocFxMetadataSolution( "docfx.json" ),
-        new DocFxBuildSolution( "docfx.json", docPackageFileName )
+        new DocFxApiSolution( "docfx.json" ),
+        new DocFxSiteSolution( "docfx.json", docPackageFileName )
     ],
     PublicArtifacts = Pattern.Create(
         docPackageFileName
