@@ -132,7 +132,7 @@ The following table compares semantic advising with non-semantic advising in sev
 | **Iterator methods:** |  |  |
 | Code covered or intercepted by the aspect | The whole method. | The compiler-generated code that instantiates the enumerator class (no user code is covered). |
 | Return value | None. | The enumerator. |
-| **Non-iterator methods returning T:System.Collections.Generic.IEnumerable`1:** |  |  |
+| **Non-iterator methods returning ``T:System.Collections.Generic.IEnumerable`1``:** |  |  |
 | Code covered or intercepted by the aspect | The returned enumerator's `MoveNext` method.  | The method that is being enhanced by the aspect. |
 | Return value | None. | The enumerator or enumerable object. |
 | **Async iterator methods:** |  |  |
