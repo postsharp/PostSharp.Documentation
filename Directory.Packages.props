@@ -9,8 +9,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="PostSharp.Engineering.BuildTools" Version="$(PostSharpEngineeringVersion)" />
+    <PackageVersion Include="PostSharp.Engineering.DocFx" Version="$(PostSharpEngineeringVersion)" />
     <PackageVersion Include="Docfx.App" Version="2.77.0" />
-    <PackageVersion Include="Docfx.MarkdigEngine.Extensions" Version="2.77.0" />
     <PackageVersion Include="JetBrains.Annotations" Version="2024.2.0" />
     <PackageVersion Include="PostSharp.Compiler.Engine" Version="$(PostSharpPackageVersion)" />
     <PackageVersion Include="PostSharp.Redist" Version="$(PostSharpPackageVersion)" />

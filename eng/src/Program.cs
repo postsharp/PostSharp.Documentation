@@ -15,6 +15,7 @@ using PostSharp.Engineering.BuildTools.Build.Publishers;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Search;
+using PostSharp.Engineering.DocFx;
 using PostSharpDocumentationDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies;
 using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2024_1;
 
@@ -53,11 +54,10 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
                 PublicPublishers =
                 [
                     new MergePublisher(),
-                    new DocumentationPublisher( new S3PublisherConfiguration[]
-                    {
+                    new DocumentationPublisher( [
                         new(docPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net",
-                            docPackageFileName),
-                    }, "https://postsharp-helpbrowser.azurewebsites.net/" )
+                            docPackageFileName)
+                    ], "https://postsharp-helpbrowser.azurewebsites.net/" )
                 ]
             } ),
     Extensions =
@@ -71,8 +71,6 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
     ]
 };
 
-var commandApp = new CommandApp();
-
-commandApp.AddProductCommands( product );
-
-return commandApp.Run( args );
+var app = new EngineeringApp( product );
+app.AddDocFxCommands( );
+return app.Run( args );

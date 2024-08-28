@@ -51,9 +51,9 @@ internal class PostSharpDocCrawler : DocFxCrawler
 
         return new(
             breadcrumb,
-            new[] { kind },
+            [kind],
             kindRank,
-            category == null ? Array.Empty<string>() : new[] { category },
+            category == null ? [] : [category],
             relevantBreadCrumbTitles.Length,
             false,
             isApiReference );
