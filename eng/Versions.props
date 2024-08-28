@@ -9,12 +9,6 @@
         <PostSharpDocumentationAssemblyVersion>$(MainVersion)</PostSharpDocumentationAssemblyVersion>
     </PropertyGroup>
 
-    <!-- Versions of dependencies -->
-    <PropertyGroup>
-        <PostSharpEngineeringVersion>2023.2.106</PostSharpEngineeringVersion>
-        <NuGetCommandLineVersion>6.9.1</NuGetCommandLineVersion>
-    </PropertyGroup>
-
     <!-- Set the deafult versions of auto-updated dependencies -->
     <Import Project="AutoUpdatedVersions.props" />
 

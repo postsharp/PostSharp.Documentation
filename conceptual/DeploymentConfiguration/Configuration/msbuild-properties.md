@@ -56,6 +56,7 @@ PostSharp both reads and executes assemblies it transforms. It needs to run unde
 ## Directory Properties
 
 PostSharp uses multiple directories during build-time. You can use following properties to override default locations.
+
 | Property Name | Description |
 |---------------|-------------|
 | `PostSharpBinaryDirectory` | Location of the PostSharp binaries. PostSharp extracts it's binaries into one subdirectory of this directory per PostSharp version.<br>Default on Windows is `%PROGRAMDATA%\PostSharp` (usually `C:\ProgramData\PostSharp`). Default on UNIX systems is `/var/tmp/postsharp`.  |

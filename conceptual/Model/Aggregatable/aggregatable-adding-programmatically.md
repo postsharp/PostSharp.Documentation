@@ -60,17 +60,18 @@ public class InvoiceLine
     > You have to mark each project assembly to make your FieldRule active in the whole solution.
 
 
-`product`> [!NOTE]
-> PostSharp has two built-in rules: one rule for auto-generated WinForms fields and one rule for auto-generated XAML fields.
-```xml
-<Window x:Class="WpfApp.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid>
-        <Button x:Name="myButton" />
-    </Grid>f
-</Window>
-```
+    > [!NOTE]
+    > PostSharp has two built-in rules: one rule for auto-generated WinForms fields and one rule for auto-generated XAML fields.
+
+    ```xml
+    <Window x:Class="WpfApp.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <Grid>
+            <Button x:Name="myButton" />
+        </Grid>
+    </Window>
+    ```
 
 In this example, the WPF designer generates a `myButton` field to a `MainWindow` class. Both the `myButton` field and the `MainWindow` class are indirectly inherited from [System.Windows.Controls.Control](https://msdn.microsoft.com/en-us/library/system.windows.controls.control.aspx). The built-in rule annotates the `myButton` field as a reference automatically. 
 

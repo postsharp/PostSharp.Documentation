@@ -126,24 +126,16 @@ The following table compares semantic advising with non-semantic advising in sev
 | **Async methods:** |  |  |
 | Code covered or intercepted by the aspect | The whole async method. | The part of the async method before the first `await` operator whose operand (typically a <xref:System.Threading.Tasks.Task>) has not yet completed.  |
 | Return value | The operand of the `return` statement, i.e. <xref:System.Threading.Tasks.Task`1.Result>.  | The <xref:System.Threading.Tasks.Task`1> object itself.  |
-| **
-                  Non-async methods returning a  T:System.Threading.Tasks.Task:
-                ** |  |  |
+| **Non-async methods returning a  T:System.Threading.Tasks.Task:** |  |  |
 | Code covered or intercepted by the aspect | Both the code that instantiates or gets the <xref:System.Threading.Tasks.Task> and the whole execution of the <xref:System.Threading.Tasks.Task>.  | The compiler-generated code that instantiates or gets the <xref:System.Threading.Tasks.Task> (and if the <xref:System.Threading.Tasks.Task> represents an `async` method, plus the first segment of the method that runs synchronously).  |
 | Return value | The value of the <xref:System.Threading.Tasks.Task`1.Result> property.  | The <xref:System.Threading.Tasks.Task`1> object itself.  |
-| **
-                  Iterator methods:
-                ** |  |  |
+| **Iterator methods:** |  |  |
 | Code covered or intercepted by the aspect | The whole method. | The compiler-generated code that instantiates the enumerator class (no user code is covered). |
 | Return value | None. | The enumerator. |
-| **
-							Non-iterator methods returning T:System.Collections.Generic.IEnumerable`1:
-						** |  |  |
+| **Non-iterator methods returning ``T:System.Collections.Generic.IEnumerable`1``:** |  |  |
 | Code covered or intercepted by the aspect | The returned enumerator's `MoveNext` method.  | The method that is being enhanced by the aspect. |
 | Return value | None. | The enumerator or enumerable object. |
-| **
-                            Async iterator methods:
-                        ** |  |  |
+| **Async iterator methods:** |  |  |
 | Code covered or intercepted by the aspect | (not supported) | The compiler-generated code that instantiates the async enumerator class (no user code is covered). |
 | Return value | (not supported) | The async enumerator. |
 

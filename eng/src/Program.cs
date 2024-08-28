@@ -15,6 +15,7 @@ using PostSharp.Engineering.BuildTools.Build.Publishers;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Search;
+using PostSharp.Engineering.DocFx;
 using PostSharpDocumentationDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies;
 using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2024_1;
 
@@ -28,7 +29,8 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
         {
             CanFormatCode = true
         },
-        new DocFxSolution( "docfx.json", docPackageFileName )
+        new DocFxApiSolution( "docfx.json" ),
+        new DocFxSiteSolution( "docfx.json", docPackageFileName )
     ],
     PublicArtifacts = Pattern.Create(
         docPackageFileName
@@ -41,7 +43,7 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
                 BuildConfiguration.Release, BuildConfiguration.Release, BuildConfiguration.Release
             ) )
     ],
-    AdditionalDirectoriesToClean = new[] { "obj", "docfx\\_site" },
+    AdditionalDirectoriesToClean = [Path.Combine( "artifacts", "api" ), Path.Combine( "artifacts", "site" )],
 
     // Disable automatic build triggers.
     Configurations = Product.DefaultConfigurations
@@ -52,11 +54,10 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
                 PublicPublishers =
                 [
                     new MergePublisher(),
-                    new DocumentationPublisher( new S3PublisherConfiguration[]
-                    {
+                    new DocumentationPublisher( [
                         new(docPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net",
-                            docPackageFileName),
-                    }, "https://postsharp-helpbrowser.azurewebsites.net/" )
+                            docPackageFileName)
+                    ], "https://postsharp-helpbrowser.azurewebsites.net/" )
                 ]
             } ),
     Extensions =
@@ -70,23 +71,6 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
     ]
 };
 
-product.PrepareCompleted += OnPrepareCompleted;
-
-
-var commandApp = new CommandApp();
-
-commandApp.AddProductCommands( product );
-
-return commandApp.Run( args );
-
-
-static void OnPrepareCompleted( PrepareCompletedEventArgs args )
-{
-    var nuget = Path.Combine( Path.GetDirectoryName( Process.GetCurrentProcess().MainModule!.FileName )!, "nuget.exe " );
-
-    if ( !ToolInvocationHelper.InvokeTool( args.Context.Console, nuget,
-        "restore \"docfx\\packages.config\" -OutputDirectory \"docfx\\packages\"", args.Context.RepoDirectory ) )
-    {
-        args.IsFailed = true;
-    }
-}
+var app = new EngineeringApp( product );
+app.AddDocFxCommands( );
+return app.Run( args );

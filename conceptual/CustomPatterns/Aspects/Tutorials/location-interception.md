@@ -318,12 +318,12 @@ AuctionItem item = new AuctionItem();
 item.Price += 2000;
 ```
 
-will have this output: ```none
+will have this output:
+
+```none
 The Price of the item starts out at 40000
 The Price of the item changed to 42000
 ```
-
- 
 
 See the Remarks section of <xref:PostSharp.Aspects.LocationInterceptionAspect.OnSetValue(PostSharp.Aspects.LocationInterceptionArgs)> and <xref:PostSharp.Aspects.LocationInterceptionAspect.OnInstanceLocationInitialized(PostSharp.Aspects.LocationInitializationArgs)> for more details. 
 
