@@ -367,7 +367,7 @@ object PublicUpdateSearch : BuildType({
 
     params {
         text("UpdateSearchArguments", "", label = "Update search Arguments", description = "Arguments to append to the 'Update search' build step.", allowEmpty = true)
-        text("DefaultBranch", "master", label = "Default Branch", description = "The default branch of this build configuration.")
+        text("DefaultBranch", "dev", label = "Default Branch", description = "The default branch of this build configuration.")
         text("TimeOut", "300", label = "Time-Out Threshold", description = "Seconds after the duration of the last successful build.", regex = """\d+""", validationMessage = "The timeout has to be an integer number.")
     }
 
