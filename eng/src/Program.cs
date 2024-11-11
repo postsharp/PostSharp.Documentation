@@ -4,13 +4,9 @@ using Amazon;
 using BuildPostSharpDocumentation;
 using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build.Solutions;
-using PostSharp.Engineering.BuildTools.S3.Publishers;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
-using PostSharp.Engineering.BuildTools.Utilities;
-using Spectre.Console.Cli;
 using System.IO;
-using System.Diagnostics;
 using PostSharp.Engineering.BuildTools.Build.Publishers;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
@@ -53,7 +49,6 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
             {
                 PublicPublishers =
                 [
-                    new MergePublisher(),
                     new DocumentationPublisher( [
                         new(docPackageFileName, RegionEndpoint.EUWest1, "doc.postsharp.net",
                             docPackageFileName)
