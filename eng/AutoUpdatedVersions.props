@@ -3,6 +3,6 @@
 
     <PropertyGroup>
         <PostSharpPackageVersion>2025.0.2.245586-dev-release</PostSharpPackageVersion>
-    <PostSharpEngineeringVersion>2023.2.143.1161-local-AntoninProchazka-debug</PostSharpEngineeringVersion></PropertyGroup>
+    </PropertyGroup>
 
 </Project>
