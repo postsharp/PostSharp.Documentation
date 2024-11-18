@@ -7,32 +7,29 @@ summary: "The .NET Core 3.1 BinaryFormatter, used for binary serialization, is c
 ---
 # BinaryFormatter security
 
-In .NET Core 3.1 `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter`, which is used for binary serialization of CLR object, began to be considered insecure and dangerous. In .NET 5.0, `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter` started to throw an exception upon its use in ASP.NET Core applications. In .NET 8.0, more serialization-related APIs started to be obsolete and by default, BinaryFormatter is disabled (throwing exceptions) in all .NET 8.0 projects with an exception of WinForms and WPF projects.
+In .NET Core 3.1 `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter`, which is used for binary serialization of CLR objects, began to be considered insecure and dangerous. In .NET 5.0, `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter` started to throw an exception upon its use in ASP.NET Core applications. In .NET 8.0, more serialization-related APIs started to be obsolete and by default, BinaryFormatter is disabled (throwing exceptions) in all .NET 8.0 projects with an exception of WinForms and WPF projects. In .NET 9.0, the implementation of BinaryFormatter class and related types is removed from runtime and all members of these types now have only throwing implementation.
 
 The attack vector of this vulnerability is deserialization of data that could be manipulated by the attacker, which can result in execution of arbitrary command under credentials of the process that executed the deserialization.
 
+## Impact of vulnerability on PostSharp 
 
-## Impact of vulnerability on PostSharp
+PostSharp allows multiple methods of serializing aspects. The `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter` is used if the type has the `[Serializable]` attribute in C#. After PostSharp 4.0, the preferred method of serialization is using `T:PostSharp.Serialization.PSerializableAttribute`, which results in use of `T:PostSharp.Serialization.PortableFormatter`, which is our PostSharp's efficient and portable serialization format for aspect serialization. 
 
-PostSharp aspects are serialized at compile-time to preserve aspect parameters and analysis results and stored in a managed resource within the assembly. Serialized aspects are deserialized either at compile time to facilitate aspect inheritance (e.g. the aspect is applied to a derived class), or at run time when aspect is about to be used.
-
-The above described **vulnerability does not apply to the use of serialization by PostSharp itself**, because in order to alter the serialized data, the attacker would have to alter the assembly containing the data. Being able to alter an assembly containing the serialized aspect data is itself a more general security vulnerability. 
-
-PostSharp allows multiple methods of serializing aspects. The `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter` is used if the type has the `[Serializable]` attribute in C#. After PostSharp 4.0, the preferred method of serialization is using `T:PostSharp.Serialization.PSerializableAttribute`, which results in use of `T:PostSharp.Serialization.PortableFormatter`, which is our own efficient and portable serialization format for aspect serialization. 
-
-Using `[Serializable]` on aspect classes will result in a build-time error LA206. 
+Since PostSharp 2024.0, using `[Serializable]` on aspect classes will result in a build-time error LA0206. 
 
 In legacy applications that require usage of binary serialization, you can disable this error by setting `PostSharpBinaryFormatterAllowed` MSBuild property to `true`.
 
+When building under .NET 9.0+ in Postsharp 2025.0 and later, using this setting will automatically reference `System.Runtime.Serialization.Formattters` package as a build-time dependency. Additional steps have to be taken to enable runtime support for aspect binary deserialization. See more [in Microsoft documentation](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-migration-guide/compatibility-package). .
+
 > [!CAUTION]
-> Disabling LA206 and using `PostSharpBinaryFormatterAllowed` is not recommended.
+> Using `PostSharpBinaryFormatterAllowed` is not recommended and is unsupported.
 
 > [!NOTE]
 > In releases before PostSharp 2024.0, using `[Serializable]` may result in build-time warning LA205, which can be suppressed through `NoWarn` MSBuild property.
 
 ## Recommended actions
 
-Since the usage of BinaryFormatter is discouraged by Microsoft and in most projects using it would cause a runtime exception, it is required to use PortableFormatter for serializing aspects instead.
+Since the usage of BinaryFormatter is unsupported by Microsoft and in most projects using it would cause a runtime exception, it is recommended to use PortableFormatter for serializing aspects instead.
 
 All aspects and types that are used for aspect serialization should use `[PSerializable]` instead of `[Serializable]`.
 

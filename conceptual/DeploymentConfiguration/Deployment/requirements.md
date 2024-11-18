@@ -14,6 +14,7 @@ You can use PostSharp to build applications that target a wide range of target d
 
 This chapter contains the following sections:
 
+* <xref:requirements-20250>
 * <xref:requirements-20241>
 * <xref:requirements-20240>
 * <xref:requirements-20230>

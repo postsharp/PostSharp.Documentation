@@ -30,6 +30,10 @@ items:
       - name: What's New
         topicUid: whats-new
         items:
+          - name: What's New in PostSharp 2025.0
+            topicUid: whats-new-20250
+              - name: Breaking Changes in PostSharp 2025.0
+                topicUid: breaking-changes-20250
           - name: What's New in PostSharp 2024.1
             topicUid: whats-new-20241
           - name: What's New in PostSharp 2024.0
@@ -117,6 +121,8 @@ items:
           - name: Requirements and Compatibility
             topicUid: requirements
             items:
+              - name: Requirements of PostSharp 2025.0
+                topicUid: requirements-20250
               - name: Requirements of PostSharp 2024.1
                 topicUid: requirements-20241
               - name: Requirements of PostSharp 2024.0
