@@ -2,7 +2,7 @@
 <Project>
 
     <PropertyGroup>
-        <PostSharpPackageVersion></PostSharpPackageVersion>
+        <PostSharpPackageVersion>2025.0.3.248641-dev-release</PostSharpPackageVersion>
     </PropertyGroup>
 
 </Project>
