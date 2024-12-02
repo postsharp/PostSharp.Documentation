@@ -5,7 +5,7 @@ product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
 summary: "PostSharp 2025.0 supports C# 13.0 or earlier and VB 16.9 or earlier. It requires Microsoft Visual Studio 2022, .NET Framework 4.7.2 or later, and is compatible with various operating systems and .NET SDK versions. It also supports Blazor via .NET Standard."
 ---
-# PostSharp 2024.1: Requirements and Compatibility
+# PostSharp 2025.0: Requirements and Compatibility
 
 You can use PostSharp to build applications that target a wide range of target devices. This article lists the requirements for development, build and end-user devices.
 

@@ -25,3 +25,4 @@ PostSharp 2025.0 introduces support for .NET 9.0 along with some platform update
 ## PostSharp Pattern Libraries
 
 * Dependencies of pattern libraries were upgraded to versions without known security vulnerabilities.
+* Weak event primitive used in `[NotifyPropertyChanged]` and `[WeakEvent]` was significantly optimized to improve performance in edge cases. The amortized complexity profile now matches that of a manually written event-field.

@@ -11,8 +11,8 @@ PostSharp 2025.0 contains a small number of breaking changes mainly related to p
 
 ## PostSharp
 * To build .NET Standard, .NET Core and .NET projects, .NET 8.0 SDK is required. Older SDKs are no longer supported.
-* PostSharp aspects required to use `[PSerializable]` instead of `[Serializable]` for aspects serialization. 
-  Projects that still require using `[Serializable]` for aspects should explicitly set the `PostSharpBinaryFormatterAllowed` MSBuild property to `True`, but use of this option is unsupported.
+* PostSharp aspects must now use `[PSerializable]` instead of `[Serializable]` for aspects serialization. 
+  Projects that still require using `[Serializable]` for aspects should explicitly set the `PostSharpBinaryFormatterAllowed` MSBuild property to `True`, but the use of this option is unsupported, which means it is not guaranteed to work.
 * PostSharp Compiler internal dependencies have been upgraded. Consequently, downloading NuGet packages will be necessary during the initial build, potentially requiring manual action for users.
 
 ## PostSharp.Patterns.Common
@@ -32,3 +32,6 @@ PostSharp 2025.0 contains a small number of breaking changes mainly related to p
 
 ## PostSharp.Patterns.Diagnostics.ApplicationInsights
 * The dependency on `Microsoft.ApplicationInsights` has been upgraded to 2.22.0.
+
+## PostSharp.Patterns.Model
+* The package no longer supports targeting `netstandard1.3` target framework.
