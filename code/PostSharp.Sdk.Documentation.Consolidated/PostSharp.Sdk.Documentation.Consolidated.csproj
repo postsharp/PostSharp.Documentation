@@ -16,7 +16,7 @@
 	</ItemGroup>
 
 	<Target Name="CheckConfiguration">
-		<Error Text="This project can only be built in Debug configuration because its Debug output directory is specificially references. Check the sln file." Condition="'$(Configuration)'!='Debug'"/>
+		<Error Text="This project can only be built in Debug configuration because its Debug output directory is specifically references. Check the sln file." Condition="'$(Configuration)'!='Debug'"/>
 	</Target>
 
 </Project>
