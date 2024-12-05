@@ -32,6 +32,7 @@ items:
         items:
           - name: What's New in PostSharp 2025.0
             topicUid: whats-new-20250
+            items:
               - name: Breaking Changes in PostSharp 2025.0
                 topicUid: breaking-changes-20250
           - name: What's New in PostSharp 2024.1
