@@ -13,7 +13,7 @@ Our implementation uses the [StackExchange.Redis library](https://stackexchange.
 
 In theory, this component should work with any Redis implementation supported by `StackExchange.Redis`.
 
-However, we only tested this component with the latest Redis version. Old versions or other implementations are not officially supported except on a ad-hoc basis for customers with an enterprise support plan.
+However, we only tested this component with the latest stable Redis version available at the time of release. Older versions or alternative implementations are not officially supported except on an ad-hoc basis for customers with an enterprise support plan.
 
 We performed tests with single-node, master/replica, and sharded cluster deployments.
 
@@ -28,12 +28,17 @@ To prepare your Redis server for use with PostSharp caching:
     > Other eviction policies than `volatile-lru` or `volatile-random` are not supported.
 
 
-2. If you intend to enable events or use dependencies, configure keyspace notifications to include the `Exe` events (_key event_ notifications for expirations and evictions). See https://redis.io/topics/notifications#configuration for details.
+2. If you intend to enable support for dependencies, configure keyspace notifications to `Exe` where:
+    - `E` = Keyevent notifications,
+    - `x` = Expired events,
+    - `e` = Evicted events.
+   
+    See <https://redis.io/docs/latest/develop/interact/notifications/> for details.
 
 
 ### Example
 
-`redis.conf`:
+Here is en excert of your `redis.conf`configuration file:
 
 ```text
 maxmemory-policy volatile-lru
@@ -50,7 +55,7 @@ To set up PostSharp to use Redis for caching:
 
 3. Create an instance of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> class using the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend.Create*> factory method and assign the instance to <xref:PostSharp.Patterns.Caching.CachingServices.DefaultBackend>, passing a <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration> object.
 
-4. Configure logging. See <xref:backends> to learn how to plug caching into your logging framework. <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> uses PostSharp Logging. While tuning performance, we recommend monitoring warnings.
+4. Configure logging. <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> uses PostSharp Logging. See <xref:backends> to learn how to plug caching into your logging framework. While tuning performance, we recommend monitoring warnings.
 
 > [!IMPORTANT]
 > If one node enables the local cache, all nodes must enable events.
@@ -63,7 +68,7 @@ In-memory cache must be enabled globally for the whole back-end. It is not possi
 
 ```csharp
 // Enable logging
- oggingServices.DefaultBackend = new ConsoleLoggingBackend();
+LoggingServices.DefaultBackend = new ConsoleLoggingBackend();
 LoggingServices.DefaultBackend.DefaultVerbosity.SetMinimalLevel( LogLevel.Warning, LoggingRoles.Caching );
 
 // Connect to Redis
@@ -71,7 +76,8 @@ string connectionConfiguration = "localhost";
 ConnectionMultiplexer connection = ConnectionMultiplexer.Connect( connectionConfiguration );
 
 // Set Redis as the default backend.
-RedisCachingBackendConfiguration redisCachingConfiguration = new RedisCachingBackendConfiguration() { Prefix = "MyApp-1.0.1" };
+RedisCachingBackendConfiguration redisCachingConfiguration = 
+    new RedisCachingBackendConfiguration() { Prefix = "MyApp-1.0.1" };
 CachingServices.DefaultBackend = RedisCachingBackend.Create( connection, redisCachingConfiguration );
 ```
 
@@ -79,7 +85,7 @@ CachingServices.DefaultBackend = RedisCachingBackend.Create( connection, redisCa
 
 - The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> property should be set to a value that uniquely identifies the version of the data model. This will allow you to run several versions of your application side by side with the same database.
 - The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.DefaultExpiration> property is the expiration for items that do not have an explicit expiration and are not marked unremovable. It defaults to 30 days.
-- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property allows you to select the logical database. It defaults to 0. If you run several applications on the same Redis node or cluster, it’s recommended to place each application in a separate database. This also allows you to clear the cache easily with the `FLUSHDB` Redis command.
+- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property allows you to select the logical database. It defaults to 0. If you run several applications on the same standalone Redis node, it’s recommended to place each application in a separate database so that you can clear the cache easily with the `FLUSHDB` Redis command. Note that in Redis Cluster mode only database 0 is available, so you must differentiate applications using the `Prefix` instead.
 
 ## Adding a local in-memory cache to a remote Redis server
 
@@ -87,12 +93,13 @@ For higher performance, you can add an additional, in-process layer of caching b
 
 The benefit of using local caching is to reduce latency between the application and the Redis server and to decrease CPU load due to object deserialization.
 
-This feature relies on Redis' Pub/Sub subsystem to propagate cache invalidation events. This synchronization is asynchronous. Therefore, different nodes may have different views of the cache — even if you are using a single Redis node. Since Redis' master/replica synchronization is also asynchronous, having an in-memory caching layer does not fundamentally differ from a master/replica setup, although delays will be higher.
+This feature relies on Redis' Pub/Sub subsystem to propagate cache invalidation events. This synchronization is asynchronous, which means that a key invalidation on a node does not wait until the key is invalidated on all clients. Therefore, different nodes may have different views of the cache — even if you are using a single Redis node. Since Redis' master/replica synchronization is also asynchronous, having an in-memory caching layer does not fundamentally differ from a master/replica setup. In this case, however, processing delays may be caused by the application nodes if they are overloaded, even if the Redis cluster is synchronizing fast.
 
 The following code enables the in-memory cache:
 
 ```csharp
-RedisCachingBackendConfiguration redisCachingConfiguration = new RedisCachingBackendConfiguration() { IsLocallyCached = true, SupportsEvents = true };
+RedisCachingBackendConfiguration redisCachingConfiguration =
+     new RedisCachingBackendConfiguration() { IsLocallyCached = true, SupportsEvents = true };
 CachingServices.DefaultBackend = RedisCachingBackend.Create( connection, redisCachingConfiguration );
 ```
 
@@ -103,24 +110,27 @@ In-memory cache must be enabled globally for the whole back-end. It is not possi
 
 ## Using dependencies with the Redis caching backend
 
-Support for dependencies is disabled by default with the Redis caching backend because it has an important performance and deployment impact. From a performance perspective, the dependency graphs need to be stored in Redis. As for deployment, the cache GC process, which cleans up dependencies when cache items expire, needs to run continuously, even when the application is not running.
+Support for dependencies is disabled by default with the Redis caching backend because it has an important performance and deployment impact:
+- Performance impact: the dependency graphs need to be stored and maintained in Redis. 
+- Deployment impact: the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> component, which cleans up dependencies when cache items expire or are evicted, needs to run continuously.
 
 To use dependencies with the Redis caching backend:
 
-1. Make sure that at least one instance of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> class is alive at any moment (whether the application is running or not). If several instances of your application use the same Redis server, a single instance of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> class is required. You may package the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> into a separate application or cloud service.
+1. Set the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.SupportsDependencies?text=RedisCachingBackendConfiguration.SupportsDependencies> property to `true`.
+
+2. Make sure that at least one instance of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> class is alive at any moment (whether the application is running or not). It must be configured with the same <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> as your main application. You may package the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> into a separate application or cloud service.
 
     This component performs two tasks:
 
     - It subscribes to `__keyevent@0__:expired` and `__keyevent@0__:evicted` notifications and cleans up the dependency graphs in real time. This process generally works well, but it is temporarily disabled when the system is overloaded.
     - It periodically scans the entire database and removes any unreachable data (garbage).
 
-2. Set the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.SupportsDependencies?text=RedisCachingBackendConfiguration.SupportsDependencies> property to `true`.
+    If you choose to enable dependencies with Redis, you need to ensure that at least one instance of the cache GC process is running. It is acceptable to have several instances running, but since all instances will compete to process the same messages, it’s better to a have a single instance running.
 
-If you choose to enable dependencies with Redis, you need to ensure that at least one instance of the cache GC process is running. It is acceptable to have several instances running, but since all instances will compete to process the same messages, it’s better to have only a small number of instances (ideally one) running.
-
-The dependencies feature of <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> is designed so that the cache is always consistent from the client’s point of view. Read operations are fast and transactionless. Write operations are optimized for performance and read consistency, but may leave garbage behind in case of a race condition.
+The dependencies feature of <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> is designed so that the cache is **observationally consistent** from the client’s point of view during normal operation. Read operations are fast and transactionless. Write operations are optimized for performance and read consistency, but may leave garbage behind in case of a race condition (later cleaned by the GC process).
 
 Garbage may therefore be due to three factors:
+
 - The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> component was not running when a cache eviction or expiration happened.
 - The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> component was temporarily disabled because of high system load.
 - There was a race condition in setting a cache value (the version that loses becomes garbage).
@@ -144,7 +154,7 @@ With any level of load, it is recommended to enable cache key compression by ass
 
 If you expect high load, it is recommended to tune the following <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration> properties:
 
-- <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.BackgroundTasksMaxConcurrency> is critical to the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> component. It should be high enough to utilize the maximum network resources of your deployment, but small enough not to allow for a large operation backlog to form.
+- <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.BackgroundTasksMaxConcurrency> is critical to the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> component. It should be high enough to utilize the maximum resources of your deployment, but small enough not to allow for a large operation backlog to form.
 - <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.BackgroundTasksOverloadedThreshold> is used only by the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector>. It will cause the component to stop processing eviction and expiration notifications in case the operation backlog is too large. In this case, GC would rely on periodic database scanning.
 
 The following <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollectorOptions> properties must also be properly tuned:
@@ -158,8 +168,8 @@ Note that you can run a manual cleanup by calling the <xref:PostSharp.Patterns.C
 
 The following metrics are relevant for assessing the health of your caching setup:
 
-- Number of cache evictions per second. A high number might indicate either insufficient caching memory or an ineffective caching strategy—caching things that are not worth it (too many cache misses)
-- Number of cache expirations per second. A high number might indicate too-short expiration delays
+- Number of cache evictions per second. A high number might indicate either insufficient caching memory or an ineffective caching strategy—caching things that are not worth it (too many cache misses).
+- Number of cache expirations per second. A high number might indicate too-short expiration delays.
 - Number of warnings per minute in the caching component. A high number indicates that your system is overloaded.
 
 If you want to gather statistics about cache hits and misses, you can do so by implementing a <xref:PostSharp.Patterns.Caching.Implementation.CachingBackendEnhancer> that overrides the <xref:PostSharp.Patterns.Caching.Implementation.CachingBackend.GetItemCore*> and <xref:PostSharp.Patterns.Caching.Implementation.CachingBackend.GetItemAsyncCore*> methods (a `null` return value means a cache miss).
@@ -171,7 +181,7 @@ If you want to gather statistics about cache hits and misses, you can do so by i
 When dependencies are enabled, <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> relies on these keys:
 
 1. Item version: `<prefix>:<schema-version>:{<item-key>}:ver` — unique string identifier.
-2. Item value: `<prefix>:<schema-version>:{<item-key>}:val:<item-version>` — a list with values: `[<item-value>, <item-sliding-expiration>, <tag0>, <tag1> ... <tagn>]`.
+2. Item value: `<prefix>:<schema-version>:{<item-key>}:val:<item-version>` — a list with values: `[<item-value>, <item-sliding-expiration>, <tag0>, <tag1>, ... <tagn>]`.
 3. Forward dependencies: `<prefix>:<schema-version>:{<item-key>}:fdep:<item-version>` — list of `<dependency-key>`.
 4. Backward dependencies: `<prefix>:<schema-version>:{<dependency-key>}:bdep` — hash set of `<item-version>:<item-key>`.
 
@@ -186,11 +196,14 @@ In this description, elements between angle brackets are placeholders and mean t
 - `<item-version>` is a randomly generated item version.
 - `<dependency-key>` is either a dependency key or a cache item key, when the cache item is itself a dependency (recursive dependencies), where `{`, `}` and `:` have been escaped.
 
+Note the use of `{..}` brackets around `<item-key>`, marking `<item-key>` is a _hashtag_. It guarantees that all Redis keys related to the same logical cache item are stored on the same cluster slot and can be processed atomically in a transaction.
+
 ### Big O analysis
 
 In the following analysis, we use the following parameters:
+
 - `Items` is the number of items.
-- `Dependencies` is the number of dependencies and items (as items can act as dependencies if a cached method calls another cached method).
+- `Dependencies` is the number of dependencies.
 - `KeySize` is the average size of item or dependency keys (after compression, if enabled).
 - `ValueSize` is the average size of item values (i.e. the serialized data).
 - `Dependencies_Per_Item` is the average number of dependencies per item (first level, not recursive).
@@ -204,11 +217,14 @@ Memory usage is the sum of:
 - Forward dependencies: `O(Items * KeySize * (1 + Dependencies_Per_Item))`
 - Backward dependencies: `O((Dependencies + Items) * KeySize * Items_Per_Dependency)`
 
+Total memory usage: `O( Items * ValueSize + Items * KeySize * ( 2 + Dependencies_Per_Item + Items_Per_Dependency) + Dependencies * KeySize * Items_Per_Dependency)`
+
 Time complexity of operations is the following:
 
 - Get: `O(1)`
 - Set: `O(Dependencies_Per_Item * (1 + Recursive_Items_Per_Dependency))`
 - Invalidate: `O(Recursive_Items_Per_Dependency * Dependencies_Per_Item)`
+- Clean up: `O(Items * Dependencies_Per_Item + Dependencies * Items_Per_Dependency)`
 
 Race conditions affecting performance can happen when several operations attempt to set the same key. In this case, Redis transactions are used to achieve consistency, and they might be repeated in case of race. Adding items that share the same dependencies do not cause races and do not affect performance.
 
@@ -216,9 +232,9 @@ Race conditions affecting performance can happen when several operations attempt
 
 To remove all cache keys, you can:
 
-* Use the `FLUSHDB` Redis command to delete all keys in the selected database, even those that don’t match the prefix.
-* Use the `SCAN <prefix>:*` command to identify all keys, then use `DEL` for each key.
-* Use the <xref:PostSharp.Patterns.Caching.Implementation.CachingBackend.ClearAsync*> method, which does a `SCAN <prefix>:<schema-version>:*` command, then `UNLINK` for each key.
+- Use the `FLUSHDB` Redis command to delete all keys in the selected database, even those that don’t match the prefix.
+- Use the `SCAN <prefix>:*` command to identify all cache keys, then use `UNLINK` (preferred) or `DEL` for each key.
+- Use the <xref:PostSharp.Patterns.Caching.Implementation.CachingBackend.ClearAsync*> method, which performs a `SCAN <prefix>:<schema-version>:*` then `UNLINK` for each key.
 
 ## Troubleshooting
 
@@ -228,40 +244,40 @@ To remove all cache keys, you can:
 
 - If necessary, increase the logging verbosity to `Info` (suitable for production in troubleshooting situations) or `Debug` (extremely verbose and never suitable for production). If you don't see any message in `Debug` verbosity it means that logging is not properly configured.
 
-    ```
+    ```csharp
     LoggingServices.DefaultBackend.DefaultVerbosity.SetMinimalLevel( LogLevel.Info, LoggingRoles.Caching );
     ```
 
 - Use the Redis `MONITOR` command in Redis CLI, or Redis Insight's profiler tool.
 
-- Use the Redis `SUBSCRIBE _keyevents@0__*` command in Redis CLI, or use Redis Insight's Pub/Sub tool and subscribe to the pattern `_keyevents@0__*`.
+- Use the Redis pattern subscription to keyevent channels, e.g. `PSUBSCRIBE __keyevent@0__*` in Redis CLI, or use Redis Insight's Pub/Sub tool and subscribe to the pattern `__keyevent@0__*`.
 
 ### Common issues
 
-- **Problem: Cache accesses never hit, always miss.**
+#### Problem: Cache accesses never hit, always miss.
 
-    Cause: <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> cannot connect to Redis and the `AbortOnConnect` option is set to `false`. You should see errors in your logs. If you don't, logging is not properly configured.
+**Cause**: <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend> cannot connect to Redis and the `AbortOnConnect` option is set to `false`. You should see errors in your logs. If you don't, logging is not properly configured.
 
-    Remedy: Check that you can connect to the Redis server, for instance using `connection.GetDatabase.Ping()`.
+**Remedy**: Check that you can connect to the Redis server, for instance using `connection.GetDatabase().Ping()`.
 
-- **Problem: the collector component reports dozens of errors per minute.**
+#### Problem: the collector component reports dozens of errors per minute.
 
-    Cause: the collector is overloaded because of excessive evictions and expirations.
+**Cause**: the collector is overloaded because of excessive evictions and expirations.
 
-    Remedies:
+Remedies:
 
-    - If expirations are excessive, increase the cache item expiry delay.
-    - If evictions are excessive, remove caching from methods with a high miss ratio.
-    - If the problem is intermittent, tune the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.BackgroundTasksMaxConcurrency> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.BackgroundTasksOverloadedThreshold>
+- If expirations are excessive, increase the cache item expiry delay.
+- If evictions are excessive, remove caching from methods with a high miss ratio.
+- If the problem is intermittent, tune the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.BackgroundTasksMaxConcurrency> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.BackgroundTasksOverloadedThreshold>
 
-- **Problem: InvalidCacheItemException or InvalidCastException are logged after an application upgrade.**
+#### Problem: InvalidCacheItemException or InvalidCastException are logged after an application upgrade.
 
-    Cause: the serialization of new and old data classes is not compatible with each other, but the two versions of the application use the same <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> properties.
+**Cause**: the serialization of new and old data classes is not compatible with each other, but the two versions of the application use the same <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> properties.
 
-    Remedies:
+**Remedies**:
 
-    - Use a different value of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> or <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property when you update cached classes.
-    - Use a serializer that makes the data contract explicit, i.e. <xref:PostSharp.Patterns.Caching.Serializers.DataContractSerializer> or <xref:PostSharp.Patterns.Caching.Serializers.JsonCachingSerializer> instead of <xref:PostSharp.Patterns.Caching.Serializers.BinarySerializer> or <xref:PostSharp.Patterns.Caching.Serializers.PortableSerializer> -- and maintain serialization compatibility when you update the classes.
+- Use a different value of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> or <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property when you update cached classes.
+- Use a serializer that makes the data contract explicit, i.e. <xref:PostSharp.Patterns.Caching.Serializers.DataContractSerializer> or <xref:PostSharp.Patterns.Caching.Serializers.JsonCachingSerializer> instead of <xref:PostSharp.Patterns.Caching.Serializers.BinarySerializer> or <xref:PostSharp.Patterns.Caching.Serializers.PortableSerializer> -- and maintain serialization compatibility when you update the classes.
 
 ## See also
 
