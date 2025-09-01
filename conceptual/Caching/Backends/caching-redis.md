@@ -77,15 +77,15 @@ ConnectionMultiplexer connection = ConnectionMultiplexer.Connect( connectionConf
 
 // Set Redis as the default backend.
 RedisCachingBackendConfiguration redisCachingConfiguration = 
-    new RedisCachingBackendConfiguration() { Prefix = "MyApp-1.0.1" };
+    new RedisCachingBackendConfiguration() { KeyPrefix = "MyApp-1.0.1" };
 CachingServices.DefaultBackend = RedisCachingBackend.Create( connection, redisCachingConfiguration );
 ```
 
 ### Important configuration settings
 
-- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> property should be set to a value that uniquely identifies the version of the data model. This will allow you to run several versions of your application side by side with the same database.
+- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.KeyPrefix> property should be set to a value that uniquely identifies the version of the data model. This will allow you to run several versions of your application side by side with the same database.
 - The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.DefaultExpiration> property is the expiration for items that do not have an explicit expiration and are not marked unremovable. It defaults to 30 days.
-- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property allows you to select the logical database. It defaults to 0. If you run several applications on the same standalone Redis node, it’s recommended to place each application in a separate database so that you can clear the cache easily with the `FLUSHDB` Redis command. Note that in Redis Cluster mode only database 0 is available, so you must differentiate applications using the `Prefix` instead.
+- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property allows you to select the logical database. It defaults to 0. If you run several applications on the same standalone Redis node, it’s recommended to place each application in a separate database so that you can clear the cache easily with the `FLUSHDB` Redis command. Note that in Redis Cluster mode only database 0 is available, so you must differentiate applications using the `KeyPrefix` instead.
 
 ## Adding a local in-memory cache to a remote Redis server
 
@@ -118,7 +118,7 @@ To use dependencies with the Redis caching backend:
 
 1. Set the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.SupportsDependencies?text=RedisCachingBackendConfiguration.SupportsDependencies> property to `true`.
 
-2. Make sure that at least one instance of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> class is alive at any moment (whether the application is running or not). It must be configured with the same <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> as your main application. You may package the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> into a separate application or cloud service.
+2. Make sure that at least one instance of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> class is alive at any moment (whether the application is running or not). It must be configured with the same <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.KeyPrefix> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> as your main application. You may package the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollector> into a separate application or cloud service.
 
     This component performs two tasks:
 
@@ -160,7 +160,7 @@ If you expect high load, it is recommended to tune the following <xref:PostSharp
 The following <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollectorOptions> properties must also be properly tuned:
 
 - The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollectorOptions.CacheCleanupDelay> property is the delay between the initialization of the component and the first cleanup, then between two subsequent cache cleanups, and defaults to 4 hours. Cleaning up the database too frequently is useless performance overhead, but doing it too late degrades performance even more. If the database contains too much garbage, Redis will start evicting _useful_ data, affecting your application performance. However it will never evict garbage. That's why you should increase the cache cleanup frequency if you see high memory usage or high levels of evictions.
-- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollectorOptions.CacheCleanupOptions.CacheCleanupOptions> property affects the cleanup process. It is important to keep the cleanup slow enough to avoid impacting your application's performance, but fast enough to finish before Redis runs out of memory. The <xref:PostSharp.Patterns.Caching.Implementation.CacheCleanupOptions.WaitDelay> is an artificial delay between processing each cache key, defaulting to 100 ms.
+- The <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCacheDependencyGarbageCollectorOptions.CacheCleanupOptions> property affects the cleanup process. It is important to keep the cleanup slow enough to avoid impacting your application's performance, but fast enough to finish before Redis runs out of memory. The <xref:PostSharp.Patterns.Caching.Implementation.CacheCleanupOptions.WaitDelay> is an artificial delay between processing each cache key, defaulting to 100 ms.
 
 Note that you can run a manual cleanup by calling the <xref:PostSharp.Patterns.Caching.Implementation.CachingBackend.CleanUpAsync*?CachingBackend.CleanUpAsync> method. Do not run this method with the default options on a production database; these options are optimized for cleanup performance and may overload your server.
 
@@ -191,7 +191,7 @@ In this description, elements between angle brackets are placeholders and mean t
 
 - `<item-key>` is the cache key (as generated by <xref:PostSharp.Patterns.Caching.Implementation.CacheKeyBuilder>), where `{`, `}` and `:` have been escaped.
 - `<item-value>` is the serialized cache value.
-- `<prefix>` is the value of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> property.
+- `<prefix>` is the value of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.KeyPrefix> property.
 - `<schema-version>` is the version of the data schema internal to <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackend>.
 - `<item-version>` is a randomly generated item version.
 - `<dependency-key>` is either a dependency key or a cache item key, when the cache item is itself a dependency (recursive dependencies), where `{`, `}` and `:` have been escaped.
@@ -272,11 +272,11 @@ Remedies:
 
 #### Problem: InvalidCacheItemException or InvalidCastException are logged after an application upgrade.
 
-**Cause**: the serialization of new and old data classes is not compatible with each other, but the two versions of the application use the same <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> properties.
+**Cause**: the serialization of new and old data classes is not compatible with each other, but the two versions of the application use the same <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.KeyPrefix> and <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> properties.
 
 **Remedies**:
 
-- Use a different value of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Prefix> or <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property when you update cached classes.
+- Use a different value of the <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.KeyPrefix> or <xref:PostSharp.Patterns.Caching.Backends.Redis.RedisCachingBackendConfiguration.Database> property when you update cached classes.
 - Use a serializer that makes the data contract explicit, i.e. <xref:PostSharp.Patterns.Caching.Serializers.DataContractSerializer> or <xref:PostSharp.Patterns.Caching.Serializers.JsonCachingSerializer> instead of <xref:PostSharp.Patterns.Caching.Serializers.BinarySerializer> or <xref:PostSharp.Patterns.Caching.Serializers.PortableSerializer> -- and maintain serialization compatibility when you update the classes.
 
 ## See also
