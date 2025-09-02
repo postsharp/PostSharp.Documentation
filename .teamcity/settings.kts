@@ -94,7 +94,7 @@ object DebugBuild : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -179,7 +179,7 @@ object ReleaseBuild : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -264,7 +264,7 @@ object PublicBuild : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -335,7 +335,7 @@ object PublicDeployment : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
