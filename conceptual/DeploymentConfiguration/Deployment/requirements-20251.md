@@ -1,11 +1,11 @@
 ---
-uid: requirements-20250
-title: "PostSharp 2025.0: Requirements and Compatibility"
+uid: requirements-20251
+title: "PostSharp 2025.1: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "PostSharp 2025.0 supports C# 13.0 or earlier and VB 16.9 or earlier. It requires Microsoft Visual Studio 2022, .NET Framework 4.7.2 or later, and is compatible with various operating systems and .NET SDK versions. It also supports Blazor via .NET Standard."
+summary: "PostSharp 2025.1 supports C# 13.0 or earlier and VB 16.9 or earlier. It requires Microsoft Visual Studio 2022, .NET Framework 4.7.2 or later, and is compatible with various operating systems and .NET SDK versions. It also supports Blazor via .NET Standard."
 ---
-# PostSharp 2025.0: Requirements and Compatibility
+# PostSharp 2025.1: Requirements and Compatibility
 
 You can use PostSharp to build applications that target a wide range of target devices. This article lists the requirements for development, build and end-user devices.
 
@@ -33,7 +33,7 @@ This section lists the supported platforms, and most importantly platform versio
 The following software components need to be installed before PostSharp can be used:
 
 * Any of the following versions of Microsoft Visual Studio:
-    * Visual Studio 2022 (17.8 and later).
+    * Visual Studio 2022 (17.10 and later).
 
     The debugging experience may be inconsistent with other IDEs than Visual Studio or when PostSharp Tools for Visual Studio are not installed.
 
@@ -51,6 +51,7 @@ The following software components need to be installed before PostSharp can be u
 
 * Any of the following operating systems currently in mainstream support by respective vendors:
     * Windows Server 2022
+    * Windows Server 2025 x64 or ARM64
     * Windows 10 x64
     * Windows 11 x64 or ARM64
     * Ubuntu 20.04 LTS x64,
@@ -61,7 +62,7 @@ The following software components need to be installed before PostSharp can be u
     * Alpine Linux 3.18+ ARM64.
 
 At least one of the following:
-* .NET Framework 4.7.2 and later + Build Tools for Visual Studio 2022 or Visual Studio 2022 (17.10 and later).
+* .NET Framework 4.7.2 and later + Build Tools for Visual Studio 2022 or Visual Studio 2022 (17.8 and later).
 * .NET SDK 8.0 (build 8.0.100 or later).
 * .NET SDK 9.0 (build 9.0.100 or later).
 
