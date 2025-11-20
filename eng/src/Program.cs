@@ -13,7 +13,7 @@ using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Search;
 using PostSharp.Engineering.DocFx;
 using PostSharpDocumentationDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies;
-using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2025_0;
+using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2025_1_GitHub;
 
 const string docPackageFileName = "PostSharp.Doc.zip";
 
@@ -57,12 +57,15 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
             } ),
     Extensions =
     [
+        
         // Run `b generate-scripts` after changing these parameters.
-        new UpdateSearchProductExtension<UpdatePostSharpDocumentationCommand>(
-            "https://0fpg9nu41dat6boep.a1.typesense.net",
+        new UpdateSearchProductExtension(
+            "https://typesense.postsharp.net",
             "postsharpdoc",
-            "https://doc-production.postsharp.net/il/sitemap.xml",
-            true )
+            "https://doc-production.postsharp.net/sitemap.xml",
+            () => new PostSharpDocCrawler(),
+            ["PostSharp"])
+        
     ]
 };
 

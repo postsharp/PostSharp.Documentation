@@ -94,7 +94,7 @@ object DebugBuild : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharp_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -179,7 +179,7 @@ object ReleaseBuild : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharp_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -264,7 +264,7 @@ object PublicBuild : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharp_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -335,7 +335,7 @@ object PublicDeployment : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharp_PostSharp20250_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharp20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -383,7 +383,7 @@ object PublicUpdateSearch : BuildType({
                 path = "Build.ps1"
             }
             noProfile = false
-            scriptArgs = "tools search update https://0fpg9nu41dat6boep.a1.typesense.net postsharpdoc https://doc-production.postsharp.net/il/sitemap.xml --ignore-tls %UpdateSearchArguments%"
+            scriptArgs = "search update %UpdateSearchArguments%"
         }
     }
 

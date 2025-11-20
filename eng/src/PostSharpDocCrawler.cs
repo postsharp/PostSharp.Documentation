@@ -1,5 +1,4 @@
 ﻿// Copyright (c) SharpCrafters s.r.o. See the LICENSE.md file in the root directory of this repository root for details.
-
 using HtmlAgilityPack;
 using PostSharp.Engineering.BuildTools.Search.Crawlers;
 using System;
@@ -7,13 +6,12 @@ using System.Linq;
 
 namespace BuildPostSharpDocumentation;
 
-internal class PostSharpDocCrawler : DocFxCrawler
+internal class PostSharpDocCrawler : DocFxDocumentParser
 {
-    protected override BreadcrumbInfo GetBreadcrumbData( HtmlNode[] breadcrumbLinks )
+    protected override BreadcrumbInfo GetBreadcrumbData( string[] breadcrumbLinks )
     {
         var relevantBreadCrumbTitles = breadcrumbLinks
             .Skip( 4 )
-            .Select( n => n.GetText() )
             .ToArray(); 
         
         var breadcrumb = string.Join(
@@ -24,7 +22,7 @@ internal class PostSharpDocCrawler : DocFxCrawler
 
         var category = breadcrumbLinks.Length < 5
             ? null
-            : NormalizeCategoryName( breadcrumbLinks.Skip( 4 ).First().GetText() );
+            : NormalizeCategoryName( breadcrumbLinks.Skip( 4 ).First() );
 
         var isApiReference = category?.Equals( "api reference", StringComparison.OrdinalIgnoreCase ) ?? false;
 
