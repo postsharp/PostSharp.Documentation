@@ -22,6 +22,8 @@ PostSharp 2026.0 introduces support for .NET 10.0 and C# 14.0.
 
 * In both above cases, if your projects cannot be compatible with supported target frameworks, please continue using PostSharp 2024.0 LTS, which will be supported for at least a year after 2026.0 is made LTS. Qualifying Enterprise users can request longer support duration than this, which is handled on case-by-case basis.
 
+* In C# 14, extension blocks are implemented by the compiler as static methods and a set of special metadata types that are intended for C# compiler to match extension methods and properties with the receiver type. Since both the implementation methods and the metadata types may not be expected by existing aspects, we've decided to introduce support into the multicast engine. For more information refer to <xref:extension-blocks-multicast>.
+
 ## PostSharp Pattern Libraries
 
 * Dependencies of pattern libraries were upgraded to versions without known security vulnerabilities.
@@ -33,4 +35,8 @@ PostSharp 2026.0 introduces support for .NET 10.0 and C# 14.0.
 * We've removed direct support for .NET 5.0 and .NET 7.0 target frameworks. You can still use Pattern Libraries with these target frameworks, but support will be provided through .NET Standard 2.0 and .NET 6.0 assemblies respectively.
 
 * As mentioned before, if this affects you, we recommend staying on PostSharp 2024.0 LTS before you are able to upgrade to supported target frameworks.
+
+* Deadlock detection support was removed from our packages. This component was deprecated in 2024.0 LTS and was not maintained since.
+
+* Undo-redo support is not considered obsolete and will not be maintained. The APIs will be removed in a future version.
 

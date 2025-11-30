@@ -7,6 +7,9 @@ summary: "The document provides instructions on how to add Undo/Redo functionali
 ---
 # Adding Undo/Redo to the User Interface
 
+> [!CAUTION]
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be remoed in the future.
+
 The Undo/Redo functionality that you added to your codebase needs to be made available to the users. Users will want to have the ability to move forward and backward through the stack of recorded operations.
 
 

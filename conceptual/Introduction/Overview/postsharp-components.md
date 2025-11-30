@@ -31,9 +31,9 @@ The following table lists all PostSharp packages:
 | *PostSharp.Redist* | *PostSharp* | PostSharp Framework. The build-time package includes the PostSharp compiler. |
 | *PostSharp.Patterns.Common.Redist* | *PostSharp.Patterns.Common* | Common logic shared between pattern libraries. Code contracts. |
 | *PostSharp.Patterns.Aggregation.Redist* | *PostSharp.Patterns.Aggregation* | Aggretable and Disposable aspects. |
-| *PostSharp.Patterns.Model.Redist* | *PostSharp.Patterns.Model* | NotifyPropertyChanged aspect and Undo/Redo. |
-| *PostSharp.Patterns.XAML.Redist* | *PostSharp.Patterns.XAML* | Command, Dependency Property and Attached Property aspects. WPF controls for undo/redo. |
-| *PostSharp.Patterns.Threading.Redist* | *PostSharp.Patterns.Threading* | Threading models, thread dispatching aspects, deadlock detection. |
+| *PostSharp.Patterns.Model.Redist* | *PostSharp.Patterns.Model* | NotifyPropertyChanged aspect. |
+| *PostSharp.Patterns.XAML.Redist* | *PostSharp.Patterns.XAML* | Command, Dependency Property and Attached Property aspects. |
+| *PostSharp.Patterns.Threading.Redist* | *PostSharp.Patterns.Threading* | Threading models, thread dispatching aspects. |
 | *PostSharp.Patterns.Caching.Redist* | *PostSharp.Patterns.Caching* | Caching aspect. |
 | *PostSharp.Patterns.Caching.Redis* | N/A | Redis connector for *PostSharp.Patterns.Caching*.  |
 | *PostSharp.Patterns.Caching.Azure* | N/A | Azure connector for *PostSharp.Patterns.Caching*.  |
