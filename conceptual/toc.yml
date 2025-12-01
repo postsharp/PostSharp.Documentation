@@ -253,6 +253,8 @@ items:
             items:
               - name: Understanding Attribute Multicasting
                 topicUid: multicast-conceptual
+              - name: C# 14 Extension Blocks and Multicasting
+                topicUid: extension-blocks-multicast
           - name: Adding Aspects to Derived Classes and Methods Using Attributes
             topicUid: aspect-inheritance
             items:
