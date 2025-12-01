@@ -28,8 +28,8 @@ PostSharp is a design pattern automation tool for Microsoft .NET.
 | <xref:PostSharp.Patterns.Model> | This namespace contains an implementation of the Observer, Aggregatable and Disposable patterns. |
 | <xref:PostSharp.Patterns.Threading> | This namespace contains an implementation of several threading models, and other thread dispatching aspects. |
 | <xref:PostSharp.Patterns.Collections> | This namespace defines collection classes that work with the Aggregatable pattern. |
-| <xref:PostSharp.Patterns.Recording> | This namespace implements the undo/redo feature. |
-| <xref:PostSharp.Patterns.Recording.Operations> | This namespace defines recordable operations. |
+| <xref:PostSharp.Patterns.Recording> | This namespace implements the undo/redo feature (deprecated). |
+| <xref:PostSharp.Patterns.Recording.Operations> | This namespace defines recordable operations (deprecated). |
 | <xref:PostSharp.Extensibility.BuildTimeLogging> | This namespace allows to emit build-time log records. |
 | <xref:PostSharp.Patterns> | This is the root namespace for all ready-made implementation of patterns. |
 | <xref:PostSharp.Patterns.Caching> | This namespace contains an API to cache method return values as a result of their arguments. |
@@ -65,7 +65,7 @@ PostSharp is a design pattern automation tool for Microsoft .NET.
 | <xref:PostSharp.Patterns.Diagnostics.ThreadingInstrumentation> | This namespaces contains aspects that instrument the System.Threading namespace. |
 | <xref:PostSharp.Patterns.DynamicAdvising> | This namespace defines the abstractions for dynamically advisable classes, i.e. classes of objects into which behaviors can be injected at run time. |
 | <xref:PostSharp.Patterns.Formatters> | This namespace contains the implementation of formatters for values of different types. |
-| <xref:PostSharp.Patterns.Model.Controls> | This namespaces contains XAML controls for the undo/redo feature. |
+| <xref:PostSharp.Patterns.Model.Controls> | This namespaces contains XAML controls for the undo/redo feature (deprecated). |
 | <xref:PostSharp.Patterns.Model.TypeAdapters> | This namespace defines abstractions that allow to use the Aggregatable pattern with third-party types. |
 | <xref:PostSharp.Patterns.Threading.Models> | This namespace contains the implementation of different threading models. |
 | <xref:PostSharp.Patterns.Utilities> | This namespace contains unsorted types. |

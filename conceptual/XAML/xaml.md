@@ -25,6 +25,5 @@ Additionally, if you are writing a XAML application, you may be interested in th
 | <xref:inotifypropertychanged> | This chapter shows how to automatically implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface without boilerplate code.  |
 | <xref:contracts> | This chapter describes how to validate the value of your fields, properties and parameters with custom attributes. |
 | <xref:weak-event> | This article shows how to turn normal events into weak events and prevent memory leaks. |
-| <xref:undoredo> | This chapter explains how to add undo/redo to your application with a minimum of handwritten code. |
 
 

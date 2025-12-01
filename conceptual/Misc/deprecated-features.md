@@ -5,7 +5,7 @@ product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
 summary: "The document lists articles for past features of PostSharp which were deprecated."
 ---
-# Hacking
+# Deprecated Features
 
 The following articles cover deprecated features.
 

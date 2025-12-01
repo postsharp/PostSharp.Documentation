@@ -37,6 +37,6 @@ Conventional programming languages miss a concept of pattern, therefore patterns
 
 * **Too much knowledge required**. When new team members come to work on a specific feature, they often must first learn about caching, threading and other highly technical issues before being able to contribute to the business value: an example of bad division of labor. 
 
-* **Long feedback loops**. Even with small development teams, common patterns like diagnostics, logging, threading, INotifyPropertyChanged and undo/redo can be handled differently by each developer. Architects need to make sure new team members understand and follow the internal design standards and have to spend more time on manual code reviews--delaying progress while new team members wait to get feedback from code review. 
+* **Long feedback loops**. Even with small development teams, common patterns like diagnostics, logging, threading, and INotifyPropertyChanged can be handled differently by each developer. Architects need to make sure new team members understand and follow the internal design standards and have to spend more time on manual code reviews--delaying progress while new team members wait to get feedback from code review. 
 
 
