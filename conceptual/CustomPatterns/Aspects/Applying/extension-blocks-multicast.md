@@ -174,7 +174,6 @@ Classic extension methods using the `this` modifier continue to work as before a
 <br><xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers>
 <br><xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers>
 
-**External Resources:**
-- [C# 14 Extension Members - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extension)
-- [Exploring extension members - .NET Blog](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/)
-- [What's new in C# 14 - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-14)
+**Other Resources**
+<br>[C# 14 Extension Members - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extension)
+<br>[Exploring extension members - .NET Blog](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/)
