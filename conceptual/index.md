@@ -25,7 +25,6 @@ Developers usually think in terms of design patterns, but with conventional prog
 | <xref:weak-event> | This chapter explains how to transform a plain C# event into a weak event and avoid memory leaks. |
 | <xref:xaml> | This chapter covers: <xref:command>, <xref:dependency-property> and <xref:attached-property>.  |
 | <xref:aggregatable> | This chapter explains how to implement the Aggregatable pattern by annotating an object model with parent/child information, and how to implement a visitor. The Aggregatable pattern is the base of undo/redo patterns and threading models. |
-| <xref:undoredo> | This chapter explains how to implement an undo/redo feature by making your model objects record their changes. |
 | <xref:caching> | This chapter explains how to add caching to your code. |
 | <xref:threading-library> | This chapter covers multi-threading aspects: <xref:threading-models>; <xref:background-dispatching>; <xref:ui-dispatching>.  |
 | <xref:custom-aspects> | This chapter explains how to create your own aspects with PostSharp Aspect Framework. |

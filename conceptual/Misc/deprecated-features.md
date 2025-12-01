@@ -12,4 +12,4 @@ The following articles cover deprecated features.
 | Section | Description |
 |---------|-------------|
 | <xref:install-without-nuget> | This topic shows how to install PostSharp without NuGet. |
-| <xref:undo-redo> | This topic shows how to detect deadlocks at runtime. |
+| <xref:undoredo> | This chapter explains how to implement an undo/redo feature by making your model objects record their changes. |

@@ -16,8 +16,6 @@ PostSharp provides implementations of some of the patterns that are the most com
 
 * Parent/child relationships: see <xref:aggregatable>. 
 
-* Undo/redo: see <xref:undoredo>. 
-
 * Code contracts: see <xref:contracts>. 
 
 * Logging: see <xref:logging>. 
