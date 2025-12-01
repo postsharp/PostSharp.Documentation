@@ -5,7 +5,7 @@ product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
 summary: "PostSharp 2026.0 supports C# 14.0 or earlier and VB 16.9 or earlier. It requires Microsoft Visual Studio 2022 or 2026, .NET Framework 4.7.2 or later, and is compatible with various operating systems and .NET SDK versions. It also supports Blazor via .NET Standard."
 ---
-# PostSharp 2025.1: Requirements and Compatibility
+# PostSharp 2026.0: Requirements and Compatibility
 
 You can use PostSharp to build applications that target a wide range of target devices. This article lists the requirements for development, build and end-user devices.
 
@@ -33,7 +33,7 @@ This section lists the supported platforms, and most importantly platform versio
 The following software components need to be installed before PostSharp can be used:
 
 * Any of the following versions of Microsoft Visual Studio:
-    * Visual Studio 2022 (17.14 and later).
+    * Visual Studio 2022 (17.12 and later).
     * Visual Studio 2026 (18.0 and later).
 
     The debugging experience may be inconsistent with other IDEs than Visual Studio or when PostSharp Tools for Visual Studio are not installed.
@@ -97,7 +97,7 @@ The following table displays the versions of the target frameworks that are supp
 > <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%%</superscript> Each PostSharp.Patterns.Caching caching backend has different set of supported target frameworks. Please refer to individual packages on [nuget.org](http://www.nuget.org).
 
 > [!NOTE]
-> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript> .NET 6.0 is no longer suported by Microsoft. Although we still provide libraries targeting it, we no longer run our tests on this specific version of the .NET. We recommend using a supported version of .NET runtime in your final application.
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript> .NET 6.0 is no longer supported by Microsoft. Although we still provide libraries targeting it, we no longer run our tests on this specific version of the .NET. We recommend using a supported version of .NET runtime in your final application.
 
 ## Compatibility with deprecated versions of .NET Core and .NET
 
