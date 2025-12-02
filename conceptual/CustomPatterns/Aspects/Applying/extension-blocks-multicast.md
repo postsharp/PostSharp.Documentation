@@ -12,20 +12,19 @@ summary: "Explains how C# 14 extension blocks are handled by PostSharp's multica
 
 Starting with PostSharp 2026.0, the multicast engine provides support for C# 14 extension blocks. By default, aspects and multicast attributes are not applied to extension block members to prevent unexpected behavior. You can explicitly enable this using the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property.
 
-Extension block metadata may still be targeted by <xref:PostSharp.Aspects.Advices.IAdviceProvider> and <xref:PostSharp.Aspects.IAspectProvider> by mistake. Doing this will result in an error.
+Using <xref:PostSharp.Aspects.Advices.IAdviceProvider> and <xref:PostSharp.Aspects.IAspectProvider> on extension members is not limited and will apply aspects and advices. Targeting extension block metadata will result in an error.
 
 ## How Extension Blocks Are Implemented in IL
 
 The C# compiler implements extension block members as static methods (including properties) and a set of special metadata types. These metadata types are intended for the C# compiler to match extension methods and properties with the receiver type. Since both the implementation methods and the metadata types may not be expected by existing aspects, the multicasting algorithm in PostSharp 2026.0 and later skips all of these members and adds explicit opt-in support for extension block implementation methods.
 
-### Enabling Extension Block Support
+## Enabling Extension Block Support
 
 To apply aspects to extension block members, one of the following actions needs to be taken:
 
 - Add the aspect directly to the extension block member.
 - Set the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property to `true` when applying the aspect.
 - Add <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute> to the aspect type and set <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers> to `true`.
-
 
 ### Example: Applying aspects directly to extension members
 
