@@ -10,26 +10,26 @@ summary: "Explains how C# 14 extension blocks are handled by PostSharp's multica
 
 ## Overview
 
-Starting with PostSharp 2026.0, the multicast engine provides support for C# 14 extension blocks. By default, aspects and multicast attributes are not applied to extension block members to prevent unexpected behavior. You can explicitly enable this using the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> and properties.
+Starting with PostSharp 2026.0, the multicast engine provides support for C# 14 extension blocks. By default, aspects and multicast attributes are not applied to extension block members to prevent unexpected behavior. You can explicitly enable this using the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property.
 
 Extension block metadata may still be targeted by <xref:PostSharp.Aspects.Advices.IAdviceProvider> and <xref:PostSharp.Aspects.IAspectProvider> by mistake. Doing this will result in an error.
 
 ## How Extension Blocks Are Implemented in IL
 
-C# compiler implements extension block members as static methods (including properties) and a set of special metadata types. These metadata types are intended for the C# compiler to match extension methods and properties with the receiver type. Since both the implementation methods and the metadata types may not be expected by existing aspects, multicasting algorithm in PostSharp 2026.0 and later skips all of these members and adds an explicit opt-in support for extension block implementation methods.
+The C# compiler implements extension block members as static methods (including properties) and a set of special metadata types. These metadata types are intended for the C# compiler to match extension methods and properties with the receiver type. Since both the implementation methods and the metadata types may not be expected by existing aspects, the multicasting algorithm in PostSharp 2026.0 and later skips all of these members and adds explicit opt-in support for extension block implementation methods.
 
 ### Enabling Extension Block Support
 
-To apply aspects to extension block members one of following actions needs to be taken:
+To apply aspects to extension block members, one of the following actions needs to be taken:
 
-- add the aspect directly to the extension block member.
-- set the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property to <c>true</c> when applying the aspect.
-- add <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute> to the aspect type and  set <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers> to <c>true</c>.
+- Add the aspect directly to the extension block member.
+- Set the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property to `true` when applying the aspect.
+- Add <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute> to the aspect type and set <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers> to `true`.
 
 
-### Example: Applying Aspects directly to extension members
+### Example: Applying aspects directly to extension members
 
-When applied explicitly to extension members, aspects are added without need to change any of the properties.
+When applied explicitly to extension members, aspects are added without the need to change any of the properties.
 
 ```csharp
 [PSerializable]
@@ -60,7 +60,7 @@ public static class TestClassExtensions
 
 ### Example: Multicasting with AllowExtensionBlockMembers set to true
 
-After setting <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> to true and multicasting on the whole class, members within extension blocks will be eligible for the aspect.
+After setting <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> to `true` and multicasting on the whole class, members within extension blocks will be eligible for the aspect.
 
 ```csharp
 [PSerializable]
@@ -88,9 +88,9 @@ public static class TestClassExtensions
 }
 ```
 
-### Example: Changing Default Behavior for Custom Aspects
+### Example: Changing default behavior for custom aspects
 
-Setting the <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers> property to true on the aspect class removed will make extension members to automatically eligible for the aspect:
+Setting the <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers> property to `true` on the aspect class will make extension members automatically eligible for the aspect:
 
 ```csharp
 [MulticastAttributeUsage(MulticastTargets.Method, AllowExtensionBlockMembers = true)]
@@ -122,7 +122,7 @@ public static class TestClassExtensions
 
 ## Backward Compatibility
 
-Classic extension methods using the `this` modifier continue to work as before and are not affected by the `AllowExtensionBlockMembers` properties. They are always eligible for aspect application according to existing multicast rules.
+Classic extension methods using the `this` modifier continue to work as before and are not affected by the `AllowExtensionBlockMembers` property. They are always eligible for aspect application according to existing multicast rules.
 
 
 ## See Also
