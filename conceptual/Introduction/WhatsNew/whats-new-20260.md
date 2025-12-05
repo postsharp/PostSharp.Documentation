@@ -24,7 +24,7 @@ PostSharp 2026.0 introduces support for .NET 10.0 and C# 14.0.
 
 * In C# 14, extension blocks are implemented by the compiler as static methods and a set of special metadata types that are intended for C# compiler to match extension methods and properties with the receiver type. Since both the implementation methods and the metadata types may not be expected by existing aspects, we've decided to introduce support into the multicast engine. For more information refer to <xref:extension-blocks-multicast>.
 
-* <xref:PostSharp.Aspects.IAspectProvider> and <xref:PostSharp.Aspects.Advices.IAdviceProvider> will now report error LA0167 when targeting an extension member metadata declaration. You can use <xref:PostSharp.Reflection.ReflectionHelper.IsExtensionBlockMetadata> to identify such declarations.
+* <xref:PostSharp.Aspects.IAspectProvider> and <xref:PostSharp.Aspects.Advices.IAdviceProvider> will now report an when targeting an extension member metadata declaration. For more information see <xref:iaspectprovider#extension-block-members>.
 
 ## PostSharp Pattern Libraries
 

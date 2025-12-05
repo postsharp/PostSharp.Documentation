@@ -66,7 +66,7 @@ It is common that aspects provided by <xref:PostSharp.Aspects.IAspectProvider> (
 
 An interesting feature of PostSharp is that object graphs instantiated at compile-time are serialized, and can be used at run-time. In other words, if you store a reference to another aspect in a child aspect, you will be able to use this reference at run time.
 
-## C# 14 Extension Block Members
+## Extension Block Members
 
 C# 14 introduced extension members. Both <xref:PostSharp.Aspects.IAspectProvider> and <xref:PostSharp.Aspects.Advices.IAdviceProvider> can be used on extension member implementation methods (members of the class containing extension blocks).
 
