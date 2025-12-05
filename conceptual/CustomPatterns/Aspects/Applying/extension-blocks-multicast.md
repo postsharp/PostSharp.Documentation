@@ -22,8 +22,8 @@ Since both the implementation methods and the metadata types may not be expected
 
 To apply aspects to extension block members, one of the following actions needs to be taken:
 
-- Add the aspect directly to the extension block member.
-- Set the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property to `true` when applying the aspect.
+- Add the aspect directly to the extension block member, or
+- Set the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property to `true` when multicasting the aspect from an outer scope, such as the declaring type.
 - Add <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute> to the aspect type and set <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers> to `true`.
 
 ### Example: Applying aspects directly to extension members
