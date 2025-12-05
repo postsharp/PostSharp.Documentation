@@ -8,7 +8,7 @@ summary: "The document provides detailed steps on how to customize Undo/Redo ope
 # Customizing Undo/Redo Operation Names
 
 > [!CAUTION]
-> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be remoed in the future.
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be removed in the future.
 
 The example of previous sections displays the list of operations appearing in the two UI buttons. That list of operations references the setters on the different individual properties in a very technical manner, for instance the operation of setting the first name is named `set_FirstName`, according to the name of the property in source code. 
 

@@ -60,7 +60,7 @@ If you added the policy to the whole solution, the result of running this wizard
 1. Add the *PostSharp.Patterns.Threading* NuGet package to the project. 
 
 
-2. Add the <xref:PostSharp.Patterns.Threading.ThreadSafetyPolicy> any C# file. We recommend you add it to a new file named *GlobalAspects.cs*. 
+2. Add the <xref:PostSharp.Patterns.Threading.ThreadSafetyPolicy> to any C# file. We recommend you add it to a new file named *GlobalAspects.cs*. 
 
     ```csharp
     using PostSharp.Patterns.Threading;

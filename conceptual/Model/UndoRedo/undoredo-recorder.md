@@ -8,7 +8,7 @@ summary: "The document provides instructions on how to manually assign recorders
 # Assigning Recorders Manually
 
 > [!CAUTION]
-> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be remoed in the future.
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be removed in the future.
 
 By default, all recordable objects are attached to the global <xref:PostSharp.Patterns.Recording.Recorder> exposed on the <xref:PostSharp.Patterns.Recording.RecordingServices.DefaultRecorder> property. There is nothing you have to do to make this happen. There may be circumstances where you want to create and assign your own recorder to the undo/redo process. There are two different ways that you can accomplish this. 
 

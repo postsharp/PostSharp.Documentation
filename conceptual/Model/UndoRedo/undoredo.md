@@ -8,7 +8,7 @@ summary: "The document details how to use PostSharp's RecordableAttribute aspect
 # Undo/Redo
 
 > [!CAUTION]
-> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be remoed in the future.
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be removed in the future.
 
 Most business application users are familiar with applications that have the ability to undo and redo changes that they have made. It’s not common to see this functionality in custom built applications because it is quite difficult to do. Despite this difficulty, undo/redo is consistently mentioned on the top of users' wish list.
 

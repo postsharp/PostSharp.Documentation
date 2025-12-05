@@ -124,7 +124,7 @@ PostSharp 2026.0 contains major breaking changes related to platform discontinua
 * Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
 
 ## PostSharp.Patterns.Model.Redist
-* `[Recordable]` aspect and related APIs are not marked as obsolete and should not be used. These APIs will not be maintained and will be removed in a future release.
+* `[Recordable]` aspect and related APIs are now marked as obsolete and should not be used. These APIs will not be maintained and will be removed in a future release.
 * Assemblies targeting .NET Framework 4.5, .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
 * Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
 * Projects targeting .NET Framework 4.5 to 4.7, .NET Standard 1.3 to 1.6 are unsupported.

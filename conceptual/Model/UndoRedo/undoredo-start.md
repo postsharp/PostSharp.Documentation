@@ -8,7 +8,7 @@ summary: "The document provides a guide on making an object recordable for undo/
 # Making Your Model Recordable
 
 > [!CAUTION]
-> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be remoed in the future.
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be removed in the future.
 
 To make an object usable for undo/redo operations, you will need to add the <xref:PostSharp.Patterns.Recording.RecordableAttribute> aspect to the class. This aspect instruments changes to fields and records them into a <xref:PostSharp.Patterns.Recording.Recorder>. The aspect also instruments public methods to group field changes into logical operations. 
 
