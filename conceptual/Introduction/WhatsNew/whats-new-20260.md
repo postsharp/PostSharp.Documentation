@@ -39,4 +39,3 @@ PostSharp 2026.0 introduces support for .NET 10.0 and C# 14.0.
 * Deadlock detection support and APIs were removed from our packages. This component was deprecated in 2024.0 LTS and was not maintained since.
 
 * Undo-redo patterns and `[Recordable]` aspect are now considered obsolete and will not be maintained. The APIs will be removed in a future version.
-

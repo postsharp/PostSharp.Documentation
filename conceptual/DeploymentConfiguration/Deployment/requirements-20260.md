@@ -195,4 +195,3 @@ PostSharp is not compatible with the following products or features:
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Mono, Unity3D | Unsupported | None. |
 | Xamarin | Unsupported | Use Microsoft MAUI. |
-
