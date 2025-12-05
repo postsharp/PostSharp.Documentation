@@ -70,7 +70,7 @@ An interesting feature of PostSharp is that object graphs instantiated at compil
 
 C# 14 introduced extension members. Both <xref:PostSharp.Aspects.IAspectProvider> and <xref:PostSharp.Aspects.Advices.IAdviceProvider> can be used on extension member implementation methods (members of the class containing extension blocks).
 
-Targeting extension block metadata (nested types emitted by the C# compiler) will result in an error `LA0167`. You can use <xref:PostSharp.Reflection.ReflectionHelper.IsExtensionBlockMetadata> to identify extension block metadata members if filtering is needed.
+Targeting extension block metadata types (nested types emitted by the C# compiler) and all their members will result in an error `LA0167`. You can use <xref:PostSharp.Reflection.ReflectionHelper.IsExtensionBlockMetadata> to identify extension block metadata members if filtering is needed.
 
 ## See Also
 
