@@ -40,14 +40,27 @@ The compiler generates nested types similar to:
 ```csharp
 public static class TestClassExtensions
 {
-    // Compiler-generated nested metadata types
-    [CompilerGenerated]
-    private static class <Extension>0<TInstance>
+    // Compiler-generated nested metadata types representing the extension block.
+    [SpecialName]
+    private static class <G>$BA41CFE2B5EDAEB8C1B9062F59ED4D69<TInstance>
     {
-        // Metadata type representing the extension block
+        // Pure metadata classes.
+        [SpecialName]
+    	public static class <M>$DE9F57644BDC66EDA3F1FD365749DA9F;
+
+        [SpecialName]
+    	public static class <M>$7A2C8F3E91B4D5A6C0E9F1B2D4A7C8E3;
+    	
+
+        // Original extension members without implementations.
+        [ExtensionMarker("<M>$DE9F57644BDC66EDA3F1FD365749DA9F")]
+        public TInstance ExtensionMethod() => throw null;
+
+        [ExtensionMarker("<M>$DE9F57644BDC66EDA3F1FD365749DA9F")]
+        public TInstance ExtensionProperty => throw null;
     }
 
-    // Static implementation methods
+    // Static implementation methods with received parameter.
     public static TInstance ExtensionMethod<TInstance>(TInstance instance) => instance;
 
     public static TInstance get_ExtensionProperty<TInstance>(TInstance instance) => instance;
