@@ -23,7 +23,7 @@ These APIs will not be maintained and will be removed in a future release.
 
 ## Deprecation of target frameworks
 
-PostSharp 2026.0 removes support for all pre-2017 frameworks plus the .NET Core versions that are no longer in mainstream Microsoft support.
+PostSharp 2026.0 removes support for all pre-2017 frameworks and .NET Core versions that are no longer supported by Microsoft. However, we have kept support for .NET 6.0 due to its widespread adoption as indicated by our telemetry data.
 
 > [!WARNING]
 > If you are affected by these deprecations and cannot update your target frameworks, please remain on PostSharp 2024.0 LTS. Contact us to indicate your dependency on this version and potentially negotiate an extension of its support window.
@@ -35,82 +35,82 @@ The following table summarizes all target framework changes across PostSharp pac
 | PostSharp.Redist | .NET Framework 3.5 | .NET Framework 4.5.2 |
 | PostSharp.Redist | .NET Framework 4.5 | .NET Framework 4.5.2 |
 | PostSharp.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Redist | .NET 5.0 | .NET 6.0 |
 | PostSharp.Redist | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Common.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Common.Redist | .NET Framework 4.6 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Common.Redist | .NET Framework 4.7 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Common.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Common.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Common.Redist | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Common.Redist | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Aggregation.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Aggregation.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Aggregation.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Aggregation.Redist | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Aggregation.Redist | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Caching | .NET Framework 4.6.1 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Caching | .NET Framework 4.7 | .NET Framework 4.7.1 |
-| PostSharp.Patterns.Caching | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Caching | .NET 7.0 | .NET 8.0 |
-| PostSharp.Patterns.Caching.Azure | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.Azure | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Caching.Azure | .NET 7.0 | .NET 8.0 |
-| PostSharp.Patterns.Caching.IMemoryCache | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.IMemoryCache | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Caching.IMemoryCache | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Caching.Redis | .NET Framework 4.7 | .NET Framework 4.7.1 |
-| PostSharp.Patterns.Caching.Redis | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.Redis | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Caching.Redis | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Redist | .NET Framework 4.6 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Redist | .NET Framework 4.7 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Diagnostics.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Redist | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.Redist | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.ApplicationInsights | .NET Framework 4.5.2 | .NET Framework 4.7.1 |
-| PostSharp.Patterns.Diagnostics.ApplicationInsights | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.ApplicationInsights | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.ApplicationInsights | .NET 7.0 | .NET 8.0 |
-| PostSharp.Patterns.Diagnostics.AspNetCore | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.AspNetCore | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.AspNetCore | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.AspNetFramework | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.CommonLogging | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.CommonLogging | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Diagnostics.CommonLogging | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.CommonLogging | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.CommonLogging | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.Configuration | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Configuration | .NET Framework 4.6.1 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.DiagnosticSource | .NET Framework 4.5 | .NET Framework 4.7.1 |
-| PostSharp.Patterns.Diagnostics.DiagnosticSource | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.DiagnosticSource | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.DiagnosticSource | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.HttpClient | .NET Framework 4.5 | .NET Framework 4.7.1 |
-| PostSharp.Patterns.Diagnostics.HttpClient | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.HttpClient | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.HttpClient | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.Log4Net | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Log4Net | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Diagnostics.Log4Net | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Log4Net | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.Log4Net | .NET 7.0 | .NET 8.0 |
-| PostSharp.Patterns.Diagnostics.Microsoft | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Microsoft | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.Microsoft | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.NLog | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.NLog | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Diagnostics.NLog | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.NLog | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.NLog | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.Serilog | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Serilog | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Diagnostics.Serilog | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Serilog | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.Serilog | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Diagnostics.Tracing | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Tracing | .NET Framework 4.6 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Diagnostics.Tracing | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Diagnostics.Tracing | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Tracing | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Diagnostics.Tracing | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Model.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Model.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Model.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Model.Redist | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Model.Redist | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Threading.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
 | PostSharp.Patterns.Threading.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
-| PostSharp.Patterns.Threading.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Threading.Redist | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Threading.Redist | .NET 7.0 | .NET 8.0 |
 | PostSharp.Patterns.Xaml | .NET Framework 4.5 | .NET Framework 4.7.1 |
-| PostSharp.Patterns.Xaml | .NET Core 3.0 | .NET 8.0 |
-| PostSharp.Patterns.Xaml | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Xaml | .NET Core 3.0 | .NET 6.0 |
+| PostSharp.Patterns.Xaml | .NET 5.0 | .NET 6.0 |
 | PostSharp.Patterns.Xaml | .NET 7.0 | .NET 8.0 |
 
