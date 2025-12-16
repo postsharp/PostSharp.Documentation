@@ -7,37 +7,35 @@ summary: "PostSharp 2026.0 adds support for .NET 10.0 and C# 14, removes support
 ---
 # What's New in PostSharp 2026.0
 
-PostSharp 2026.0 introduces support for .NET 10.0 and C# 14.0.
+PostSharp 2026.0 introduces support for .NET 10.0 and C# 14.0. It also removes support for obsolete target frameworks and features.
 
 > [!NOTE]
 > Please note that this release includes several breaking changes. Refer to <xref:breaking-changes-20260> for more detailed information.
 
-## PostSharp Compiler
+## Support for .NET 10 and C# 14
 
-* PostSharp now supports the .NET 10.0 SDK and C# 14.
+We've added support for .NET 10 SDK to all packages.
 
-* Based on usage data, we've removed PostSharp.Redist support for .NET Framework 3.5-4.5.1, .NET Standard 1.3. This means it is no longer possible to use PostSharp with these target frameworks. The package instead targets .NET Framework 4.5.2 and .NET Standard 2.0.
+In C# 14, the only change impacting PostSharp was _extension blocks_.
 
-* We've removed direct support for .NET 5.0 and .NET 7.0 target frameworks. You can still use PostSharp with these target frameworks, but the support is provided through .NET Standard 2.0 and .NET 6.0 library respectively.
+## Extension blocks
 
-* In both above cases, if your projects cannot be compatible with supported target frameworks, please continue using PostSharp 2024.0 LTS, which will be supported for at least a year after 2026.0 is made LTS. Qualifying Enterprise users can request longer support duration than this, which is handled on case-by-case basis.
+C# 14 introduces extension blocks, a new syntax for defining extension methods and properties using an `extension<T>` declaration instead of the classic `this` modifier. The C# compiler implements these as static methods and compiler-generated metadata types, which presents challenges for PostSharp:
 
-* In C# 14, extension blocks are implemented by the compiler as static methods and a set of special metadata types that are intended for C# compiler to match extension methods and properties with the receiver type. Since both the implementation methods and the metadata types may not be expected by existing aspects, we've decided to introduce support into the multicast engine. For more information refer to <xref:extension-blocks-multicast>.
+1. **Multicasting**: Previous versions of PostSharp would multicast aspects to all compiler-generated implementation methods, including those from extension blocks. In PostSharp 2026.0, multicast attributes skip extension block members by default to prevent unexpected behavior.
+2. **IAspectProvider/IAdviceProvider**: These interfaces receive IL-level reflection objects (static methods and metadata types) rather than the C# source syntax. Since PostSharp relies on `System.Reflection` to provide access to the code model, developers using these interfaces must manually identify and filter extension block metadata.
 
-* <xref:PostSharp.Aspects.IAspectProvider> and <xref:PostSharp.Aspects.Advices.IAdviceProvider> will now report an when targeting an extension member metadata declaration. Using extension members without updating your IAspectProvider implementations may cause your aspects to fail. For more information see <xref:iaspectprovider#extension-block-members>.
+To address these challenges, PostSharp 2026.0 introduces:
 
-## PostSharp Pattern Libraries
+- <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers?text=MulticastAttribute.AllowExtensionBlockMembers> and <xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers?text=MulticastAttributeUsageAttribute.AllowExtensionBlockMembers> - Set to `true` to enable multicasting to extension block members (default: `false`)
+- <xref:PostSharp.Reflection.ReflectionHelper.IsExtensionBlockMetadata> - Helper method to identify and filter compiler-generated extension block metadata when using `IAspectProvider` or `IAdviceProvider`
 
-* Dependencies of pattern libraries were upgraded to versions without known security vulnerabilities.
+For detailed information, examples, and best practices, see <xref:extension-blocks-multicast>.
 
-* All Pattern libraries now support .NET 10.0.
 
-* Based on usage data, we've unified support for .NET Framework on version 4.7.1 for all Pattern Libraries and removed libraries targeting all previous versions of .NET Framework. Additionally, we've removed support for .NET Standard 1.3. 
+## Deprecation of unsupported target frameworks
 
-* We've removed direct support for .NET 5.0 and .NET 7.0 target frameworks. You can still use Pattern Libraries with these target frameworks, but support will be provided through .NET Standard 2.0 and .NET 6.0 assemblies respectively.
+We removed support for all pre-2017 target frameworks, as well as the versions of .NET Core that fell out of mainstream support. The new baseline frameworks are now .NET Standard 2.0, .NET Framework 4.7.0, and .NET 6.0.
 
-* As mentioned before, if this affects you, we recommend staying on PostSharp 2024.0 LTS before you are able to upgrade to supported target frameworks.
+Refer to <xref:breaking-changes-20260> for more detailed information.
 
-* Deadlock detection support and APIs were removed from our packages. This component was deprecated in 2024.0 LTS and was not maintained since.
-
-* Undo-redo patterns and `[Recordable]` aspect are now considered obsolete and will not be maintained. The APIs will be removed in a future version.

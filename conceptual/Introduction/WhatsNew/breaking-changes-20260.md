@@ -3,142 +3,114 @@ uid: breaking-changes-20260
 title: "Breaking Changes in PostSharp 2026.0"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "PostSharp 2026.0 introduces major breaking changes including discontinued support for older than .NET Framework 4.7.1, .NET Standard 1.3, and end-of-life .NET versions."
+summary: "PostSharp 2026.0 introduces major breaking changes including discontinued support for .NET Framework versions older than 4.7.1, .NET Standard 1.3, and end-of-life .NET versions."
 ---
 # Breaking Changes in PostSharp 2026.0
 
-PostSharp 2026.0 removes API for `[DeadlockDetectionPolicy]` after being deprecated since 2024.0.
+PostSharp 2026.0 consolidates our supported target platforms to simplify our build environment and streamline ongoing maintenance. This release focuses on actively maintained .NET versions while discontinuing support for legacy platforms that have reached end-of-life. Additionally, it officially removes the long-obsolete `[DeadlockDetectionPolicy]` feature and marks undo/redo for obsolescence.
 
-PostSharp 2026.0 deprecates the support for `[Recordable]` aspect and related APIs.
+We understand that breaking changes require effort to address, and we've carefully selected which platforms to discontinue with the goal of minimizing customer impact. Most applications targeting modern .NET versions (.NET 8.0 and later, .NET Framework 4.7.1 and later) will experience minimal or no impact from these changes.
 
-PostSharp 2026.0 contains major breaking changes related to platform discontinuation.
+## Deprecation of the deadlock detection feature
 
-## PostSharp.Redist
-* Assemblies targeting .NET Framework 3.5, .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued. 
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.5.2.
-* Projects targeting .NET Framework 3.5, 4.0, 4.5, 4.5.1, .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8.0 or later should be used in the final application instead.
+PostSharp 2026.0 removes the API for `[DeadlockDetectionPolicy]`. This feature has been marked `[Obsolete]` since 2024.0.
 
-## PostSharp.Patterns.Common.Redist
-* Assemblies targeting .NET Framework 4.5, 4.6, .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.7 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7, .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
+## Undo/redo marked obsolete
 
-## PostSharp.Patterns.Aggregation.Redist
-* Assemblies targeting .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7, .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8.0 or later should be used in the final application instead.
+The `[Recordable]` aspect and related APIs are now marked as obsolete and should not be used. This feature has long been de-facto obsolete due to lack of support for `async` methods and its low user base.
 
-## PostSharp.Patterns.Caching
-* Assemblies targeting .NET Framework 4.6.1, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.7 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.6.1 to 4.7 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
+These APIs will not be maintained and will be removed in a future release.
 
-## PostSharp.Patterns.Caching.Azure
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
+## Deprecation of target frameworks
 
-## PostSharp.Patterns.Caching.IMemoryCache
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
+PostSharp 2026.0 removes support for all pre-2017 frameworks plus the .NET Core versions that are no longer in mainstream Microsoft support.
 
-## PostSharp.Patterns.Caching.Redis
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.7 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.7 is unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
+> [!WARNING]
+> If you are affected by these deprecations and cannot update your target frameworks, please remain on PostSharp 2024.0 LTS. Contact us to indicate your dependency on this version and potentially negotiate an extension of its support window.
 
-## PostSharp.Patterns.Diagnostics.Redist
-* Assemblies targeting .NET Framework 4.5 and 4.6, .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.7 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 and .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
+The following table summarizes all target framework changes across PostSharp packages:
 
-## PostSharp.Patterns.Diagnostics.ApplicationInsights
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5.2 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5.2 to 4.7 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
+| Package | Discontinued TFM | Replacement TFM |
+|---------|------------------|-----------------|
+| PostSharp.Redist | .NET Framework 3.5 | .NET Framework 4.5.2 |
+| PostSharp.Redist | .NET Framework 4.5 | .NET Framework 4.5.2 |
+| PostSharp.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Redist | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Common.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Common.Redist | .NET Framework 4.6 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Common.Redist | .NET Framework 4.7 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Common.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Common.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Common.Redist | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Aggregation.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Aggregation.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Aggregation.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Aggregation.Redist | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching | .NET Framework 4.6.1 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Caching | .NET Framework 4.7 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Caching | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.Azure | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.Azure | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.IMemoryCache | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.IMemoryCache | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.Redis | .NET Framework 4.7 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Caching.Redis | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Caching.Redis | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Redist | .NET Framework 4.6 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Redist | .NET Framework 4.7 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Diagnostics.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Redist | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.ApplicationInsights | .NET Framework 4.5.2 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.ApplicationInsights | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.ApplicationInsights | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.AspNetCore | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.AspNetCore | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.AspNetFramework | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.CommonLogging | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.CommonLogging | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Diagnostics.CommonLogging | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.CommonLogging | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Configuration | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Configuration | .NET Framework 4.6.1 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.DiagnosticSource | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.DiagnosticSource | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.DiagnosticSource | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.HttpClient | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.HttpClient | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.HttpClient | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Log4Net | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Log4Net | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Diagnostics.Log4Net | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Log4Net | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Microsoft | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Microsoft | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.NLog | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.NLog | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Diagnostics.NLog | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.NLog | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Serilog | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Serilog | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Diagnostics.Serilog | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Serilog | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Tracing | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Tracing | .NET Framework 4.6 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Diagnostics.Tracing | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Diagnostics.Tracing | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Diagnostics.Tracing | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Model.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Model.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Model.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Model.Redist | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Threading.Redist | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Threading.Redist | .NET Standard 1.3 | .NET Standard 2.0 |
+| PostSharp.Patterns.Threading.Redist | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Threading.Redist | .NET 7.0 | .NET 8.0 |
+| PostSharp.Patterns.Xaml | .NET Framework 4.5 | .NET Framework 4.7.1 |
+| PostSharp.Patterns.Xaml | .NET Core 3.0 | .NET 8.0 |
+| PostSharp.Patterns.Xaml | .NET 5.0 | .NET 8.0 |
+| PostSharp.Patterns.Xaml | .NET 7.0 | .NET 8.0 |
 
-## PostSharp.Patterns.Diagnostics.AspNetCore
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.AspNetFramework
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 are unsupported.
-
-## PostSharp.Patterns.Diagnostics.CommonLogging
-* Assemblies targeting .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 and .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.Configuration
-* Assembly targeting .NET Framework 4.5 was discontinued.
-* Assembly targeting .NET Framework 4.6.1 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.DiagnosticSource
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.HttpClient
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.Log4Net
-* Assemblies targeting .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 and .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.Microsoft
-* Assemblies targeting .NET 5.0, and .NET 7.0 were discontinued.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.NLog
-* Assemblies targeting .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 and .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.Serilog
-* Assemblies targeting .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 and .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Diagnostics.Tracing
-* Assemblies targeting .NET Framework 4.5, .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.6 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7 and .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8 or later should be used in the final application instead.
-
-## PostSharp.Patterns.Model.Redist
-* `[Recordable]` aspect and related APIs are now marked as obsolete and should not be used. These APIs will not be maintained and will be removed in a future release.
-* Assemblies targeting .NET Framework 4.5, .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7, .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8.0 or later should be used for the executed application instead.
-
-## PostSharp.Patterns.Threading.Redist
-* `DeadlockDetectionPolicy` and related APIs were removed.
-* Assemblies targeting .NET Framework 4.5, .NET Standard 1.3, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7, .NET Standard 1.3 to 1.6 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8.0 or later should be used for the executed application instead.
-
-## PostSharp.Patterns.Xaml
-* Assemblies targeting .NET Core 3.0, .NET 5.0, and .NET 7.0 were discontinued.
-* Assembly targeting .NET Framework 4.5 was retargeted to .NET Framework 4.7.1.
-* Projects targeting .NET Framework 4.5 to 4.7, .NET Core 3.0 to 3.1 are unsupported.
-* Projects targeting .NET 5.0 to 7.0 are unsupported at runtime. .NET 8.0 or later should be used for the executed application instead.

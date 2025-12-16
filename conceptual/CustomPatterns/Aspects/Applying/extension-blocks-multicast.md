@@ -1,24 +1,65 @@
 ---
 uid: extension-blocks-multicast
-title: "C# 14 Extension Blocks and Multicasting"
+title: "C# 14 extension blocks and multicasting"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "Explains how C# 14 extension blocks are handled by PostSharp's multicast engine in PostSharp 2026.0, including the AllowExtensionBlockMembers property."
+summary: "Explains how C# 14 extension blocks are handled by PostSharp's multicast engine in PostSharp 2026.0, including the AllowExtensionBlockMembers property and ReflectionHelper.IsExtensionBlockMetadata method."
 ---
-# C# 14 Extension Blocks and Multicasting
+# C# 14 extension blocks and multicasting
 
 
 ## Overview
 
 Starting with PostSharp 2026.0, the multicast engine provides support for C# 14 extension blocks. By default, aspects and multicast attributes are not applied to extension block members to prevent unexpected behavior. You can explicitly enable this using the <xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers> property.
 
-## How Extension Blocks Are Implemented in IL
+## How extension blocks are implemented in IL
 
-The C# compiler implements extension block members as static methods (including properties) and a set of special metadata types. These metadata types are intended for the C# compiler to match extension methods and properties with the receiver type. 
+The C# compiler implements extension block members as static methods (including properties) and a set of special metadata types. These metadata types are intended for the C# compiler to match extension methods and properties with the receiver type.
 
-Since both the implementation methods and the metadata types may not be expected by existing aspects, the multicasting algorithm in PostSharp 2026.0 and later skips all of these members and adds explicit opt-in support for extension block implementation methods.
+At the IL level and when viewed through `System.Reflection`, the compiler generates:
 
-## Enabling Extension Block Support
+- Static implementation methods (e.g., `ExtensionMethod` and `get_ExtensionProperty`)
+- Nested compiler-generated metadata types that describe the extension block structure
+
+For example, consider this C# 14 extension block:
+
+```csharp
+public static class TestClassExtensions
+{
+    extension<TInstance>(TInstance instance)
+    {
+        public TInstance ExtensionMethod() => instance;
+
+        public TInstance ExtensionProperty => instance;
+    }
+}
+```
+
+The compiler generates nested types similar to:
+
+```csharp
+public static class TestClassExtensions
+{
+    // Compiler-generated nested metadata types
+    [CompilerGenerated]
+    private static class <Extension>0<TInstance>
+    {
+        // Metadata type representing the extension block
+    }
+
+    // Static implementation methods
+    public static TInstance ExtensionMethod<TInstance>(TInstance instance) => instance;
+
+    public static TInstance get_ExtensionProperty<TInstance>(TInstance instance) => instance;
+}
+```
+
+Since both the implementation methods and the metadata types may not be expected by existing aspects, the multicasting algorithm in PostSharp 2026.0 and later behaves as follows:
+
+- **Extension block metadata types are always skipped** - These compiler-generated nested types and their members are never eligible for aspect application
+- **Extension block implementation methods require opt-in** - Static methods that implement extension members are skipped by default but can be targeted by setting `AllowExtensionBlockMembers = true`
+
+## Enabling extension block support
 
 To apply aspects to extension block members, one of the following actions needs to be taken:
 
@@ -118,8 +159,68 @@ public static class TestClassExtensions
 }
 ```
 
+## IAspectProvider and IAdviceProvider
 
-## Backward Compatibility
+C# 14 extension blocks present a challenge when using <xref:PostSharp.Aspects.IAspectProvider> or <xref:PostSharp.Aspects.Advices.IAdviceProvider> because the `System.Reflection` API exposes the compiler-generated IL artifacts rather than the source-level C# syntax.
+
+When implementing `IAspectProvider` or `IAdviceProvider`, you receive reflection objects (`Type`, `MethodInfo`, etc.) that represent the IL structure. For extension blocks, this means you'll encounter:
+
+- Static implementation methods for extension members
+- Compiler-generated nested metadata types (e.g., `<Extension>0<TInstance>`)
+
+Attempting to target extension block metadata types or their members will result in error **LA0167**.
+
+To make your `IAspectProvider` or `IAdviceProvider` safe to use with extension blocks, remember that:
+
+- **Extension member implementation methods are safe to target** - These are the static methods that implement the actual extension logic and can have aspects applied to them.
+- **Extension block metadata types must be avoided** - Targeting these compiler-generated types or their members will result in error LA0167.
+
+PostSharp 2026.0 introduces the <xref:PostSharp.Reflection.ReflectionHelper.IsExtensionBlockMetadata> method to help identify and filter extension block metadata artifacts. This method allows you to distinguish between regular types/members and compiler-generated extension block metadata.
+
+### Example: Filtering extension block metadata
+
+When implementing `IAspectProvider`, use `IsExtensionBlockMetadata` to skip compiler-generated metadata types:
+
+```csharp
+using PostSharp.Aspects;
+using PostSharp.Reflection;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+
+[PSerializable]
+public class MyAspectProvider : IAspectProvider
+{
+    public IEnumerable<AspectInstance> ProvideAspects(object targetElement)
+    {
+        Type type = (Type)targetElement;
+
+        // Get all nested types, but filter out extension block metadata
+        var nestedTypes = type.GetNestedTypes(BindingFlags.Public | BindingFlags.NonPublic)
+            .Where(t => !ReflectionHelper.IsExtensionBlockMetadata(t));
+
+        foreach (var nestedType in nestedTypes)
+        {
+            // Safely process non-metadata nested types
+            yield return new AspectInstance(nestedType, new MyAspect());
+        }
+
+        // Extension member implementation methods are safe to target
+        var methods = type.GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .Where(m => !ReflectionHelper.IsExtensionBlockMetadata(m.DeclaringType));
+
+        foreach (var method in methods)
+        {
+            yield return new AspectInstance(method, new MyMethodAspect());
+        }
+    }
+}
+```
+
+
+
+## Backward compatibility
 
 Classic extension methods using the `this` modifier continue to work as before and are not affected by the `AllowExtensionBlockMembers` property. They are always eligible for aspect application according to existing multicast rules.
 
@@ -131,6 +232,8 @@ Classic extension methods using the `this` modifier continue to work as before a
 <br><xref:whats-new-20260>
 <br><xref:PostSharp.Extensibility.MulticastAttribute.AllowExtensionBlockMembers>
 <br><xref:PostSharp.Extensibility.MulticastAttributeUsageAttribute.AllowExtensionBlockMembers>
+<br><xref:PostSharp.Reflection.ReflectionHelper.IsExtensionBlockMetadata>
+<br><xref:iaspectprovider>
 
 **Other Resources**
 <br>[C# 14 Extension Members - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extension)
