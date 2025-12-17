@@ -7,6 +7,9 @@ summary: "The document explains the Recordable Aspect in PostSharp, which record
 ---
 # Understanding the Recordable Aspect
 
+> [!CAUTION]
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be removed in the future.
+
 This section describes how the <xref:PostSharp.Patterns.Recording.RecordableAttribute> aspect is implemented. It helps developers and architects to understand the behavior and limitations of the aspect. 
 
 

@@ -16,8 +16,6 @@ PostSharp provides implementations of some of the patterns that are the most com
 
 * Parent/child relationships: see <xref:aggregatable>. 
 
-* Undo/redo: see <xref:undoredo>. 
-
 * Code contracts: see <xref:contracts>. 
 
 * Logging: see <xref:logging>. 
@@ -25,7 +23,7 @@ PostSharp provides implementations of some of the patterns that are the most com
 
 ### Example
 
-The following code snippet illustrates an object model where <xref:System.ComponentModel.INotifyPropertyChanged>, undo/redo, code contracts, aggregation and code contracts are all implemented using PostSharp ready-made attributes. 
+The following code snippet illustrates an object model where <xref:System.ComponentModel.INotifyPropertyChanged>, code contracts, and aggregation are all implemented using PostSharp ready-made attributes. 
 
 ```csharp
 [NotifyPropertyChanged]
@@ -38,7 +36,6 @@ public class CustomerViewModel
 }
 
 [NotifyPropertyChanged]
-[Recordable]
 public class Customer
 {
    public string FirstName { get; set; }
@@ -58,7 +55,6 @@ public class Customer
 }
 
 [NotifyPropertyChanged]
-[Recordable]
 public class Address
 {
    [Parent]

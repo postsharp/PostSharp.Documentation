@@ -7,6 +7,9 @@ summary: "The document explains how to use the IRecordableCallback interface in 
 ---
 # Adding Callbacks on Undo and Redo
 
+> [!CAUTION]
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be removed in the future.
+
 You may run into situations where you will want to execute some code before or after an object is being modified by an Undo or Redo operation. This capability is provided through the <xref:PostSharp.Patterns.Recording.IRecordableCallback> interface. 
 
 In the following example, we output a message each time an undo or redo operation executes.
