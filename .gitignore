@@ -26,3 +26,4 @@ artifacts/
 eng/tools
 packages/
 docfx/_*
+eng/docker-context/env.g.json

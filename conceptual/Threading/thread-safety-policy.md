@@ -24,9 +24,9 @@ The thread-safety policy emits warnings in two situations:
 
 ### To apply the thread-safety policy to your application with Visual Studio Tools for Metalama and PostSharp:
 
-1. Right click on your solution or your project in **Solution Explorer**, select **Add** followed by **PostSharp Policy...** 
+1. Right click on your solution or your project in **Solution Explorer**, select **Add** followed by **PostSharp Policy...**
 
-    ![](deadlockdetection2.png)
+    ![](thread-safety-policy-1.png)
 
 
 2. In the **Add PostSharp policy** wizard, expand **Threading** and select **Thread Safety**. 
@@ -60,7 +60,7 @@ If you added the policy to the whole solution, the result of running this wizard
 1. Add the *PostSharp.Patterns.Threading* NuGet package to the project. 
 
 
-2. Add the <xref:PostSharp.Patterns.Threading.ThreadSafetyPolicy> any C# file. We recommend you add it to a new file named *GlobalAspects.cs*. 
+2. Add the <xref:PostSharp.Patterns.Threading.ThreadSafetyPolicy> to any C# file. We recommend you add it to a new file named *GlobalAspects.cs*. 
 
     ```csharp
     using PostSharp.Patterns.Threading;
@@ -74,9 +74,9 @@ If you added the policy to the whole solution, the result of running this wizard
 
 ### To manually add the thread-safety policy to a whole solution:
 
-1. Open the solution's *pssln* file. This can be found under the Solution Items folder in Visual Studio's Solution Explorer. 
+1. Open the solution's *pssln* file. This can be found under the Solution Items folder in Visual Studio's Solution Explorer.
 
-    ![](deadlockdetection7.png)
+    ![](thread-safety-policy-2.png)
 
     If the *pssln* file doesn't exist manually add the file at the solution level. Name the file with the same name as your solution and the *pssln* file extension. 
 

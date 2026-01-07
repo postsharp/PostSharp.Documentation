@@ -11,6 +11,8 @@ PostSharp has been around since the early days of .NET 2.0 in 2004. Since the fi
 
 This chapter contains the following sections:
 
+* <xref:whats-new-20260>
+* <xref:whats-new-20251>
 * <xref:whats-new-20250>
 * <xref:whats-new-20241>
 * <xref:whats-new-20240>

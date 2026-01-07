@@ -7,18 +7,31 @@ using PostSharp.Engineering.BuildTools.Build.Solutions;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
 using System.IO;
-using PostSharp.Engineering.BuildTools.Build.Publishers;
+using PostSharp.Engineering.BuildTools.Build.Publishing;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
+using PostSharp.Engineering.BuildTools.Docker;
 using PostSharp.Engineering.BuildTools.Search;
 using PostSharp.Engineering.DocFx;
 using PostSharpDocumentationDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies;
-using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2025_1_GitHub;
+using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2025_1;
 
 const string docPackageFileName = "PostSharp.Doc.zip";
+const string dotNetSdkVersion = "10.0.100";
 
 var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumentation )
 {
+    OverriddenBuildAgentRequirements = new ContainerRequirements( ContainerHostKind.Windows )
+    {
+        Components =
+        [
+            new DotNetComponent( dotNetSdkVersion, DotNetComponentKind.Sdk ),
+        ]
+    },
+    GenerateNuGetConfig = true,
+    DotNetSdkVersion = new DotNetSdkVersion( dotNetSdkVersion ),
+
+    
     Solutions =
     [
         new DotNetSolution( Path.Combine( "code", "PostSharp.Documentation.Prerequisites.sln" ) )
@@ -31,19 +44,12 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
     PublicArtifacts = Pattern.Create(
         docPackageFileName
     ),
-    ParametrizedDependencies =
-    [
-        DevelopmentDependencies.PostSharpEngineering.ToDependency(),
-        PostSharpDependencies.PostSharp.ToDependency(
-            new ConfigurationSpecific<BuildConfiguration>(
-                BuildConfiguration.Release, BuildConfiguration.Release, BuildConfiguration.Release
-            ) )
-    ],
+ 
     AdditionalDirectoriesToClean = [Path.Combine( "artifacts", "api" ), Path.Combine( "artifacts", "site" )],
 
     // Disable automatic build triggers.
     Configurations = Product.DefaultConfigurations
-        .WithValue( BuildConfiguration.Debug, c => c with { BuildTriggers = default } )
+        .WithValue( BuildConfiguration.Debug, c => c with { BuildTriggers = [] } )
         .WithValue( BuildConfiguration.Public,
             c => c with
             {

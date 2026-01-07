@@ -1,11 +1,11 @@
 ---
-uid: requirements-20250
-title: "PostSharp 2025.0: Requirements and Compatibility"
+uid: requirements-20260
+title: "PostSharp 2026.0: Requirements and Compatibility"
 product: "postsharp"
 categories: "PostSharp;AOP;Metaprogramming"
-summary: "PostSharp 2025.0 supports C# 13.0 or earlier and VB 16.9 or earlier. It requires Microsoft Visual Studio 2022, .NET Framework 4.7.2 or later, and is compatible with various operating systems and .NET SDK versions. It also supports Blazor via .NET Standard."
+summary: "PostSharp 2026.0 supports C# 14.0 or earlier and VB 16.9 or earlier. It requires Microsoft Visual Studio 2022 or 2026, .NET Framework 4.7.2 or later, and is compatible with various operating systems and .NET SDK versions. It also supports Blazor via .NET Standard."
 ---
-# PostSharp 2025.0: Requirements and Compatibility
+# PostSharp 2026.0: Requirements and Compatibility
 
 You can use PostSharp to build applications that target a wide range of target devices. This article lists the requirements for development, build and end-user devices.
 
@@ -17,7 +17,7 @@ You can use PostSharp to build applications that target a wide range of target d
 
 This version of PostSharp supports the following languages:
 
-* C# 13.0 or earlier,
+* C# 14.0 or earlier,
 
 * VB 16.9 or earlier.
 
@@ -33,7 +33,8 @@ This section lists the supported platforms, and most importantly platform versio
 The following software components need to be installed before PostSharp can be used:
 
 * Any of the following versions of Microsoft Visual Studio:
-    * Visual Studio 2022 (17.8 and later).
+    * Visual Studio 2022 (17.12 and later).
+    * Visual Studio 2026 (18.0 and later).
 
     The debugging experience may be inconsistent with other IDEs than Visual Studio or when PostSharp Tools for Visual Studio are not installed.
 
@@ -46,11 +47,13 @@ The following software components need to be installed before PostSharp can be u
 * Optionally, one of the following versions of .NET SDK:
     * .NET SDK 8.0 (build 8.0.100 or later).
     * .NET SDK 9.0 (build 9.0.100 or later).
+    * .NET SDK 10.0 (build 10.0.100 or later).
 
 ## Requirements on build servers
 
 * Any of the following operating systems currently in mainstream support by respective vendors:
     * Windows Server 2022
+    * Windows Server 2025 x64 or ARM64
     * Windows 10 x64
     * Windows 11 x64 or ARM64
     * Ubuntu 20.04 LTS x64,
@@ -61,7 +64,7 @@ The following software components need to be installed before PostSharp can be u
     * Alpine Linux 3.18+ ARM64.
 
 At least one of the following:
-* .NET Framework 4.7.2 and later + Build Tools for Visual Studio 2022 or Visual Studio 2022 (17.10 and later).
+* .NET Framework 4.7.2 and later + Build Tools for Visual Studio 2022 or Visual Studio 2022 (17.8 and later).
 * .NET SDK 8.0 (build 8.0.100 or later).
 * .NET SDK 9.0 (build 9.0.100 or later).
 
@@ -71,15 +74,15 @@ The following table displays the versions of the target frameworks that are supp
 
 | Package | .NET Framework | .NET Core & .NET | .NET Standard*** | Blazor*** |
 |---------|----------------|------------------|------------------|-----------|
-| *PostSharp* | 3.5 SP1, 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 8.0, 9.0 | 2.0, 2.1 | Supported |
-| *PostSharp.Patterns.Common*<br>*PostSharp.Patterns.Aggregation*<br>*PostSharp.Patterns.Model* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 8.0, 9.0 | 2.0, 2.1 | Supported |
-| *PostSharp.Patterns.Diagnostics* <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%</superscript> | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 8.0, 9.0 | 2.0, 2.1 | Supported |
-| *PostSharp.Patterns.Threading* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 8.0, 9.0 | 2.0, 2.1 | - |
-| *PostSharp.Patterns.Xaml* | 4.5 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.6 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 8.0-windows, 9.0-windows | - | - |
-| *PostSharp.Patterns.Caching* <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%%</superscript> | 4.6.1 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript>, 4.7, 4.8 <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript>  | 8.0, 9.0 | 2.0, 2.1 | Supported |
+| *PostSharp* | 4.5.2&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">\*</superscript>, 4.6.x&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">\*</superscript>, 4.7.x, 4.8.x | 6.0&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript>, 8.0, 9.0, 10.0 | 2.0, 2.1 | Supported |
+| *PostSharp.Patterns.Common*<br>*PostSharp.Patterns.Aggregation*<br>*PostSharp.Patterns.Model* | 4.7.1, 4.7.2, 4.8.x<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript> | 6.0&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript>, 8.0, 9.0, 10.0 | 2.0, 2.1 | Supported |
+| *PostSharp.Patterns.Diagnostics* <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%</superscript> | 4.7.1, 4.7.2, 4.8.x<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript> | 6.0&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript>, 8.0, 9.0, 10.0 | 2.0, 2.1 | Supported |
+| *PostSharp.Patterns.Threading* | 4.7.1, 4.7.2, 4.8.x<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript> | 6.0&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript>, 8.0, 9.0, 10.0 | 2.0, 2.1 | - |
+| *PostSharp.Patterns.Xaml* | 4.7.1, 4.7.2, 4.8.x<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript> | 6.0‑windows&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript>, 8.0‑windows, 9.0‑windows, 10.0‑windows | - | - |
+| *PostSharp.Patterns.Caching* <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%%</superscript> | 4.7.1, 4.7.2, 4.8.x<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript> | 6.0&nbsp;<superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript>, 8.0, 9.0, 10.0 | 2.0, 2.1 | Supported |
 
 > [!NOTE]
-> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript> .NET Framework versions 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1 are no longer supported by Microsoft. Although we still provide libraries targeting them, we no longer run our tests on these specific versions of the .NET Framework.
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">*</superscript> .NET Framework versions 4.5.x and 4.6.x are no longer supported by Microsoft. Although we still provide libraries targeting them, we no longer run our tests on these specific versions of the .NET Framework.
 
 > [!NOTE]
 > <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">**</superscript> .NET Framework ARM64 is experimentally supported for PostSharp Pattern Libraries. We recommend using PostSharp Pattern Libraries on ARM64 Windows with emulated .NET Framework x64.
@@ -93,6 +96,14 @@ The following table displays the versions of the target frameworks that are supp
 > [!NOTE]
 > <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">%%</superscript> Each PostSharp.Patterns.Caching caching backend has different set of supported target frameworks. Please refer to individual packages on [nuget.org](http://www.nuget.org).
 
+> [!NOTE]
+> <superscript xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">#</superscript> .NET 6.0 is no longer supported by Microsoft. Although we still provide libraries targeting it, we no longer run our tests on this specific version of the .NET. We recommend using a supported version of .NET runtime in your final application.
+
+## Compatibility with deprecated versions of .NET Core and .NET
+
+When targeting .NET Core 2.x, 3.x, and .NET 5.0 and .NET 7.0, your project will consume PostSharp assemblies for an older target framework, i.e. .NET Standard 2.0, or .NET 6.0. 
+
+As these platforms are unsupported, we do not test our libraries against them. We recommend using a supported runtime target framework in your final application.
 
 ## Compatibility with Xamarin
 
@@ -184,4 +195,3 @@ PostSharp is not compatible with the following products or features:
 | Universal Windows Platform (UWP) | Not supported (low customer demand) | Contact PostSharp support team. |
 | Mono, Unity3D | Unsupported | None. |
 | Xamarin | Unsupported | Use Microsoft MAUI. |
-

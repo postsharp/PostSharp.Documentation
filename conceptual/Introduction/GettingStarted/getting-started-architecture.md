@@ -37,7 +37,7 @@ PostSharp offers a number of different pre-built patterns. The following documen
 | Topic | Articles |
 |-------|----------|
 | General patterns | <xref:contracts><br><xref:aggregatable> |
-| User interface patterns | <xref:inotifypropertychanged-conceptual><br><xref:undoredo-conceptual> |
+| User interface patterns | <xref:inotifypropertychanged-conceptual><br><xref:dependency-property><br><xref:command> |
 | Multithreading | [White Paper: Threading Models for Object-Oriented Programming](https://www.postsharp.net/downloads/documentation/Threading%20Models%20for%20OOP.pdf)<br><xref:ui-dispatching><br><xref:background-dispatching> |
 | Diagnostics | <xref:logging> |
 

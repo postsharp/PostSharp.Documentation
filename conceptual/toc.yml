@@ -30,6 +30,11 @@ items:
       - name: What's New
         topicUid: whats-new
         items:
+          - name: What's New in PostSharp 2026.0
+            topicUid: whats-new-20260
+            items:
+              - name: Breaking Changes in PostSharp 2026.0
+                topicUid: breaking-changes-20260
           - name: What's New in PostSharp 2025.0
             topicUid: whats-new-20250
             items:
@@ -122,6 +127,8 @@ items:
           - name: Requirements and Compatibility
             topicUid: requirements
             items:
+              - name: Requirements of PostSharp 2026.0
+                topicUid: requirements-20260
               - name: Requirements of PostSharp 2025.0
                 topicUid: requirements-20250
               - name: Requirements of PostSharp 2024.1
@@ -246,6 +253,8 @@ items:
             items:
               - name: Understanding Attribute Multicasting
                 topicUid: multicast-conceptual
+              - name: C# 14 Extension Blocks and Multicasting
+                topicUid: extension-blocks-multicast
           - name: Adding Aspects to Derived Classes and Methods Using Attributes
             topicUid: aspect-inheritance
             items:
@@ -385,21 +394,6 @@ items:
         topicUid: disposable
       - name: Working With Child Collections
         topicUid: advisable-collections
-  - name: Undo/Redo
-    topicUid: undoredo
-    items:
-      - name: Making Your Model Recordable
-        topicUid: undoredo-start
-      - name: Adding Undo/Redo to the User Interface
-        topicUid: undoredo-ui
-      - name: Customizing Undo/Redo Operation Names
-        topicUid: undoredo-operation-name
-      - name: Assigning Recorders Manually
-        topicUid: undoredo-recorder
-      - name: Adding Callbacks on Undo and Redo
-        topicUid: undoredo-callbacks
-      - name: Understanding the Recordable Aspect
-        topicUid: undoredo-conceptual
   - name: Caching
     topicUid: caching
     items:
@@ -563,7 +557,20 @@ items:
         items:
           - name: Installing PostSharp without NuGet
             topicUid: install-without-nuget
-          - name: Detecting Deadlocks at Runtime
-            topicUid: deadlock-detection
+          - name: Undo/Redo
+            topicUid: undoredo
+            items:
+              - name: Making Your Model Recordable
+                topicUid: undoredo-start
+              - name: Adding Undo/Redo to the User Interface
+                topicUid: undoredo-ui
+              - name: Customizing Undo/Redo Operation Names
+                topicUid: undoredo-operation-name
+              - name: Assigning Recorders Manually
+                topicUid: undoredo-recorder
+              - name: Adding Callbacks on Undo and Redo
+                topicUid: undoredo-callbacks
+              - name: Understanding the Recordable Aspect
+                topicUid: undoredo-conceptual
   - name: API Reference
     topicUid: api

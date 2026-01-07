@@ -8,6 +8,9 @@ summary: "The document discusses the limitations of the PostSharp product, inclu
 
 ## Essentially Single-Threaded
 
+> [!CAUTION]
+> Undo/Redo was deprecated in PostSharp 2026.0 and will not be maintained. The API will be removed in the future.
+
 But the <xref:PostSharp.Patterns.Recording.Recorder> class is intrinsically single-threaded. You can use recordable objects in a multithreaded context, but you should make sure that objects that share the same recorder are not accessed concurrently from several threads. Note that this is a limitation of the undo/redo concept, not a limitation of our implementation. 
 
 
