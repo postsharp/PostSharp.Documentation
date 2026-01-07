@@ -33,7 +33,7 @@ object DebugBuild : BuildType({
 """
 
     params {
-        text("Build.Arguments", "", label = "Build.ps1 Arguments", description = "Arguments to append to the 'Build' build step.", allowEmpty = true)
+        text("Build.Arguments", "", label = "DockerBuild.ps1 Arguments", description = "Arguments to append to the 'Build' build step.", allowEmpty = true)
         param("Build.Timeout", "30")
     }
 
@@ -44,36 +44,27 @@ object DebugBuild : BuildType({
 
     steps {
         powerShell {
-            name = "Kill background processes before cleanup"
-            id = "PreKill"
+            name = "Prepare Docker image postsharpdocumentation-1.0"
+            id = "PrepareImage"
             scriptMode = file {
-                path = "Build.ps1"
+                path = "DockerBuild.ps1"
             }
             noProfile = false
-            scriptArgs = "tools kill "
+            scriptArgs = "-BuildImage -ImageName postsharpdocumentation-1.0 "
         }
         powerShell {
             name = "Build"
             id = "Build"
             scriptMode = file {
-                path = "Build.ps1"
+                path = "DockerBuild.ps1"
             }
             noProfile = false
-            scriptArgs = "test --configuration Debug --buildNumber %build.number% --buildType %system.teamcity.buildType.id% --timeout %Build.Timeout% %Build.Arguments%"
-        }
-        powerShell {
-            name = "Kill background processes before next build"
-            id = "PostKill"
-            scriptMode = file {
-                path = "Build.ps1"
-            }
-            noProfile = false
-            scriptArgs = "tools kill "
+            scriptArgs = "-Script Build.ps1 -ImageName postsharpdocumentation-1.0 -NoBuildImage test --configuration Debug --buildNumber %build.number% --buildType %system.teamcity.buildType.id% --timeout %Build.Timeout% %Build.Arguments%"
         }
     }
 
     requirements {
-        equals("env.BuildAgentType", "caravela04cloud")
+        equals("env.BuildAgentType", "docker-win-x64-md")
     }
 
     features {
@@ -131,7 +122,7 @@ object ReleaseBuild : BuildType({
 """
 
     params {
-        text("Build.Arguments", "", label = "Build.ps1 Arguments", description = "Arguments to append to the 'Build' build step.", allowEmpty = true)
+        text("Build.Arguments", "", label = "DockerBuild.ps1 Arguments", description = "Arguments to append to the 'Build' build step.", allowEmpty = true)
         param("Build.Timeout", "30")
     }
 
@@ -142,36 +133,27 @@ object ReleaseBuild : BuildType({
 
     steps {
         powerShell {
-            name = "Kill background processes before cleanup"
-            id = "PreKill"
+            name = "Prepare Docker image postsharpdocumentation-1.0"
+            id = "PrepareImage"
             scriptMode = file {
-                path = "Build.ps1"
+                path = "DockerBuild.ps1"
             }
             noProfile = false
-            scriptArgs = "tools kill "
+            scriptArgs = "-BuildImage -ImageName postsharpdocumentation-1.0 "
         }
         powerShell {
             name = "Build"
             id = "Build"
             scriptMode = file {
-                path = "Build.ps1"
+                path = "DockerBuild.ps1"
             }
             noProfile = false
-            scriptArgs = "test --configuration Release --buildNumber %build.number% --buildType %system.teamcity.buildType.id% --timeout %Build.Timeout% %Build.Arguments%"
-        }
-        powerShell {
-            name = "Kill background processes before next build"
-            id = "PostKill"
-            scriptMode = file {
-                path = "Build.ps1"
-            }
-            noProfile = false
-            scriptArgs = "tools kill "
+            scriptArgs = "-Script Build.ps1 -ImageName postsharpdocumentation-1.0 -NoBuildImage test --configuration Release --buildNumber %build.number% --buildType %system.teamcity.buildType.id% --timeout %Build.Timeout% %Build.Arguments%"
         }
     }
 
     requirements {
-        equals("env.BuildAgentType", "caravela04cloud")
+        equals("env.BuildAgentType", "docker-win-x64-md")
     }
 
     features {
@@ -229,7 +211,7 @@ object PublicBuild : BuildType({
 """
 
     params {
-        text("Build.Arguments", "", label = "Build.ps1 Arguments", description = "Arguments to append to the 'Build' build step.", allowEmpty = true)
+        text("Build.Arguments", "", label = "DockerBuild.ps1 Arguments", description = "Arguments to append to the 'Build' build step.", allowEmpty = true)
         param("Build.Timeout", "30")
     }
 
@@ -240,36 +222,27 @@ object PublicBuild : BuildType({
 
     steps {
         powerShell {
-            name = "Kill background processes before cleanup"
-            id = "PreKill"
+            name = "Prepare Docker image postsharpdocumentation-1.0"
+            id = "PrepareImage"
             scriptMode = file {
-                path = "Build.ps1"
+                path = "DockerBuild.ps1"
             }
             noProfile = false
-            scriptArgs = "tools kill "
+            scriptArgs = "-BuildImage -ImageName postsharpdocumentation-1.0 "
         }
         powerShell {
             name = "Build"
             id = "Build"
             scriptMode = file {
-                path = "Build.ps1"
+                path = "DockerBuild.ps1"
             }
             noProfile = false
-            scriptArgs = "test --configuration Public --buildNumber %build.number% --buildType %system.teamcity.buildType.id% --timeout %Build.Timeout% %Build.Arguments%"
-        }
-        powerShell {
-            name = "Kill background processes before next build"
-            id = "PostKill"
-            scriptMode = file {
-                path = "Build.ps1"
-            }
-            noProfile = false
-            scriptArgs = "tools kill "
+            scriptArgs = "-Script Build.ps1 -ImageName postsharpdocumentation-1.0 -NoBuildImage test --configuration Public --buildNumber %build.number% --buildType %system.teamcity.buildType.id% --timeout %Build.Timeout% %Build.Arguments%"
         }
     }
 
     requirements {
-        equals("env.BuildAgentType", "caravela04cloud")
+        equals("env.BuildAgentType", "docker-win-x64-md")
     }
 
     features {
@@ -322,7 +295,7 @@ object PublicDeployment : BuildType({
     type = Type.DEPLOYMENT
 
     params {
-        text("Publish.Arguments", "", label = "Build.ps1 Arguments", description = "Arguments to append to the 'Publish' build step.", allowEmpty = true)
+        text("Publish.Arguments", "", label = "DockerBuild.ps1 Arguments", description = "Arguments to append to the 'Publish' build step.", allowEmpty = true)
         param("Publish.Timeout", "30")
     }
 
@@ -333,18 +306,27 @@ object PublicDeployment : BuildType({
 
     steps {
         powerShell {
+            name = "Prepare Docker image postsharpdocumentation-1.0"
+            id = "PrepareImage"
+            scriptMode = file {
+                path = "DockerBuild.ps1"
+            }
+            noProfile = false
+            scriptArgs = "-BuildImage -ImageName postsharpdocumentation-1.0 "
+        }
+        powerShell {
             name = "Publish"
             id = "Publish"
             scriptMode = file {
-                path = "Build.ps1"
+                path = "DockerBuild.ps1"
             }
             noProfile = false
-            scriptArgs = "publish --configuration Public --timeout %Publish.Timeout% %Publish.Arguments%"
+            scriptArgs = "-Script Build.ps1 -ImageName postsharpdocumentation-1.0 -NoBuildImage publish --configuration Public --timeout %Publish.Timeout% %Publish.Arguments%"
         }
     }
 
     requirements {
-        equals("env.BuildAgentType", "caravela04cloud")
+        equals("env.BuildAgentType", "docker-win-x64-md")
     }
 
     features {
@@ -408,7 +390,7 @@ object PublicUpdateSearch : BuildType({
     }
 
     requirements {
-        equals("env.BuildAgentType", "caravela04cloud")
+        equals("env.BuildAgentType", "docker-win-x64-md")
     }
 
     features {
