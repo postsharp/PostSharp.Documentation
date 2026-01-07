@@ -23,7 +23,11 @@ code/.local
 artifacts/
 /PostSharp.Documentation.Import.props
 *.g.props
+*.g.ps1
+*.g.json
 eng/tools
 packages/
 docfx/_*
-eng/docker-context/env.g.json
+
+nuget.config
+global.json

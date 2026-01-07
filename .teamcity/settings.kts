@@ -38,7 +38,7 @@ object DebugBuild : BuildType({
     }
 
     vcs {
-        root(AbsoluteId("PostSharp_PostSharpDocumentation"))
+        root(AbsoluteId("PostSharpGitHub_PostSharpDocumentation"))
      checkoutMode = CheckoutMode.ON_AGENT
     }
 
@@ -73,7 +73,7 @@ object DebugBuild : BuildType({
             verbose = true
         }
     commitStatusPublisher {
-        vcsRootExtId = "PostSharp_PostSharpDocumentation"
+        vcsRootExtId = "PostSharpGitHub_PostSharpDocumentation"
         publisher = github {
             githubUrl = "https://api.github.com"
             authType = personalToken {
@@ -82,7 +82,7 @@ object DebugBuild : BuildType({
         }
     }
 pullRequests {
-       vcsRootExtId = "PostSharp_PostSharpDocumentation"
+       vcsRootExtId = "PostSharpGitHub_PostSharpDocumentation"
         provider = github {
             authType = token {
                 token = "%env.GITHUB_TOKEN%"
@@ -96,7 +96,7 @@ pullRequests {
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20260_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharpGitHub20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -127,7 +127,7 @@ object ReleaseBuild : BuildType({
     }
 
     vcs {
-        root(AbsoluteId("PostSharp_PostSharpDocumentation"))
+        root(AbsoluteId("PostSharpGitHub_PostSharpDocumentation"))
      checkoutMode = CheckoutMode.ON_AGENT
     }
 
@@ -162,7 +162,7 @@ object ReleaseBuild : BuildType({
             verbose = true
         }
     commitStatusPublisher {
-        vcsRootExtId = "PostSharp_PostSharpDocumentation"
+        vcsRootExtId = "PostSharpGitHub_PostSharpDocumentation"
         publisher = github {
             githubUrl = "https://api.github.com"
             authType = personalToken {
@@ -171,7 +171,7 @@ object ReleaseBuild : BuildType({
         }
     }
 pullRequests {
-       vcsRootExtId = "PostSharp_PostSharpDocumentation"
+       vcsRootExtId = "PostSharpGitHub_PostSharpDocumentation"
         provider = github {
             authType = token {
                 token = "%env.GITHUB_TOKEN%"
@@ -185,7 +185,7 @@ pullRequests {
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20260_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharpGitHub20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -216,7 +216,7 @@ object PublicBuild : BuildType({
     }
 
     vcs {
-        root(AbsoluteId("PostSharp_PostSharpDocumentation"))
+        root(AbsoluteId("PostSharpGitHub_PostSharpDocumentation"))
      checkoutMode = CheckoutMode.ON_AGENT
     }
 
@@ -251,7 +251,7 @@ object PublicBuild : BuildType({
             verbose = true
         }
     commitStatusPublisher {
-        vcsRootExtId = "PostSharp_PostSharpDocumentation"
+        vcsRootExtId = "PostSharpGitHub_PostSharpDocumentation"
         publisher = github {
             githubUrl = "https://api.github.com"
             authType = personalToken {
@@ -260,7 +260,7 @@ object PublicBuild : BuildType({
         }
     }
 pullRequests {
-       vcsRootExtId = "PostSharp_PostSharpDocumentation"
+       vcsRootExtId = "PostSharpGitHub_PostSharpDocumentation"
         provider = github {
             authType = token {
                 token = "%env.GITHUB_TOKEN%"
@@ -274,7 +274,7 @@ pullRequests {
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20260_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharpGitHub20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -300,7 +300,7 @@ object PublicDeployment : BuildType({
     }
 
     vcs {
-        root(AbsoluteId("PostSharp_PostSharpDocumentation"))
+        root(AbsoluteId("PostSharpGitHub_PostSharpDocumentation"))
      checkoutMode = CheckoutMode.ON_AGENT
     }
 
@@ -337,7 +337,7 @@ object PublicDeployment : BuildType({
     }
 
     dependencies {
-        dependency(AbsoluteId("PostSharpGitHub_PostSharp20260_BuildDistribution")) {
+        dependency(AbsoluteId("PostSharpGitHub_PostSharpGitHub20251_BuildDistribution")) {
             snapshot {
                      onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -373,7 +373,7 @@ object PublicUpdateSearch : BuildType({
     }
 
     vcs {
-        root(AbsoluteId("PostSharp_PostSharpDocumentation"))
+        root(AbsoluteId("PostSharpGitHub_PostSharpDocumentation"))
      checkoutMode = CheckoutMode.ON_AGENT
     }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>PostSharp_PostSharpDocumentation Config DSL Script</name>
-  <groupId>PostSharp_PostSharpDocumentation</groupId>
-  <artifactId>PostSharp_PostSharpDocumentation_dsl</artifactId>
+  <name>PostSharpGitHub_PostSharpDocumentation Config DSL Script</name>
+  <groupId>PostSharpGitHub_PostSharpDocumentation</groupId>
+  <artifactId>PostSharpGitHub_PostSharpDocumentation_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>

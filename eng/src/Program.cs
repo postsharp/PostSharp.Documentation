@@ -8,13 +8,10 @@ using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
 using System.IO;
 using PostSharp.Engineering.BuildTools.Build.Publishing;
-using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
-using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Docker;
 using PostSharp.Engineering.BuildTools.Search;
 using PostSharp.Engineering.DocFx;
 using PostSharpDocumentationDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies;
-using PostSharpDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.PostSharpDependencies.V2025_1;
 
 const string docPackageFileName = "PostSharp.Doc.zip";
 const string dotNetSdkVersion = "10.0.100";
