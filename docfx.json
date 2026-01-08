@@ -35,7 +35,7 @@
             "System.Runtime.dll",
             "Microsoft.TeamFoundation.TestManagement.Client.dll"
           ],
-          "src": "code/PostSharp.Documentation.Consolidated/bin/Debug/net8.0-windows"
+          "src": "code/PostSharp.Documentation.Consolidated/bin/Debug/net10.0-windows"
         },
         {
           "files": [
